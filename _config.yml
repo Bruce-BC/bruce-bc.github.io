@@ -85,10 +85,10 @@ content:
     layout: list
     content:
       - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
+        title: Sanigen inc.
+        sub_title: Bioinformatics specialist
+        caption: 2020 - present
+        link: Sanigen[https://sanigen.kr]
         quote: >
           Short description of the company (optional)
         description: | # this will include new lines to allow paragraphs
