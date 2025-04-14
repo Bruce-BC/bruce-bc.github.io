@@ -49,16 +49,10 @@ additional_links:
 # google_analytics: "UA-00000000-0"
 
 # About Section
-about_title: Curriculum vitae
+about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
-
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images ![alt text](/images/landscape-trees.jpg "Trees")
+  Ph.D. candidate in Bioinformatics with expertise in genomics, metagenomics, and NGS data analysis. Eager to perform meaningful finding in n-dimensional data analysis through mathematical frameworks like <mark>optimal transport</mark>. Proficient in bioinformatics tools, programming, and systems. Over five years of field and managerial collaborative projects with government agencies.
 
 content:
   - title: Projects # Title for the section
