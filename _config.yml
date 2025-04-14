@@ -52,7 +52,7 @@ additional_links:
 about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Ph.D. candidate in Bioinformatics with expertise in genomics, metagenomics, and NGS data analysis. Eager to perform meaningful finding in n-dimensional data analysis through mathematical frameworks like <mark>optimal transport</mark>. Proficient in bioinformatics tools, programming, and systems. Over five years of field and managerial collaborative projects with government agencies.
+    Ph.D. candidate in Bioinformatics with expertise in genomics, metagenomics, and NGS data analysis. Eager to perform meaningful finding in n-dimensional data analysis through mathematical frameworks like optimal transport. Proficient in bioinformatics tools, programming, and systems. Over five years of field and managerial collaborative projects with government agencies.
 
 content:
   - title: Projects # Title for the section
@@ -86,7 +86,10 @@ content:
         quote: >
           Short description of the company (optional)
         description: | # this will include new lines to allow paragraphs
-          Description of role
+          - Bioinformatic Analyst
+          - Pipeline Maintenance(Git & Snakemake)
+          - In-house program development
+          - System Administrator
   - title: Education
     layout: list
     content:
@@ -108,11 +111,9 @@ content:
         description: | # this will include new lines to allow paragraphs
           Description of qualification
 
-  - title: A Little More About Me
+  - title: References
     layout: text
     content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
-
       Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
 
 # Footer
