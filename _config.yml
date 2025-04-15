@@ -82,11 +82,15 @@ content:
         title: Sanigen inc.
         sub_title: Bioinformatics specialist
         caption: 2020 - present
-        link: Sanigen(https://sanigen.kr)
+        link: [Sanigen](https://sanigen.kr)
         quote: >
           Short description of the company (optional)
         description: | # this will include new lines to allow paragraphs
           - Bioinformatic Analyst
+            Whole genome sequencing(WGS) and microbial genome assembly(de novo, reference-assisted assembly), conduct microbiome analysis services.
+            Oversee analysis services, including developing NGS panel markers using comparative genomics and pan-genomics.
+            To investigate microbial genomic characteristics, utilize various open-source tools, public databases, and in-house programs.
+
           - Pipeline Maintenance(Git & Snakemake)
           - In-house program development
           - System Administrator
