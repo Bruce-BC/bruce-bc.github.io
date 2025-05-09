@@ -29,7 +29,7 @@ github_username:  Bruce-BC
 linkedin_username: byungcheol-kang-67973311b
 # jxing_username: jekyll
 # pinterest_username: jekyll
-youtube_username: brucekang6474
+# youtube_username: brucekang6474
 orcid_username: 0000-0002-3015-0064
 googlescholar_username: D847cGsAAAAJ
 
@@ -52,8 +52,18 @@ additional_links:
 about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-    Ph.D. candidate in Bioinformatics with expertise in genomics, metagenomics, and NGS data analysis. Eager to perform meaningful finding in n-dimensional data analysis through mathematical frameworks like optimal transport. Proficient in bioinformatics tools, programming, and systems. Over five years of field and managerial collaborative projects with government agencies.
+    Hi! my name is Byung-cheol(Or Byeong-cheol) Kang. I've been working in bioinformatics field for over 6 years, and 
+    spent over 5 years in bioinformatics field, and have a strong interest in genomics and NGS data analysis.
 
+
+    Ph.D. candidate in Bioinformatics with expertise in genomics, metagenomics, and NGS data analysis. 
+    Eager to perform meaningful finding in n-dimensional data analysis through mathematical frameworks like optimal transport. 
+    Proficient in bioinformatics tools, programming, and systems. Over five years of field and managerial collaborative projects
+    with government agencies.
+
+    Skilled: <mark>Metagenomics</mark>, <mark>Genomics</mark>, <mark>NGS</mark>, <mark>Bioinformatics</mark>, <mark>Systems administration</mark>, <mark>Program development</mark>
+
+    Interested and Progressing: <mark>Optimal transport</mark>, <mark>Computational biology</mark>, <mark>Probability theory</mark>, <mark>Optimization</mark>, <mark>Machine learning</mark>
 content:
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
@@ -64,13 +74,31 @@ content:
         title: Project name
         link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         link_text: Link Text
-        additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        # additional_links:
+        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
+        #     icon: fab fa-github
+        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
+        #     icon: fab fa-github
+        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        quote: >
+          Short overview of the project (optional)
+        description: | # this will include new lines to allow paragraphs
+          Description about the work on/with the project
+      # s
+      - layout: left
+        border: weak  # Value of `weak` will display a weak border below this item. # Any 
+                      # other value (or no value) means no border will be displayed
+        title: Project name
+        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        link_text: Link Text
+        # additional_links:
+        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
+        #     icon: fab fa-github
+        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
+        #     icon: fab fa-github
+        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         quote: >
           Short overview of the project (optional)
         description: | # this will include new lines to allow paragraphs
@@ -84,42 +112,60 @@ content:
         caption: 2020 - present
         link: Sanigen(https://sanigen.kr)
         quote: >
-          Short description of the company (optional)
+          Bioinformatics specialist with expertise in genomics and NGS data analysis
         description: | # this will include new lines to allow paragraphs
-          - Bioinformatic Analyst
-            Whole genome sequencing(WGS) and microbial genome assembly(de novo, reference-assisted assembly), conduct microbiome analysis services.
-            Oversee analysis services, including developing NGS panel markers using comparative genomics and pan-genomics.
-            To investigate microbial genomic characteristics, utilize various open-source tools, public databases, and in-house programs.
-
+          - Whole genome sequencing(WGS) and microbial genome assembly(de novo, reference-assisted assembly), conduct microbiome analysis services.
+          - Oversee analysis services, including developing NGS panel markers using comparative genomics and pan-genomics.
+          - To investigate microbial genomic characteristics, utilize various open-source tools, public databases, and in-house programs.
           - Pipeline Maintenance(Git & Snakemake)
-          - In-house program development
-          - System Administrator
+          - In-house program development; NGS panel marker development, microbial genome assembly, and microbial genomics analysis.
+          - System Administrator; Server & Database management
+            - a
+            - b
+            - c
   - title: Education
     layout: list
     content:
-      - layout: top-right
-        title: Kyungpook National University
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
+      - layout: top-right # MS
+        title: Kyungpook National University of Hospital, School of Medicine
+        sub_title: "M.S. (Major: Medical Science)"
+        caption: 2016 - 2018
         quote: >
           Short institution or course description (optional)
         description: | # this will include new lines to allow paragraphs
           Description of qualification
-
-      - layout: top-right
+      - layout: top-right # BS
         title: Kyungpook National University
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
+        sub_title: "BA (Major: Biotechnology, Minor: Psychology)"
+        caption: 2008 - 2016
         quote: >
           Short institution or course description (optional)
         description: | # this will include new lines to allow paragraphs
           Description of qualification
+  - title: Publications
+    layout: text
+    content: |
+      - Park, D. G., Kwon, J. G., Ha, E. S., **Kang, B.**, Choi, I., Kwak, J. E., ... & Lee, J. H. (2023). Novel next generation sequencing panel method for the multiple detection and identification of foodborne pathogens in agricultural wastewater. Frontiers in Microbiology, 14.
+      - Park, D. G., Ha, E. S., **Kang, B.**, Choi, I., Kwak, J. E., Choi, J., ... & Lee, J. H. (2023). Development and evaluation of a next-generation Sequencing panel for the multiple detection and identification of pathogens in fermented foods. Journal of Microbiology and Biotechnology, 33(1), 83.
+      - Choi, Y. A., Lee, S., Choi, J. K., **Kang, B. C.**, Kim, M. J., Dhakal, H., ... & Kim, S. H. (2020). The suppressive effect of dabrafenib, a therapeutic agent for metastatic melanoma, in IgE-mediated allergic inflammation. International Immunopharmacology, 83, 106398
+      - **Kang, B. C.**, Kim, M. J., Lee, S., Choi, Y. A., Park, P. H., Shin, T. Y., ... & Kim, S. H. (2019). Nothofagin suppresses mast cell-mediated allergic inflammation. Chemico-biological interactions, 298, 1-7.
+      - Lee, J. K., Lee, S., Choi, Y., Jin, M., Kim, Y. Y., **Kang, B. C.**, ... & Kim, S. H. (2018). Perfluorooctane sulfonate exacerbates mast cell-mediated allergic inflammation by the release of histamine. Molecular & Cellular Toxicology, 14(2), 173-181.
+      - Kim, Y. Y., Je, I. G., Kim, M. J., **Kang, B. C.**, Choi, Y., Baek, M. C., ... & Kim, S. H. (2017). 2-Hydroxy-3-methoxybenzoic acid attenuates mast cell-mediated allergic reaction in mice via modulation of the FcεRI signaling pathway. Acta Pharmacologica Sinica, 38(1), 90-99.
+      - Kim, Y. Y., Lee, S., Kim, M. J., **Kang, B. C.**, Dhakal, H., Choi, Y. A., ... & Kim, S. H. (2017). Tyrosol attenuates lipopolysaccharide-induced acute lung injury by inhibiting the inflammatory response and maintaining the alveolar capillary barrier. Food and Chemical Toxicology, 109, 526-533.
+      - [Patent] Primer set of food poisoning bacteria using next generation sequencing and detection method using thereof (2022)
+      - [Patent] PRIMER SET FOR DETECTING FOOD POISONING BACTERIA USING A NEXT GENERATION SEQUENCING METHOD AND METHOD FOR DETECTING FOOD POISONING BACTERIA USING THE PRIMER SET
 
   - title: References
     layout: text
     content: | # this will include new lines to allow paragraphs
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
-
+      -	Prof. Gunhee Cho | Professor | wvx17@txstate.edu 
+        Mathematics Department, Texas State University, Texas 
+      -	Prof. Namkyung Kim | Assistant Professor | nortonnk@dst.ac.kr
+        Department of Biomedical Laboratory Science, Daejeon Institute of Science and Technology, South Korea
+      -	Prof. JinKyung Choi | Professor | jkchoi@jbnu.ac.kr 
+        Department of Immunology, Jeonbuk National University Medical School, South Korea
+      -	Dr. Jinjoo Kang | Lecturer | jinjoo1kang@gmail.com 
+        Department of Clinical Laboratory Science, Wonkwang Health Science University, South Korea
 # Footer
 footer_show_references: true
 # references_title: References on request (Override references text)
