@@ -106,9 +106,21 @@ content:
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         description: | # this will include new lines to allow paragraphs
-          - Assembled microbial genomes using multiple NGS platforms, including Illumina, Pacbio and Nanopore.
-          - Detected and corrected errors in genome assemblies using various tools and methods(eg. Unicycler, SPAdes, Canu, etc.).
-          - Annotated assembled genomes using public databases and in-house programs. 
+          My primary responsibility as a practitioner is to analyze microbial data. 
+          At our company, we use NGS sequencers to analyze microorganisms 
+          isolated and cultured from various samples. My role was to reconstruct 
+          complete microbial genome information using NGS data produced by the 
+          lab team. Initially, using only Illumina data, I frequently encountered 
+          situations where the assembly algorithm resulted in many contigs due to 
+          its limitations. After introducing a nanopore sequencer, we succeeded in 
+          constructing more than 90% complete genomes and have continued to provide this service.
+          Through this analysis work, I gained various practical insights. 
+          The most satisfying cases were when assembly resulted in a circular
+          genome in one attempt. However, sometimes, for various reasons, 
+          circular genome construction fails. The most common cause is low 
+          sequencing quality. In such cases, I discuss with the client and 
+          attempt scaffolding as much as possible, but if necessary, 
+          I use reference genomes for reference-assisted scaffolding before delivering the results.
       - layout: left # Work experience contents3 - comparative genomics
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
@@ -123,7 +135,13 @@ content:
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
+          To publish the constructed genome information, 
+          it is necessary to identify genomic characteristics or 
+          differences compared to previously registered species. 
+          In this process, analyses such as constructing phylogenetic 
+          trees based on Average Nucleotide Identity and comparing gene 
+          pool variations with existing species are required. I have experience in this area, 
+          using virulence factors and antibiotic resistance genes to perform comparative genetic analyses.
       - layout: left # Work experience contents4 - metagenomics
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
@@ -138,10 +156,20 @@ content:
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         description: | # this will include new lines to allow paragraphs
-          - Conducted 16S rRNA and shotgun metagenomic data analysis, including microbial community profiling and functional annotation.
-          - Developed in-house programs for microbial genome assembly and comparative genomics.
-          - Maintained and optimized bioinformatics pipelines using Git and Snakemake.
-          - Collaborated with government agencies on various projects related to metagenomics and genomics.
+          For metagenome analysis, we receive samples 
+          from various sources for different requests. Unlike genome analysis, 
+          which focuses solely on reconstructing genome information, metagenome 
+          analysis requires careful interpretation of results according to the client’s purpose.
+          A notable case was the “Incheon Chironomid Incident” in 2020. 
+          At that time, unidentified chironomid larvae entered households 
+          through tap water, and the Korea Water Resources Corporation 
+          requested our company to analyze samples from both the source 
+          water and households (with and without chironomid detection). 
+          Comprehensive beta diversity analysis revealed differences 
+          between source water and tap water, but no significant differences 
+          among tap water samples. These results were announced by the corporation, 
+          confirming that changes in the microbial community were not significantly 
+          correlated with chironomid proliferation.
       - layout: left # Work experience contents5 - transcriptomics
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
@@ -156,9 +184,17 @@ content:
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         description: | # this will include new lines to allow paragraphs
-          - Conducted RNA-Seq data analysis, including differential expression analysis and functional annotation.(DESeq2, EdgeR, etc.)
-          - Developed in-house programs for RNA-Seq data analysis and visualization.
-          - Collaborated with researchers on various projects related to transcriptomics and gene expression analysis.
+          Genome analysis alone has limitations in fully understanding 
+          the functional characteristics or environmental responses of microorganisms. 
+          To overcome these limitations, I have experience leading RNA-Seq-based transcriptome 
+          analysis projects. In these projects, I quantitatively analyzed changes in microbial 
+          gene expression under specific environmental conditions (e.g., stress, antibiotic exposure). 
+          I collaborated with the lab team throughout the process, from sample preparation and RNA 
+          extraction to library construction, sequencing, data cleaning, and differential gene 
+          expression (DEG) analysis. The analysis identified gene groups with significantly increased 
+          expression under certain stress conditions, helping to elucidate microbial adaptation mechanisms. 
+          Additionally, I provided clients with practical insights through functional annotation and 
+          pathway analysis of differentially expressed genes.
       - layout: left # Work experience contents6 - develop in silico primer design as an in-house program
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
@@ -174,7 +210,18 @@ content:
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
           
         description: | # this will include new lines to allow paragraphs
-
+          During the development of the NGS panel kit, 
+          designing primers targeting specific genetic regions of 
+          various foodborne pathogens was a key challenge. As commercial 
+          software could not efficiently design primers meeting our requirements, 
+          I developed in-house primer discovery software. This software automatically 
+          analyzes large-scale genome data to rapidly generate candidate primers that 
+          are specific to target genes and minimize cross-reactivity. I utilized Python 
+          and bioinformatics libraries in the development process, and the software was 
+          applied to the actual panel kit development, where it demonstrated a high success 
+          rate through experimental validation. Since adopting this system, the time and cost 
+          required for primer design have been significantly reduced, contributing 
+          to improved efficiency in our R&D operations.
   - title: Experience
     layout: list
     content:
