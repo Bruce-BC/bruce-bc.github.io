@@ -68,10 +68,10 @@ content:
   - title: Work Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
-      - layout: left # Work experience contents1 - metagenomics
+      - layout: left # Work experience contents1 - design ngs panel marker for foodbourne pathogen detection
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
-        title: Metagenomics
+        title: Design NGS panel for foodbourne pathogen detection
         # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         # link_text: Link Text
         # additional_links:
@@ -82,10 +82,16 @@ content:
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         description: | # this will include new lines to allow paragraphs
-          - Conducted 16S rRNA and shotgun metagenomic data analysis, including microbial community profiling and functional annotation.
-          - Developed in-house programs for microbial genome assembly and comparative genomics.
-          - Maintained and optimized bioinformatics pipelines using Git and Snakemake.
-          - Collaborated with government agencies on various projects related to metagenomics and genomics.
+          This was the first project I took the lead on at my company. 
+          In line with our core value of leading food safety, 
+          we embarked on the development of a kit for multiplex
+          detection of foodborne pathogens using NGS technology. 
+          The development period was set at one year, during 
+          which I developed multiple sets of optimal primers 
+          for each pathogen and built the necessary bioinformatics 
+          pipeline for detection. As a result, we successfully 
+          launched the NGS panel kit to the market, and 
+          this achievement contributed to the company’s IPO.
       - layout: left # Work experience contents2 - genome assembly
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
@@ -103,7 +109,40 @@ content:
           - Assembled microbial genomes using multiple NGS platforms, including Illumina, Pacbio and Nanopore.
           - Detected and corrected errors in genome assemblies using various tools and methods(eg. Unicycler, SPAdes, Canu, etc.).
           - Annotated assembled genomes using public databases and in-house programs. 
-      - layout: left # Work experience contents3 - transcriptomics
+      - layout: left # Work experience contents3 - comparative genomics
+        border: weak  # Value of `weak` will display a weak border below this item. # Any 
+                      # other value (or no value) means no border will be displayed
+        title: Comparative genomics
+        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        # link_text: Link Text
+        # additional_links:
+        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
+        #     icon: fab fa-github
+        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
+        #     icon: fab fa-github
+        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        description: | # this will include new lines to allow paragraphs
+          Description about the work on/with the project
+      - layout: left # Work experience contents4 - metagenomics
+        border: weak  # Value of `weak` will display a weak border below this item. # Any 
+                      # other value (or no value) means no border will be displayed
+        title: Metagenomics
+        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        # link_text: Link Text
+        # additional_links:
+        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
+        #     icon: fab fa-github
+        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
+        #     icon: fab fa-github
+        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        description: | # this will include new lines to allow paragraphs
+          - Conducted 16S rRNA and shotgun metagenomic data analysis, including microbial community profiling and functional annotation.
+          - Developed in-house programs for microbial genome assembly and comparative genomics.
+          - Maintained and optimized bioinformatics pipelines using Git and Snakemake.
+          - Collaborated with government agencies on various projects related to metagenomics and genomics.
+      - layout: left # Work experience contents5 - transcriptomics
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
         title: Transcriptomics
@@ -120,23 +159,7 @@ content:
           - Conducted RNA-Seq data analysis, including differential expression analysis and functional annotation.(DESeq2, EdgeR, etc.)
           - Developed in-house programs for RNA-Seq data analysis and visualization.
           - Collaborated with researchers on various projects related to transcriptomics and gene expression analysis.
-      - layout: left # Work experience contents4 - design ngs panel marker for foodbourne pathogen detection
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Design NGS panel for foodbourne pathogen detection
-        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        # link_text: Link Text
-        # additional_links:
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        description: | # this will include new lines to allow paragraphs
-          - Appropriate marker selection for multiple 
-          - 
-      - layout: left # Work experience contents5 - develop in silico primer design as an in-house program
+      - layout: left # Work experience contents6 - develop in silico primer design as an in-house program
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
         title: Develop <italic>in silico</italic> primer design as an in-house program
@@ -151,38 +174,7 @@ content:
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
           
         description: | # this will include new lines to allow paragraphs
-          A
-      - layout: left # Work experience contents6 - comparative genomics
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Comparative genomics
-        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        # link_text: Link Text
-        # additional_links:
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
-      # test
-      - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
-        # additional_links:
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
+
   - title: Experience
     layout: list
     content:
