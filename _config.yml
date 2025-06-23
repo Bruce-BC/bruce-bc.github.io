@@ -198,7 +198,7 @@ content:
       - layout: left # Work experience contents6 - develop in silico primer design as an in-house program
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
-        title: Develop <italic>in silico</italic> primer design as an in-house program
+        title: In-house <italic>in silico</italic> Primer Discovery Software Development
         # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         # link_text: Link Text
         # additional_links:
