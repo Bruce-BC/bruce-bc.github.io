@@ -114,7 +114,7 @@ content:
           situations where the assembly algorithm resulted in many contigs due to 
           its limitations. After introducing a nanopore sequencer, we succeeded in 
           constructing more than 90% complete genomes and have continued to provide this service.
-          Through this analysis work, I gained various practical insights. 
+          <br>Through this analysis work, I gained various practical insights. 
           The most satisfying cases were when assembly resulted in a circular
           genome in one attempt. However, sometimes, for various reasons, 
           circular genome construction fails. The most common cause is low 
@@ -160,7 +160,7 @@ content:
           from various sources for different requests. Unlike genome analysis, 
           which focuses solely on reconstructing genome information, metagenome 
           analysis requires careful interpretation of results according to the client’s purpose.
-          A notable case was the “Incheon Chironomid Incident” in 2020. 
+          <br>A notable case was the “Incheon Chironomid Incident” in 2020. 
           At that time, unidentified chironomid larvae entered households 
           through tap water, and the Korea Water Resources Corporation 
           requested our company to analyze samples from both the source 
