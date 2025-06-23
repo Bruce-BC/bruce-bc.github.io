@@ -81,8 +81,6 @@ content:
         #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Analysis of 16S rRNA and shotgun metagenomic data, including microbial community profiling and functional annotation.
         description: | # this will include new lines to allow paragraphs
           - Conducted 16S rRNA and shotgun metagenomic data analysis, including microbial community profiling and functional annotation.
           - Developed in-house programs for microbial genome assembly and comparative genomics.
@@ -101,8 +99,6 @@ content:
         #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Construction of microbial genome using <italic> de novo </italic> and reference-assisted assembly methods.
         description: | # this will include new lines to allow paragraphs
           - Assembled microbial genomes using multiple NGS platforms, including Illumina, Pacbio and Nanopore.
           - Detected and corrected errors in genome assemblies using various tools and methods(eg. Unicycler, SPAdes, Canu, etc.).
@@ -120,8 +116,6 @@ content:
         #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Analysis of RNA-Seq data, including differential expression analysis and functional annotation.
         description: | # this will include new lines to allow paragraphs
           - Conducted RNA-Seq data analysis, including differential expression analysis and functional annotation.(DESeq2, EdgeR, etc.)
           - Developed in-house programs for RNA-Seq data analysis and visualization.
@@ -139,8 +133,6 @@ content:
         #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Design NGS panel markers and bioinformatics pipeline for detection of Food poisoning bacteria notified by the Ministry of Food and Drug Safety (MFDS).
         description: | # this will include new lines to allow paragraphs
           - Appropriate marker selection for multiple 
           - 
@@ -157,10 +149,9 @@ content:
         #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Short overview of the project (optional)
+          
         description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
+          A
       - layout: left # Work experience contents6 - comparative genomics
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
@@ -174,8 +165,6 @@ content:
         #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Short overview of the project (optional)
         description: | # this will include new lines to allow paragraphs
           Description about the work on/with the project
       # test
@@ -192,8 +181,6 @@ content:
         #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Short overview of the project (optional)
         description: | # this will include new lines to allow paragraphs
           Description about the work on/with the project
   - title: Experience
@@ -204,8 +191,6 @@ content:
         sub_title: Bioinformatics specialist
         caption: 2020 - present
         link: Sanigen(https://sanigen.kr)
-        quote: >
-          Bioinformatics specialist with expertise in genomics and NGS data analysis
         description: | # this will include new lines to allow paragraphs
           - Whole genome sequencing(WGS) and microbial genome assembly(de novo, reference-assisted assembly), conduct microbiome analysis services.
           - Oversee analysis services, including developing NGS panel markers using comparative genomics and pan-genomics.
@@ -213,9 +198,6 @@ content:
           - Pipeline Maintenance(Git & Snakemake)
           - In-house program development; NGS panel marker development, microbial genome assembly, and microbial genomics analysis.
           - System Administrator; Server & Database management
-            - a
-            - b
-            - c
   - title: Education
     layout: list
     content:
@@ -223,16 +205,12 @@ content:
         title: Kyungpook National University of Hospital, School of Medicine
         sub_title: "M.S. (Major: Medical Science)"
         caption: 2016 - 2018
-        quote: >
-          Short institution or course description (optional)
         description: | # this will include new lines to allow paragraphs
           Description of qualification
       - layout: top-right # BS
         title: Kyungpook National University
         sub_title: "BA (Major: Biotechnology, Minor: Psychology)"
         caption: 2008 - 2016
-        quote: >
-          Short institution or course description (optional)
         description: | # this will include new lines to allow paragraphs
           Description of qualification
   - title: Publications
