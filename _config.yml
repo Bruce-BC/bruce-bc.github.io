@@ -238,18 +238,22 @@ content:
   - title: Education
     layout: list
     content:
-      - layout: top-right # MS
+      - layout: left # MS
         title: Kyungpook National University of Hospital, School of Medicine
         sub_title: "M.S. (Major: Medical Science)"
         caption: 2016 - 2018
         description: | # this will include new lines to allow paragraphs
-          Description of qualification
-      - layout: top-right # BS
+          - Conducted research on the effects of various compounds on mast cell-mediated allergic inflammation.
+          - Experimental techniques:
+            - In vitro cell culture, flow cytometry, ELISA, Western blotting, and animal experiments.
+            - Developed skills in experimental design, data analysis, and scientific writing.
+      - layout: left # BS
         title: Kyungpook National University
         sub_title: "BA (Major: Biotechnology, Minor: Psychology)"
         caption: 2008 - 2016
         description: | # this will include new lines to allow paragraphs
-          Description of qualification
+
+
   - title: Publications
     layout: text
     content: |
