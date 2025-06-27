@@ -52,18 +52,16 @@ additional_links:
 about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-    Hi! my name is Byung-cheol(Or Byeong-cheol) Kang. I've been working in bioinformatics field for over 6 years, and 
-    spent over 5 years in bioinformatics field, and have a strong interest in genomics and NGS data analysis.
-
-
-    Bioinformatics with expertise in genomics, metagenomics, and NGS data analysis. 
-    Eager to perform meaningful finding in n-dimensional data analysis through mathematical frameworks like optimal transport. 
-    Proficient in bioinformatics tools, programming, and systems. Over five years of field and managerial collaborative projects
-    with government agencies.
-
-    Skilled: <mark>Metagenomics</mark>, <mark>Genomics</mark>, <mark>NGS</mark>, <mark>Bioinformatics</mark>, <mark>Systems administration</mark>, <mark>Program development</mark>
-
-    Interested and Progressing: <mark>Optimal transport</mark>, <mark>Computational biology</mark>, <mark>Probability theory</mark>, <mark>Optimization</mark>, <mark>Machine learning</mark>
+    Hello! My name is Byung-Chul Kang. I am a bioinformatician with over six years of experience. 
+    Currently, I lead the bioinformatics team at Senigen, a food safety company, where I conduct 
+    a wide range of sequencing analyses.
+    <br>My ultimate goal is to systematically predict and elucidate complex phenomena occurring in living organisms. 
+    Drawing on my expertise in genomics, metagenomics, and bioinformatics, I aim to build meaningful 
+    models by integrating mathematical frameworks such as optimal transport, machine learning, 
+    probability theory, and probabilistic modeling. For example, there would be questions like 
+    “Why do some drugs only work for certain species?” These are the kinds of questions that 
+    inspire me—questions that demand answers. I am ready to pursue these challenges and am c
+    ommitted to dedicating myself to finding solutions.
 content:
   - title: Work Experience # Title for the section
     layout: list # Type of content section (list/text)
