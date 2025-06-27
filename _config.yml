@@ -66,7 +66,7 @@ content:
   - title: Project # Title for the section
     layout: list # Type of content section (list/text)
     content:
-      - layout: top # Work experience contents1 - design ngs panel marker for foodbourne pathogen detection
+      - layout: top-middle # Work experience contents1 - design ngs panel marker for foodbourne pathogen detection
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
         title: Design NGS panel for foodbourne pathogen detection
@@ -79,6 +79,8 @@ content:
         #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        quote: >
+          Multiplex detection of every foodborne pathogens using NGS technology and Bioinformatics 
         description: | # this will include new lines to allow paragraphs
           This was the first project I took the lead on at my company. 
           In line with our core value of leading food safety, 
@@ -90,7 +92,7 @@ content:
           pipeline for detection. As a result, we successfully 
           launched the NGS panel kit to the market, and 
           this achievement contributed to the company’s IPO.
-      - layout: top # Work experience contents6 - develop in silico primer design as an in-house program
+      - layout: top-middle # Work experience contents6 - develop in silico primer design as an in-house program
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
         title: In-house <italic>in silico</italic> Primer Discovery Software Development
@@ -104,6 +106,8 @@ content:
         #     icon: fab fa-github
         #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
           
+        quote: >
+          Automating the optimal primer selection process within a few hours
         description: | # this will include new lines to allow paragraphs
           During the development of the NGS panel kit, 
           designing primers targeting specific genetic regions of 
