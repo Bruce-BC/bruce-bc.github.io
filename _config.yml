@@ -63,7 +63,7 @@ about_content: | # this will include new lines to allow paragraphs
     inspire me—questions that demand answers. I am ready to pursue these challenges and am c
     ommitted to dedicating myself to finding solutions.
 content:
-  - title: Work Experience # Title for the section
+  - title: Project # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left # Work experience contents1 - design ngs panel marker for foodbourne pathogen detection
@@ -90,6 +90,37 @@ content:
           pipeline for detection. As a result, we successfully 
           launched the NGS panel kit to the market, and 
           this achievement contributed to the company’s IPO.
+      - layout: left # Work experience contents6 - develop in silico primer design as an in-house program
+        border: weak  # Value of `weak` will display a weak border below this item. # Any 
+                      # other value (or no value) means no border will be displayed
+        title: In-house <italic>in silico</italic> Primer Discovery Software Development
+        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        # link_text: Link Text
+        # additional_links:
+        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
+        #     icon: fab fa-github
+        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
+        #     icon: fab fa-github
+        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+          
+        description: | # this will include new lines to allow paragraphs
+          During the development of the NGS panel kit, 
+          designing primers targeting specific genetic regions of 
+          various foodborne pathogens was a key challenge. As commercial 
+          software could not efficiently design primers meeting our requirements, 
+          I developed in-house primer discovery software. This software automatically 
+          analyzes large-scale genome data to rapidly generate candidate primers that 
+          are specific to target genes and minimize cross-reactivity. I utilized Python 
+          and bioinformatics libraries in the development process, and the software was 
+          applied to the actual panel kit development, where it demonstrated a high success 
+          rate through experimental validation. Since adopting this system, the time and cost 
+          required for primer design have been significantly reduced, contributing 
+          to improved efficiency in our R&D operations.
+
+  - title: Work Experience # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
       - layout: left # Work experience contents2 - genome assembly
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
@@ -193,37 +224,10 @@ content:
           expression under certain stress conditions, helping to elucidate microbial adaptation mechanisms. 
           Additionally, I provided clients with practical insights through functional annotation and 
           pathway analysis of differentially expressed genes.
-      - layout: left # Work experience contents6 - develop in silico primer design as an in-house program
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: In-house <italic>in silico</italic> Primer Discovery Software Development
-        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        # link_text: Link Text
-        # additional_links:
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          
-        description: | # this will include new lines to allow paragraphs
-          During the development of the NGS panel kit, 
-          designing primers targeting specific genetic regions of 
-          various foodborne pathogens was a key challenge. As commercial 
-          software could not efficiently design primers meeting our requirements, 
-          I developed in-house primer discovery software. This software automatically 
-          analyzes large-scale genome data to rapidly generate candidate primers that 
-          are specific to target genes and minimize cross-reactivity. I utilized Python 
-          and bioinformatics libraries in the development process, and the software was 
-          applied to the actual panel kit development, where it demonstrated a high success 
-          rate through experimental validation. Since adopting this system, the time and cost 
-          required for primer design have been significantly reduced, contributing 
-          to improved efficiency in our R&D operations.
   - title: Experience
     layout: list
     content:
-      - layout: right
+      - layout: left
         title: Sanigen inc.
         sub_title: Bioinformatics specialist
         caption: 2020 - present
