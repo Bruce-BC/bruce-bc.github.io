@@ -69,7 +69,7 @@ content:
       - layout: top-middle # Work experience contents1 - design ngs panel marker for foodbourne pathogen detection
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
-        title: Design NGS panel for foodbourne pathogen detection
+        title: Design NGS panel for foodbourne pathogen detection<p> 
         # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         # link_text: Link Text
         # additional_links:
@@ -95,7 +95,7 @@ content:
       - layout: top-middle # Work experience contents6 - develop in silico primer design as an in-house program
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
-        title: In-house <italic>in silico</italic> Primer Discovery Software Development
+        title: In-house <italic>in silico</italic> Primer Discovery Software Development<p> 
         # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         # link_text: Link Text
         # additional_links:
