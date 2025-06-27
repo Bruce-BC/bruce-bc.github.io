@@ -55,7 +55,7 @@ about_content: | # this will include new lines to allow paragraphs
     Hello! My name is Byung-Chul Kang. I am a bioinformatician with over six years of experience. 
     Currently, I lead the bioinformatics team at Senigen, a food safety company, where I conduct 
     a wide range of sequencing analyses.
-    <br>My ultimate goal is to systematically predict and elucidate complex phenomena occurring in living organisms. 
+    <p>My ultimate goal is to systematically predict and elucidate complex phenomena occurring in living organisms. 
     Drawing on my expertise in genomics, metagenomics, and bioinformatics, I aim to build meaningful 
     models by integrating mathematical frameworks such as optimal transport, machine learning, 
     probability theory, and probabilistic modeling. For example, there would be questions like 
@@ -112,7 +112,7 @@ content:
           situations where the assembly algorithm resulted in many contigs due to 
           its limitations. After introducing a nanopore sequencer, we succeeded in 
           constructing more than 90% complete genomes and have continued to provide this service.
-          <br>Through this analysis work, I gained various practical insights. 
+          <p>Through this analysis work, I gained various practical insights. 
           The most satisfying cases were when assembly resulted in a circular
           genome in one attempt. However, sometimes, for various reasons, 
           circular genome construction fails. The most common cause is low 
@@ -158,7 +158,7 @@ content:
           from various sources for different requests. Unlike genome analysis, 
           which focuses solely on reconstructing genome information, metagenome 
           analysis requires careful interpretation of results according to the client’s purpose.
-          <br>A notable case was the “Incheon Chironomid Incident” in 2020. 
+          <p>A notable case was the “Incheon Chironomid Incident” in 2020. 
           At that time, unidentified chironomid larvae entered households 
           through tap water, and the Korea Water Resources Corporation 
           requested our company to analyze samples from both the source 
