@@ -66,7 +66,7 @@ content:
   - title: Project # Title for the section
     layout: list # Type of content section (list/text)
     content:
-      - layout: left # Work experience contents1 - design ngs panel marker for foodbourne pathogen detection
+      - layout: top # Work experience contents1 - design ngs panel marker for foodbourne pathogen detection
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
         title: Design NGS panel for foodbourne pathogen detection
@@ -90,7 +90,7 @@ content:
           pipeline for detection. As a result, we successfully 
           launched the NGS panel kit to the market, and 
           this achievement contributed to the company’s IPO.
-      - layout: left # Work experience contents6 - develop in silico primer design as an in-house program
+      - layout: top # Work experience contents6 - develop in silico primer design as an in-house program
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
         title: In-house <italic>in silico</italic> Primer Discovery Software Development
