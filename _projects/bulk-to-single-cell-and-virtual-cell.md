@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bulk-to-Single-Cell and Virtual-Cell Research
-description: Current-role methods connecting bulk transcriptomes to single-cell references and evaluating computational cell models.
+description: Wittgenbio research connecting bulk transcriptomes to single-cell references and evaluating computational cell models.
 img:
 importance: 1
 category: research
@@ -11,9 +11,9 @@ mermaid:
   zoomable: true
 ---
 
-## Current-role scope
+## Wittgenbio research scope
 
-At Microiotix, I work on **bulk-to-single-cell inference** and **virtual-cell research** alongside bacterial and bacteriophage genomics. This public case study describes the analytical questions and validation structure; private datasets, model implementations, and performance metrics are not disclosed.
+At **Wittgenbio**, I develop **bulk-to-single-cell inference** approaches and contribute to **virtual-cell research**. This work is separate from my bacteriophage research at Microiotix. The public case study describes the analytical questions and validation structure; private datasets, model implementations, and performance metrics are not disclosed.
 
 ## Bulk-to-single-cell workflow
 

@@ -18,19 +18,25 @@ cv:
 
   sections:
     Experience:
+      - company: Wittgenbio
+        position: Computational Biology Research
+        end_date: present
+        summary: Develop bulk-to-single-cell inference approaches and contribute to virtual-cell research.
+        highlights:
+          - Develop and evaluate bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references while retaining validation and uncertainty evidence.
+          - Contribute to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation of predicted states or responses.
+
       - company: Microiotix
         position: Bioinformatician
         start_date: 2026-07
         end_date: present
-        summary: Analyze bacterial and bacteriophage genomes and develop evidence-driven approaches for phage design, bulk-to-single-cell inference, and virtual-cell research.
+        summary: Analyze bacterial and bacteriophage genomes and develop evidence-driven resources for phage target selection and in silico design.
         highlights:
           - Analyze bacterial genomes for host context and phage genomes for quality, annotation, taxonomy, lifestyle, packaging, and tail-gene interpretation.
           - Built and evaluated a Klebsiella pneumoniae tail/RBP and KL-type reference database with 7,759 curated sequences, source traceability, confidence labels, and experimentally verified targets explicitly flagged.
           - Applied sequence- and structure-based protein analysis with Phold, ProstT5, Foldseek, and experimental PDB references to identify divergent tail proteins and assess engineered RBP designs.
           - Integrated CheckV, Pharokka, Phold, BACPHLIP, PhaTYP, PhaGCN, and PhageTerm evidence in an anonymized four-genome case study; the tools independently converged on lytic Przondovirus genomes with short DTR packaging.
           - Developed an in silico tail-RBP design workflow that evaluates anchor compatibility, KL-target evidence, taxonomic context, cluster-label conflicts, and structural retention before producing genome and protein design files.
-          - Develop and evaluate bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references while retaining validation and uncertainty evidence.
-          - Contribute to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation of predicted states or responses.
 
       - company: Sanigen
         position: Bioinformatics Team Lead · Senior Researcher
@@ -44,15 +50,6 @@ cv:
           - Maintained reproducible environments with Conda, Docker, Apptainer, and Linux-based compute infrastructure.
           - Developed in-house analysis utilities for NGS panel markers, microbial assemblies, and comparative-genomics investigations.
           - Coordinated analysis operations, review, interpretation, and delivery across a conservative lower bound of 98 archived project orders.
-
-      - company: GinaPath
-        position: Business Development
-        location: South Korea
-        start_date: 2019-11
-        end_date: 2020-01
-        highlights:
-          - Supported business development for genomics-related services and customer requirements.
-          - Translated technical capabilities into project scopes and client-facing communication.
 
     Education:
       - institution: Kyungpook National University School of Medicine
@@ -99,7 +96,7 @@ cv:
           - Prioritized an engineering candidate using same-genus context, a 129-aa anchor alignment spanning 99.2% of the region, experimental PDB support, and predicted structural retention.
 
       - name: Bulk-to-Single-Cell and Virtual-Cell Research
-        summary: Current-role research connecting bulk expression profiles to single-cell references and evaluating computational representations of cellular state and response.
+        summary: Wittgenbio research connecting bulk expression profiles to single-cell references and evaluating computational representations of cellular state and response.
         highlights:
           - Structure bulk-to-single-cell analyses around reference curation, feature alignment, cell-composition and state inference, and uncertainty-aware validation.
           - Develop and evaluate virtual-cell workflows with explicit train/evaluation boundaries and biological plausibility review.

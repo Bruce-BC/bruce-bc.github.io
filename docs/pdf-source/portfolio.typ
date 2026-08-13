@@ -17,13 +17,17 @@
 ]
 
 #v(10mm)
-#section("CURRENT ROLE")
+#section("CURRENT ROLES")
 #role("Microiotix", "Bioinformatician", "2026.07 - PRESENT", [
   - Bacterial genome analysis for host context and phage genome analysis across QC, annotation, taxonomy, lifestyle, packaging, and tail biology.
   - *K. pneumoniae* tail/RBP and KL-type database construction and evaluation.
   - Protein structure prediction, structure-based annotation, and reference-structure comparison.
   - In silico tail-RBP design using explicit attachment, target, taxonomy, and structural criteria.
-  - Bulk-to-single-cell inference and virtual-cell modeling with validation, uncertainty, and biological-interpretation boundaries.
+])
+
+#role("Wittgenbio", "Computational Biology Research", "CURRENT", [
+  - Develop bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references.
+  - Contribute to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation.
 ])
 
 #section("CAREER SNAPSHOT")
@@ -36,7 +40,7 @@
 
 #v(4mm)
 #note[
-  *Past platform evidence.* The integrated workflow and operational results in this portfolio describe work performed at Sanigen (2020.03 - 2025.10). They are not presented as Microiotix assets or current-company outcomes.
+  *Past platform evidence.* The integrated workflow and operational results in this portfolio describe work performed at Sanigen (2020.03 - 2025.10). They are not presented as Microiotix or Wittgenbio assets or current-company outcomes.
 ]
 
 #pagebreak()
@@ -160,7 +164,7 @@ Only tools connected to active Snakemake includes and rules are listed as active
 The design bench supports domain swaps, full-module replacements, and tandem additions, with genome FASTA, module multi-FASTA, GenBank, and protein FASTA export. Host K-locus assignments, predicted RBP folding, adsorption, host range, and lytic activity still require bacterial-genome and wet-lab validation.
 
 #pagebreak()
-#kicker("Project 06 · Current role research")
+#kicker("Project 06 · Wittgenbio research")
 #linebreak()
 #text(size: 21pt, weight: "bold", fill: navy)[Bulk-to-Single-Cell and Virtual-Cell Research]
 

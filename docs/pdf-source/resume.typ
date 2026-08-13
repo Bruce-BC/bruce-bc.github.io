@@ -21,7 +21,7 @@
 )
 
 #section("PROFILE")
-Bioinformatician with more than six years of experience connecting bacterial and bacteriophage genomics, bulk-to-single-cell inference, virtual-cell research, protein-structure analysis, reproducible workflow engineering, and research operations. Currently at *Microiotix*, developing evidence-driven approaches for phage design and computational cell-state research. Previously led a five-person bioinformatics team and built shared Snakemake workflows for 16S, ITS, WGS, and hybrid assembly.
+Bioinformatician with more than six years of experience connecting bacterial and bacteriophage genomics, bulk-to-single-cell inference, virtual-cell research, protein-structure analysis, reproducible workflow engineering, and research operations. At *Microiotix*, I work on phage genomics and in silico design; at *Wittgenbio*, I work on bulk-to-single-cell inference and virtual-cell research. Previously led a five-person bioinformatics team and built shared Snakemake workflows for 16S, ITS, WGS, and hybrid assembly.
 
 #grid(
   columns: (1fr, 1fr, 1fr, 1fr),
@@ -34,13 +34,17 @@ Bioinformatician with more than six years of experience connecting bacterial and
 
 #section("EXPERIENCE")
 
+#role("Wittgenbio", "Computational Biology Research", "CURRENT", [
+  - Develop and evaluate bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references while retaining validation and uncertainty evidence.
+  - Contribute to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation of predicted states or responses.
+])
+
 #role("Microiotix", "Bioinformatician", "2026.07 - PRESENT", [
   - Analyze bacterial genomes for host context and phage genomes for quality, annotation, taxonomy, lifestyle, packaging, and tail-gene interpretation.
   - Built and evaluated a *Klebsiella pneumoniae* tail/RBP and KL-type resource with 7,759 curated sequences, traceable sources, confidence labels, and verified targets explicitly flagged.
   - Apply Phold, ProstT5, Foldseek, and experimental PDB references to structure-informed annotation and engineered-RBP assessment.
   - Integrated CheckV, Pharokka, Phold, BACPHLIP, PhaTYP, PhaGCN, and PhageTerm in an anonymized four-genome study that converged on lytic Przondovirus genomes with short DTR packaging.
   - Develop tail-RBP design candidates using anchor compatibility, capsule-target evidence, taxonomic context, cluster conflicts, and structural retention.
-  - Develop bulk-to-single-cell inference and virtual-cell evaluation workflows with explicit reference, validation, uncertainty, and biological-interpretation boundaries.
 ])
 
 #role("Sanigen", "Bioinformatics Team Lead · Senior Researcher", "2020.03 - 2025.10", [
@@ -49,10 +53,6 @@ Bioinformatician with more than six years of experience connecting bacterial and
   - Standardized execution with Conda, Docker, and Apptainer across Linux compute environments; wrote Python, R, and Bash utilities for QC, analysis, visualization, and reporting.
   - Supported comparative-genomics marker discovery and foodborne-pathogen NGS panel development that contributed to two 2023 papers and one joint patent.
   - Coordinated analysis review and delivery across a conservative lower bound of 98 archived project orders.
-])
-
-#role("GinaPath", "Business Development", "2019.11 - 2020.01", [
-  - Supported genomics-service requirements, project scoping, and client-facing technical communication.
 ])
 
 #pagebreak()
@@ -79,7 +79,7 @@ Bioinformatician with more than six years of experience connecting bacterial and
     Connected host and phage genomics to KL-type evidence, protein structure comparison, and reproducible design exports. Prioritized one candidate with a 129-aa anchor alignment spanning 99.2% of the region and experimental structure support.
 
     #v(7pt)
-    #kicker("Current research")
+    #kicker("Wittgenbio")
     #h(4pt)
     *Bulk-to-single-cell and virtual-cell research* \
     Connect bulk expression profiles to curated single-cell references for cell-composition and state inference, and evaluate computational cell models against held-out and biologically interpretable evidence.
