@@ -45,6 +45,15 @@
     }
   };
 
+  const sizeResponsiveSvg = (wrapper, svg) => {
+    if (wrapper.dataset.diagramMode !== "mobile") return;
+    const naturalWidth = svg.viewBox?.baseVal?.width;
+    if (!naturalWidth) return;
+    const availableWidth = svg.parentElement?.clientWidth || naturalWidth;
+    const scale = Math.min(1.1, availableWidth / naturalWidth);
+    wrapper.style.setProperty("--workflow-svg-width", `${naturalWidth * scale}px`);
+  };
+
   const prepareResponsiveSource = (wrapper) => {
     const source = wrapper.querySelector("pre > code.language-mermaid");
     if (!source) return;
@@ -77,6 +86,7 @@
     const svg = wrapper.querySelector("pre.mermaid svg");
     if (!explorer || !svg) return false;
     disableWheelZoom(svg);
+    sizeResponsiveSvg(wrapper, svg);
 
     const rows = [...explorer.querySelectorAll("tbody tr[data-tool-node]")];
     const matchingRows = rows.filter((row) => row.dataset.toolNode === nodeId);
@@ -103,6 +113,7 @@
     const svg = wrapper.querySelector("pre.mermaid svg");
     if (!explorer || !svg) return false;
     disableWheelZoom(svg);
+    sizeResponsiveSvg(wrapper, svg);
 
     const rows = [...explorer.querySelectorAll("tbody tr[data-tool-node]")];
     const selection = explorer.querySelector("[data-tool-selection]");
@@ -150,6 +161,20 @@
   const wireAll = () => {
     document.querySelectorAll(".project-tool-workflow").forEach(wireExplorer);
   };
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const expectedMode = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches ? "mobile" : "desktop";
+      const currentMode = document.querySelector(".project-tool-workflow")?.dataset.diagramMode;
+      if (currentMode && currentMode !== expectedMode) {
+        window.location.reload();
+        return;
+      }
+      wireAll();
+    }, 160);
+  });
 
   const observer = new MutationObserver(wireAll);
   observer.observe(document.documentElement, { childList: true, subtree: true });

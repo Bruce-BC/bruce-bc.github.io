@@ -132,12 +132,13 @@
   }
 
   .project-tool-workflow > pre.mermaid svg {
+    width: min(100%, var(--workflow-svg-width, 100%)) !important;
     min-width: 0;
   }
 
   .project-tool-workflow > pre.mermaid .nodeLabel,
   .project-tool-workflow > pre.mermaid .edgeLabel {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
     line-height: 1.25 !important;
   }
 
