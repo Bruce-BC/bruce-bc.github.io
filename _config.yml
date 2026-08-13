@@ -1,315 +1,190 @@
 # Site
-repository: Git repository where your resume will be hosted, only required if you are hosting on GitHub (eg. sproogen/modern-resume-theme)
-# favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
+repository: Bruce-BC/bruce-bc.github.io
+favicon: assets/favicon.ico
+lang: en
+description: Byung-cheol Kang — Senior Bioinformatician in microbial genomics, metagenomics, and workflow engineering.
 
 # Content configuration version
 version: 2
 
-# Personal info
+# Personal information
 name: Byung-cheol Kang
-title: Bioinformatics specialist
+title: Senior Bioinformatician | Microbial Genomics and Workflow Engineering
 email: sentim2@gmail.com
-# email_title: Email (Email title override)
-# phone: (+82)10-5366-3411
-# phone_title: Phone (Phone title override)
-# website: Your website (eg. https://google.com)(optional)
-# website_title: Web (Website title override)
-
-# Dark Mode (true/false/never)
-darkmode: false
-
-# Social links
-# twitter_username: jekyllrb
-github_username:  Bruce-BC
-# stackoverflow_username: "00000001"
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-# instagram_username: jekyll
+phone: (+82) 10-5366-3411
+website: https://bruce-bc.github.io
+github_username: Bruce-BC
 linkedin_username: byungcheol-kang-67973311b
-# jxing_username: jekyll
-# pinterest_username: jekyll
-# youtube_username: brucekang6474
 orcid_username: 0000-0002-3015-0064
 googlescholar_username: ccNz2toAAAAJ
+additional_links:
+  - title: Resume PDF
+    icon: fas fa-file-pdf
+    url: https://bruce-bc.github.io/assets/documents/Byungcheol_Kang_Bioinformatics_Resume.pdf
+  - title: Portfolio PDF
+    icon: fas fa-book-open
+    url: https://bruce-bc.github.io/assets/documents/Byungcheol_Kang_Bioinformatics_Portfolio.pdf
 
-# Additional icon links
-# additional_links:
-# - title: Link name
-#   icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-#   url: Link url (eg. https://google.com)
-# - title: another link
-#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-#   url: Link url (eg. https://google.com)
+# Theme
+darkmode: false
 
-# Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
-
-# About Section
-about_title: About Me
+# Profile
+about_title: Profile
 about_profile_image: images/profile.jpg
-about_content: | # this will include new lines to allow paragraphs
-    Hello! My name is Byung-Chul Kang. I am a bioinformatician with over six years of experience. 
-    Currently, I lead the bioinformatics team at Senigen, a food safety company, where I conduct 
-    a wide range of sequencing analyses.
-    <p>My ultimate goal is to systematically predict and elucidate complex phenomena occurring in living organisms. 
-    Drawing on my expertise in genomics, metagenomics, and bioinformatics, I aim to build meaningful 
-    models by integrating mathematical frameworks such as optimal transport, machine learning, 
-    probability theory, and probabilistic modeling. For example, there would be questions like 
-    “Why do some drugs only work for certain species?” These are the kinds of questions that 
-    inspire me—questions that demand answers. I am ready to pursue these challenges and am c
-    ommitted to dedicating myself to finding solutions.
-content:
-  - title: Project # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: top-middle # Work experience contents1 - design ngs panel marker for foodbourne pathogen detection
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Design NGS panel for foodbourne pathogen detection<p> 
-        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        # link_text: Link Text
-        # additional_links:
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Multiplex detection of every foodborne pathogens using NGS technology and Bioinformatics 
-        description: | # this will include new lines to allow paragraphs
-          This was the first project I took the lead on at my company. 
-          In line with our core value of leading food safety, 
-          we embarked on the development of a kit for multiplex
-          detection of foodborne pathogens using NGS technology. 
-          The development period was set at one year, during 
-          which I developed multiple sets of optimal primers 
-          for each pathogen and built the necessary bioinformatics 
-          pipeline for detection. As a result, we successfully 
-          launched the NGS panel kit to the market, and 
-          this achievement contributed to the company’s IPO.
-      - layout: top-middle # Work experience contents6 - develop in silico primer design as an in-house program
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: In-house <italic>in silico</italic> Primer Discovery Software Development<p> 
-        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        # link_text: Link Text
-        # additional_links:
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          
-        quote: >
-          Automating the optimal primer selection process within a few hours
-        description: | # this will include new lines to allow paragraphs
-          During the development of the NGS panel kit, 
-          designing primers targeting specific genetic regions of 
-          various foodborne pathogens was a key challenge. As commercial 
-          software could not efficiently design primers meeting our requirements, 
-          I developed in-house primer discovery software. This software automatically 
-          analyzes large-scale genome data to rapidly generate candidate primers that 
-          are specific to target genes and minimize cross-reactivity. I utilized Python 
-          and bioinformatics libraries in the development process, and the software was 
-          applied to the actual panel kit development, where it demonstrated a high success 
-          rate through experimental validation. Since adopting this system, the time and cost 
-          required for primer design have been significantly reduced, contributing 
-          to improved efficiency in our R&D operations.
+about_content: |
+  I am a bioinformatician and team lead with **6+ years of industry experience** connecting microbial and phage genomics, metagenomics, pipeline engineering, analysis operations, and scientific communication.
 
-  - title: Work Experience # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left # Work experience contents2 - genome assembly
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Genome assembly
-        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        # link_text: Link Text
-        # additional_links:
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        description: | # this will include new lines to allow paragraphs
-          My primary responsibility as a practitioner is to analyze microbial data. 
-          At our company, we use NGS sequencers to analyze microorganisms 
-          isolated and cultured from various samples. My role was to reconstruct 
-          complete microbial genome information using NGS data produced by the 
-          lab team. Initially, using only Illumina data, I frequently encountered 
-          situations where the assembly algorithm resulted in many contigs due to 
-          its limitations. After introducing a nanopore sequencer, we succeeded in 
-          constructing more than 90% complete genomes and have continued to provide this service.
-          <p>Through this analysis work, I gained various practical insights. 
-          The most satisfying cases were when assembly resulted in a circular
-          genome in one attempt. However, sometimes, for various reasons, 
-          circular genome construction fails. The most common cause is low 
-          sequencing quality. In such cases, I discuss with the client and 
-          attempt scaffolding as much as possible, but if necessary, 
-          I use reference genomes for reference-assisted scaffolding before delivering the results.
-      - layout: left # Work experience contents3 - comparative genomics
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Comparative genomics
-        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        # link_text: Link Text
-        # additional_links:
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        description: | # this will include new lines to allow paragraphs
-          To publish the constructed genome information, 
-          it is necessary to identify genomic characteristics or 
-          differences compared to previously registered species. 
-          In this process, analyses such as constructing phylogenetic 
-          trees based on Average Nucleotide Identity and comparing gene 
-          pool variations with existing species are required. I have experience in this area, 
-          using virulence factors and antibiotic resistance genes to perform comparative genetic analyses.
-      - layout: left # Work experience contents4 - metagenomics
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Metagenomics
-        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        # link_text: Link Text
-        # additional_links:
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        description: | # this will include new lines to allow paragraphs
-          For metagenome analysis, we receive samples 
-          from various sources for different requests. Unlike genome analysis, 
-          which focuses solely on reconstructing genome information, metagenome 
-          analysis requires careful interpretation of results according to the client’s purpose.
-          <p>A notable case was the “Incheon Chironomid Incident” in 2020. 
-          At that time, unidentified chironomid larvae entered households 
-          through tap water, and the Korea Water Resources Corporation 
-          requested our company to analyze samples from both the source 
-          water and households (with and without chironomid detection). 
-          Comprehensive beta diversity analysis revealed differences 
-          between source water and tap water, but no significant differences 
-          among tap water samples. These results were announced by the corporation, 
-          confirming that changes in the microbial community were not significantly 
-          correlated with chironomid proliferation.
-      - layout: left # Work experience contents5 - transcriptomics
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Transcriptomics
-        # link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        # link_text: Link Text
-        # additional_links:
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        #   - title:  Github page for project (eg. sproogen/modern-resume-theme)
-        #     icon: fab fa-github
-        #     url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        description: | # this will include new lines to allow paragraphs
-          Genome analysis alone has limitations in fully understanding 
-          the functional characteristics or environmental responses of microorganisms. 
-          To overcome these limitations, I have experience leading RNA-Seq-based transcriptome 
-          analysis projects. In these projects, I quantitatively analyzed changes in microbial 
-          gene expression under specific environmental conditions (e.g., stress, antibiotic exposure). 
-          I collaborated with the lab team throughout the process, from sample preparation and RNA 
-          extraction to library construction, sequencing, data cleaning, and differential gene 
-          expression (DEG) analysis. The analysis identified gene groups with significantly increased 
-          expression under certain stress conditions, helping to elucidate microbial adaptation mechanisms. 
-          Additionally, I provided clients with practical insights through functional annotation and 
-          pathway analysis of differentially expressed genes.
-  - title: Experience
+  My work spans WGS, hybrid assembly, 16S/ITS and shotgun metagenomics, comparative-genomics marker discovery, and reproducible workflow development. I focus on turning complex sequencing data into maintainable analysis systems and decisions that researchers can act on.
+
+content:
+  - title: Career Snapshot
+    layout: text
+    content: |
+      - Lead analysis operations, quality review, scientific support, and onboarding for a **five-person bioinformatics team**.
+      - Integrated **16S, ITS, Hybrid, and WGS** analyses behind a shared Snakemake entry point and containerized environments.
+      - Supported at least **98 distinct analysis order codes** found in archived project communications; this is a conservative lower bound, not a claim of total workload.
+      - Co-authored **seven SCI(E) papers** and contributed to **one patent** for an NGS-based foodborne-pathogen detection method.
+
+      [Download resume (PDF)](https://bruce-bc.github.io/assets/documents/Byungcheol_Kang_Bioinformatics_Resume.pdf) · [Download project portfolio (PDF)](https://bruce-bc.github.io/assets/documents/Byungcheol_Kang_Bioinformatics_Portfolio.pdf)
+
+  - title: Professional Experience
     layout: list
     content:
       - layout: left
-        title: Sanigen inc.
-        sub_title: Bioinformatics specialist
-        caption: 2020 - present
-        link: Sanigen(https://sanigen.kr)
-        description: | # this will include new lines to allow paragraphs
-          - Whole genome sequencing(WGS) and microbial genome assembly(de novo, reference-assisted assembly), conduct microbiome analysis services.
-          - Oversee analysis services, including developing NGS panel markers using comparative genomics and pan-genomics.
-          - To investigate microbial genomic characteristics, utilize various open-source tools, public databases, and in-house programs.
-          - Pipeline Maintenance(Git & Snakemake)
-          - In-house program development; NGS panel marker development, microbial genome assembly, and microbial genomics analysis.
-          - System Administrator; Server & Database management
+        border: weak
+        title: Sanigen Inc.
+        sub_title: Bioinformatics Team Lead / Senior Researcher
+        caption: Mar 2020 – Present
+        link: https://sanigen.kr
+        link_text: sanigen.kr
+        description: |
+          - Design and operate WGS, hybrid assembly, 16S/ITS amplicon, and shotgun-metagenome analysis services; oversee result review and scientific support.
+          - Analyze bacterial, bacteriophage, viral, fungal, and organelle genomes using de novo, hybrid, and reference-assisted assembly, annotation, and comparative genomics.
+          - Modularized the analysis platform with Snakemake and standardized runtime environments with Conda, Docker, and Singularity/Apptainer.
+          - Automated QC, taxonomic profiling, diversity analysis, AMR/virulence/mobile-element searches, visualization, and HTML report generation with Python, R, and Bash.
+          - Translate research questions into analysis plans and communicate methods, limitations, and reanalysis decisions across laboratory, commercial, and research teams.
+          - Maintain Linux/HPC analysis infrastructure, NAS storage, Git-based source control, operating guides, and onboarding materials.
+
+      - layout: left
+        border: weak
+        title: GinaPath
+        sub_title: Business Development
+        caption: Nov 2019 – Jan 2020
+        description: |
+          - Supported quotations, schedules, study materials, reports, and partner communication for domestic and international preclinical and clinical projects.
+
+  - title: Selected Projects
+    layout: list
+    content:
+      - layout: top-middle
+        border: weak
+        title: Integrated Microbial Genomics and Metagenomics Platform
+        quote: Reproducible workflows from raw reads to quality-reviewed reports.
+        description: |
+          Consolidated fragmented 16S, ITS, Hybrid, and WGS assets into a shared Snakemake architecture. Modularized QC, database checks, assembly, annotation, statistics, visualization, HTML reporting, and delivery while separating server-specific profiles and container environments.
+
+          `Snakemake` `Python` `R` `Bash` `QIIME2` `DADA2` `Conda` `Apptainer` `Docker` `Git`
+        additional_links:
+          - title: Pipeline repository
+            icon: fab fa-github
+            url: https://github.com/Bruce-BC/Bioinformatics_pipeline
+
+      - layout: top-middle
+        border: weak
+        title: Comparative-Genomics Marker Discovery
+        quote: Candidate regions for strain- and species-specific detection.
+        description: |
+          Built filtered reference sets from public complete genomes and combined whole-genome comparison with k-mer searches to narrow target/non-target marker candidates. In one project, delivered an approximately 17 kb candidate region with FASTA and visualization outputs, while separating computational evidence from required wet-lab validation.
+
+          `Comparative genomics` `k-mer analysis` `NCBI RefSeq/GenBank` `Python` `R`
+
+      - layout: top-middle
+        border: weak
+        title: Phage Genome Assembly and Annotation
+        quote: Resolving fragmented assemblies and improving biological interpretation.
+        description: |
+          Applied parameter tuning and reference-assisted assembly to fragmented phage datasets and obtained a final one-contig result across the assessed samples. Supplemented hypothetical-protein-heavy Prokka output with RAST-tk and supported interpretation of circularity, depth, annotation, and prophage coordinates. Also evaluated an Oxford Nanopore bacterial Nextflow workflow for internal adoption.
+
+          `Illumina` `Oxford Nanopore` `Unicycler` `Prokka` `RAST-tk` `Nextflow/EPI2ME`
+
+      - layout: top-middle
+        border: weak
+        title: Foodborne-Pathogen NGS Detection Panel
+        quote: Comparative-genomics evidence translated into a multiplex detection workflow.
+        description: |
+          Contributed marker discovery, analysis-pipeline development, and a web interface for an NGS panel designed to detect multiple foodborne pathogens. The work led to two peer-reviewed papers in 2023 and a joint patent in 2022.
+
+          `Marker discovery` `NGS panel` `Pipeline development` `Web interface`
+
+      - layout: top-middle
+        border: weak
+        title: Lytic/Lysogenic Phage Classification Prototype
+        quote: Independent research prototype — external benchmarking pending.
+        description: |
+          Designed an explainable end-to-end classifier that combines genome quality, lysogeny markers, and independent lifestyle predictions from CheckV, Pharokka/Phold, BACPHLIP, and PhaTYP. Conflicting evidence remains explicitly flagged for review. The next step is evaluation on a curated lifestyle dataset with sensitivity, specificity, MCC, calibration, baseline comparisons, and ablation studies.
+
+          `CheckV` `Pharokka` `Phold` `BACPHLIP` `PhaTYP` `Evidence integration`
+
+  - title: Technical Expertise
+    layout: text
+    content: |
+      | Area | Skills and tools |
+      | :--- | :--- |
+      | **Languages** | Python, R, Bash, SQL |
+      | **Workflow and Infrastructure** | Snakemake, Nextflow, Git, Conda, Docker, Singularity/Apptainer, Linux/HPC, Synology NAS, Lima |
+      | **Genomics** | WGS, de novo/hybrid/reference-assisted assembly, genome annotation, comparative and pan-genomics, ANI/MLST, AMR/VF/HGT searches |
+      | **Metagenomics** | 16S/18S/ITS, shotgun metagenomics, QIIME2, DADA2, alpha/beta diversity, PCoA, LEfSe, heatmaps, phylogeny |
+      | **Phage and Virus** | Genome assembly, circularity review, annotation, prophage detection, ONT workflow evaluation |
+      | **Leadership and Delivery** | Analysis QA, scientific support, requirements translation, documentation, training, server and storage operations |
+
   - title: Education
     layout: list
     content:
-      - layout: left # MS
-        title: Kyungpook National University of Hospital, School of Medicine
-        sub_title: "M.S. (Major: Medical Science)"
-        caption: 2016 - 2018
-        description: | # this will include new lines to allow paragraphs
-          - Conducted research on the effects of various compounds on mast cell-mediated allergic inflammation.
-          - Experimental techniques:
-            - In vitro cell culture, flow cytometry, ELISA, Western blotting, and animal experiments.
-            - Developed skills in experimental design, data analysis, and scientific writing.
-      - layout: left # BS
+      - layout: left
+        border: weak
+        title: Kyungpook National University School of Medicine
+        sub_title: M.S. in Medical Science
+        caption: Feb 2016 – Aug 2018
+        description: |
+          Research focus: mast-cell-mediated allergic inflammation, experimental design, statistical analysis, and scientific communication.
+
+      - layout: left
         title: Kyungpook National University
-        sub_title: "BA (Major: Biotechnology, Minor: Psychology)"
-        caption: 2008 - 2016
-        description: | # this will include new lines to allow paragraphs
+        sub_title: B.S. in Biotechnology, Minor in Psychology
+        caption: Mar 2008 – Feb 2016
 
-
-  - title: Publications
+  - title: Selected Publications and Patent
     layout: text
     content: |
-      - Park, D. G., Kwon, J. G., Ha, E. S., **Kang, B.**, Choi, I., Kwak, J. E., ... & Lee, J. H. (2023). Novel next generation sequencing panel method for the multiple detection and identification of foodborne pathogens in agricultural wastewater. Frontiers in Microbiology, 14.
-      - Park, D. G., Ha, E. S., **Kang, B.**, Choi, I., Kwak, J. E., Choi, J., ... & Lee, J. H. (2023). Development and evaluation of a next-generation Sequencing panel for the multiple detection and identification of pathogens in fermented foods. Journal of Microbiology and Biotechnology, 33(1), 83.
-      - Choi, Y. A., Lee, S., Choi, J. K., **Kang, B. C.**, Kim, M. J., Dhakal, H., ... & Kim, S. H. (2020). The suppressive effect of dabrafenib, a therapeutic agent for metastatic melanoma, in IgE-mediated allergic inflammation. International Immunopharmacology, 83, 106398
-      - **Kang, B. C.**, Kim, M. J., Lee, S., Choi, Y. A., Park, P. H., Shin, T. Y., ... & Kim, S. H. (2019). Nothofagin suppresses mast cell-mediated allergic inflammation. Chemico-biological interactions, 298, 1-7.
-      - Lee, J. K., Lee, S., Choi, Y., Jin, M., Kim, Y. Y., **Kang, B. C.**, ... & Kim, S. H. (2018). Perfluorooctane sulfonate exacerbates mast cell-mediated allergic inflammation by the release of histamine. Molecular & Cellular Toxicology, 14(2), 173-181.
-      - Kim, Y. Y., Je, I. G., Kim, M. J., **Kang, B. C.**, Choi, Y., Baek, M. C., ... & Kim, S. H. (2017). 2-Hydroxy-3-methoxybenzoic acid attenuates mast cell-mediated allergic reaction in mice via modulation of the FcεRI signaling pathway. Acta Pharmacologica Sinica, 38(1), 90-99.
-      - Kim, Y. Y., Lee, S., Kim, M. J., **Kang, B. C.**, Dhakal, H., Choi, Y. A., ... & Kim, S. H. (2017). Tyrosol attenuates lipopolysaccharide-induced acute lung injury by inhibiting the inflammatory response and maintaining the alveolar capillary barrier. Food and Chemical Toxicology, 109, 526-533.
-      - [Patent] Primer set of food poisoning bacteria using next generation sequencing and detection method using thereof (2022)
-      - [Patent] PRIMER SET FOR DETECTING FOOD POISONING BACTERIA USING A NEXT GENERATION SEQUENCING METHOD AND METHOD FOR DETECTING FOOD POISONING BACTERIA USING THE PRIMER SET
+      - Park et al. **Novel next generation sequencing panel method for the multiple detection and identification of foodborne pathogens in agricultural wastewater.** *Frontiers in Microbiology* 14 (2023).
+      - Park et al. **Development and evaluation of a next-generation sequencing panel for the multiple detection and identification of pathogens in fermented foods.** *Journal of Microbiology and Biotechnology* 33(1) (2023).
+      - Kang et al. **Nothofagin suppresses mast cell-mediated allergic inflammation.** *Chemico-Biological Interactions* 298 (2019).
+      - **Patent (joint, 2022):** NGS-based primer set and detection method for foodborne bacteria.
 
-  - title: References
+  - title: Language
     layout: text
-    content: | # this will include new lines to allow paragraphs
-      -	Prof. Gunhee Cho | Professor | wvx17@txstate.edu 
-        Mathematics Department, Texas State University, Texas 
-      -	Prof. Namkyung Kim | Assistant Professor | nortonnk@dst.ac.kr
-        Department of Biomedical Laboratory Science, Daejeon Institute of Science and Technology, South Korea
-      -	Prof. JinKyung Choi | Professor | jkchoi@jbnu.ac.kr 
-        Department of Immunology, Jeonbuk National University Medical School, South Korea
-      -	Dr. Jinjoo Kang | Lecturer | jinjoo1kang@gmail.com 
-        Department of Clinical Laboratory Science, Wonkwang Health Science University, South Korea
-# Footer
-footer_show_references: true
-# references_title: References on request (Override references text)
+    content: |
+      **Korean:** Native<br>
+      **English:** IELTS 6.5 (Oct 2023)
 
-# Build settings
-# theme: modern-resume-theme (Use this is you are hosting your resume yourself)
-# remote_theme: sproogen/modern-resume-theme (Use this if you are hosting your resume on GitHub)
+# Footer
+footer_show_references: false
 
 sass:
   sass_dir: _sass
   style: compressed
 
 plugins:
- - jekyll-seo-tag
+  - jekyll-seo-tag
 
-exclude : [
-  "Gemfile",
-  "Gemfile.lock",
-  "node_modules",
-  "vendor/bundle/",
-  "vendor/cache/",
-  "vendor/gems/",
-  "vendor/ruby/",
-  "lib/",
-  "scripts/",
-  "docker-compose.yml",
-  ]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - lib/
+  - scripts/
+  - docker-compose.yml
