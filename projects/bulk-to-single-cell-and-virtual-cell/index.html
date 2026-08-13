@@ -1,0 +1,201 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Bulk-to-Single-Cell and Virtual-Cell Research | Byung-cheol Kang </title> <meta name="author" content="Byung-cheol Kang"> <meta name="description" content="Current-role methods connecting bulk transcriptomes to single-cell references and evaluating computational cell models."> <meta name="keywords" content="bioinformatics, microbial genomics, metagenomics, bacteriophage, Snakemake, NGS, portfolio"> <meta property="og:site_name" content="Byung-cheol Kang"> <meta property="og:type" content="website"> <meta property="og:title" content="Byung-cheol Kang | Bulk-to-Single-Cell and Virtual-Cell Research"> <meta property="og:url" content="https://bruce-bc.github.io/projects/bulk-to-single-cell-and-virtual-cell/"> <meta property="og:description" content="Current-role methods connecting bulk transcriptomes to single-cell references and evaluating computational cell models."> <meta property="og:image" content="https://bruce-bc.github.io/assets/img/og.png"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Bulk-to-Single-Cell and Virtual-Cell Research"> <meta name="twitter:description" content="Current-role methods connecting bulk transcriptomes to single-cell references and evaluating computational cell models."> <meta name="twitter:image" content="https://bruce-bc.github.io/assets/img/og.png"> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Byung-cheol Kang"
+        },
+        "url": "https://bruce-bc.github.io/projects/bulk-to-single-cell-and-virtual-cell/",
+        "@type": "WebSite",
+        "description": "Current-role methods connecting bulk transcriptomes to single-cell references and evaluating computational cell models.",
+        "headline": "Bulk-to-Single-Cell and Virtual-Cell Research",
+        
+        "sameAs": [null,"https://github.com/Bruce-BC","https://www.linkedin.com/in/byungcheol-kang-67973311b","https://orcid.org/0000-0002-3015-0064","https://scholar.google.com/citations?user=ccNz2toAAAAJ"],
+        
+        "name": "Byung-cheol Kang",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 1100px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.ico?v=47c92262d32ec05d8c72cccc0b4dd7b0"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://bruce-bc.github.io/projects/bulk-to-single-cell-and-virtual-cell/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Byung-cheol</span> Kang </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">Projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">Code </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Bulk-to-Single-Cell and Virtual-Cell Research</h1> <p class="post-description">Current-role methods connecting bulk transcriptomes to single-cell references and evaluating computational cell models.</p> </header> <article> <h2 id="current-role-scope">Current-role scope</h2> <p>At Microiotix, I work on <strong>bulk-to-single-cell inference</strong> and <strong>virtual-cell research</strong> alongside bacterial and bacteriophage genomics. This public case study describes the analytical questions and validation structure; private datasets, model implementations, and performance metrics are not disclosed.</p> <h2 id="bulk-to-single-cell-workflow">Bulk-to-single-cell workflow</h2> <div class="project-tool-workflow" data-workflow-id="bulk_to_single_cell_workflow"> <pre><code class="language-mermaid">flowchart LR
+    bulk_expression[Bulk expression profiles] --&gt; preprocessing_harmonization[Preprocessing and harmonization]
+    single_cell_reference[Single-cell reference atlas] --&gt; reference_curation[Reference curation]
+    preprocessing_harmonization --&gt; feature_alignment[Feature-space alignment]
+    reference_curation --&gt; feature_alignment
+    feature_alignment --&gt; composition_inference[Cell-composition inference]
+    feature_alignment --&gt; state_inference[Cell-state inference]
+    composition_inference --&gt; validation_uncertainty[Validation and uncertainty review]
+    state_inference --&gt; validation_uncertainty
+    validation_uncertainty --&gt; interpretable_outputs[Interpretable bulk-to-cell outputs]
+    class preprocessing_harmonization,reference_curation,feature_alignment,composition_inference,state_inference,validation_uncertainty project-tool-node
+</code></pre> <link rel="stylesheet" href="/assets/css/project-tool-explorer.css?v=1786612350"> <script defer src="/assets/js/project-tool-explorer.js?v=1786612350"></script> <section class="project-tool-explorer" id="tool-explorer-bulk-to-single-cell-and-virtual-cell-bulk_to_single_cell_workflow" data-project="bulk-to-single-cell-and-virtual-cell" data-workflow="bulk_to_single_cell_workflow" aria-labelledby="tool-explorer-bulk-to-single-cell-and-virtual-cell-bulk_to_single_cell_workflow-title"> <div class="project-tool-explorer__header"> <div> <p class="project-tool-explorer__eyebrow">Workflow evidence</p> <h3 id="tool-explorer-bulk-to-single-cell-and-virtual-cell-bulk_to_single_cell_workflow-title">Tools used in this workflow</h3> <p class="project-tool-explorer__selection" data-tool-selection="">All workflow steps</p> </div> <button class="project-tool-explorer__reset" type="button" data-tool-reset="" hidden="">Show all tools</button> </div> <p class="project-tool-explorer__hint"> Select a highlighted workflow node to filter the evidence table. The complete table remains available without JavaScript. Version labels, where present, describe the inspected workflow snapshot and are not historical run records. </p> <div class="project-tool-explorer__table-wrap" tabindex="0" role="region" aria-label="Bulk-to-single-cell inference workflow tool table"> <table id="tool-explorer-bulk-to-single-cell-and-virtual-cell-bulk_to_single_cell_workflow-table" class="project-tool-explorer__table"> <thead> <tr> <th scope="col">Stage</th> <th scope="col">Tool or method</th> <th scope="col">Type</th> <th scope="col">Role</th> <th scope="col">Input → output</th> <th scope="col">Evidence status</th> </tr> </thead> <tbody> <tr data-tool-node="preprocessing_harmonization" data-tool-node-label="Preprocessing and harmonization"> <th scope="row">Preprocessing and harmonization</th> <td> Bulk expression preprocessing </td> <td>method</td> <td>Prepare and quality-review bulk expression profiles before reference-based inference</td> <td>Bulk expression profiles and sample metadata → Analysis-ready bulk expression matrix</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> <tr data-tool-node="reference_curation" data-tool-node-label="Reference curation"> <th scope="row">Reference curation</th> <td> Single-cell reference curation </td> <td>method</td> <td>Select and review single-cell references for tissue, condition, annotation, and population coverage</td> <td>Candidate single-cell reference atlases → Curated reference with documented coverage and limitations</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> <tr data-tool-node="feature_alignment" data-tool-node-label="Feature-space alignment"> <th scope="row">Feature-space alignment</th> <td> Bulk and reference feature alignment </td> <td>method</td> <td>Establish a compatible feature space while tracking missing, duplicated, and weakly represented signals</td> <td>Analysis-ready bulk data and curated single-cell reference → Aligned bulk and reference feature matrices</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> <tr data-tool-node="composition_inference" data-tool-node-label="Cell-composition inference"> <th scope="row">Cell-composition inference</th> <td> Cell-type composition inference </td> <td>method</td> <td>Estimate the cellular composition represented in bulk expression profiles</td> <td>Aligned bulk and single-cell reference matrices → Cell-type proportion estimates</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> <tr data-tool-node="state_inference" data-tool-node-label="Cell-state inference"> <th scope="row">Cell-state inference</th> <td> Cell-state signal inference </td> <td>method</td> <td>Recover reference-supported cell-state signals from bulk expression profiles</td> <td>Aligned bulk and single-cell reference matrices → Cell-state estimates and supporting evidence</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> <tr data-tool-node="validation_uncertainty" data-tool-node-label="Validation and uncertainty review"> <th scope="row">Validation and uncertainty review</th> <td> Reference and inference validation </td> <td>review</td> <td>Evaluate sensitivity to reference choice, feature coverage, batch effects, and biological mismatch</td> <td>Composition estimates, state estimates, and reference metadata → Reviewed results with confidence and limitations</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> </tbody> </table> </div> <p class="sr-only" aria-live="polite" data-tool-status=""></p> </section> </div> <p>The analysis is organized around compatibility between the bulk dataset and the single-cell reference. Reference composition, feature overlap, batch effects, tissue or condition mismatch, and uncertainty are reviewed before cell-type or cell-state estimates are interpreted.</p> <h2 id="virtual-cell-workflow">Virtual-cell workflow</h2> <div class="project-tool-workflow" data-workflow-id="virtual_cell_workflow"> <pre><code class="language-mermaid">flowchart LR
+    cellular_data[Cellular and molecular data] --&gt; data_model_scope[Data and modeling scope]
+    biological_question[Biological question] --&gt; data_model_scope
+    data_model_scope --&gt; cell_representation[Computational cell representation]
+    cell_representation --&gt; train_evaluation_design[Train and evaluation design]
+    train_evaluation_design --&gt; virtual_cell_model[Virtual-cell model]
+    virtual_cell_model --&gt; state_response_evaluation[State and response evaluation]
+    state_response_evaluation --&gt; biological_review[Biological plausibility review]
+    biological_review --&gt; research_hypotheses[Research hypotheses]
+    class data_model_scope,cell_representation,train_evaluation_design,virtual_cell_model,state_response_evaluation,biological_review project-tool-node
+</code></pre> <link rel="stylesheet" href="/assets/css/project-tool-explorer.css?v=1786612350"> <script defer src="/assets/js/project-tool-explorer.js?v=1786612350"></script> <section class="project-tool-explorer" id="tool-explorer-bulk-to-single-cell-and-virtual-cell-virtual_cell_workflow" data-project="bulk-to-single-cell-and-virtual-cell" data-workflow="virtual_cell_workflow" aria-labelledby="tool-explorer-bulk-to-single-cell-and-virtual-cell-virtual_cell_workflow-title"> <div class="project-tool-explorer__header"> <div> <p class="project-tool-explorer__eyebrow">Workflow evidence</p> <h3 id="tool-explorer-bulk-to-single-cell-and-virtual-cell-virtual_cell_workflow-title">Tools used in this workflow</h3> <p class="project-tool-explorer__selection" data-tool-selection="">All workflow steps</p> </div> <button class="project-tool-explorer__reset" type="button" data-tool-reset="" hidden="">Show all tools</button> </div> <p class="project-tool-explorer__hint"> Select a highlighted workflow node to filter the evidence table. The complete table remains available without JavaScript. Version labels, where present, describe the inspected workflow snapshot and are not historical run records. </p> <div class="project-tool-explorer__table-wrap" tabindex="0" role="region" aria-label="Virtual-cell modeling and evaluation workflow tool table"> <table id="tool-explorer-bulk-to-single-cell-and-virtual-cell-virtual_cell_workflow-table" class="project-tool-explorer__table"> <thead> <tr> <th scope="col">Stage</th> <th scope="col">Tool or method</th> <th scope="col">Type</th> <th scope="col">Role</th> <th scope="col">Input → output</th> <th scope="col">Evidence status</th> </tr> </thead> <tbody> <tr data-tool-node="data_model_scope" data-tool-node-label="Data and modeling scope"> <th scope="row">Data and modeling scope</th> <td> Biological and data-scope definition </td> <td>review</td> <td>Define the cell states, conditions, perturbations, outputs, and evidence needed for evaluation</td> <td>Biological question and available cellular data → Explicit modeling and evaluation scope</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> <tr data-tool-node="cell_representation" data-tool-node-label="Computational cell representation"> <th scope="row">Computational cell representation</th> <td> Cell-state representation design </td> <td>method</td> <td>Construct computational representations that retain biologically relevant cell-state information</td> <td>Curated cellular and molecular data → Model-ready cell representations</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> <tr data-tool-node="train_evaluation_design" data-tool-node-label="Train and evaluation design"> <th scope="row">Train and evaluation design</th> <td> Leakage-aware evaluation design </td> <td>review</td> <td>Separate fitting and evaluation data across relevant biological conditions and coverage boundaries</td> <td>Model-ready cell representations and evaluation scope → Train and evaluation partitions with documented assumptions</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> <tr data-tool-node="virtual_cell_model" data-tool-node-label="Virtual-cell model"> <th scope="row">Virtual-cell model</th> <td> Virtual-cell model development </td> <td>method</td> <td>Model cell-state relationships and generate testable state or response predictions</td> <td>Training representations and defined research question → Computational cell model and predictions</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> <tr data-tool-node="state_response_evaluation" data-tool-node-label="State and response evaluation"> <th scope="row">State and response evaluation</th> <td> Cell-state and response evaluation </td> <td>method</td> <td>Measure whether predictions retain useful signal across held-out states, conditions, or perturbations</td> <td>Virtual-cell predictions and evaluation data → Performance evidence and failure cases</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> <tr data-tool-node="biological_review" data-tool-node-label="Biological plausibility review"> <th scope="row">Biological plausibility review</th> <td> Biological interpretation and review </td> <td>review</td> <td>Compare predictions with known or measurable biology and identify hypotheses requiring external validation</td> <td>Evaluation evidence and biological references → Interpretable hypotheses, caveats, and validation priorities</td> <td> <span class="project-tool-explorer__badge" data-status="used"> used </span> <span class="project-tool-explorer__state">documented only</span> </td> </tr> </tbody> </table> </div> <p class="sr-only" aria-live="polite" data-tool-status=""></p> </section> </div> <p>The virtual-cell track focuses on whether a computational representation preserves biologically useful cell-state information and whether predicted states or responses remain reliable outside the data used to build the model.</p> <h2 id="evaluation-principles">Evaluation principles</h2> <ul> <li>Separate model fitting from evaluation data and document reference or condition coverage.</li> <li>Compare predictions with measurable biological signals rather than relying on latent-space appearance alone.</li> <li>Report where cell types, states, tissues, perturbations, or experimental conditions are underrepresented.</li> <li>Treat generated cell states and perturbation responses as hypotheses until they are externally or experimentally validated.</li> </ul> <h2 id="boundary">Boundary</h2> <p>Bulk-to-single-cell outputs are model-based estimates, not direct single-cell measurements. Virtual-cell predictions do not establish biological mechanism or treatment response without independent data and experimental validation.</p> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © Copyright 2026 Byung-cheol Kang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: August 13, 2026. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.7.0/dist/mermaid.min.js" integrity="sha256-TtLOdUA8mstPoO6sGvHIGx2ceXrrX4KgIItO06XOn8A=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js" integrity="sha256-1rA678n2xEx7x4cTZ5x4wpUCj6kUMZEZ5cxLSVSFWxw=" crossorigin="anonymous"></script> <script defer src="/assets/al_charts/js/mermaid-setup.js" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "About",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "Publications",
+          description: "Seven SCI(E) publications in NGS pathogen detection and experimental biomedicine.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-projects",
+          title: "Projects",
+          description: "Applied bioinformatics systems, research workflows, and evidence-backed outcomes.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-code",
+          title: "Code",
+          description: "Public workflow and portfolio repositories.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Experience, education, selected projects, publications, and technical skills.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "projects-analysis-operations-and-qa",
+          title: 'Analysis Operations and QA',
+          description: "From project intake to reviewed, interpretable delivery across recurring genomics work.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/analysis-operations-and-qa/";
+            },},{id: "projects-bulk-to-single-cell-and-virtual-cell-research",
+          title: 'Bulk-to-Single-Cell and Virtual-Cell Research',
+          description: "Current-role methods connecting bulk transcriptomes to single-cell references and evaluating computational cell models.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/bulk-to-single-cell-and-virtual-cell/";
+            },},{id: "projects-comparative-genomics-marker-discovery",
+          title: 'Comparative-genomics Marker Discovery',
+          description: "Narrowing complete-genome differences to an approximately 17 kb candidate region.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/comparative-genomics-marker-discovery/";
+            },},{id: "projects-foodborne-pathogen-ngs-panel",
+          title: 'Foodborne Pathogen NGS Panel',
+          description: "Translating multi-pathogen detection into papers, panel evaluation, and a joint patent.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/foodborne-pathogen-ngs-panel/";
+            },},{id: "projects-integrated-microbial-genomics-platform",
+          title: 'Integrated Microbial Genomics Platform',
+          description: "One reproducible execution model for 16S, ITS, WGS, and hybrid assembly.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/integrated-microbial-genomics-platform/";
+            },},{id: "projects-klebsiella-phage-genomics-and-tail-rbp-design",
+          title: 'Klebsiella Phage Genomics and Tail-RBP Design',
+          description: "Current-role bacterial and phage genomics, KL-type evidence, protein structure analysis, and in silico tail design.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/klebsiella-phage-genomics-and-tail-design/";
+            },},{id: "projects-bacteriophage-assembly-and-annotation",
+          title: 'Bacteriophage Assembly and Annotation',
+          description: "Assembly review, one-contig resolution, and complementary annotation evidence.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/phage-assembly-and-annotation/";
+            },},{id: "projects-phage-lifestyle-evidence-prototype",
+          title: 'Phage Lifestyle Evidence Prototype',
+          description: "Evidence integration for lytic/lysogenic classification and host-range candidate discovery.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/phage-lifestyle-evidence-prototype/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/Byungcheol_Kang_Bioinformatics_Resume.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%73%65%6E%74%69%6D%32@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/Bruce-BC", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/byungcheol-kang-67973311b", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0002-3015-0064", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=ccNz2toAAAAJ", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> <script defer src="/assets/al_email_protect/js/email-protect.js"></script> </body> </html>
