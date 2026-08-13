@@ -1,0 +1,143 @@
+cv:
+  name: Byung-cheol Kang
+  label: Bioinformatics Team Lead · Senior Researcher
+  email: sentim2@gmail.com
+  phone: (+82) 10-5366-3411
+  location: Suwon, South Korea
+  image: ""
+  summary: >
+    Bioinformatician with more than six years of experience in microbial genomics,
+    metagenomics, NGS analysis services, and reproducible workflow engineering.
+
+  social_networks:
+    - network: GitHub
+      username: Bruce-BC
+    - network: LinkedIn
+      username: byungcheol-kang-67973311b
+
+  sections:
+    Experience:
+      - company: Sanigen
+        position: Bioinformatics Team Lead · Senior Researcher
+        location: Suwon, South Korea
+        start_date: 2020-03
+        end_date: present
+        summary: Lead a five-person bioinformatics team delivering microbial genomics and metagenomics analyses.
+        highlights:
+          - Designed and maintained a shared Snakemake platform covering 16S, ITS, WGS, and hybrid-assembly workflows.
+          - Delivered microbial WGS, assembly, annotation, comparative genomics, and microbiome analyses with explicit quality-control checkpoints.
+          - Maintained reproducible environments with Conda, Docker, Apptainer, and Linux-based compute infrastructure.
+          - Developed in-house analysis utilities for NGS panel markers, microbial assemblies, and comparative-genomics investigations.
+          - Coordinated analysis operations, review, interpretation, and delivery across a conservative lower bound of 98 archived project orders.
+
+      - company: GinaPath
+        position: Business Development
+        location: South Korea
+        start_date: 2019-11
+        end_date: 2020-01
+        highlights:
+          - Supported business development for genomics-related services and customer requirements.
+          - Translated technical capabilities into project scopes and client-facing communication.
+
+    Education:
+      - institution: Kyungpook National University School of Medicine
+        location: Daegu, South Korea
+        area: Medical Science
+        studyType: M.S.
+        start_date: 2016-02
+        end_date: 2018-08
+        highlights:
+          - Investigated mast-cell-mediated allergic inflammation.
+          - Applied cell culture, flow cytometry, ELISA, Western blotting, and animal experiments.
+          - Built foundations in experimental design, statistical analysis, and scientific writing.
+
+      - institution: Kyungpook National University
+        location: Daegu, South Korea
+        area: Biotechnology · Minor in Psychology
+        studyType: B.S.
+        start_date: 2008-03
+        end_date: 2016-02
+
+    Projects:
+      - name: Integrated Microbial Genomics Platform
+        summary: A shared Snakemake execution and reporting framework for 16S, ITS, WGS, and hybrid-assembly analyses.
+        highlights:
+          - Standardized validation, environment capture, checkpoints, and deliverables across assay profiles.
+          - Implemented with Python, R, Bash, Conda, Docker, and Apptainer.
+
+      - name: Comparative-genomics Marker Discovery
+        summary: Prioritized a candidate region of approximately 17 kb by comparing complete microbial genomes.
+        highlights:
+          - Combined pan-genome context, region-level comparison, and downstream assay constraints.
+
+      - name: Bacteriophage Assembly and Annotation
+        summary: Evaluated assembly and annotation strategies for bacteriophage sequencing data.
+        highlights:
+          - Produced single-contig final assemblies in the assessed sample set.
+          - Supplemented Prokka annotations with RAST-tk and evaluated ONT/Nextflow-based processing.
+
+      - name: Phage Lifestyle Evidence Prototype
+        summary: Independent prototype integrating CheckV, Pharokka/Phold, BACPHLIP, and PhaTYP evidence.
+        highlights:
+          - Designed to keep tool disagreement visible rather than collapse every signal into an unexplained label.
+          - External benchmarking and publication-grade validation remain pending.
+
+    Publications:
+      - title: Novel next generation sequencing panel method for the multiple detection and identification of foodborne pathogens in agricultural wastewater
+        authors:
+          - D. G. Park
+          - J. G. Kwon
+          - E. S. Ha
+          - Byung-cheol Kang
+          - et al.
+        publisher: Frontiers in Microbiology 14
+        releaseDate: 2023
+
+      - title: Development and evaluation of a next-generation sequencing panel for the multiple detection and identification of pathogens in fermented foods
+        authors:
+          - D. G. Park
+          - E. S. Ha
+          - Byung-cheol Kang
+          - et al.
+        publisher: Journal of Microbiology and Biotechnology 33(1)
+        releaseDate: 2023
+
+      - title: Nothofagin suppresses mast cell-mediated allergic inflammation
+        authors:
+          - Byung-cheol Kang
+          - M. J. Kim
+          - S. Lee
+          - et al.
+        publisher: Chemico-Biological Interactions 298, 1–7
+        releaseDate: 2019
+
+    Awards:
+      - title: NGS-based primer set and detection method for foodborne bacteria
+        authors:
+          - Joint inventor
+        date: 2022
+        awarder: Patent
+        summary: Patent contribution associated with an NGS-based foodborne-pathogen detection method.
+
+    Skills:
+      - name: Bioinformatics
+        level: Advanced
+        icon: fa-solid fa-dna
+        keywords: "Microbial genomics, Metagenomics, Genome assembly, Annotation, Comparative genomics, Bacteriophage analysis"
+
+      - name: Workflow Engineering
+        level: Advanced
+        icon: fa-solid fa-diagram-project
+        keywords: "Snakemake, Nextflow, Conda, Docker, Apptainer, Linux"
+
+      - name: Programming
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: "Python, R, Bash, Git"
+
+    Languages:
+      - name: Korean
+        summary: Native
+
+      - name: English
+        summary: IELTS 6.5 (October 2023)
