@@ -26,7 +26,7 @@ latest_posts:
   limit: 0
 ---
 
-I build reproducible analysis systems for **bacterial genomics, bacteriophage genomics, metagenomics, and in silico design**. Since July 2026, I have worked at Microiotix as a **Bioinformatician**, analyzing bacterial and phage genomes, building and evaluating _Klebsiella pneumoniae_ tail/RBP and KL-type databases, and using protein-sequence and structure evidence to support phage design. Previously, I worked at Sanigen from March 2020 to October 2025, where I led a five-person bioinformatics team across workflow development, analysis review, infrastructure, and delivery.
+I build reproducible analysis systems for **bacterial genomics, bacteriophage genomics, bulk-to-single-cell inference, virtual-cell research, and in silico design**. Since July 2026, I have worked at Microiotix as a **Bioinformatician**, analyzing bacterial and phage genomes, building and evaluating _Klebsiella pneumoniae_ tail/RBP and KL-type databases, supporting protein-structure-informed phage design, and developing bulk-to-single-cell and virtual-cell analysis approaches. Previously, I worked at Sanigen from March 2020 to October 2025, where I led a five-person bioinformatics team across workflow development, analysis review, infrastructure, and delivery.
 
 My work connects methods to operations: input validation, versioned environments, quality-control checkpoints, interpretable reports, and a clear record of how a result was produced. At Sanigen, I built a shared Snakemake framework for **16S, ITS, WGS, and hybrid assembly** using Python, R, Bash, Conda, Docker, Apptainer, and Linux.
 
@@ -44,8 +44,12 @@ My work connects methods to operations: input validation, versioned environments
 - _K. pneumoniae_ tail/RBP and KL-type database construction, curation, and evaluation
 - Protein structure prediction, structure-based annotation, and reference-structure comparison
 - In silico tail-RBP design with explicit compatibility criteria and wet-lab validation boundaries
+- Bulk-to-single-cell inference that connects bulk expression profiles with curated single-cell references
+- Virtual-cell modeling and evaluation for computational representations of cell state and response
 
 The current-role [Klebsiella phage genomics and tail-design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}) presents an anonymized example. It integrates seven core phage-analysis tools, a 7,759-sequence capsule-target reference resource, and sequence-plus-structure evidence without exposing sample identifiers or internal reference IDs.
+
+The [bulk-to-single-cell and virtual-cell case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}) describes the second current-role research track at method level. Private datasets, model implementations, and performance metrics are intentionally excluded until they can be disclosed.
 
 Explore the [project workflows]({% link _pages/projects.md %}), the [publication record]({% link _pages/publications.md %}), or download the [resume]({{ '/assets/pdf/Byungcheol_Kang_Bioinformatics_Resume.pdf' | relative_url }}) and [project portfolio]({{ '/assets/pdf/Byungcheol_Kang_Bioinformatics_Portfolio.pdf' | relative_url }}).
 

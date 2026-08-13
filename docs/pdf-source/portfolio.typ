@@ -7,7 +7,7 @@
   #v(4mm)
   #text(size: 30pt, weight: "bold", fill: navy)[Byung-cheol Kang]
   #v(2mm)
-  #text(size: 13pt, fill: teal)[Bacteriophage Research · Microbial Genomics · Workflow Engineering]
+  #text(size: 13pt, fill: teal)[Bacteriophage Genomics · Bulk-to-Single-Cell · Virtual Cell]
   #v(9mm)
   #block(width: 150mm, inset: 14pt, radius: 8pt, fill: pale, stroke: 0.7pt + rule)[
     #text(size: 13pt, weight: "medium", fill: navy)[
@@ -23,6 +23,7 @@
   - *K. pneumoniae* tail/RBP and KL-type database construction and evaluation.
   - Protein structure prediction, structure-based annotation, and reference-structure comparison.
   - In silico tail-RBP design using explicit attachment, target, taxonomy, and structural criteria.
+  - Bulk-to-single-cell inference and virtual-cell modeling with validation, uncertainty, and biological-interpretation boundaries.
 ])
 
 #section("CAREER SNAPSHOT")
@@ -159,7 +160,42 @@ Only tools connected to active Snakemake includes and rules are listed as active
 The design bench supports domain swaps, full-module replacements, and tandem additions, with genome FASTA, module multi-FASTA, GenBank, and protein FASTA export. Host K-locus assignments, predicted RBP folding, adsorption, host range, and lytic activity still require bacterial-genome and wet-lab validation.
 
 #pagebreak()
-#kicker("Project 06 · Independent R&D prototype")
+#kicker("Project 06 · Current role research")
+#linebreak()
+#text(size: 21pt, weight: "bold", fill: navy)[Bulk-to-Single-Cell and Virtual-Cell Research]
+
+#section("BULK-TO-SINGLE-CELL WORKFLOW")
+#grid(columns: (1fr, auto, 1fr, auto, 1fr), align: center,
+  note[*Bulk profiles* #linebreak() QC + harmonization], [→],
+  note[*Single-cell reference* #linebreak() curation + alignment], [→],
+  note[*Inference* #linebreak() composition + state],
+)
+
+#section("ANALYTICAL RESPONSIBILITIES")
+- Curate reference atlases for tissue, condition, cell annotation, and population coverage.
+- Align bulk and single-cell feature spaces while tracking missing, duplicated, and weakly represented signals.
+- Infer cell-type composition and reference-supported cell-state signals from bulk expression profiles.
+- Review sensitivity to reference choice, feature coverage, batch effects, and biological mismatch before interpretation.
+
+#section("VIRTUAL-CELL WORKFLOW")
+#grid(columns: (1fr, auto, 1fr, auto, 1fr), align: center,
+  note[*Cellular data* #linebreak() question + scope], [→],
+  note[*Cell model* #linebreak() representation + fitting], [→],
+  note[*Evaluation* #linebreak() state + response + biology],
+)
+
+#section("EVALUATION PRINCIPLES")
+- Separate model fitting from evaluation data across relevant cell states, conditions, and perturbations.
+- Evaluate predicted states or responses against measurable biological evidence, not latent-space appearance alone.
+- Report underrepresented tissues, cell populations, perturbations, and experimental conditions.
+
+#section("PUBLIC EVIDENCE BOUNDARY")
+#note[
+  Bulk-to-single-cell outputs are model-based estimates, not direct single-cell measurements. Virtual-cell predictions remain research hypotheses until externally or experimentally validated. Private data, implementation details, and performance metrics are not disclosed here.
+]
+
+#pagebreak()
+#kicker("Project 07 · Independent R&D prototype")
 #linebreak()
 #text(size: 21pt, weight: "bold", fill: navy)[Phage Lifestyle Evidence Prototype]
 

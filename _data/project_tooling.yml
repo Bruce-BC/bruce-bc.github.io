@@ -1201,3 +1201,140 @@ klebsiella-phage-genomics-and-tail-design:
               output: Genome FASTA, module multi-FASTA, GenBank, and protein FASTA files
               usage_status: used
               pipeline_state: documented-only
+
+bulk-to-single-cell-and-virtual-cell:
+  workflows:
+    bulk_to_single_cell_workflow:
+      title: Bulk-to-single-cell inference workflow
+      display_only_nodes:
+        - bulk_expression
+        - single_cell_reference
+        - interpretable_outputs
+      nodes:
+        preprocessing_harmonization:
+          label: Preprocessing and harmonization
+          entries:
+            - name: Bulk expression preprocessing
+              kind: method
+              role: Prepare and quality-review bulk expression profiles before reference-based inference
+              input: Bulk expression profiles and sample metadata
+              output: Analysis-ready bulk expression matrix
+              usage_status: used
+              pipeline_state: documented-only
+        reference_curation:
+          label: Reference curation
+          entries:
+            - name: Single-cell reference curation
+              kind: method
+              role: Select and review single-cell references for tissue, condition, annotation, and population coverage
+              input: Candidate single-cell reference atlases
+              output: Curated reference with documented coverage and limitations
+              usage_status: used
+              pipeline_state: documented-only
+        feature_alignment:
+          label: Feature-space alignment
+          entries:
+            - name: Bulk and reference feature alignment
+              kind: method
+              role: Establish a compatible feature space while tracking missing, duplicated, and weakly represented signals
+              input: Analysis-ready bulk data and curated single-cell reference
+              output: Aligned bulk and reference feature matrices
+              usage_status: used
+              pipeline_state: documented-only
+        composition_inference:
+          label: Cell-composition inference
+          entries:
+            - name: Cell-type composition inference
+              kind: method
+              role: Estimate the cellular composition represented in bulk expression profiles
+              input: Aligned bulk and single-cell reference matrices
+              output: Cell-type proportion estimates
+              usage_status: used
+              pipeline_state: documented-only
+        state_inference:
+          label: Cell-state inference
+          entries:
+            - name: Cell-state signal inference
+              kind: method
+              role: Recover reference-supported cell-state signals from bulk expression profiles
+              input: Aligned bulk and single-cell reference matrices
+              output: Cell-state estimates and supporting evidence
+              usage_status: used
+              pipeline_state: documented-only
+        validation_uncertainty:
+          label: Validation and uncertainty review
+          entries:
+            - name: Reference and inference validation
+              kind: review
+              role: Evaluate sensitivity to reference choice, feature coverage, batch effects, and biological mismatch
+              input: Composition estimates, state estimates, and reference metadata
+              output: Reviewed results with confidence and limitations
+              usage_status: used
+              pipeline_state: documented-only
+    virtual_cell_workflow:
+      title: Virtual-cell modeling and evaluation workflow
+      display_only_nodes:
+        - cellular_data
+        - biological_question
+        - research_hypotheses
+      nodes:
+        data_model_scope:
+          label: Data and modeling scope
+          entries:
+            - name: Biological and data-scope definition
+              kind: review
+              role: Define the cell states, conditions, perturbations, outputs, and evidence needed for evaluation
+              input: Biological question and available cellular data
+              output: Explicit modeling and evaluation scope
+              usage_status: used
+              pipeline_state: documented-only
+        cell_representation:
+          label: Computational cell representation
+          entries:
+            - name: Cell-state representation design
+              kind: method
+              role: Construct computational representations that retain biologically relevant cell-state information
+              input: Curated cellular and molecular data
+              output: Model-ready cell representations
+              usage_status: used
+              pipeline_state: documented-only
+        train_evaluation_design:
+          label: Train and evaluation design
+          entries:
+            - name: Leakage-aware evaluation design
+              kind: review
+              role: Separate fitting and evaluation data across relevant biological conditions and coverage boundaries
+              input: Model-ready cell representations and evaluation scope
+              output: Train and evaluation partitions with documented assumptions
+              usage_status: used
+              pipeline_state: documented-only
+        virtual_cell_model:
+          label: Virtual-cell model
+          entries:
+            - name: Virtual-cell model development
+              kind: method
+              role: Model cell-state relationships and generate testable state or response predictions
+              input: Training representations and defined research question
+              output: Computational cell model and predictions
+              usage_status: used
+              pipeline_state: documented-only
+        state_response_evaluation:
+          label: State and response evaluation
+          entries:
+            - name: Cell-state and response evaluation
+              kind: method
+              role: Measure whether predictions retain useful signal across held-out states, conditions, or perturbations
+              input: Virtual-cell predictions and evaluation data
+              output: Performance evidence and failure cases
+              usage_status: used
+              pipeline_state: documented-only
+        biological_review:
+          label: Biological plausibility review
+          entries:
+            - name: Biological interpretation and review
+              kind: review
+              role: Compare predictions with known or measurable biology and identify hypotheses requiring external validation
+              input: Evaluation evidence and biological references
+              output: Interpretable hypotheses, caveats, and validation priorities
+              usage_status: used
+              pipeline_state: documented-only
