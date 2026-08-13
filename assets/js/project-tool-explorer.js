@@ -8,6 +8,85 @@
 
   const MOBILE_BREAKPOINT = 640;
 
+  const WORKFLOW_ICONS = [
+    {
+      icon: "fa-solid fa-file-export",
+      label: "Output",
+      pattern: /(report|deliverable|export|package|publication|patent|output|candidate region|hypotheses)/,
+    },
+    {
+      icon: "fa-solid fa-circle-check",
+      label: "Quality and validation",
+      pattern: /(quality|\bqc\b|review|validation|confidence|checkpoint|specificity|sensitivity|consistency)/,
+    },
+    {
+      icon: "fa-solid fa-dna",
+      label: "Sequence and genome analysis",
+      pattern:
+        /(genome|sequence|assembly|annotation|primer|marker|denois|taxonomy|phylogen|termini|packaging|amr|virulence|locus|kl-type|depolymerase)/,
+    },
+    {
+      icon: "fa-solid fa-shapes",
+      label: "Structure and design",
+      pattern: /(structure|protein|compatibility|design|domain swap|module replacement|tandem addition|construction)/,
+    },
+    {
+      icon: "fa-solid fa-database",
+      label: "Database and reference",
+      pattern: /(database|reference|atlas|curation|public sequences|evidence table)/,
+    },
+    {
+      icon: "fa-solid fa-microscope",
+      label: "Experiment and biological evaluation",
+      pattern: /(wet-lab|experimental|biological|matrix-specific|assay|cellular|molecular|organism|host|phage receptor|surface variation)/,
+    },
+    {
+      icon: "fa-solid fa-brain",
+      label: "Modeling and inference",
+      pattern: /(model|inference|virtual-cell|cell-state|cell-composition|representation|feature|score|prediction|lifestyle)/,
+    },
+    {
+      icon: "fa-solid fa-gears",
+      label: "Workflow processing",
+      pattern: /(workflow|orchestration|execution|preprocess|harmonization|alignment|trimming|filtering|polishing|import|isolation)/,
+    },
+    {
+      icon: "fa-solid fa-chart-line",
+      label: "Measurement and interpretation",
+      pattern: /(depth|coverage|diversity|interpretation|comparison|context|performance|ranked|evaluation|analysis)/,
+    },
+    {
+      icon: "fa-solid fa-file-arrow-down",
+      label: "Input",
+      pattern: /(reads|fastq|input|metadata|profiles|data|request|question|target|project communications)/,
+    },
+  ];
+
+  const iconForNode = (nodeId, label) => {
+    const searchable = `${nodeId.replaceAll("_", " ")} ${label}`.toLowerCase();
+    return (
+      WORKFLOW_ICONS.find(({ pattern }) => pattern.test(searchable)) || {
+        icon: "fa-solid fa-diagram-project",
+        label: "Workflow step",
+      }
+    );
+  };
+
+  const decorateNode = (node, nodeId, label) => {
+    const labelRoot = node.querySelector(".nodeLabel");
+    if (!labelRoot || labelRoot.querySelector(".project-tool-node__icon")) return;
+
+    const { icon, label: iconLabel } = iconForNode(nodeId, label);
+    const iconElement = document.createElement("i");
+    iconElement.className = `${icon} project-tool-node__icon`;
+    iconElement.setAttribute("aria-hidden", "true");
+    iconElement.title = iconLabel;
+    labelRoot.prepend(iconElement);
+    node.dataset.toolIcon = iconLabel;
+  };
+
+  const mermaidNodeId = (node) => node.id.replace(/^flowchart-/, "").replace(/-\d+$/, "");
+
   const wrapMobileLabels = (diagram) => {
     const wrapLabel = (label) => {
       if (label.includes("<br") || label.length <= 22) return label;
@@ -122,6 +201,11 @@
     const tableId = explorer.querySelector("table")?.id;
     const labels = new Map(rows.map((row) => [row.dataset.toolNode, row.dataset.toolNodeLabel]));
 
+    svg.querySelectorAll("g.node").forEach((node) => {
+      const label = node.querySelector(".nodeLabel")?.textContent.trim() || "Workflow step";
+      decorateNode(node, mermaidNodeId(node), label);
+    });
+
     const showAll = () => {
       rows.forEach((row) => {
         row.hidden = false;
@@ -141,10 +225,11 @@
     labels.forEach((label, nodeId) => {
       findNodeGroups(svg, nodeId).forEach((node) => {
         wiredNodeCount += 1;
-        if (node.dataset.toolBound) return;
-        node.dataset.toolBound = "true";
         node.dataset.toolNode = nodeId;
         node.classList.add("project-tool-node");
+        decorateNode(node, nodeId, label);
+        if (node.dataset.toolBound) return;
+        node.dataset.toolBound = "true";
         node.setAttribute("role", "button");
         node.setAttribute("tabindex", "0");
         node.setAttribute("aria-controls", tableId);

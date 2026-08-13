@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Shotgun taxonomy flow and selected-taxon summary</title>
+  <desc id="desc">A disclosure-safe reconstruction with a multi-rank taxonomy flow from domain to genus and sample-level count and percentage charts for a selected genus.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fff}.panel{fill:#fbfcfd;stroke:#d8dee4;stroke-width:2}.ink{fill:#24292f;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.muted{fill:#57606a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.axis{stroke:#57606a;stroke-width:1.5}.grid{stroke:#d8dee4;stroke-width:1}.node{stroke:#fff;stroke-width:1}.flow{fill:none;stroke-linecap:round;opacity:.32}.chip{fill:#ddf4ff;stroke:#54aeff}.selected{fill:#dafbe1;stroke:#2da44e}.bar-a{fill:#1f9d8a}.bar-b{fill:#f9844a}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="650"/>
+  <text class="ink" x="48" y="46" font-size="28" font-weight="700">Shotgun taxonomic classification · output reconstruction</text>
+  <text class="muted" x="48" y="74" font-size="15">Kraken2/Pavian-style multi-rank flow with selected-taxon read summaries</text>
+  <rect class="chip" x="922" y="29" width="230" height="38" rx="19"/><text class="ink" x="1037" y="53" text-anchor="middle" font-size="13" font-weight="700">ILLUSTRATIVE VALUES</text>
+
+  <rect class="panel" x="42" y="98" width="770" height="500" rx="12"/>
+  <text class="ink" x="68" y="133" font-size="20" font-weight="700">Taxonomic flow of classified reads</text>
+  <text class="muted" x="68" y="156" font-size="13">Lineage width represents the share retained through each rank.</text>
+  <g class="muted" font-size="12" font-weight="700" text-anchor="middle"><text x="95" y="190">DOMAIN</text><text x="268" y="190">PHYLUM</text><text x="441" y="190">CLASS</text><text x="614" y="190">ORDER</text><text x="758" y="190">GENUS</text></g>
+
+  <g>
+    <path class="flow" stroke="#9b5de5" stroke-width="118" d="M98 270 C175 270 190 270 264 270"/>
+    <path class="flow" stroke="#277da1" stroke-width="74" d="M272 246 C345 246 365 235 437 235"/>
+    <path class="flow" stroke="#43aa8b" stroke-width="31" d="M272 324 C345 324 365 319 437 319"/>
+    <path class="flow" stroke="#f9c74f" stroke-width="13" d="M272 352 C345 352 365 372 437 372"/>
+    <path class="flow" stroke="#277da1" stroke-width="52" d="M445 225 C518 225 538 220 610 220"/>
+    <path class="flow" stroke="#90be6d" stroke-width="22" d="M445 269 C518 269 538 282 610 282"/>
+    <path class="flow" stroke="#43aa8b" stroke-width="24" d="M445 314 C518 314 538 334 610 334"/>
+    <path class="flow" stroke="#f9844a" stroke-width="10" d="M445 348 C518 348 538 374 610 374"/>
+    <path class="flow" stroke="#f9c74f" stroke-width="13" d="M445 386 C518 386 538 410 610 410"/>
+    <path class="flow" stroke="#277da1" stroke-width="34" d="M618 211 C675 211 690 214 744 214"/>
+    <path class="flow" stroke="#54aeff" stroke-width="18" d="M618 239 C675 239 690 258 744 258"/>
+    <path class="flow" stroke="#90be6d" stroke-width="22" d="M618 282 C675 282 690 302 744 302"/>
+    <path class="flow" stroke="#43aa8b" stroke-width="24" d="M618 334 C675 334 690 350 744 350"/>
+    <path class="flow" stroke="#f9844a" stroke-width="10" d="M618 374 C675 374 690 392 744 392"/>
+    <path class="flow" stroke="#f9c74f" stroke-width="13" d="M618 410 C675 410 690 432 744 432"/>
+  </g>
+
+  <g class="node">
+    <rect x="86" y="211" width="24" height="118" rx="4" fill="#9b5de5"/>
+    <rect x="260" y="209" width="24" height="74" rx="4" fill="#277da1"/><rect x="260" y="309" width="24" height="31" rx="4" fill="#43aa8b"/><rect x="260" y="346" width="24" height="13" rx="4" fill="#f9c74f"/>
+    <rect x="433" y="199" width="24" height="52" rx="4" fill="#277da1"/><rect x="433" y="258" width="24" height="22" rx="4" fill="#90be6d"/><rect x="433" y="302" width="24" height="24" rx="4" fill="#43aa8b"/><rect x="433" y="343" width="24" height="10" rx="4" fill="#f9844a"/><rect x="433" y="379" width="24" height="13" rx="4" fill="#f9c74f"/>
+    <rect x="606" y="194" width="24" height="34" rx="4" fill="#277da1"/><rect x="606" y="230" width="24" height="18" rx="4" fill="#54aeff"/><rect x="606" y="271" width="24" height="22" rx="4" fill="#90be6d"/><rect x="606" y="322" width="24" height="24" rx="4" fill="#43aa8b"/><rect x="606" y="369" width="24" height="10" rx="4" fill="#f9844a"/><rect x="606" y="403" width="24" height="13" rx="4" fill="#f9c74f"/>
+    <rect x="742" y="197" width="24" height="34" rx="4" fill="#277da1"/><rect x="742" y="249" width="24" height="18" rx="4" fill="#54aeff"/><rect x="742" y="291" width="24" height="22" rx="4" fill="#90be6d"/><rect x="742" y="338" width="24" height="24" rx="4" fill="#43aa8b"/><rect x="742" y="387" width="24" height="10" rx="4" fill="#f9844a"/><rect x="742" y="425" width="24" height="13" rx="4" fill="#f9c74f"/>
+  </g>
+  <g class="ink" font-size="11"><text x="82" y="347">Bacteria · 91%</text><text x="292" y="230">Proteobacteria</text><text x="292" y="326">Firmicutes</text><text x="292" y="359">Other</text><text x="465" y="218">Gammaproteobacteria</text><text x="465" y="276">Bacilli</text><text x="465" y="320">Clostridia</text><text x="638" y="211">Enterobacterales</text><text x="638" y="245">Pseudomonadales</text><text x="638" y="288">Lactobacillales</text><text x="638" y="341">Clostridiales</text><text x="774" y="211" font-weight="700">Escherichia</text><text x="774" y="263">Pseudomonas</text><text x="774" y="307">Lactobacillus</text><text x="774" y="356">Clostridium</text><text x="774" y="398">Bacillus</text><text x="774" y="436">Other</text></g>
+  <rect class="selected" x="732" y="185" width="70" height="54" rx="7" fill-opacity=".18"/>
+  <g transform="translate(70 493)"><rect x="0" y="0" width="690" height="72" rx="8" fill="#f6f8fa" stroke="#d8dee4"/><text class="ink" x="18" y="24" font-size="13" font-weight="700">Classification summary</text><text class="muted" x="18" y="48" font-size="12">Six anonymized samples · classified fraction 51–80% · unresolved lineages retained explicitly</text><rect class="bar-a" x="502" y="18" width="86" height="13" rx="6"/><rect fill="#c9d1d9" x="588" y="18" width="72" height="13" rx="6"/><text class="muted" x="502" y="50" font-size="11">classified</text><text class="muted" x="588" y="50" font-size="11">unclassified</text></g>
+
+  <rect class="panel" x="832" y="98" width="326" height="500" rx="12"/>
+  <text class="ink" x="856" y="133" font-size="20" font-weight="700">Selected taxon</text>
+  <text class="ink" x="856" y="163" font-size="17" font-style="italic">Escherichia</text>
+  <text class="muted" x="856" y="184" font-size="12">Genus-level assignment</text>
+  <text class="ink" x="856" y="220" font-size="14" font-weight="700">Assigned reads</text>
+  <g transform="translate(870 240)"><line class="axis" x1="0" y1="145" x2="250" y2="145"/><line class="grid" x1="0" y1="95" x2="250" y2="95"/><line class="grid" x1="0" y1="45" x2="250" y2="45"/><g class="bar-a"><rect x="10" y="27" width="24" height="118"/><rect x="51" y="58" width="24" height="87"/><rect x="92" y="18" width="24" height="127"/><rect x="133" y="92" width="24" height="53"/><rect x="174" y="68" width="24" height="77"/><rect x="215" y="42" width="24" height="103"/></g><g class="muted" font-size="10" text-anchor="middle"><text x="22" y="160">S1</text><text x="63" y="160">S2</text><text x="104" y="160">S3</text><text x="145" y="160">S4</text><text x="186" y="160">S5</text><text x="227" y="160">S6</text></g></g>
+  <text class="ink" x="856" y="430" font-size="14" font-weight="700">Percent of classified reads</text>
+  <g transform="translate(870 448)"><line class="axis" x1="0" y1="105" x2="250" y2="105"/><line class="grid" x1="0" y1="55" x2="250" y2="55"/><g class="bar-b"><rect x="10" y="35" width="24" height="70"/><rect x="51" y="72" width="24" height="33"/><rect x="92" y="24" width="24" height="81"/><rect x="133" y="79" width="24" height="26"/><rect x="174" y="60" width="24" height="45"/><rect x="215" y="43" width="24" height="62"/></g><g class="muted" font-size="10" text-anchor="middle"><text x="22" y="120">S1</text><text x="63" y="120">S2</text><text x="104" y="120">S3</text><text x="145" y="120">S4</text><text x="186" y="120">S5</text><text x="227" y="120">S6</text></g></g>
+  <text class="muted" x="48" y="628" font-size="13">Disclosure-safe format reconstruction. Sample values and taxon assignments are illustrative, not client measurements.</text>
+</svg>

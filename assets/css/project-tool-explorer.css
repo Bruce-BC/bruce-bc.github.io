@@ -113,6 +113,21 @@
   cursor: pointer;
 }
 
+.project-tool-node__icon {
+  display: inline-block;
+  min-width: 1.85em;
+  margin-right: 0.48em;
+  padding: 0.35em 0.28em;
+  border: 1px solid color-mix(in srgb, var(--global-theme-color, #6f42c1) 42%, transparent);
+  border-radius: 0.42em;
+  background: color-mix(in srgb, var(--global-theme-color, #6f42c1) 13%, transparent);
+  color: var(--global-theme-color, #6f42c1) !important;
+  font-size: 1.25em;
+  line-height: 1;
+  text-align: center;
+  vertical-align: -0.08em;
+}
+
 .project-tool-node:focus-visible {
   outline: 3px solid var(--global-theme-color, #6f42c1);
   outline-offset: 4px;
@@ -170,6 +185,12 @@
   .project-tool-workflow > pre.mermaid .node polygon,
   .project-tool-workflow > pre.mermaid .node path {
     stroke-width: 2px;
+  }
+
+  .project-tool-node__icon {
+    min-width: 1.7em;
+    padding: 0.28em 0.22em;
+    font-size: 1.1em;
   }
 
   .project-tool-explorer {

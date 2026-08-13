@@ -26,9 +26,45 @@ latest_posts:
   limit: 0
 ---
 
-I build reproducible analysis systems for **bacterial genomics, bacteriophage genomics, bulk-to-single-cell inference, virtual-cell research, and in silico design**. Since July 2026, I have worked at Microiotix as a **Bioinformatician**, analyzing bacterial and phage genomes, building and evaluating _Klebsiella pneumoniae_ tail/RBP and KL-type databases, and supporting protein-structure-informed phage design. At **Wittgenbio**, I develop bulk-to-single-cell inference approaches and contribute to virtual-cell research. Previously, I worked at Sanigen from March 2020 to October 2025, where I led a five-person bioinformatics team across workflow development, analysis review, infrastructure, and delivery.
+<style>
+  @media (max-width: 575.98px) {
+    .post-header .desc {
+      overflow: visible;
+      white-space: normal;
+    }
 
-My work connects methods to operations: input validation, versioned environments, quality-control checkpoints, interpretable reports, and a clear record of how a result was produced. At Sanigen, I built a shared Snakemake framework for **16S, ITS, WGS, and hybrid assembly** using Python, R, Bash, Conda, Docker, Apptainer, and Linux.
+    article .profile.float-right {
+      float: none !important;
+      width: 100% !important;
+      max-width: 220px;
+      margin: 0 auto 2rem !important;
+    }
+
+    article .profile .more-info {
+      text-align: center;
+    }
+
+    article .profile + h2 {
+      clear: both;
+    }
+  }
+</style>
+
+## Research aim
+
+My ultimate research goal is to **observe biological phenomena through computation, represent them in measurable form, and reach conclusions that are proportional to the evidence**. Biology does not respect disciplinary boundaries, so I am interested in research that connects experimental biology, genomics, statistics, computer science, protein structure, systems engineering, and model evaluation.
+
+My career has followed that path across scales. I began with wet-lab research on **mast-cell-mediated allergic inflammation**, then worked on **NGS pathogen panels, microbial genomics, microbiome analysis, and reproducible workflow engineering**. I now analyze **bacterial and bacteriophage genomes**, construct _Klebsiella pneumoniae_ **tail/RBP and KL-type evidence resources**, and use sequence and protein-structure evidence for **in silico phage design** at Microiotix. At Wittgenbio, I work on **bulk-to-single-cell inference and virtual-cell research**, asking how population-level measurements can be connected to cell composition, cell state, and predicted response without hiding uncertainty.
+
+## Reverse engineering living systems
+
+My longer-term objective is to **reverse-engineer biological systems**: to understand how information, regulation, structure, and environment interact from the genome to the cell, tissue, organism, and population. The practical purpose is to identify structural failure modes, distinguish causal mechanisms from correlations, and eventually make biological intervention and redesign more rational and testable.
+
+I sometimes use a computing analogy to frame this problem. A genome resembles both **persistent information storage** and a **shared execution specification**, but the analogy is incomplete. Cellular behavior is not determined by DNA sequence alone; it emerges from gene regulation, epigenetic state, molecular interaction networks, developmental history, and the surrounding environment. Cells in one body largely inherit the same genome, yet somatic mutations produce cellular mosaics, and adaptive immune cells deliberately rearrange immunoglobulin loci and refine them through somatic hypermutation.[^1][^2] A multicellular organism is therefore better approached as a **distributed, stateful, versioned system** than as a machine controlled by one central program.
+
+Git is useful here as a metaphor, not as a biological claim: cells maintain local molecular state while remaining constrained by inherited information and lineage history. Tissue stem cells support renewal within particular lineages, but they are not a literal central repository, and acquired changes in ordinary somatic cells are generally not transmitted to descendants. The value of the comparison is methodological—it encourages attention to provenance, branching, state transitions, error accumulation, repair, and compatibility across levels of organization.
+
+My long-horizon mission is to understand these mechanisms well enough to help repair disease-associated structural failures and support the safe redesign of genomes and cellular systems. Ultimately, I am interested in whether such knowledge could expand the environments in which humans can survive, including conditions beyond Earth. That is an aspiration rather than a present capability; progress toward it must be incremental, quantitatively evaluated, biologically grounded, and constrained by safety and ethics.
 
 ## At a glance
 
@@ -67,3 +103,7 @@ Studied mast-cell-mediated allergic inflammation using cell culture, flow cytome
 
 **B.S. in Biotechnology, Kyungpook National University**<br>
 Minor in Psychology · March 2008 – February 2016
+
+[^1]: [The Somatic Mosaicism across Human Tissues Network](https://www.nature.com/articles/s41586-025-09096-7), _Nature_ (2025).
+
+[^2]: [V(D)J recombination](https://pubmed.ncbi.nlm.nih.gov/16551259/) and [somatic hypermutation](https://pubmed.ncbi.nlm.nih.gov/16868548/) alter immunoglobulin loci during B-cell development and activation; this is not whole-genome rewriting for a specialized plasma-cell purpose.

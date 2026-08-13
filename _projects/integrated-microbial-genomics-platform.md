@@ -68,6 +68,16 @@ flowchart LR
 
 The report also contained unweighted UniFrac PCoA and genus-level taxonomy heatmaps. I show only the two panels needed to explain the QC decision and the main abundance-weighted separation, rather than presenting every generated plot.
 
+## Shotgun taxonomic classification result
+
+The archived project record includes shotgun metagenomics work, while the retained pipeline evidence documents Kraken2 execution and reporting rather than a disclosure-safe client abundance table. The figure below therefore reconstructs the **result format**, not a biological result: Kraken2-style assignments explored as a Pavian-style multi-rank taxonomy flow, with sample-level summaries for a selected taxon.
+
+<figure class="project-result-figure">
+  <img class="project-result-figure__desktop" src="{{ '/assets/img/projects/sanigen-shotgun-classification-results.svg' | relative_url }}" alt="Disclosure-safe reconstruction of a shotgun classification result with classified and unclassified read fractions and genus-level classified-read composition">
+  <img class="project-result-figure__mobile" src="{{ '/assets/img/projects/sanigen-shotgun-classification-results-mobile.svg' | relative_url }}" alt="Mobile reconstruction of a Kraken2 and Bracken style shotgun classification result">
+  <figcaption><strong>Kraken2/Pavian-style shotgun output.</strong> The taxonomy-flow view preserves the path from domain to genus instead of collapsing classification into a single abundance chart. Selecting a taxon exposes sample-level assigned-read counts and its percentage of classified reads. Sample IDs, values, and taxon labels are illustrative; this is a disclosure-safe output reconstruction and not a client measurement.</figcaption>
+</figure>
+
 ## WGS
 
 The active WGS path in the inspected Sanigen workflow evidence is the Illumina assembly and review branch wired through `WGS_snakefile`, `illumina_trim.smk`, `WGS_assembly.smk`, `WGS_depth.smk`, `Assembly_QC.smk`, `WGS_annotation.smk`, and `abricate.smk`.
