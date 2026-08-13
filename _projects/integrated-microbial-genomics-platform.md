@@ -58,6 +58,16 @@ flowchart LR
 
 </div>
 
+## 16S analysis result
+
+<figure class="project-result-figure">
+  <img class="project-result-figure__desktop" src="{{ '/assets/img/projects/sanigen-16s-analysis-results.svg' | relative_url }}" alt="Two-panel 16S result figure with Shannon rarefaction curves and weighted UniFrac principal coordinates for nine anonymized samples">
+  <img class="project-result-figure__mobile" src="{{ '/assets/img/projects/sanigen-16s-analysis-results-mobile.svg' | relative_url }}" alt="Vertically stacked mobile view of Shannon rarefaction curves and weighted UniFrac principal coordinates for nine anonymized samples">
+  <figcaption><strong>Nine-sample 16S report output.</strong> Shannon curves reached stable plateaus after the first subsampling interval, supporting the selected diversity-analysis depth. Weighted UniFrac PCoA was dominated by PC1 (78.01%) and PC2 (10.58%), with two samples separated strongly along PC1. Labels are anonymized and the figure is descriptive; no treatment or disease-group inference is made.</figcaption>
+</figure>
+
+The report also contained unweighted UniFrac PCoA and genus-level taxonomy heatmaps. I show only the two panels needed to explain the QC decision and the main abundance-weighted separation, rather than presenting every generated plot.
+
 ## WGS
 
 The active WGS path in the inspected Sanigen workflow evidence is the Illumina assembly and review branch wired through `WGS_snakefile`, `illumina_trim.smk`, `WGS_assembly.smk`, `WGS_depth.smk`, `Assembly_QC.smk`, `WGS_annotation.smk`, and `abricate.smk`.
@@ -126,7 +136,7 @@ The Sanigen evidence also distinguishes a few non-active or not-currently-wired 
 
 ## Outcome and evidence
 
-The platform consolidated four major analysis types under a common operational model and became the basis for recurring microbial-genomics work. The public [Bioinformatics_pipeline](https://github.com/Bruce-BC/Bioinformatics_pipeline) repository shows a subset of the workflow approach; client data and production-only components are not public.
+The platform consolidated four major analysis types under a common operational model and became the basis for recurring microbial-genomics work. Its reporting layer retained the scientific outputs needed for review—including denoising summaries, rarefaction, ordination and taxonomy—alongside execution logs and versioned deliverables. The public [Bioinformatics_pipeline](https://github.com/Bruce-BC/Bioinformatics_pipeline) repository shows a subset of the workflow approach; client data and production-only components are not public.
 
 ## Boundary
 

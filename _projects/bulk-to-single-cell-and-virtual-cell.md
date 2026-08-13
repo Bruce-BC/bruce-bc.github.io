@@ -13,7 +13,16 @@ mermaid:
 
 ## Wittgenbio research scope
 
-At **Wittgenbio**, I develop **bulk-to-single-cell inference** approaches and contribute to **virtual-cell research**. This work is separate from my bacteriophage research at Microiotix. The public case study describes the analytical questions and validation structure; private datasets, model implementations, and performance metrics are not disclosed.
+At **Wittgenbio**, I develop **bulk-to-single-cell inference** approaches and contribute to **virtual-cell research**. This work is separate from my bacteriophage research at Microiotix. The case study below reports only versioned, reproducible evidence available in the current research checkout; it does not use illustrative performance charts.
+
+## Current evidence snapshot
+
+| Public reference cohort |   Cells |  Genes | Cell types | Samples | EDA gate                                                                 |
+| ----------------------- | ------: | -----: | ---------: | ------: | ------------------------------------------------------------------------ |
+| GSE176078               |  52,774 | 17,882 |         15 |      26 | Integer-likeness PASS; UMAP evaluated on an 8,000-cell bounded subsample |
+| SCPCP000003             | 275,875 | 60,319 |         13 |      37 | Integer-likeness PASS; UMAP evaluated on an 8,000-cell bounded subsample |
+
+These values document reference scale and preprocessing readiness, not predictive performance. The public page will gain UMAP, cell-composition, or model-comparison figures only when the corresponding reproducible artifacts are available for disclosure.
 
 ## Bulk-to-single-cell workflow
 
@@ -68,6 +77,10 @@ The virtual-cell track focuses on whether a computational representation preserv
 - Compare predictions with measurable biological signals rather than relying on latent-space appearance alone.
 - Report where cell types, states, tissues, perturbations, or experimental conditions are underrepresented.
 - Treat generated cell states and perturbation responses as hypotheses until they are externally or experimentally validated.
+
+## What is measured next
+
+The evaluation plan separates three questions that are often conflated: whether inferred proportions agree with matched references, whether reconstructed expression preserves held-out signal, and whether uncertainty increases under tissue, condition, or cell-type mismatch. Results remain non-headline until the exact split, reference coverage, baseline, and uncertainty evidence are all versioned together.
 
 ## Boundary
 

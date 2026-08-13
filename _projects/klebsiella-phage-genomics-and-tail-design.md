@@ -15,6 +15,23 @@ mermaid:
 
 At Microiotix, my work connects **bacterial genome analysis**, **phage genome analysis**, _Klebsiella pneumoniae_ **tail/RBP and KL-type database construction**, **protein structure analysis**, and **in silico phage design**. The case study below is translated and condensed from an internal analysis report; sample identifiers and internal reference IDs have been removed.
 
+## Design bench
+
+<figure class="project-result-figure">
+  <img src="{{ '/assets/img/projects/microiotix-phage-design-bench.svg' | relative_url }}" alt="Sanitized phage engineering bench showing a lytic phage chassis, two tail-protein slots, and a K64 capsule target">
+  <figcaption><strong>Sanitized static excerpt of the supplied design bench.</strong> The phage–capsule interaction scene is retained while internal genome and reference identifiers are removed. Genome evidence, KL-linked tail/RBP references, anchor compatibility, and protein-structure support are evaluated together before a module-replacement candidate advances to wet-lab testing.</figcaption>
+</figure>
+
+## What the bench evaluates
+
+| Evidence layer    | Concrete analysis                                                | Decision supported                                          |
+| ----------------- | ---------------------------------------------------------------- | ----------------------------------------------------------- |
+| Phage genome      | Assembly QC, taxonomy, lifestyle and read-termini review         | Select a lytic, structurally characterized chassis          |
+| Host genome       | _K. pneumoniae_ assembly and K-locus typing                      | Define the capsule target independently of the phage call   |
+| Tail/RBP database | Curated KL labels, experimental provenance and sequence coverage | Identify candidate receptor-binding or depolymerase modules |
+| Protein structure | Domain-boundary review, Foldseek/PDB support and fold retention  | Reject candidates likely to disrupt attachment or folding   |
+| Design gate       | Anchor identity/coverage, genus context and label consistency    | Rank domain swap, module replacement or tandem addition     |
+
 ## Genome evidence workflow
 
 <div class="project-tool-workflow" data-workflow-id="genome_evidence_workflow" markdown="1">
@@ -62,14 +79,14 @@ flowchart LR
 
 </div>
 
-## Evidence highlighted from the report
+## Results highlighted from the report
 
 - Built a **7,759-sequence capsule-target reference resource** covering depolymerase, tailspike, and receptor-binding proteins, with source traceability, confidence labels, and experimentally verified KL targets explicitly marked.
 - In an anonymized four-genome study, independent evidence converged on **lytic Przondovirus** genomes with **short DTR packaging** and 180-183 bp terminal repeats.
 - Assigned three capsule targets with **95.4-98.8% sequence identity** to experimentally supported references while retaining unresolved targets as data gaps instead of forcing labels.
 - Used independent protein-language-model classifiers to distinguish structural tail proteins from candidate depolymerases, then checked the calls with sequence, domain, and structure evidence.
 - Used **ProstT5 and Foldseek** with experimental PDB references to detect conserved folds at sequence identities too low for ordinary sequence search and to review catalytic-domain boundaries.
-- Prioritized an engineering candidate using same-genus context, a **129-aa anchor alignment spanning 99.2% of the region**, experimental structure support, label-consistency checks, and predicted structural retention.
+- Prioritized an engineering candidate using same-genus context, a **129-aa anchor alignment spanning 99.2% of the region**, experimental structure support, label-consistency checks, and predicted structural retention. This supported a **module-replacement hypothesis** for a K64-targeting construct rather than a claim of experimental host-range expansion.
 
 ## Boundary
 

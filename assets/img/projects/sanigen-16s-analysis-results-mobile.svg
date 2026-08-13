@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1040" role="img" aria-labelledby="title desc">
+  <title id="title">16S diversity analysis results</title>
+  <desc id="desc">Mobile figure with vertically stacked Shannon rarefaction and weighted UniFrac principal coordinates for nine anonymized samples.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fff}.panel{fill:#fbfcfd;stroke:#d8dee4;stroke-width:2}.ink{fill:#24292f;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.muted{fill:#57606a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.axis{stroke:#57606a;stroke-width:2}.grid{stroke:#d8dee4;stroke-width:1}.curve{fill:none;stroke-width:3}.pt{stroke:#fff;stroke-width:2}
+    </style>
+  </defs>
+  <rect class="bg" width="600" height="1040"/>
+  <text class="ink" x="28" y="42" font-size="25" font-weight="700">16S amplicon analysis</text>
+  <text class="muted" x="28" y="69" font-size="14">Nine anonymized samples · original QIIME 2 outputs</text>
+  <rect class="panel" x="20" y="92" width="560" height="421" rx="12"/>
+  <text class="ink" x="46" y="129" font-size="19" font-weight="700">A · Shannon rarefaction</text>
+  <text class="muted" x="46" y="153" font-size="13">Diversity stabilizes across sequencing depth.</text>
+  <g transform="translate(85 184)">
+    <line class="grid" x1="0" y1="0" x2="450" y2="0"/><line class="grid" x1="0" y1="65" x2="450" y2="65"/><line class="grid" x1="0" y1="130" x2="450" y2="130"/><line class="grid" x1="0" y1="195" x2="450" y2="195"/><line class="grid" x1="0" y1="260" x2="450" y2="260"/>
+    <line class="axis" x1="0" y1="260" x2="450" y2="260"/><line class="axis" x1="0" y1="0" x2="0" y2="260"/>
+    <path class="curve" stroke="#0969da" d="M0 260L45 93L90 93L135 93L180 93"/><path class="curve" stroke="#1a7f37" d="M0 260L45 98L90 98L135 98L180 98L225 98"/>
+    <path class="curve" stroke="#8250df" d="M0 260L45 116L90 116L135 116"/><path class="curve" stroke="#bf8700" d="M0 260L45 114L90 114L135 114L180 114"/>
+    <path class="curve" stroke="#cf222e" d="M0 260L45 102L90 103L135 102L180 102L225 102L270 102L315 102L360 102"/><path class="curve" stroke="#0550ae" d="M0 260L45 114L90 114L135 114L180 114"/>
+    <path class="curve" stroke="#116329" d="M0 260L45 46L90 46L135 46L180 46L225 46L270 46"/><path class="curve" stroke="#6639ba" d="M0 260L45 2L90 2L135 2L180 2L225 2L270 2L315 2L360 2L405 2L450 2"/><path class="curve" stroke="#9a6700" d="M0 260L45 13L90 13L135 13L180 12L225 12L270 12L315 12L360 12L405 12"/>
+    <text class="muted" x="225" y="306" text-anchor="middle" font-size="13">Subsampled sequence depth</text><text class="muted" x="-130" y="-47" transform="rotate(-90)" text-anchor="middle" font-size="13">Shannon diversity</text>
+    <text class="muted" x="0" y="282" text-anchor="middle" font-size="11">0</text><text class="muted" x="225" y="282" text-anchor="middle" font-size="11">mid</text><text class="muted" x="450" y="282" text-anchor="middle" font-size="11">max</text>
+  </g>
+  <rect class="panel" x="20" y="533" width="560" height="421" rx="12"/>
+  <text class="ink" x="46" y="570" font-size="19" font-weight="700">B · Weighted UniFrac PCoA</text>
+  <text class="muted" x="46" y="594" font-size="13">Abundance-weighted distances; labels are anonymized.</text>
+  <g transform="translate(85 625)">
+    <line class="grid" x1="0" y1="0" x2="450" y2="0"/><line class="grid" x1="0" y1="65" x2="450" y2="65"/><line class="grid" x1="0" y1="130" x2="450" y2="130"/><line class="grid" x1="0" y1="195" x2="450" y2="195"/><line class="grid" x1="0" y1="260" x2="450" y2="260"/>
+    <line class="grid" x1="0" y1="0" x2="0" y2="260"/><line class="grid" x1="113" y1="0" x2="113" y2="260"/><line class="grid" x1="225" y1="0" x2="225" y2="260"/><line class="grid" x1="338" y1="0" x2="338" y2="260"/><line class="grid" x1="450" y1="0" x2="450" y2="260"/>
+    <line class="axis" x1="0" y1="260" x2="450" y2="260"/><line class="axis" x1="0" y1="0" x2="0" y2="260"/>
+    <circle class="pt" cx="85" cy="137" r="9" fill="#0969da"/><circle class="pt" cx="55" cy="158" r="9" fill="#1a7f37"/><circle class="pt" cx="55" cy="166" r="9" fill="#8250df"/>
+    <circle class="pt" cx="22" cy="231" r="9" fill="#bf8700"/><circle class="pt" cx="38" cy="168" r="9" fill="#cf222e"/><circle class="pt" cx="44" cy="163" r="9" fill="#0550ae"/>
+    <circle class="pt" cx="108" cy="21" r="9" fill="#116329"/><circle class="pt" cx="321" cy="113" r="9" fill="#6639ba"/><circle class="pt" cx="422" cy="209" r="9" fill="#9a6700"/>
+    <g class="muted" font-size="11"><text x="72" y="125">S1</text><text x="42" y="146">S2</text><text x="42" y="188">S3</text><text x="10" y="251">S4</text><text x="25" y="190">S5</text><text x="31" y="151">S6</text><text x="95" y="12">S7</text><text x="308" y="101">S8</text><text x="409" y="231">S9</text></g>
+    <text class="muted" x="225" y="306" text-anchor="middle" font-size="13">PC1 · 78.01%</text><text class="muted" x="-130" y="-47" transform="rotate(-90)" text-anchor="middle" font-size="13">PC2 · 10.58%</text>
+  </g>
+  <text class="muted" x="28" y="998" font-size="12">Weighted UniFrac: PC1 78.01%, PC2 10.58%.</text>
+  <text class="muted" x="28" y="1019" font-size="12">Descriptive result only; no biological group inference.</text>
+</svg>
