@@ -6,6 +6,21 @@
   background: var(--global-card-bg-color, #fff);
 }
 
+.project-tool-workflow > pre.mermaid {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  touch-action: pan-y;
+}
+
+.project-tool-workflow > pre.mermaid svg {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  margin: 0 auto;
+}
+
 .project-tool-explorer__header {
   display: flex;
   gap: 1rem;
@@ -110,9 +125,31 @@
   stroke-width: 4px !important;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
+  .project-tool-workflow > pre.mermaid {
+    padding: 0.75rem 0.25rem;
+    overflow: visible;
+  }
+
+  .project-tool-workflow > pre.mermaid svg {
+    min-width: 0;
+  }
+
+  .project-tool-workflow > pre.mermaid .nodeLabel,
+  .project-tool-workflow > pre.mermaid .edgeLabel {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+
+  .project-tool-workflow > pre.mermaid .node rect,
+  .project-tool-workflow > pre.mermaid .node polygon,
+  .project-tool-workflow > pre.mermaid .node path {
+    stroke-width: 2px;
+  }
+
   .project-tool-explorer {
-    padding: 1rem;
+    margin-top: 1rem;
+    padding: 1rem 0.9rem;
   }
 
   .project-tool-explorer__header {
@@ -121,5 +158,57 @@
 
   .project-tool-explorer__reset {
     margin-top: 0.75rem;
+  }
+
+  .project-tool-explorer__table-wrap {
+    overflow: visible;
+  }
+
+  .project-tool-explorer__table {
+    min-width: 0;
+    font-size: 0.92rem;
+  }
+
+  .project-tool-explorer__table,
+  .project-tool-explorer__table tbody,
+  .project-tool-explorer__table tr,
+  .project-tool-explorer__table th,
+  .project-tool-explorer__table td {
+    display: block;
+    width: 100%;
+  }
+
+  .project-tool-explorer__table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .project-tool-explorer__table tr {
+    margin-bottom: 0.9rem;
+    padding: 0.9rem;
+    border: 1px solid var(--global-divider-color, #d8dee4);
+    border-radius: 0.65rem;
+    background: color-mix(in srgb, var(--global-card-bg-color, #fff) 96%, var(--global-theme-color, #6f42c1));
+  }
+
+  .project-tool-explorer__table tr[hidden] {
+    display: none;
+  }
+
+  .project-tool-explorer__table th,
+  .project-tool-explorer__table td {
+    padding: 0.35rem 0;
+    border: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .project-tool-explorer__table th {
+    font-size: 1rem;
   }
 }

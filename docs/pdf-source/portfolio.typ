@@ -25,7 +25,7 @@
   - In silico tail-RBP design using explicit attachment, target, taxonomy, and structural criteria.
 ])
 
-#role("Wittgenbio", "Computational Biology Research", "CURRENT", [
+#role("Wittgenbio", "Computational Biology Research", "2026.07.01 - PRESENT", [
   - Develop bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references.
   - Contribute to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation.
 ])

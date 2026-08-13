@@ -20,6 +20,7 @@ cv:
     Experience:
       - company: Wittgenbio
         position: Computational Biology Research
+        start_date: "2026-07-01"
         end_date: present
         summary: Develop bulk-to-single-cell inference approaches and contribute to virtual-cell research.
         highlights:

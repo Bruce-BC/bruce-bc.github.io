@@ -34,7 +34,7 @@ Bioinformatician with more than six years of experience connecting bacterial and
 
 #section("EXPERIENCE")
 
-#role("Wittgenbio", "Computational Biology Research", "CURRENT", [
+#role("Wittgenbio", "Computational Biology Research", "2026.07.01 - PRESENT", [
   - Develop and evaluate bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references while retaining validation and uncertainty evidence.
   - Contribute to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation of predicted states or responses.
 ])

@@ -6,6 +6,71 @@
 
   const findNodeGroups = (svg, nodeId) => [...svg.querySelectorAll("g.node")].filter((node) => matchesNodeId(node, nodeId));
 
+  const MOBILE_BREAKPOINT = 640;
+
+  const wrapMobileLabels = (diagram) => {
+    const wrapLabel = (label) => {
+      if (label.includes("<br") || label.length <= 22) return label;
+      const words = label.trim().split(/\s+/);
+      const lines = [];
+      let line = "";
+      words.forEach((word) => {
+        if (line && `${line} ${word}`.length > 22) {
+          lines.push(line);
+          line = word;
+        } else {
+          line = line ? `${line} ${word}` : word;
+        }
+      });
+      if (line) lines.push(line);
+      return lines.join("<br/>");
+    };
+
+    return diagram
+      .replace(/(\b[A-Za-z][A-Za-z0-9_]*)\[([^\]\n]+)\]/g, (_, nodeId, label) => `${nodeId}[${wrapLabel(label)}]`)
+      .replace(/(\b[A-Za-z][A-Za-z0-9_]*)\{([^}\n]+)\}/g, (_, nodeId, label) => `${nodeId}{${wrapLabel(label)}}`);
+  };
+
+  const disableWheelZoom = (svg) => {
+    if (!svg.dataset.pageScrollSafe) {
+      svg.addEventListener("wheel", (event) => event.stopImmediatePropagation(), { capture: true, passive: true });
+      svg.dataset.pageScrollSafe = "true";
+    }
+    if (typeof d3 !== "undefined") {
+      d3.select(svg).on(".zoom", null);
+    }
+    const zoomWrapper = svg.querySelector(":scope > g:not([class])");
+    if (zoomWrapper?.getAttribute("transform")?.includes("scale(")) {
+      zoomWrapper.removeAttribute("transform");
+    }
+  };
+
+  const prepareResponsiveDiagram = (wrapper) => {
+    const backup = wrapper.querySelector("pre.unloaded code.language-mermaid");
+    const rendered = wrapper.querySelector("pre.mermaid");
+    if (!backup || !rendered) return;
+
+    if (!wrapper.dataset.desktopDiagram) {
+      wrapper.dataset.desktopDiagram = backup.textContent;
+    }
+
+    const desktopDiagram = wrapper.dataset.desktopDiagram;
+    const mobile = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches;
+    const responsiveDiagram = mobile ? wrapMobileLabels(desktopDiagram.replace(/^flowchart\s+LR\b/m, "flowchart TB")) : desktopDiagram;
+    const currentMode = mobile ? "mobile" : "desktop";
+
+    if (wrapper.dataset.diagramMode === currentMode && backup.textContent === responsiveDiagram) return;
+
+    backup.textContent = responsiveDiagram;
+    rendered.removeAttribute("data-processed");
+    rendered.textContent = responsiveDiagram;
+    wrapper.dataset.diagramMode = currentMode;
+
+    if (typeof mermaid !== "undefined") {
+      mermaid.init(undefined, rendered);
+    }
+  };
+
   const setNodeState = (svg, selectedId) => {
     svg.querySelectorAll("g.node").forEach((node) => {
       const selected = selectedId && matchesNodeId(node, selectedId);
@@ -20,6 +85,7 @@
     const explorer = wrapper.querySelector(".project-tool-explorer");
     const svg = wrapper.querySelector("pre.mermaid svg");
     if (!explorer || !svg) return false;
+    disableWheelZoom(svg);
 
     const rows = [...explorer.querySelectorAll("tbody tr[data-tool-node]")];
     const matchingRows = rows.filter((row) => row.dataset.toolNode === nodeId);
@@ -42,6 +108,7 @@
   };
 
   const wireExplorer = (wrapper) => {
+    prepareResponsiveDiagram(wrapper);
     const explorer = wrapper.querySelector(".project-tool-explorer");
     const svg = wrapper.querySelector("pre.mermaid svg");
     if (!explorer || !svg) return false;
@@ -92,6 +159,12 @@
   const wireAll = () => {
     document.querySelectorAll(".project-tool-workflow").forEach(wireExplorer);
   };
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(wireAll, 160);
+  });
 
   const observer = new MutationObserver(wireAll);
   observer.observe(document.documentElement, { childList: true, subtree: true });
