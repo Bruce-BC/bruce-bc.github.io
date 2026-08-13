@@ -132,6 +132,7 @@
   }
 
   .project-tool-workflow > pre.mermaid svg {
+    width: min(100%, var(--workflow-svg-width, 100%)) !important;
     min-width: 0;
   }
 
