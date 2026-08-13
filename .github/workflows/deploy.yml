@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - "assets/**"
+      - "bin/**"
       - "favicon.ico"
       - "**.bib"
       - "**.html"
@@ -16,6 +17,8 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "package.json"
+      - "package-lock.json"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -35,6 +38,7 @@ on:
       - main
     paths:
       - "assets/**"
+      - "bin/**"
       - "favicon.ico"
       - "**.bib"
       - "**.html"
@@ -44,6 +48,8 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "package.json"
+      - "package-lock.json"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -86,6 +92,8 @@ jobs:
           cache: "npm"
       - name: Install JS deps 📦
         run: npm ci
+      - name: Validate portfolio evidence 🔎
+        run: ruby bin/validate_project_tooling.rb
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:

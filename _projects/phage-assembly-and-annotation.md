@@ -17,18 +17,26 @@ Produce reviewable bacteriophage genome assemblies and annotations while keeping
 
 ## Workflow
 
+<div class="project-tool-workflow" data-workflow-id="phage_assembly_annotation" markdown="1">
+
 ```mermaid
 flowchart LR
-    A[Sequencing reads] --> B[Read QC]
-    B --> C[Assembly candidates]
-    C --> D[Coverage and contiguity review]
-    D --> E[One-contig final assembly]
-    E --> F[Prokka annotation]
-    E --> G[RAST-tk annotation]
-    F --> H[Reconciled functional review]
-    G --> H
-    H --> I[Genome package + caveats]
+    sequencing_reads[Sequencing reads] --> read_qc[Read QC]
+    read_qc --> assembly_candidates[Assembly candidates]
+    assembly_candidates --> coverage_contiguity_review[Coverage and contiguity review]
+    coverage_contiguity_review --> one_contig_final_assembly[One-contig final assembly]
+    one_contig_final_assembly --> prokka_annotation[Prokka annotation]
+    one_contig_final_assembly --> rast_tk_annotation[RAST-tk annotation]
+    prokka_annotation --> reconciled_functional_review[Reconciled functional review]
+    rast_tk_annotation --> reconciled_functional_review
+    reconciled_functional_review --> portable_workflow_evaluation[ONT and Nextflow evaluation]
+    portable_workflow_evaluation --> genome_package_caveats[Genome package + caveats]
+    class read_qc,assembly_candidates,one_contig_final_assembly,prokka_annotation,rast_tk_annotation,reconciled_functional_review,portable_workflow_evaluation project-tool-node
 ```
+
+{% include project_tool_explorer.liquid project=page.slug workflow="phage_assembly_annotation" %}
+
+</div>
 
 ## Approach
 

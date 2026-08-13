@@ -1,13 +1,13 @@
 cv:
   name: Byung-cheol Kang
-  label: Bioinformatics Team Lead · Senior Researcher
+  label: Bioinformatician
   email: sentim2@gmail.com
   phone: (+82) 10-5366-3411
   location: Suwon, South Korea
   image: ""
   summary: >
     Bioinformatician with more than six years of experience in microbial genomics,
-    metagenomics, NGS analysis services, and reproducible workflow engineering.
+    metagenomics, bacteriophage research, and reproducible workflow engineering.
 
   social_networks:
     - network: GitHub
@@ -17,12 +17,22 @@ cv:
 
   sections:
     Experience:
+      - company: Microiotix
+        position: Bioinformatician
+        start_date: 2026-07
+        end_date: present
+        summary: Contribute to bacteriophage research, in silico design, and research database development and evaluation.
+        highlights:
+          - Support bacteriophage research workflows and analysis activities.
+          - Contribute in silico design work for research use cases.
+          - Develop and evaluate research database resources.
+
       - company: Sanigen
         position: Bioinformatics Team Lead · Senior Researcher
         location: Suwon, South Korea
         start_date: 2020-03
-        end_date: present
-        summary: Lead a five-person bioinformatics team delivering microbial genomics and metagenomics analyses.
+        end_date: 2025-10
+        summary: Led a five-person bioinformatics team delivering microbial genomics and metagenomics analyses.
         highlights:
           - Designed and maintained a shared Snakemake platform covering 16S, ITS, WGS, and hybrid-assembly workflows.
           - Delivered microbial WGS, assembly, annotation, comparative genomics, and microbiome analyses with explicit quality-control checkpoints.

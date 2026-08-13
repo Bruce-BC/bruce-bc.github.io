@@ -17,16 +17,23 @@ Identify a genomic region that distinguishes the target group while remaining pr
 
 ## Workflow
 
+<div class="project-tool-workflow" data-workflow-id="marker_discovery_workflow" markdown="1">
+
 ```mermaid
 flowchart TD
-    A[Curated complete genomes] --> B[Assembly and annotation consistency checks]
-    B --> C[Whole-genome comparison]
-    C --> D[Pan-genome and region context]
-    D --> E[Candidate intervals]
-    E --> F[Specificity and conservation review]
-    F --> G[Approximately 17 kb candidate region]
-    G --> H[Downstream assay constraints]
+    curated_complete_genomes[Curated complete genomes] --> consistency_checks[Assembly and annotation consistency checks]
+    consistency_checks --> whole_genome_comparison[Whole-genome comparison]
+    whole_genome_comparison --> pangenome_region_context[Pan-genome and region context]
+    pangenome_region_context --> candidate_intervals[Candidate intervals]
+    candidate_intervals --> specificity_conservation_review[Specificity and conservation review]
+    specificity_conservation_review --> candidate_region[Approximately 17 kb candidate region]
+    candidate_region --> assay_constraints[Downstream assay constraints]
+    class consistency_checks,whole_genome_comparison,pangenome_region_context,specificity_conservation_review,assay_constraints project-tool-node
 ```
+
+{% include project_tool_explorer.liquid project=page.slug workflow="marker_discovery_workflow" %}
+
+</div>
 
 ## Approach
 

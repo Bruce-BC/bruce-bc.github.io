@@ -1,0 +1,972 @@
+analysis-operations-and-qa:
+  workflows:
+    operating_model:
+      title: Operating model
+      display_only_nodes:
+        - request_question
+      nodes:
+        scope_review:
+          label: Scope and metadata review
+          entries:
+            - name: Scope and metadata review
+              kind: review
+              role: Clarify the biological question, project scope, and required metadata before analysis starts
+              input: Request details and project metadata
+              output: Ready-to-run analysis scope
+              usage_status: used
+              pipeline_state: documented-only
+        workflow_selection:
+          label: Workflow selection
+          entries:
+            - name: Workflow selection
+              kind: method
+              role: Match the project question to the appropriate analysis profile
+              input: Reviewed scope and metadata
+              output: Selected execution path
+              usage_status: used
+              pipeline_state: documented-only
+        execution_qc:
+          label: Execution and QC
+          entries:
+            - name: Execution and QC
+              kind: method
+              role: Run the selected analysis and check technical quality before interpretation
+              input: Selected workflow and project inputs
+              output: QC-checked analysis outputs
+              usage_status: used
+              pipeline_state: documented-only
+        review_gate:
+          label: Review gate
+          entries:
+            - name: Review gate
+              kind: review
+              role: Decide whether results are ready for interpretation or need revision
+              input: QC-checked outputs
+              output: Accept or revise decision
+              usage_status: used
+              pipeline_state: documented-only
+        interpretation:
+          label: Interpretation
+          entries:
+            - name: Interpretation
+              kind: review
+              role: Translate technical outputs into biologically relevant conclusions
+              input: Accepted analysis outputs
+              output: Interpreted findings
+              usage_status: used
+              pipeline_state: documented-only
+        report_package:
+          label: Report and data package
+          entries:
+            - name: Report and data package
+              kind: method
+              role: Package reviewed outputs, interpretation, and retained provenance for delivery
+              input: Interpreted findings and traceable analysis records
+              output: Delivered report and data package
+              usage_status: used
+              pipeline_state: documented-only
+        feedback_provenance:
+          label: Feedback and retained provenance
+          entries:
+            - name: Feedback and retained provenance
+              kind: method
+              role: Preserve rerun context, clarification history, and traceable project records
+              input: Delivered outputs and stakeholder feedback
+              output: Retained provenance for follow-up work
+              usage_status: used
+              pipeline_state: documented-only
+    archived_project_mix:
+      title: Archived project mix
+      display_only_nodes:
+        - archived_mix
+      nodes:
+        wgs_projects:
+          label: WGS
+          entries:
+            - name: WGS
+              kind: method
+              role: Archived whole-genome sequencing work represented in project communications
+              input: Distinct order codes in archived communications
+              output: Conservative lower-bound count of 28 order codes
+              usage_status: used
+              pipeline_state: documented-only
+        hybrid_projects:
+          label: Hybrid
+          entries:
+            - name: Hybrid
+              kind: method
+              role: Archived hybrid-assembly work represented in project communications
+              input: Distinct order codes in archived communications
+              output: Conservative lower-bound count of 21 order codes
+              usage_status: used
+              pipeline_state: documented-only
+        amplicon_16s_projects:
+          label: 16S
+          entries:
+            - name: 16S
+              kind: method
+              role: Archived 16S work represented in project communications
+              input: Distinct order codes in archived communications
+              output: Conservative lower-bound count of 19 order codes
+              usage_status: used
+              pipeline_state: documented-only
+        shotgun_projects:
+          label: Shotgun
+          entries:
+            - name: Shotgun
+              kind: method
+              role: Archived shotgun metagenomics work represented in project communications
+              input: Distinct order codes in archived communications
+              output: Conservative lower-bound count of 18 order codes
+              usage_status: used
+              pipeline_state: documented-only
+        rna_projects:
+          label: RNA
+          entries:
+            - name: RNA
+              kind: method
+              role: Archived RNA analysis work represented in project communications
+              input: Distinct order codes in archived communications
+              output: Conservative lower-bound count of 7 order codes
+              usage_status: used
+              pipeline_state: documented-only
+        its_projects:
+          label: ITS
+          entries:
+            - name: ITS
+              kind: method
+              role: Archived ITS work represented in project communications
+              input: Distinct order codes in archived communications
+              output: Conservative lower-bound count of 3 order codes
+              usage_status: used
+              pipeline_state: documented-only
+        other_projects:
+          label: Other
+          entries:
+            - name: Other
+              kind: method
+              role: Archived work outside the major listed profiles
+              input: Distinct order codes in archived communications
+              output: Conservative lower-bound count of 2 order codes
+              usage_status: used
+              pipeline_state: documented-only
+
+comparative-genomics-marker-discovery:
+  workflows:
+    marker_discovery_workflow:
+      title: Marker discovery workflow
+      display_only_nodes:
+        - curated_complete_genomes
+        - candidate_intervals
+        - candidate_region
+      nodes:
+        consistency_checks:
+          label: Assembly and annotation consistency checks
+          entries:
+            - name: Assembly and annotation consistency checks
+              kind: review
+              role: Confirm that complete genomes can be compared on a like-for-like basis
+              input: Curated complete genomes
+              output: Comparison-ready genome set
+              usage_status: used
+              pipeline_state: documented-only
+        whole_genome_comparison:
+          label: Whole-genome comparison
+          entries:
+            - name: Whole-genome comparison
+              kind: method
+              role: Identify large-scale genomic differences across the complete genomes
+              input: Comparison-ready genome set
+              output: Genome-wide difference candidates
+              usage_status: used
+              pipeline_state: documented-only
+        pangenome_region_context:
+          label: Pan-genome and region context
+          entries:
+            - name: Pan-genome and region context
+              kind: method
+              role: Place candidate differences into broader region and conservation context
+              input: Genome-wide difference candidates
+              output: Contextualized candidate intervals
+              usage_status: used
+              pipeline_state: documented-only
+        specificity_conservation_review:
+          label: Specificity and conservation review
+          entries:
+            - name: Specificity and conservation review
+              kind: review
+              role: Filter candidates against specificity and conservation constraints
+              input: Contextualized candidate intervals
+              output: Prioritized candidate region list
+              usage_status: used
+              pipeline_state: documented-only
+        assay_constraints:
+          label: Downstream assay constraints
+          entries:
+            - name: Downstream assay constraints
+              kind: review
+              role: Keep marker candidates practical for downstream assay development
+              input: Prioritized candidate regions
+              output: Follow-up-ready candidate region
+              usage_status: used
+              pipeline_state: documented-only
+
+foodborne-pathogen-ngs-panel:
+  workflows:
+    panel_development_loop:
+      title: Panel development loop
+      display_only_nodes:
+        - target_organisms
+      nodes:
+        marker_primer_design:
+          label: Marker and primer design
+          entries:
+            - name: Marker and primer design
+              kind: method
+              role: Define target regions that support multi-pathogen detection
+              input: Target organisms and comparative evidence
+              output: Candidate markers and primer designs
+              usage_status: used
+              pipeline_state: documented-only
+        panel_construction:
+          label: Panel construction
+          entries:
+            - name: Panel construction
+              kind: method
+              role: Build the targeted sequencing panel from the selected markers
+              input: Candidate markers and primer designs
+              output: Panel-ready assay design
+              usage_status: used
+              pipeline_state: documented-only
+        matrix_specific_evaluation:
+          label: Matrix-specific evaluation
+          entries:
+            - name: Matrix-specific evaluation
+              kind: method
+              role: Test the panel in food and environmental sample contexts
+              input: Panel-ready assay design and matrix samples
+              output: Matrix-specific performance evidence
+              usage_status: used
+              pipeline_state: documented-only
+        sequence_analysis:
+          label: Sequence analysis
+          entries:
+            - name: Sequence analysis
+              kind: method
+              role: Interpret targeted NGS outputs from the evaluated panel
+              input: Sequencing output from panel evaluations
+              output: Interpretable pathogen detection results
+              usage_status: used
+              pipeline_state: documented-only
+        performance_review:
+          label: Sensitivity and specificity review
+          entries:
+            - name: Sensitivity and specificity review
+              kind: review
+              role: Judge whether the current panel state is ready to report or needs refinement
+              input: Sequence analysis and matrix-specific performance evidence
+              output: Refine-or-report decision
+              usage_status: used
+              pipeline_state: documented-only
+        publication_patent_evidence:
+          label: Publication and patent evidence
+          entries:
+            - name: Publication and patent evidence
+              kind: review
+              role: Capture collaborative outputs that document the panel development result
+              input: Reportable panel evaluation outcomes
+              output: Published papers and joint patent evidence
+              usage_status: used
+              pipeline_state: documented-only
+
+integrated-microbial-genomics-platform:
+  workflows:
+    shared_execution:
+      title: Shared execution model
+      display_only_nodes:
+        - fastq_metadata
+      nodes:
+        metadata_validation:
+          label: Metadata validation
+          entries:
+            - name: Metadata validation
+              kind: method
+              role: Standardize input contracts before compute starts
+              input: FASTQ files, sample metadata, and workflow config
+              output: Validated run inputs
+              usage_status: used
+              pipeline_state: active-rule
+        snakemake_orchestration:
+          label: Snakemake orchestration
+          entries:
+            - name: Snakemake
+              kind: workflow-engine
+              role: Coordinate shared execution across 16S, ITS, WGS, and hybrid profiles
+              input: Validated inputs, profile config, and rule graph
+              output: Ordered jobs, checkpoints, logs, and outputs
+              usage_status: used
+              pipeline_state: active-rule
+        environment_isolation:
+          label: Conda and container isolation
+          entries:
+            - name: Conda
+              kind: platform
+              role: Provide tool-level reproducibility for workflow environments
+              input: Environment YAML files and workflow rules
+              output: Reproducible analysis environments
+              usage_status: used
+              pipeline_state: active-rule
+            - name: Apptainer
+              kind: platform
+              role: Run containerized tools when stronger isolation is needed
+              input: Container image references and Snakemake rules
+              output: Isolated execution environment
+              usage_status: used
+              pipeline_state: active-rule
+            - name: Docker
+              kind: platform
+              role: Provide alternative container execution for pinned workflow images
+              input: Container image references and Snakemake rules
+              output: Isolated execution environment
+              usage_status: used
+              pipeline_state: active-rule
+        qc_checkpoints:
+          label: QC and checkpoint gates
+          entries:
+            - name: FastQC
+              kind: tool
+              role: Generate per-read-set QC before downstream analysis
+              input: Raw Illumina FASTQ files
+              output: Per-sample QC ZIP archives and summaries
+              usage_status: used
+              pipeline_state: active-rule
+              version: 0.12.1
+            - name: MultiQC
+              kind: tool
+              role: Aggregate QC outputs into a run-level report
+              input: FastQC outputs
+              output: Multi-sample QC report
+              usage_status: used
+              pipeline_state: active-rule
+              version: "1.27"
+        versioned_deliverables:
+          label: Versioned reports and deliverables
+          entries:
+            - name: Versioned report packaging
+              kind: method
+              role: Emit reviewable reports and retained provenance in a consistent structure
+              input: Workflow outputs and QC checkpoints
+              output: Traceable deliverables for delivery and review
+              usage_status: used
+              pipeline_state: active-rule
+    amplicon_16s_its:
+      title: 16S and ITS workflow
+      display_only_nodes:
+        - illumina_reads
+      nodes:
+        illumina_qc:
+          label: Illumina QC
+          entries:
+            - name: FastQC
+              kind: tool
+              role: Generate read-level QC before amplicon import
+              input: Raw paired-end amplicon FASTQ files
+              output: Per-read QC archives
+              usage_status: used
+              pipeline_state: active-rule
+              version: 0.12.1
+            - name: MultiQC
+              kind: tool
+              role: Combine FastQC outputs into a run-level QC report
+              input: FastQC archives
+              output: Multi-sample QC report
+              usage_status: used
+              pipeline_state: active-rule
+              version: "1.27"
+        qiime_import:
+          label: QIIME 2 import
+          entries:
+            - name: QIIME 2 Amplicon
+              kind: platform
+              role: Import manifests and amplicon reads into the shared QIIME 2 workflow
+              input: Manifest file and raw paired-end reads
+              output: Imported QIIME 2 artifacts
+              usage_status: used
+              pipeline_state: active-rule
+              version: "2026.1"
+        dada2_denoising:
+          label: DADA2 denoising
+          entries:
+            - name: QIIME 2 DADA2
+              kind: tool
+              role: Denoise paired-end amplicon reads and generate representative sequences
+              input: Imported QIIME 2 demultiplexed sequences
+              output: Feature table, representative sequences, and denoising stats
+              usage_status: used
+              pipeline_state: active-rule
+              version: "2026.1"
+        taxonomy_classification:
+          label: Taxonomy classification
+          entries:
+            - name: QIIME 2 feature-classifier
+              kind: tool
+              role: Classify representative sequences against the configured reference database
+              input: Representative sequences and classifier database
+              output: Taxonomy assignments and tabulated taxonomy views
+              usage_status: used
+              pipeline_state: active-rule
+              version: "2026.1"
+        phylogeny_diversity:
+          label: Phylogeny and diversity
+          entries:
+            - name: QIIME 2 MAFFT
+              kind: tool
+              role: Build the sequence alignment used for phylogenetic reconstruction
+              input: Filtered representative sequences
+              output: Multiple-sequence alignment
+              usage_status: used
+              pipeline_state: active-rule
+              version: "2026.1"
+            - name: QIIME 2 FastTree
+              kind: tool
+              role: Construct rooted trees for diversity analysis
+              input: Masked amplicon alignment
+              output: Unrooted and rooted trees
+              usage_status: used
+              pipeline_state: active-rule
+              version: "2026.1"
+            - name: QIIME 2 core-metrics-phylogenetic
+              kind: tool
+              role: Generate alpha and beta diversity outputs from the filtered feature table
+              input: Filtered feature table, rooted tree, and sample metadata
+              output: Diversity metrics and ordination artifacts
+              usage_status: used
+              pipeline_state: active-rule
+              version: "2026.1"
+        taxonomy_exports:
+          label: Taxonomy exports
+          entries:
+            - name: QIIME 2 taxa barplot
+              kind: tool
+              role: Export interactive taxonomy bar plots from classified amplicon tables
+              input: Filtered feature table, taxonomy assignments, and metadata
+              output: Taxonomy visualization artifacts and exported HTML assets
+              usage_status: used
+              pipeline_state: active-rule
+              version: "2026.1"
+    wgs_profile:
+      title: WGS workflow
+      display_only_nodes:
+        - wgs_reads
+      nodes:
+        illumina_qc:
+          label: Illumina QC
+          entries:
+            - name: FastQC
+              kind: tool
+              role: Generate read-level QC before trimming and assembly
+              input: Raw WGS paired-end FASTQ files
+              output: Per-read QC archives
+              usage_status: used
+              pipeline_state: active-rule
+              version: 0.12.1
+            - name: MultiQC
+              kind: tool
+              role: Aggregate per-read QC into a run-level report
+              input: FastQC archives
+              output: Multi-sample QC report
+              usage_status: used
+              pipeline_state: active-rule
+              version: "1.27"
+        adapter_trimming:
+          label: Adapter trimming
+          entries:
+            - name: Trimmomatic
+              kind: tool
+              role: Trim adapters and low-quality bases from paired-end WGS reads
+              input: Raw paired-end WGS FASTQ files
+              output: Trimmed paired and unpaired reads with trimming logs
+              usage_status: used
+              pipeline_state: active-rule
+              version: "0.39"
+        spades_assembly:
+          label: SPAdes assembly
+          entries:
+            - name: SPAdes
+              kind: tool
+              role: Assemble trimmed WGS reads into draft scaffolds
+              input: Trimmed paired-end reads
+              output: Assembly scaffolds
+              usage_status: used
+              pipeline_state: active-rule
+              version: 4.0.0
+        assembly_filtering:
+          label: Assembly filtering
+          entries:
+            - name: Length and coverage scaffold filtering
+              kind: method
+              role: Keep scaffolds that pass the configured minimum length and coverage thresholds
+              input: SPAdes scaffolds
+              output: Filtered scaffolds for downstream QC and annotation
+              usage_status: used
+              pipeline_state: active-rule
+        depth_remap:
+          label: Depth remapping
+          entries:
+            - name: Bowtie2
+              kind: tool
+              role: Remap trimmed reads to filtered scaffolds for depth review
+              input: Filtered scaffolds and trimmed paired-end reads
+              output: Alignment SAM files and Bowtie2 statistics
+              usage_status: used
+              pipeline_state: active-rule
+              version: 2.5.5
+            - name: Samtools
+              kind: tool
+              role: Sort remapped alignments and compute depth summaries
+              input: WGS remapping alignments
+              output: Sorted alignments and per-base depth files
+              usage_status: used
+              pipeline_state: active-rule
+              version: "1.21"
+        assembly_qc:
+          label: Assembly QC
+          entries:
+            - name: QUAST
+              kind: tool
+              role: Summarize assembly contiguity and structural QC metrics
+              input: Filtered scaffold FASTA files
+              output: Assembly QC report
+              usage_status: used
+              pipeline_state: active-rule
+              version: 5.2.0
+            - name: Kraken2
+              kind: tool
+              role: Generate expected-taxon checks on filtered scaffolds
+              input: Filtered scaffold FASTA files
+              output: Taxon information summaries
+              usage_status: used
+              pipeline_state: active-rule
+              version: 2.1.3
+            - name: BUSCO
+              kind: tool
+              role: Estimate assembly completeness for bacterial WGS runs
+              input: Filtered scaffold FASTA files
+              output: BUSCO figure and summary statistics
+              usage_status: used
+              pipeline_state: active-rule
+              version: 5.7.1
+        annotation_and_amr:
+          label: Annotation and AMR/VF review
+          entries:
+            - name: Prokka
+              kind: tool
+              role: Annotate filtered genome assemblies
+              input: Filtered scaffold FASTA files
+              output: Annotated GenBank and feature files
+              usage_status: used
+              pipeline_state: active-rule
+              version: 1.15.6
+            - name: Abricate
+              kind: tool
+              role: Summarize antimicrobial-resistance and virulence-factor hits
+              input: Filtered scaffold FASTA files
+              output: AMR, virulence-factor, and combined summary tables
+              usage_status: used
+              pipeline_state: active-rule
+              version: 1.0.1
+    hybrid_profile:
+      title: Hybrid workflow
+      display_only_nodes:
+        - hybrid_inputs
+      nodes:
+        illumina_qc:
+          label: Illumina QC
+          entries:
+            - name: FastQC
+              kind: tool
+              role: Generate read-level QC for Illumina inputs used in hybrid runs
+              input: Raw hybrid Illumina paired-end FASTQ files
+              output: Per-read QC archives
+              usage_status: used
+              pipeline_state: active-rule
+              version: 0.12.1
+            - name: MultiQC
+              kind: tool
+              role: Aggregate Illumina QC outputs for hybrid runs
+              input: FastQC archives
+              output: Multi-sample QC report
+              usage_status: used
+              pipeline_state: active-rule
+              version: "1.27"
+        adapter_trimming:
+          label: Adapter trimming
+          entries:
+            - name: Trimmomatic
+              kind: tool
+              role: Trim Illumina paired-end reads before hybrid assembly
+              input: Raw hybrid Illumina paired-end FASTQ files
+              output: Trimmed paired and unpaired reads with trimming logs
+              usage_status: used
+              pipeline_state: active-rule
+              version: "0.39"
+        nanopore_filtering:
+          label: Nanopore merge and filtering
+          entries:
+            - name: NanoFilt
+              kind: tool
+              role: Filter merged Nanopore reads by quality and length before assembly
+              input: Merged Nanopore FASTQ files
+              output: Trimmed Nanopore reads
+              usage_status: used
+              pipeline_state: active-rule
+              version: 2.8.0
+            - name: NanoPlot
+              kind: tool
+              role: Summarize Nanopore read quality before and after filtering
+              input: Raw or filtered Nanopore FASTQ files
+              output: NanoStats summaries and QC HTML reports
+              usage_status: used
+              pipeline_state: active-rule
+              version: "1.42.0"
+        unicycler_assembly:
+          label: Unicycler hybrid assembly
+          entries:
+            - name: Unicycler
+              kind: tool
+              role: Assemble Illumina and Nanopore reads in the hybrid branch
+              input: Trimmed Illumina reads and filtered Nanopore reads
+              output: Hybrid assembly FASTA
+              usage_status: used
+              pipeline_state: active-rule
+              version: 0.5.0
+        flye_assembly:
+          label: Flye long-read assembly
+          entries:
+            - name: Flye
+              kind: tool
+              role: Assemble filtered Nanopore reads in the long-read branch
+              input: Filtered Nanopore reads
+              output: Long-read assembly FASTA
+              usage_status: used
+              pipeline_state: active-rule
+              version: 2.9.3
+        pilon_polishing:
+          label: Pilon polishing
+          entries:
+            - name: BWA
+              kind: tool
+              role: Remap Illumina reads to the Flye assembly before polishing
+              input: Flye assembly and trimmed Illumina reads
+              output: Remapping alignments for polishing
+              usage_status: used
+              pipeline_state: active-rule
+              version: 0.7.17
+            - name: Samtools
+              kind: tool
+              role: Sort and index remapped alignments for Pilon input
+              input: BWA alignments
+              output: Sorted and indexed BAM files
+              usage_status: used
+              pipeline_state: active-rule
+              version: "1.21"
+            - name: Pilon
+              kind: tool
+              role: Polish Flye assemblies with Illumina evidence
+              input: Flye assembly and indexed Illumina remapping BAM files
+              output: Polished hybrid assembly FASTA
+              usage_status: used
+              pipeline_state: active-rule
+              version: "1.24"
+        depth_review:
+          label: Depth review
+          entries:
+            - name: Bowtie2
+              kind: tool
+              role: Map Illumina reads back to final hybrid assemblies
+              input: Final hybrid assembly FASTA and trimmed Illumina reads
+              output: Illumina alignment statistics and depth files
+              usage_status: used
+              pipeline_state: active-rule
+              version: 2.5.5
+            - name: Minimap2
+              kind: tool
+              role: Map Nanopore reads back to final hybrid assemblies
+              input: Final hybrid assembly FASTA and filtered Nanopore reads
+              output: Nanopore alignment statistics and depth files
+              usage_status: used
+              pipeline_state: active-rule
+              version: "2.28"
+            - name: Samtools
+              kind: tool
+              role: Sort remapping alignments and compute depth summaries
+              input: Hybrid remapping alignments
+              output: Sorted alignments and per-base depth files
+              usage_status: used
+              pipeline_state: active-rule
+              version: "1.21"
+        assembly_qc:
+          label: Assembly QC
+          entries:
+            - name: BUSCO
+              kind: tool
+              role: Estimate completeness for hybrid assemblies
+              input: Final hybrid assembly FASTA files
+              output: BUSCO figure and per-sample BUSCO statistics
+              usage_status: used
+              pipeline_state: active-rule
+              version: 5.7.1
+            - name: Kraken2
+              kind: tool
+              role: Generate expected-taxon checks on final hybrid assemblies
+              input: Final hybrid assembly FASTA files
+              output: Taxon information summaries
+              usage_status: used
+              pipeline_state: active-rule
+              version: 2.1.3
+        annotation_and_maps:
+          label: Annotation and maps
+          entries:
+            - name: Prokka
+              kind: tool
+              role: Annotate final hybrid assemblies
+              input: Final hybrid assembly FASTA files
+              output: Annotated GenBank and feature files
+              usage_status: used
+              pipeline_state: active-rule
+              version: 1.15.6
+            - name: Abricate
+              kind: tool
+              role: Summarize antimicrobial-resistance and virulence-factor hits on hybrid assemblies
+              input: Final hybrid assembly FASTA files
+              output: AMR, virulence-factor, and combined summary tables
+              usage_status: used
+              pipeline_state: active-rule
+              version: 1.0.1
+            - name: CGView
+              kind: tool
+              role: Render circular genome maps from final hybrid assemblies
+              input: Final hybrid assembly FASTA files
+              output: Circular map XML and PNG assets
+              usage_status: used
+              pipeline_state: active-rule
+              version: "1.0"
+
+phage-assembly-and-annotation:
+  workflows:
+    phage_assembly_annotation:
+      title: Phage assembly and annotation workflow
+      display_only_nodes:
+        - sequencing_reads
+        - coverage_contiguity_review
+        - genome_package_caveats
+      nodes:
+        read_qc:
+          label: Read QC
+          entries:
+            - name: Read QC
+              kind: method
+              role: Check sequencing-read quality before assembly comparison
+              input: Sequencing reads
+              output: QC context for assembly review
+              usage_status: used
+              pipeline_state: documented-only
+        assembly_candidates:
+          label: Assembly candidates
+          entries:
+            - name: Assembly candidate comparison
+              kind: review
+              role: Compare candidate assemblies by contiguity, read support, and plausibility
+              input: QC-reviewed sequencing reads and assembly candidates
+              output: Preferred assembly candidate
+              usage_status: used
+              pipeline_state: documented-only
+        one_contig_final_assembly:
+          label: One-contig final assembly
+          entries:
+            - name: One-contig final assembly
+              kind: method
+              role: Carry the selected assembly forward as the reviewable genome build
+              input: Preferred assembly candidate
+              output: One-contig final assembly
+              usage_status: used
+              pipeline_state: documented-only
+        prokka_annotation:
+          label: Prokka annotation
+          entries:
+            - name: Prokka
+              kind: tool
+              role: Generate one annotation evidence stream for the final phage assembly
+              input: One-contig final assembly
+              output: Prokka annotation output
+              usage_status: used
+              pipeline_state: documented-only
+        rast_tk_annotation:
+          label: RAST-tk annotation
+          entries:
+            - name: RAST-tk
+              kind: tool
+              role: Provide a second annotation evidence stream for reconciliation
+              input: One-contig final assembly
+              output: RAST-tk annotation output
+              usage_status: used
+              pipeline_state: documented-only
+        reconciled_functional_review:
+          label: Reconciled functional review
+          entries:
+            - name: Reconciled functional review
+              kind: review
+              role: Compare annotation outputs instead of treating one source as definitive
+              input: Prokka and RAST-tk annotation outputs
+              output: Reviewable functional interpretation with caveats
+              usage_status: used
+              pipeline_state: documented-only
+        portable_workflow_evaluation:
+          label: ONT and Nextflow evaluation
+          entries:
+            - name: ONT
+              kind: platform
+              role: Evaluate long-read sequencing as part of a more portable workflow direction
+              input: Candidate portable workflow design
+              output: Portability evaluation evidence
+              usage_status: evaluated
+              pipeline_state: configured-only
+            - name: Nextflow
+              kind: workflow-engine
+              role: Evaluate a more portable execution model for phage processing
+              input: Candidate portable workflow design
+              output: Portability evaluation evidence
+              usage_status: evaluated
+              pipeline_state: configured-only
+
+phage-lifestyle-evidence-prototype:
+  workflows:
+    lifestyle_evidence_workflow:
+      title: Lifestyle evidence workflow
+      display_only_nodes:
+        - phage_genome
+        - lytic_candidate
+        - lysogenic_candidate
+        - unresolved_review
+      nodes:
+        checkv_quality_context:
+          label: CheckV quality context
+          entries:
+            - name: CheckV
+              kind: tool
+              role: Contribute genome-quality context to lifestyle interpretation
+              input: Phage genome
+              output: Quality context for downstream evidence integration
+              usage_status: prototype
+              pipeline_state: documented-only
+        annotation_evidence:
+          label: Annotation evidence
+          entries:
+            - name: Pharokka
+              kind: tool
+              role: Generate phage-focused gene annotations used in the evidence table
+              input: Phage genome
+              output: Functional annotation evidence
+              usage_status: prototype
+              pipeline_state: documented-only
+            - name: Phold
+              kind: tool
+              role: Contribute complementary annotation evidence for phage genes
+              input: Phage genome
+              output: Functional annotation evidence
+              usage_status: prototype
+              pipeline_state: documented-only
+        lifestyle_scores:
+          label: Lifestyle scores
+          entries:
+            - name: BACPHLIP
+              kind: tool
+              role: Score the lytic-versus-lysogenic signal from the phage genome
+              input: Phage genome
+              output: Lifestyle score
+              usage_status: prototype
+              pipeline_state: documented-only
+            - name: PhaTYP
+              kind: tool
+              role: Provide an additional lifestyle score for evidence comparison
+              input: Phage genome
+              output: Lifestyle score
+              usage_status: prototype
+              pipeline_state: documented-only
+        hallmark_gene_review:
+          label: Hallmark gene review
+          entries:
+            - name: Integrase, repressor, excision, and lysis review
+              kind: review
+              role: Keep gene-level lifestyle evidence visible instead of hiding it behind a consensus label
+              input: Annotation evidence
+              output: Gene-level lifestyle evidence
+              usage_status: prototype
+              pipeline_state: documented-only
+        evidence_table:
+          label: Evidence table
+          entries:
+            - name: Evidence table integration
+              kind: method
+              role: Combine quality, classifier, and gene-level evidence without suppressing disagreement
+              input: CheckV context, classifier scores, and hallmark-gene review
+              output: Consolidated evidence table
+              usage_status: prototype
+              pipeline_state: documented-only
+        agreement_confidence:
+          label: Agreement and confidence
+          entries:
+            - name: Agreement and confidence review
+              kind: review
+              role: Route concordant cases to candidate labels and discordant cases to manual review
+              input: Consolidated evidence table
+              output: Lytic, lysogenic, or unresolved candidate status
+              usage_status: prototype
+              pipeline_state: documented-only
+    host_range_extension:
+      title: Host-range extension
+      display_only_nodes:
+        - resistant_host_genomes
+        - phage_side_evidence
+        - ranked_candidates
+      nodes:
+        host_surface_variation:
+          label: Host surface variation
+          entries:
+            - name: LPS and outer-membrane variation review
+              kind: review
+              role: Track bacterial surface features relevant to receptor compatibility
+              input: Resistant host genomes
+              output: Host-side compatibility features
+              usage_status: prototype
+              pipeline_state: documented-only
+        phage_receptor_evidence:
+          label: Phage receptor evidence
+          entries:
+            - name: Phage receptor and annotation evidence
+              kind: review
+              role: Pull phage-side receptor cues into the compatibility layer
+              input: Phage annotation evidence
+              output: Phage-side compatibility features
+              usage_status: prototype
+              pipeline_state: documented-only
+        compatibility_features:
+          label: Compatibility features
+          entries:
+            - name: Compatibility feature integration
+              kind: method
+              role: Combine host-surface and phage-side evidence into a ranking feature set
+              input: Host-side and phage-side compatibility features
+              output: Ranked phage-host candidates
+              usage_status: prototype
+              pipeline_state: documented-only
+        experimental_validation:
+          label: Experimental validation
+          entries:
+            - name: Experimental validation
+              kind: review
+              role: Treat the ranked candidates as hypotheses that still require wet-lab confirmation
+              input: Ranked phage-host candidates
+              output: Validated or rejected host-range candidates
+              usage_status: planned
+              pipeline_state: documented-only

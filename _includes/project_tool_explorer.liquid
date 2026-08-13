@@ -1,0 +1,81 @@
+{% assign project_key = include.project | default: page.slug %}
+{% assign project_tooling = site.data.project_tooling[project_key] %}
+{% assign workflow_tooling = project_tooling.workflows[include.workflow] %}
+{% if workflow_tooling %}
+  {% capture tooling_asset_version %}{{ site.time | date: '%s' }}{% endcapture %}
+  <link rel="stylesheet" href="{{ '/assets/css/project-tool-explorer.css' | relative_url }}?v={{ tooling_asset_version }}">
+  <script defer src="{{ '/assets/js/project-tool-explorer.js' | relative_url }}?v={{ tooling_asset_version }}"></script>
+
+  {% capture explorer_id %}tool-explorer-{{ project_key }}-{{ include.workflow }}{% endcapture %}
+  <section
+    class="project-tool-explorer"
+    id="{{ explorer_id }}"
+    data-project="{{ project_key }}"
+    data-workflow="{{ include.workflow }}"
+    aria-labelledby="{{ explorer_id }}-title"
+  >
+    <div class="project-tool-explorer__header">
+      <div>
+        <p class="project-tool-explorer__eyebrow">Workflow evidence</p>
+        <h3 id="{{ explorer_id }}-title">Tools used in this workflow</h3>
+        <p class="project-tool-explorer__selection" data-tool-selection>All workflow steps</p>
+      </div>
+      <button class="project-tool-explorer__reset" type="button" data-tool-reset hidden>Show all tools</button>
+    </div>
+
+    <p class="project-tool-explorer__hint">
+      Select a highlighted workflow node to filter the evidence table. The complete table remains available without JavaScript. Version labels, where
+      present, describe the inspected workflow snapshot and are not historical run records.
+    </p>
+
+    <div class="project-tool-explorer__table-wrap" tabindex="0" role="region" aria-label="{{ workflow_tooling.title }} tool table">
+      <table id="{{ explorer_id }}-table" class="project-tool-explorer__table">
+        <thead>
+          <tr>
+            <th scope="col">Stage</th>
+            <th scope="col">Tool or method</th>
+            <th scope="col">Type</th>
+            <th scope="col">Role</th>
+            <th scope="col">Input &rarr; output</th>
+            <th scope="col">Evidence status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for node_pair in workflow_tooling.nodes %}
+            {% assign node_id = node_pair[0] %}
+            {% assign node = node_pair[1] %}
+            {% for entry in node.entries %}
+              <tr data-tool-node="{{ node_id }}" data-tool-node-label="{{ node.label }}">
+                <th scope="row">{{ node.label }}</th>
+                <td>
+                  {% if entry.url %}
+                    <a href="{{ entry.url }}" rel="external noopener" target="_blank">{{ entry.name }}</a>
+                  {% else %}
+                    {{ entry.name }}
+                  {% endif %}
+                  {% if entry.version -%}
+                    <span class="project-tool-explorer__version">snapshot {{ entry.version }}</span>
+                  {%- endif %}
+                </td>
+                <td>{{ entry.kind | replace: '-', ' ' }}</td>
+                <td>{{ entry.role }}</td>
+                <td>{{ entry.input }} &rarr; {{ entry.output }}</td>
+                <td>
+                  <span class="project-tool-explorer__badge" data-status="{{ entry.usage_status }}">
+                    {{ entry.usage_status | replace: '-', ' ' }}
+                  </span>
+                  <span class="project-tool-explorer__state">{{ entry.pipeline_state | replace: '-', ' ' }}</span>
+                </td>
+              </tr>
+            {% endfor %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="sr-only" aria-live="polite" data-tool-status></p>
+  </section>
+{% else %}
+  <p class="project-tool-explorer__error">
+    Tool evidence is not available for workflow <code>{{ include.workflow }}</code>.
+  </p>
+{% endif %}

@@ -2,15 +2,15 @@
 layout: about
 title: About
 permalink: /
-subtitle: Bioinformatics Team Lead · Microbial Genomics · Metagenomics · Workflow Engineering
+subtitle: Bioinformatician · Bacteriophage Research · In Silico Design
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: true
   more_info: >
-    <p>Sanigen</p>
-    <p>Suwon, South Korea</p>
+    <p>Microiotix</p>
+    <p>South Korea</p>
 
 selected_papers: true
 social: true
@@ -26,9 +26,9 @@ latest_posts:
   limit: 0
 ---
 
-I build reproducible analysis systems for **microbial genomics, metagenomics, and bacteriophage research**. Since March 2020, I have worked at Sanigen as a Bioinformatics Team Lead and Senior Researcher, leading a five-person team across workflow development, analysis review, infrastructure, and delivery.
+I build reproducible analysis systems for **microbial genomics, metagenomics, and bacteriophage research**. Since July 2026, I have worked at Microiotix as a **Bioinformatician**, focusing on bacteriophage research, in silico design, and research database development and evaluation. Previously, I worked at Sanigen from March 2020 to October 2025, where I led a five-person bioinformatics team across workflow development, analysis review, infrastructure, and delivery.
 
-My work connects methods to operations: input validation, versioned environments, quality-control checkpoints, interpretable reports, and a clear record of how a result was produced. The current platform brings **16S, ITS, WGS, and hybrid assembly** into a shared Snakemake framework using Python, R, Bash, Conda, Docker, Apptainer, and Linux.
+My work connects methods to operations: input validation, versioned environments, quality-control checkpoints, interpretable reports, and a clear record of how a result was produced. At Sanigen, I built a shared Snakemake framework for **16S, ITS, WGS, and hybrid assembly** using Python, R, Bash, Conda, Docker, Apptainer, and Linux.
 
 ## At a glance
 
@@ -39,9 +39,9 @@ My work connects methods to operations: input validation, versioned environments
 
 ## Current focus
 
-- Reliable microbial WGS, assembly, annotation, and comparative-genomics workflows
-- Reusable metagenomics pipelines with auditable quality control
-- Bacteriophage assembly, annotation, lifestyle evidence, and host-range candidate discovery
+- Bacteriophage research workflows spanning assembly, annotation, and comparative evaluation
+- In silico design for bacteriophage research questions
+- Research database development and evaluation
 - Research software that exposes uncertainty instead of hiding disagreement between tools
 
 Explore the [project workflows]({% link _pages/projects.md %}), the [publication record]({% link _pages/publications.md %}), or download the [resume]({{ '/assets/pdf/Byungcheol_Kang_Bioinformatics_Resume.pdf' | relative_url }}) and [project portfolio]({{ '/assets/pdf/Byungcheol_Kang_Bioinformatics_Portfolio.pdf' | relative_url }}).

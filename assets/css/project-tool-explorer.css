@@ -1,0 +1,125 @@
+.project-tool-explorer {
+  margin: 1.5rem 0 2.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--global-divider-color, #d8dee4);
+  border-radius: 0.75rem;
+  background: var(--global-card-bg-color, #fff);
+}
+
+.project-tool-explorer__header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.project-tool-explorer__header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.project-tool-explorer__eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--global-theme-color, #6f42c1);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-tool-explorer__selection,
+.project-tool-explorer__hint {
+  margin: 0.35rem 0 0;
+  color: var(--global-text-color-light, #57606a);
+}
+
+.project-tool-explorer__hint {
+  margin-top: 0.85rem;
+  font-size: 0.9rem;
+}
+
+.project-tool-explorer__reset {
+  flex: 0 0 auto;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--global-theme-color, #6f42c1);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--global-theme-color, #6f42c1);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.project-tool-explorer__reset:hover,
+.project-tool-explorer__reset:focus-visible {
+  background: var(--global-theme-color, #6f42c1);
+  color: var(--global-bg-color, #fff);
+}
+
+.project-tool-explorer__table-wrap {
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.project-tool-explorer__table {
+  width: 100%;
+  min-width: 760px;
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.project-tool-explorer__table th,
+.project-tool-explorer__table td {
+  padding: 0.65rem 0.55rem;
+  vertical-align: top;
+}
+
+.project-tool-explorer__version,
+.project-tool-explorer__state {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--global-text-color-light, #57606a);
+  font-size: 0.78rem;
+}
+
+.project-tool-explorer__badge {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--global-theme-color, #6f42c1) 15%, transparent);
+  color: var(--global-theme-color, #6f42c1);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.project-tool-node {
+  cursor: pointer;
+}
+
+.project-tool-node:focus-visible {
+  outline: 3px solid var(--global-theme-color, #6f42c1);
+  outline-offset: 4px;
+}
+
+.project-tool-node--selected > rect,
+.project-tool-node--selected > polygon,
+.project-tool-node--selected > path {
+  stroke: var(--global-theme-color, #6f42c1) !important;
+  stroke-width: 4px !important;
+}
+
+@media (max-width: 576px) {
+  .project-tool-explorer {
+    padding: 1rem;
+  }
+
+  .project-tool-explorer__header {
+    display: block;
+  }
+
+  .project-tool-explorer__reset {
+    margin-top: 0.75rem;
+  }
+}

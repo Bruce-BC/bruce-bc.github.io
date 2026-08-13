@@ -17,16 +17,23 @@ Support simultaneous detection and identification of foodborne pathogens in comp
 
 ## Development loop
 
+<div class="project-tool-workflow" data-workflow-id="panel_development_loop" markdown="1">
+
 ```mermaid
 flowchart LR
-    A[Target organisms] --> B[Marker and primer design]
-    B --> C[Panel construction]
-    C --> D[Matrix-specific evaluation]
-    D --> E[Sequence analysis]
-    E --> F[Sensitivity and specificity review]
-    F -->|Refine| B
-    F -->|Report| G[Publication and patent evidence]
+    target_organisms[Target organisms] --> marker_primer_design[Marker and primer design]
+    marker_primer_design --> panel_construction[Panel construction]
+    panel_construction --> matrix_specific_evaluation[Matrix-specific evaluation]
+    matrix_specific_evaluation --> sequence_analysis[Sequence analysis]
+    sequence_analysis --> performance_review[Sensitivity and specificity review]
+    performance_review -->|Refine| marker_primer_design
+    performance_review -->|Report| publication_patent_evidence[Publication and patent evidence]
+    class marker_primer_design,panel_construction,matrix_specific_evaluation,sequence_analysis,performance_review,publication_patent_evidence project-tool-node
 ```
+
+{% include project_tool_explorer.liquid project=page.slug workflow="panel_development_loop" %}
+
+</div>
 
 ## Contribution
 
