@@ -21,7 +21,7 @@
 )
 
 #section("PROFILE")
-Bioinformatician with more than six years of experience connecting microbial and bacteriophage genomics, metagenomics, reproducible workflow engineering, and research operations. Currently at *Microiotix*, conducting bacteriophage research, in silico design, and research database development and evaluation. Previously led a five-person bioinformatics team and built shared Snakemake workflows for 16S, ITS, WGS, and hybrid assembly.
+Bioinformatician with more than six years of experience connecting bacterial and bacteriophage genomics, metagenomics, protein-structure analysis, reproducible workflow engineering, and research operations. Currently at *Microiotix*, analyzing bacterial and phage genomes and developing evidence-driven databases and in silico designs. Previously led a five-person bioinformatics team and built shared Snakemake workflows for 16S, ITS, WGS, and hybrid assembly.
 
 #grid(
   columns: (1fr, 1fr, 1fr, 1fr),
@@ -35,9 +35,11 @@ Bioinformatician with more than six years of experience connecting microbial and
 #section("EXPERIENCE")
 
 #role("Microiotix", "Bioinformatician", "2026.07 - PRESENT", [
-  - Conduct bacteriophage research with computational analysis supporting research decisions.
-  - Perform in silico design for bacteriophage-related research and development.
-  - Build and evaluate research databases for reproducible candidate assessment.
+  - Analyze bacterial genomes for host context and phage genomes for quality, annotation, taxonomy, lifestyle, packaging, and tail-gene interpretation.
+  - Built and evaluated a *Klebsiella pneumoniae* tail/RBP and KL-type resource with 7,759 curated sequences, traceable sources, confidence labels, and verified targets explicitly flagged.
+  - Apply Phold, ProstT5, Foldseek, and experimental PDB references to structure-informed annotation and engineered-RBP assessment.
+  - Integrated CheckV, Pharokka, Phold, BACPHLIP, PhaTYP, PhaGCN, and PhageTerm in an anonymized four-genome study that converged on lytic Przondovirus genomes with short DTR packaging.
+  - Develop tail-RBP design candidates using anchor compatibility, capsule-target evidence, taxonomic context, cluster conflicts, and structural retention.
 ])
 
 #role("Sanigen", "Bioinformatics Team Lead · Senior Researcher", "2020.03 - 2025.10", [
@@ -72,8 +74,8 @@ Bioinformatician with more than six years of experience connecting microbial and
   [
     #kicker("Phage")
     #h(4pt)
-    *Bacteriophage assembly and annotation* \
-    Reviewed assembly evidence, produced single-contig final assemblies in the assessed set, and supplemented Prokka results with RAST-tk evidence and explicit completion caveats.
+    *Klebsiella phage genomics and tail-RBP design* \
+    Connected host and phage genomics to KL-type evidence, protein structure comparison, and reproducible design exports. Prioritized one candidate with a 129-aa anchor alignment spanning 99.2% of the region and experimental structure support.
 
     #v(7pt)
     #kicker("Independent R&D")
@@ -86,10 +88,11 @@ Bioinformatician with more than six years of experience connecting microbial and
 #v(5pt)
 #section("TECHNICAL SKILLS")
 #grid(columns: (38mm, 1fr), row-gutter: 4pt,
-  [*Genomics*], [Microbial WGS, assembly, annotation, comparative genomics, bacteriophage analysis],
+  [*Genomics*], [Bacterial WGS, phage genomics, assembly, annotation, comparative genomics, KL typing],
+  [*Phage and protein*], [Tail/RBP analysis, depolymerase curation, Phold, ProstT5, Foldseek, PDB comparison],
   [*Workflow engineering*], [Snakemake, Nextflow, Conda, Docker, Apptainer, Linux],
   [*Programming*], [Python, R, Bash, Git],
-  [*Selected tools*], [QIIME 2, DADA2, FastQC, MultiQC, SPAdes, Flye, Unicycler, QUAST, BUSCO, Prokka, Abricate, eggNOG-mapper],
+  [*Selected tools*], [CheckV, Pharokka, BACPHLIP, PhaTYP, PhaGCN, PhageTerm, Kaptive, BLAST],
 )
 
 #v(5pt)

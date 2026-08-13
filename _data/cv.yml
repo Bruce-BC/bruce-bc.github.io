@@ -6,8 +6,9 @@ cv:
   location: Suwon, South Korea
   image: ""
   summary: >
-    Bioinformatician with more than six years of experience in microbial genomics,
-    metagenomics, bacteriophage research, and reproducible workflow engineering.
+    Bioinformatician with more than six years of experience in bacterial and bacteriophage
+    genomics, metagenomics, protein-structure analysis, research database development,
+    and reproducible workflow engineering.
 
   social_networks:
     - network: GitHub
@@ -21,11 +22,13 @@ cv:
         position: Bioinformatician
         start_date: 2026-07
         end_date: present
-        summary: Contribute to bacteriophage research, in silico design, and research database development and evaluation.
+        summary: Analyze bacterial and bacteriophage genomes and develop evidence-driven resources for phage target selection and in silico design.
         highlights:
-          - Support bacteriophage research workflows and analysis activities.
-          - Contribute in silico design work for research use cases.
-          - Develop and evaluate research database resources.
+          - Analyze bacterial genomes for host context and phage genomes for quality, annotation, taxonomy, lifestyle, packaging, and tail-gene interpretation.
+          - Built and evaluated a Klebsiella pneumoniae tail/RBP and KL-type reference database with 7,759 curated sequences, source traceability, confidence labels, and experimentally verified targets explicitly flagged.
+          - Applied sequence- and structure-based protein analysis with Phold, ProstT5, Foldseek, and experimental PDB references to identify divergent tail proteins and assess engineered RBP designs.
+          - Integrated CheckV, Pharokka, Phold, BACPHLIP, PhaTYP, PhaGCN, and PhageTerm evidence in an anonymized four-genome case study; the tools independently converged on lytic Przondovirus genomes with short DTR packaging.
+          - Developed an in silico tail-RBP design workflow that evaluates anchor compatibility, KL-target evidence, taxonomic context, cluster-label conflicts, and structural retention before producing genome and protein design files.
 
       - company: Sanigen
         position: Bioinformatics Team Lead · Senior Researcher
@@ -86,6 +89,13 @@ cv:
           - Produced single-contig final assemblies in the assessed sample set.
           - Supplemented Prokka annotations with RAST-tk and evaluated ONT/Nextflow-based processing.
 
+      - name: Klebsiella Phage Genomics and Tail-RBP Design
+        summary: Current-role case study connecting bacterial and phage genomics to capsule-target evidence, protein structure analysis, and in silico tail design.
+        highlights:
+          - Integrated seven core tools to cross-check genome quality, annotation, taxonomy, lifestyle, and packaging mechanism.
+          - Curated a 7,759-sequence K. pneumoniae tail/RBP and KL-type reference resource with traceable evidence and confidence labels.
+          - Prioritized an engineering candidate using same-genus context, a 129-aa anchor alignment spanning 99.2% of the region, experimental PDB support, and predicted structural retention.
+
       - name: Phage Lifestyle Evidence Prototype
         summary: Independent prototype integrating CheckV, Pharokka/Phold, BACPHLIP, and PhaTYP evidence.
         highlights:
@@ -133,7 +143,12 @@ cv:
       - name: Bioinformatics
         level: Advanced
         icon: fa-solid fa-dna
-        keywords: "Microbial genomics, Metagenomics, Genome assembly, Annotation, Comparative genomics, Bacteriophage analysis"
+        keywords: "Bacterial genomics, Phage genomics, Metagenomics, Genome assembly, Annotation, Comparative genomics, KL typing"
+
+      - name: Protein and Phage Design
+        level: Advanced
+        icon: fa-solid fa-atom
+        keywords: "Tail/RBP analysis, Depolymerase curation, Protein structure comparison, Foldseek, In silico design"
 
       - name: Workflow Engineering
         level: Advanced

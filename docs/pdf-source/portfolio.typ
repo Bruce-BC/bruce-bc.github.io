@@ -19,7 +19,10 @@
 #v(10mm)
 #section("CURRENT ROLE")
 #role("Microiotix", "Bioinformatician", "2026.07 - PRESENT", [
-  Bacteriophage research, in silico design, and research database development and evaluation. Specific tools, database types, metrics, and outcomes are intentionally omitted until they are publicly verifiable.
+  - Bacterial genome analysis for host context and phage genome analysis across QC, annotation, taxonomy, lifestyle, packaging, and tail biology.
+  - *K. pneumoniae* tail/RBP and KL-type database construction and evaluation.
+  - Protein structure prediction, structure-based annotation, and reference-structure comparison.
+  - In silico tail-RBP design using explicit attachment, target, taxonomy, and structural criteria.
 ])
 
 #section("CAREER SNAPSHOT")
@@ -130,33 +133,30 @@ Only tools connected to active Snakemake includes and rules are listed as active
 - Joint patent contribution (2022): NGS-based primer set and foodborne-bacteria detection method.
 
 #pagebreak()
-#kicker("Project 05 · Bacteriophage genomics")
+#kicker("Project 05 · Current role case study")
 #linebreak()
-#text(size: 21pt, weight: "bold", fill: navy)[Bacteriophage Assembly and Annotation]
+#text(size: 21pt, weight: "bold", fill: navy)[Klebsiella Phage Genomics and Tail-RBP Design]
 
-#section("WORKFLOW")
+#section("GENOME EVIDENCE WORKFLOW")
 #grid(columns: (1fr, auto, 1fr, auto, 1fr), align: center,
-  note[*Reads* #linebreak() QC + candidates], [→],
-  note[*Assembly evidence* #linebreak() coverage + contiguity], [→],
-  note[*Annotation evidence* #linebreak() Prokka + RAST-tk],
+  note[*Host + phage genomes* #linebreak() QC + annotation], [→],
+  note[*Independent evidence* #linebreak() taxonomy + lifestyle + termini], [→],
+  note[*Tail interpretation* #linebreak() KL target + structure],
 )
 
-#section("CONTRIBUTION")
-- Compared assembly candidates using contiguity, read support, and genome-scale plausibility.
-- Produced single-contig final assemblies across the assessed sample set.
-- Supplemented Prokka output with RAST-tk evidence rather than treating one annotation source as definitive.
-- Evaluated Oxford Nanopore and Nextflow-based processing as a separate portability and adoption track.
+#section("CONTRIBUTION AND EVIDENCE")
+- Integrated CheckV, Pharokka, Phold, BACPHLIP, PhaTYP, PhaGCN, and PhageTerm outputs while preserving the evidence behind each conclusion.
+- Built a 7,759-sequence tail/RBP and KL-type reference resource with source traceability, confidence labels, and experimentally verified targets explicitly flagged.
+- Cross-validated candidate depolymerases with DposFinder, SpikeHunter, DepoScope, sequence search, domain boundaries, and protein-structure evidence.
+- Used ProstT5 and Foldseek with experimental PDB references to identify structurally conserved proteins at sequence identities below ordinary search sensitivity.
 
-#section("REVIEW PRINCIPLE")
-Assembly confidence and biological interpretation remain separate. A one-contig assembly is not automatically complete, circular, or correctly oriented; appropriate read-support and terminal-structure checks remain necessary.
+#section("ANONYMIZED CASE-STUDY RESULTS")
+- Four genomes converged on lytic *Przondovirus* classifications and short DTR packaging with 180-183 bp terminal repeats.
+- Three capsule targets matched experimentally supported references at 95.4-98.8% sequence identity; unsupported cases remained unresolved rather than receiving forced labels.
+- One design candidate passed genus, attachment, target-label, experimental-structure, and predicted-structure criteria; its 129-aa anchor alignment spanned 99.2% of the region.
 
-#section("TOOL AND METHOD EVIDENCE")
-#grid(columns: (35mm, 1fr), row-gutter: 5pt,
-  [*Platform*], [Illumina; Oxford Nanopore evaluated in related work],
-  [*Workflow evidence*], [Nextflow evaluated for portable ONT processing],
-  [*Annotation*], [Prokka used; RAST-tk used as complementary evidence],
-  [*Review*], [Coverage, contiguity, terminal structure, and biological plausibility],
-)
+#section("DESIGN OUTPUT AND BOUNDARY")
+The design bench supports domain swaps, full-module replacements, and tandem additions, with genome FASTA, module multi-FASTA, GenBank, and protein FASTA export. Host K-locus assignments, predicted RBP folding, adsorption, host range, and lytic activity still require bacterial-genome and wet-lab validation.
 
 #pagebreak()
 #kicker("Project 06 · Independent R&D prototype")

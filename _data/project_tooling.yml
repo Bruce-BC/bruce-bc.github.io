@@ -970,3 +970,234 @@ phage-lifestyle-evidence-prototype:
               output: Validated or rejected host-range candidates
               usage_status: planned
               pipeline_state: documented-only
+
+klebsiella-phage-genomics-and-tail-design:
+  workflows:
+    genome_evidence_workflow:
+      title: Bacterial and phage genome evidence workflow
+      display_only_nodes:
+        - bacterial_genomes
+        - phage_assemblies
+        - paired_end_reads
+      nodes:
+        host_genome_context:
+          label: Host genome and K-locus context
+          entries:
+            - name: Bacterial genome analysis
+              kind: method
+              role: Characterize host-genome context relevant to bacteriophage targeting and evaluation
+              input: Bacterial genome assemblies
+              output: Host-genome evidence for phage interpretation
+              usage_status: used
+              pipeline_state: documented-only
+            - name: Kaptive
+              kind: tool
+              role: Resolve Klebsiella capsule-locus types from host genomes for direct comparison with phage-side KL predictions
+              input: Klebsiella genome assemblies
+              output: K-locus assignments and confidence context
+              usage_status: evaluated
+              pipeline_state: configured-only
+        quality_annotation:
+          label: Genome QC and phage annotation
+          entries:
+            - name: CheckV
+              kind: tool
+              role: Assess phage-genome completeness and contamination before biological interpretation
+              input: Phage genome assemblies
+              output: Genome-quality context
+              usage_status: used
+              pipeline_state: documented-only
+            - name: Pharokka
+              kind: tool
+              role: Predict phage genes and annotate against phage, resistance, and virulence reference resources
+              input: Phage genome assemblies
+              output: Gene calls, functional annotations, and taxonomy hints
+              usage_status: used
+              pipeline_state: documented-only
+        lifestyle_taxonomy:
+          label: Lifestyle and taxonomy
+          entries:
+            - name: Mash and INPHARED
+              kind: tool
+              role: Find nearest phage-genome neighbors as one taxonomic evidence stream
+              input: Phage genome assemblies
+              output: Nearest-neighbor taxonomy evidence
+              usage_status: used
+              pipeline_state: documented-only
+            - name: BACPHLIP
+              kind: tool
+              role: Estimate lytic-versus-lysogenic probability from sequence-composition features
+              input: Phage genome assemblies
+              output: Independent lifestyle probabilities
+              usage_status: used
+              pipeline_state: documented-only
+            - name: PhaTYP
+              kind: tool
+              role: Provide protein-language-model lifestyle predictions independent of marker-gene review
+              input: Phage genome assemblies
+              output: Independent lifestyle scores
+              usage_status: used
+              pipeline_state: documented-only
+            - name: PhaGCN
+              kind: tool
+              role: Infer taxonomy through protein-similarity network clustering
+              input: Phage genome assemblies
+              output: Graph-based genus evidence
+              usage_status: used
+              pipeline_state: documented-only
+        termini_packaging:
+          label: Read-termini and packaging analysis
+          entries:
+            - name: PhageTerm
+              kind: tool
+              role: Determine DTR-versus-headful packaging from raw-read start-position coverage signatures
+              input: Paired-end reads and assembled phage genomes
+              output: Packaging mechanism and terminal-repeat evidence
+              usage_status: used
+              pipeline_state: documented-only
+        structure_annotation:
+          label: Structure-based protein annotation
+          entries:
+            - name: Phold
+              kind: tool
+              role: Add structure-informed phage protein annotations beyond sequence-only similarity
+              input: Pharokka GenBank annotations
+              output: Structure-informed functional evidence
+              usage_status: used
+              pipeline_state: documented-only
+            - name: ProstT5
+              kind: tool
+              role: Encode predicted protein structural information for structure-based search
+              input: Phage protein sequences
+              output: Predicted structural representations
+              usage_status: used
+              pipeline_state: documented-only
+            - name: Foldseek
+              kind: tool
+              role: Search structural representations to recover divergent phage protein functions
+              input: Predicted structural representations
+              output: Structure-similarity matches and annotations
+              usage_status: used
+              pipeline_state: documented-only
+        integrated_genome_report:
+          label: Integrated evidence report
+          entries:
+            - name: Python evidence integration
+              kind: method
+              role: Preserve the independent QC, annotation, taxonomy, lifestyle, packaging, and structure evidence behind each conclusion
+              input: Outputs from the genome-analysis tools
+              output: Reviewable integrated report with confidence and caveats
+              usage_status: used
+              pipeline_state: documented-only
+    tail_kl_design_workflow:
+      title: KPN tail, KL-type, and structure-design workflow
+      display_only_nodes:
+        - literature_and_public_sequences
+        - phage_tail_proteins
+        - wet_lab_validation
+      nodes:
+        kpn_tail_kl_database:
+          label: KPN tail / RBP and KL-type database
+          entries:
+            - name: Curated capsule-target reference database
+              kind: library
+              role: Connect depolymerase, tailspike, and RBP sequences to traceable KL-target evidence and confidence labels
+              input: Literature-backed and public protein records
+              output: 7,759 curated reference sequences with verified targets explicitly flagged
+              usage_status: used
+              pipeline_state: documented-only
+        depolymerase_consensus:
+          label: Depolymerase cross-validation
+          entries:
+            - name: DposFinder
+              kind: tool
+              role: Distinguish candidate capsule-depolymerase proteins from structural tail components
+              input: Phage tail protein sequences
+              output: Depolymerase predictions
+              usage_status: used
+              pipeline_state: documented-only
+            - name: SpikeHunter
+              kind: tool
+              role: Add an independently trained tailspike classification signal
+              input: Candidate RBP and tail protein sequences
+              output: Tailspike predictions for cross-checking
+              usage_status: used
+              pipeline_state: documented-only
+            - name: DepoScope
+              kind: tool
+              role: Cross-check depolymerase calls and delineate candidate catalytic domains
+              input: Candidate RBP and tail protein sequences
+              output: Depolymerase calls and domain boundaries
+              usage_status: used
+              pipeline_state: documented-only
+        capsule_target_evidence:
+          label: KL-type target evidence
+          entries:
+            - name: BLAST
+              kind: tool
+              role: Compare candidate RBPs with traceable capsule-target references and retain alignment quality
+              input: Candidate RBP sequences and curated reference database
+              output: Ranked KL-type matches with identity and coverage evidence
+              usage_status: used
+              pipeline_state: documented-only
+            - name: Confidence and conflict review
+              kind: review
+              role: Prevent forced KL labels when references are unverified or cluster labels conflict
+              input: Ranked matches and reference metadata
+              output: Supported, tentative, or unresolved KL-target status
+              usage_status: used
+              pipeline_state: documented-only
+        protein_structure_analysis:
+          label: Protein structure analysis
+          entries:
+            - name: ProstT5 and Foldseek
+              kind: tool
+              role: Detect conserved RBP and depolymerase folds when sequence identity is too low for ordinary sequence search
+              input: Candidate proteins and structure-reference database
+              output: Structural matches, aligned regions, and fold-level evidence
+              usage_status: used
+              pipeline_state: documented-only
+            - name: Experimental PDB reference set
+              kind: library
+              role: Ground structure comparisons in experimentally resolved capsule-depolymerase structures
+              input: Curated K-type-associated PDB structures
+              output: Reference-supported fold and target evidence
+              usage_status: used
+              pipeline_state: documented-only
+        compatibility_scoring:
+          label: Anchor and target compatibility
+          entries:
+            - name: Attachment-region alignment
+              kind: method
+              role: Measure N-terminal anchor identity, coverage, and aligned length before proposing a tail-RBP replacement
+              input: Chassis RBP and target-module sequences
+              output: Attachment compatibility evidence
+              usage_status: used
+              pipeline_state: documented-only
+            - name: Multi-criterion design gate
+              kind: review
+              role: Combine genus context, anchor compatibility, KL evidence, cluster conflicts, module length, and structure support
+              input: Sequence, taxonomy, database, and structure evidence
+              output: Ranked and rejected design candidates with reasons
+              usage_status: used
+              pipeline_state: documented-only
+        design_routes:
+          label: Design routes
+          entries:
+            - name: Tail-RBP design engine
+              kind: method
+              role: Generate domain-swap, full-module-replacement, and tandem-addition candidates
+              input: Compatible chassis slots and target modules
+              output: Candidate engineered RBP and phage-genome designs
+              usage_status: used
+              pipeline_state: documented-only
+        export_package:
+          label: Design export package
+          entries:
+            - name: Reproducible sequence export
+              kind: method
+              role: Package selected designs in formats suitable for review and downstream synthesis planning
+              input: Selected tail-RBP design
+              output: Genome FASTA, module multi-FASTA, GenBank, and protein FASTA files
+              usage_status: used
+              pipeline_state: documented-only
