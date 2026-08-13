@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 700" role="img" aria-labelledby="title desc">
+  <title id="title">Phage tail-module design bench</title>
+  <desc id="desc">A computational design view connecting an anonymized lytic phage chassis, two receptor-binding protein slots, a K64 capsule target, and evidence-based design gates.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0e120f}.panel{fill:#161b17;stroke:#2b352e;stroke-width:2}.inner{fill:#10140f;stroke:#28302a;stroke-width:2}
+      .ink{fill:#e7ebe5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.muted{fill:#98a499;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+      .mono{fill:#98a499;font-family:ui-monospace,"SFMono-Regular",Consolas,monospace}.accent{fill:#68d8b6}.line{stroke:#68d8b6;stroke-width:10;stroke-linecap:round;fill:none}.off{stroke:#88938c;stroke-width:10;stroke-linecap:round;fill:none}
+      .capsule{fill:#b8c866;stroke:#d9e58e;stroke-width:2}.ok{fill:#17372d;stroke:#68d8b6;stroke-width:2}.warn{fill:#3b211d;stroke:#e58175;stroke-width:2}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="700"/>
+  <text class="mono" x="44" y="42" font-size="15" letter-spacing="3">PHAGE ENGINEERING BENCH · SANITIZED VIEW</text>
+  <text class="ink" x="44" y="79" font-size="27" font-weight="700">Capsule-targeted tail-module design</text>
+  <text class="muted" x="44" y="108" font-size="16">Phage chassis, tail-protein slots and capsule-target interaction.</text>
+
+  <rect class="panel" x="42" y="142" width="770" height="505" rx="16"/>
+  <text class="muted" x="66" y="176" font-size="15" font-weight="700">ASSEMBLY &amp; INFECTION MODEL</text>
+  <rect class="inner" x="66" y="195" width="722" height="332" rx="12"/>
+
+  <polygon points="420,227 481,262 481,332 420,367 359,332 359,262" fill="#1d2923" stroke="#68d8b6" stroke-width="4"/>
+  <text class="accent" x="420" y="289" text-anchor="middle" font-size="17" font-weight="700">LYTIC PHAGE</text>
+  <text class="muted" x="420" y="313" text-anchor="middle" font-size="14">DTR packaging</text>
+  <path d="M420 367v58" stroke="#2b352e" stroke-width="28"/>
+  <rect x="370" y="416" width="100" height="28" rx="7" fill="#26312b" stroke="#465249" stroke-width="2"/>
+  <text class="muted" x="487" y="438" font-size="13">baseplate</text>
+  <path class="line" d="M391 444l-59 45-68 14"/>
+  <path class="off" d="M449 444l58 45 70 18"/>
+  <path d="M577 507c45 0 43 28 10 28" stroke="#88938c" stroke-width="7" fill="none" stroke-dasharray="5 8" stroke-linecap="round"/>
+  <polygon points="252,482 269,493 269,513 252,524 235,513 235,493" fill="#d8ad63" stroke="#f1d392" stroke-width="3"/>
+  <rect x="216" y="521" width="92" height="27" rx="7" fill="#0e120f"/><text class="accent" x="262" y="540" text-anchor="middle" font-size="14" font-weight="700">RBP1 · K8</text>
+  <rect x="510" y="521" width="138" height="27" rx="7" fill="#0e120f"/><text class="muted" x="579" y="540" text-anchor="middle" font-size="14" font-weight="700">RBP2 · replace</text>
+
+  <g transform="translate(91 559)">
+    <rect x="0" y="0" width="650" height="18" fill="#3a453d"/>
+    <rect x="0" y="25" width="650" height="14" fill="#202923"/>
+    <g class="capsule">
+      <path d="M14-30l13-9 13 9-5 15H19z"/><path d="M52-17l13-9 13 9-5 15H57z"/><path d="M90-30l13-9 13 9-5 15H95z"/><path d="M128-17l13-9 13 9-5 15h-16z"/>
+      <path d="M166-30l13-9 13 9-5 15h-16z"/><path d="M204-17l13-9 13 9-5 15h-16z"/><path d="M242-30l13-9 13 9-5 15h-16z"/><path d="M280-17l13-9 13 9-5 15h-16z"/>
+      <path d="M318-30l13-9 13 9-5 15h-16z"/><path d="M356-17l13-9 13 9-5 15h-16z"/><path d="M394-30l13-9 13 9-5 15h-16z"/><path d="M432-17l13-9 13 9-5 15h-16z"/>
+      <path d="M470-30l13-9 13 9-5 15h-16z"/><path d="M508-17l13-9 13 9-5 15h-16z"/><path d="M546-30l13-9 13 9-5 15h-16z"/><path d="M584-17l13-9 13 9-5 15h-16z"/>
+    </g>
+    <text x="0" y="64" class="muted" font-size="14">Klebsiella pneumoniae cell envelope · K64 capsule</text>
+  </g>
+
+</svg>
