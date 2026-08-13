@@ -45,30 +45,21 @@
     }
   };
 
-  const prepareResponsiveDiagram = (wrapper) => {
-    const backup = wrapper.querySelector("pre.unloaded code.language-mermaid");
-    const rendered = wrapper.querySelector("pre.mermaid");
-    if (!backup || !rendered) return;
+  const prepareResponsiveSource = (wrapper) => {
+    const source = wrapper.querySelector("pre > code.language-mermaid");
+    if (!source) return;
 
-    if (!wrapper.dataset.desktopDiagram) {
-      wrapper.dataset.desktopDiagram = backup.textContent;
-    }
+    if (!wrapper.dataset.desktopDiagram) wrapper.dataset.desktopDiagram = source.textContent;
 
-    const desktopDiagram = wrapper.dataset.desktopDiagram;
     const mobile = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches;
-    const responsiveDiagram = mobile ? wrapMobileLabels(desktopDiagram.replace(/^flowchart\s+LR\b/m, "flowchart TB")) : desktopDiagram;
-    const currentMode = mobile ? "mobile" : "desktop";
+    source.textContent = mobile
+      ? wrapMobileLabels(wrapper.dataset.desktopDiagram.replace(/^flowchart\s+LR\b/m, "flowchart TB"))
+      : wrapper.dataset.desktopDiagram;
+    wrapper.dataset.diagramMode = mobile ? "mobile" : "desktop";
+  };
 
-    if (wrapper.dataset.diagramMode === currentMode && backup.textContent === responsiveDiagram) return;
-
-    backup.textContent = responsiveDiagram;
-    rendered.removeAttribute("data-processed");
-    rendered.textContent = responsiveDiagram;
-    wrapper.dataset.diagramMode = currentMode;
-
-    if (typeof mermaid !== "undefined") {
-      mermaid.init(undefined, rendered);
-    }
+  const prepareAllResponsiveSources = () => {
+    document.querySelectorAll(".project-tool-workflow").forEach(prepareResponsiveSource);
   };
 
   const setNodeState = (svg, selectedId) => {
@@ -108,10 +99,10 @@
   };
 
   const wireExplorer = (wrapper) => {
-    prepareResponsiveDiagram(wrapper);
     const explorer = wrapper.querySelector(".project-tool-explorer");
     const svg = wrapper.querySelector("pre.mermaid svg");
     if (!explorer || !svg) return false;
+    disableWheelZoom(svg);
 
     const rows = [...explorer.querySelectorAll("tbody tr[data-tool-node]")];
     const selection = explorer.querySelector("[data-tool-selection]");
@@ -160,12 +151,6 @@
     document.querySelectorAll(".project-tool-workflow").forEach(wireExplorer);
   };
 
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(wireAll, 160);
-  });
-
   const observer = new MutationObserver(wireAll);
   observer.observe(document.documentElement, { childList: true, subtree: true });
   document.addEventListener("click", (event) => {
@@ -200,5 +185,6 @@
     const initialPolling = setInterval(wireAll, 250);
     setTimeout(() => clearInterval(initialPolling), 5000);
   });
+  prepareAllResponsiveSources();
   wireAll();
 })();
