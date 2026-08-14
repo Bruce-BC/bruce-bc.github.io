@@ -1,6 +1,7 @@
 {
   "scripts": {
     "lint:prettier": "prettier . --check",
+    "test:icons": "node test/project_tool_icons_test.js",
     "test:tooling": "ruby bin/validate_project_tooling.rb"
   },
   "devDependencies": {
