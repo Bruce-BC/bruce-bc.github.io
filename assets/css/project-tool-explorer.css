@@ -15,7 +15,7 @@
 
 .project-tool-workflow > pre.mermaid svg {
   display: block;
-  width: 100% !important;
+  width: max(100%, var(--workflow-svg-width, 100%)) !important;
   max-width: none !important;
   height: auto !important;
   margin: 0 auto;
@@ -113,19 +113,64 @@
   cursor: pointer;
 }
 
-.project-tool-node__icon {
+.project-tool-node__icons {
+  position: relative;
   display: inline-block;
-  min-width: 1.85em;
-  margin-right: 0.48em;
-  padding: 0.35em 0.28em;
-  border: 1px solid color-mix(in srgb, var(--global-theme-color, #6f42c1) 42%, transparent);
-  border-radius: 0.42em;
-  background: color-mix(in srgb, var(--global-theme-color, #6f42c1) 13%, transparent);
-  color: var(--global-theme-color, #6f42c1) !important;
-  font-size: 1.25em;
+  width: 1.6em;
+  height: 1.65em;
+  margin-right: 0.5em;
+  vertical-align: -0.42em;
+}
+
+.project-tool-node__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 1.6em;
+  height: 1.6em;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--global-text-color, #24292f) 24%, transparent);
+  border-radius: 0.4em;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 22%);
+}
+
+.project-tool-node__icon:nth-child(2) {
+  left: 0.75em;
+  z-index: 2;
+}
+
+.project-tool-node__icon:nth-child(3) {
+  left: 1.5em;
+  z-index: 3;
+}
+
+.project-tool-node__icon-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.12em;
+  background: #fff;
+  object-fit: contain;
+}
+
+.project-tool-node__icon-overflow {
+  position: absolute;
+  right: -0.15em;
+  bottom: -0.15em;
+  z-index: 4;
+  min-width: 1.2em;
+  padding: 0.12em 0.24em;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  background: var(--global-theme-color, #6f42c1);
+  color: #fff;
+  font-size: 0.58em;
+  font-weight: 800;
   line-height: 1;
   text-align: center;
-  vertical-align: -0.08em;
 }
 
 .project-tool-node:focus-visible {
@@ -167,11 +212,12 @@
 @media (max-width: 640px) {
   .project-tool-workflow > pre.mermaid {
     padding: 0.75rem 0.25rem;
-    overflow: visible;
+    overflow-x: auto;
+    touch-action: pan-x pan-y;
   }
 
   .project-tool-workflow > pre.mermaid svg {
-    width: min(100%, var(--workflow-svg-width, 100%)) !important;
+    width: var(--workflow-svg-width, 100%) !important;
     min-width: 0;
   }
 
@@ -186,10 +232,8 @@
     stroke-width: 2px;
   }
 
-  .project-tool-node__icon {
-    min-width: 1.7em;
-    padding: 0.28em 0.22em;
-    font-size: 1.1em;
+  .project-tool-node__icons {
+    margin-right: 0.42em;
   }
 
   .project-tool-explorer {
