@@ -2,99 +2,98 @@
   if (window.projectToolExplorerLoaded) return;
   window.projectToolExplorerLoaded = true;
 
+  const explorerScriptUrl = document.currentScript?.src;
+
   const matchesNodeId = (node, nodeId) => node.id === nodeId || node.id.startsWith(`flowchart-${nodeId}-`);
 
   const findNodeGroups = (svg, nodeId) => [...svg.querySelectorAll("g.node")].filter((node) => matchesNodeId(node, nodeId));
 
   const MOBILE_BREAKPOINT = 640;
+  const MOBILE_LABEL_LINE_LENGTH = 16;
+  const MOBILE_MIN_DIAGRAM_WIDTH = 430;
+  const MAX_VISIBLE_TOOL_ICONS = 3;
 
-  const WORKFLOW_ICONS = [
-    {
-      icon: "fa-solid fa-file-export",
-      label: "Output",
-      pattern: /(report|deliverable|export|package|publication|patent|output|candidate region|hypotheses)/,
-    },
-    {
-      icon: "fa-solid fa-circle-check",
-      label: "Quality and validation",
-      pattern: /(quality|\bqc\b|review|validation|confidence|checkpoint|specificity|sensitivity|consistency)/,
-    },
-    {
-      icon: "fa-solid fa-dna",
-      label: "Sequence and genome analysis",
-      pattern:
-        /(genome|sequence|assembly|annotation|primer|marker|denois|taxonomy|phylogen|termini|packaging|amr|virulence|locus|kl-type|depolymerase)/,
-    },
-    {
-      icon: "fa-solid fa-shapes",
-      label: "Structure and design",
-      pattern: /(structure|protein|compatibility|design|domain swap|module replacement|tandem addition|construction)/,
-    },
-    {
-      icon: "fa-solid fa-database",
-      label: "Database and reference",
-      pattern: /(database|reference|atlas|curation|public sequences|evidence table)/,
-    },
-    {
-      icon: "fa-solid fa-microscope",
-      label: "Experiment and biological evaluation",
-      pattern: /(wet-lab|experimental|biological|matrix-specific|assay|cellular|molecular|organism|host|phage receptor|surface variation)/,
-    },
-    {
-      icon: "fa-solid fa-brain",
-      label: "Modeling and inference",
-      pattern: /(model|inference|virtual-cell|cell-state|cell-composition|representation|feature|score|prediction|lifestyle)/,
-    },
-    {
-      icon: "fa-solid fa-gears",
-      label: "Workflow processing",
-      pattern: /(workflow|orchestration|execution|preprocess|harmonization|alignment|trimming|filtering|polishing|import|isolation)/,
-    },
-    {
-      icon: "fa-solid fa-chart-line",
-      label: "Measurement and interpretation",
-      pattern: /(depth|coverage|diversity|interpretation|comparison|context|performance|ranked|evaluation|analysis)/,
-    },
-    {
-      icon: "fa-solid fa-file-arrow-down",
-      label: "Input",
-      pattern: /(reads|fastq|input|metadata|profiles|data|request|question|target|project communications)/,
-    },
-  ];
+  const uniqueToolNames = (toolNames) => [...new Set(toolNames.filter(Boolean))];
 
-  const iconForNode = (nodeId, label) => {
-    const searchable = `${nodeId.replaceAll("_", " ")} ${label}`.toLowerCase();
-    return (
-      WORKFLOW_ICONS.find(({ pattern }) => pattern.test(searchable)) || {
-        icon: "fa-solid fa-diagram-project",
-        label: "Workflow step",
-      }
-    );
+  const toolNameForRow = (row) => {
+    if (row.dataset.toolName) return row.dataset.toolName;
+    const linkedName = row.querySelector("td a")?.textContent.trim();
+    if (linkedName) return linkedName;
+    const toolCell = row.querySelector("td");
+    return [...(toolCell?.childNodes || [])].map((child) => child.textContent.trim()).find(Boolean);
   };
 
-  const decorateNode = (node, nodeId, label) => {
-    const labelRoot = node.querySelector(".nodeLabel");
-    if (!labelRoot || labelRoot.querySelector(".project-tool-node__icon")) return;
+  const createToolIcon = (descriptor) => {
+    const tile = document.createElement("span");
+    tile.className = "project-tool-node__icon";
+    tile.dataset.iconId = descriptor.id;
+    tile.dataset.iconFit = descriptor.fit || "contain";
 
-    const { icon, label: iconLabel } = iconForNode(nodeId, label);
-    const iconElement = document.createElement("i");
-    iconElement.className = `${icon} project-tool-node__icon`;
-    iconElement.setAttribute("aria-hidden", "true");
-    iconElement.title = iconLabel;
-    labelRoot.prepend(iconElement);
-    node.dataset.toolIcon = iconLabel;
+    const image = document.createElement("img");
+    image.src = descriptor.src;
+    image.alt = "";
+    image.loading = "eager";
+    image.decoding = "async";
+    image.className = `project-tool-node__icon-image project-tool-node__icon-image--${descriptor.fit || "contain"}`;
+    image.setAttribute("aria-hidden", "true");
+    if (descriptor.fallback?.src) {
+      image.addEventListener(
+        "error",
+        () => {
+          image.src = descriptor.fallback.src;
+          image.className = "project-tool-node__icon-image project-tool-node__icon-image--contain";
+        },
+        { once: true }
+      );
+    }
+    tile.append(image);
+    return tile;
+  };
+
+  const decorateNode = (node, nodeId, label, toolNames = []) => {
+    const labelRoot = node.querySelector(".nodeLabel");
+    if (!labelRoot || !window.projectToolIcons) return;
+
+    const names = uniqueToolNames(toolNames);
+    const iconInputs = names.length ? names : [label];
+    const descriptors = iconInputs
+      .map((name) => window.projectToolIcons.resolve(name, `${nodeId.replaceAll("_", " ")} ${label}`))
+      .filter((descriptor, index, all) => all.findIndex(({ id }) => id === descriptor.id) === index);
+    const signature = descriptors.map(({ id }) => id).join("|");
+    const existing = labelRoot.querySelector(".project-tool-node__icons");
+    if (existing?.dataset.iconSignature === signature) return;
+    existing?.remove();
+
+    const iconStack = document.createElement("span");
+    iconStack.className = "project-tool-node__icons";
+    iconStack.dataset.iconSignature = signature;
+    iconStack.dataset.iconCount = Math.min(descriptors.length, MAX_VISIBLE_TOOL_ICONS);
+    if (descriptors.length === 1) iconStack.dataset.iconFit = descriptors[0].fit || "contain";
+    iconStack.title = names.length ? `Tools: ${names.join(", ")}` : descriptors[0].title;
+    iconStack.setAttribute("aria-hidden", "true");
+    descriptors.slice(0, MAX_VISIBLE_TOOL_ICONS).forEach((descriptor) => {
+      iconStack.append(createToolIcon(descriptor));
+    });
+    if (descriptors.length > MAX_VISIBLE_TOOL_ICONS) {
+      const overflow = document.createElement("span");
+      overflow.className = "project-tool-node__icon-overflow";
+      overflow.textContent = `+${descriptors.length - MAX_VISIBLE_TOOL_ICONS}`;
+      iconStack.append(overflow);
+    }
+    labelRoot.prepend(iconStack);
+    node.dataset.toolIcon = names.length ? names.join(", ") : descriptors[0].title;
   };
 
   const mermaidNodeId = (node) => node.id.replace(/^flowchart-/, "").replace(/-\d+$/, "");
 
   const wrapMobileLabels = (diagram) => {
     const wrapLabel = (label) => {
-      if (label.includes("<br") || label.length <= 22) return label;
+      if (label.includes("<br") || label.length <= MOBILE_LABEL_LINE_LENGTH) return label;
       const words = label.trim().split(/\s+/);
       const lines = [];
       let line = "";
       words.forEach((word) => {
-        if (line && `${line} ${word}`.length > 22) {
+        if (line && `${line} ${word}`.length > MOBILE_LABEL_LINE_LENGTH) {
           lines.push(line);
           line = word;
         } else {
@@ -125,11 +124,15 @@
   };
 
   const sizeResponsiveSvg = (wrapper, svg) => {
-    if (wrapper.dataset.diagramMode !== "mobile") return;
     const naturalWidth = svg.viewBox?.baseVal?.width;
     if (!naturalWidth) return;
     const availableWidth = svg.parentElement?.clientWidth || naturalWidth;
-    const scale = Math.min(1.1, availableWidth / naturalWidth);
+    if (wrapper.dataset.diagramMode !== "mobile") {
+      wrapper.style.setProperty("--workflow-svg-width", `${Math.max(availableWidth, naturalWidth)}px`);
+      return;
+    }
+    const readableWidth = Math.min(naturalWidth, Math.max(availableWidth, MOBILE_MIN_DIAGRAM_WIDTH));
+    const scale = Math.min(1.1, readableWidth / naturalWidth);
     wrapper.style.setProperty("--workflow-svg-width", `${naturalWidth * scale}px`);
   };
 
@@ -200,10 +203,18 @@
     const reset = explorer.querySelector("[data-tool-reset]");
     const tableId = explorer.querySelector("table")?.id;
     const labels = new Map(rows.map((row) => [row.dataset.toolNode, row.dataset.toolNodeLabel]));
+    const toolsByNode = new Map();
+    rows.forEach((row) => {
+      const current = toolsByNode.get(row.dataset.toolNode) || [];
+      const toolName = toolNameForRow(row);
+      if (toolName && !current.includes(toolName)) current.push(toolName);
+      toolsByNode.set(row.dataset.toolNode, current);
+    });
 
     svg.querySelectorAll("g.node").forEach((node) => {
       const label = node.querySelector(".nodeLabel")?.textContent.trim() || "Workflow step";
-      decorateNode(node, mermaidNodeId(node), label);
+      const nodeId = mermaidNodeId(node);
+      decorateNode(node, nodeId, label, toolsByNode.get(nodeId) || []);
     });
 
     const showAll = () => {
@@ -227,14 +238,16 @@
         wiredNodeCount += 1;
         node.dataset.toolNode = nodeId;
         node.classList.add("project-tool-node");
-        decorateNode(node, nodeId, label);
+        const toolNames = toolsByNode.get(nodeId) || [];
+        decorateNode(node, nodeId, label, toolNames);
         if (node.dataset.toolBound) return;
         node.dataset.toolBound = "true";
         node.setAttribute("role", "button");
         node.setAttribute("tabindex", "0");
         node.setAttribute("aria-controls", tableId);
         node.setAttribute("aria-pressed", "false");
-        node.setAttribute("aria-label", `Show tools for ${label}`);
+        const toolDescription = toolNames.length ? `: ${toolNames.join(", ")}` : "";
+        node.setAttribute("aria-label", `Show tools for ${label}${toolDescription}`);
       });
     });
 
@@ -245,6 +258,16 @@
 
   const wireAll = () => {
     document.querySelectorAll(".project-tool-workflow").forEach(wireExplorer);
+  };
+
+  const ensureIconRegistry = () => {
+    if (window.projectToolIcons || !explorerScriptUrl) return;
+    const registryUrl = explorerScriptUrl.replace("project-tool-explorer.js", "project-tool-icons.js");
+    if (document.querySelector(`script[src="${registryUrl}"]`)) return;
+    const script = document.createElement("script");
+    script.src = registryUrl;
+    script.addEventListener("load", wireAll, { once: true });
+    document.head.append(script);
   };
 
   let resizeTimer;
@@ -296,5 +319,6 @@
     setTimeout(() => clearInterval(initialPolling), 5000);
   });
   prepareAllResponsiveSources();
+  ensureIconRegistry();
   wireAll();
 })();

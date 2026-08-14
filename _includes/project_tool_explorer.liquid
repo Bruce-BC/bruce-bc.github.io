@@ -4,6 +4,7 @@
 {% if workflow_tooling %}
   {% capture tooling_asset_version %}{{ site.time | date: '%s' }}{% endcapture %}
   <link rel="stylesheet" href="{{ '/assets/css/project-tool-explorer.css' | relative_url }}?v={{ tooling_asset_version }}">
+  <script defer src="{{ '/assets/js/project-tool-icons.js' | relative_url }}?v={{ tooling_asset_version }}"></script>
   <script defer src="{{ '/assets/js/project-tool-explorer.js' | relative_url }}?v={{ tooling_asset_version }}"></script>
 
   {% capture explorer_id %}tool-explorer-{{ project_key }}-{{ include.workflow }}{% endcapture %}
@@ -45,7 +46,12 @@
             {% assign node_id = node_pair[0] %}
             {% assign node = node_pair[1] %}
             {% for entry in node.entries %}
-              <tr data-tool-node="{{ node_id }}" data-tool-node-label="{{ node.label }}">
+              <tr
+                data-tool-node="{{ node_id }}"
+                data-tool-node-label="{{ node.label }}"
+                data-tool-name="{{ entry.name | escape }}"
+                data-tool-kind="{{ entry.kind }}"
+              >
                 <th scope="row">{{ node.label }}</th>
                 <td>
                   {% if entry.url %}
