@@ -10,7 +10,6 @@
 
   const MOBILE_BREAKPOINT = 640;
   const MOBILE_LABEL_LINE_LENGTH = 16;
-  const MOBILE_MIN_DIAGRAM_WIDTH = 430;
   const MAX_VISIBLE_TOOL_ICONS = 3;
 
   const uniqueToolNames = (toolNames) => [...new Set(toolNames.filter(Boolean))];
@@ -123,17 +122,16 @@
     }
   };
 
+  const verticalizeDiagram = (diagram) => {
+    return diagram.replace(/^flowchart\s+(LR|RL|BT)\b/m, "flowchart TB").replace(/^(\s*direction\s+)(LR|RL|BT)\b/gm, "$1TB");
+  };
+
   const sizeResponsiveSvg = (wrapper, svg) => {
+    wrapper.style.removeProperty("--workflow-svg-width");
     const naturalWidth = svg.viewBox?.baseVal?.width;
-    if (!naturalWidth) return;
-    const availableWidth = svg.parentElement?.clientWidth || naturalWidth;
-    if (wrapper.dataset.diagramMode !== "mobile") {
-      wrapper.style.setProperty("--workflow-svg-width", `${Math.max(availableWidth, naturalWidth)}px`);
-      return;
-    }
-    const readableWidth = Math.min(naturalWidth, Math.max(availableWidth, MOBILE_MIN_DIAGRAM_WIDTH));
-    const scale = Math.min(1.1, readableWidth / naturalWidth);
-    wrapper.style.setProperty("--workflow-svg-width", `${naturalWidth * scale}px`);
+    if (naturalWidth) wrapper.style.setProperty("--workflow-svg-render-width", `${Math.ceil(naturalWidth)}px`);
+    svg.removeAttribute("width");
+    svg.removeAttribute("height");
   };
 
   const prepareResponsiveSource = (wrapper) => {
@@ -143,10 +141,10 @@
     if (!wrapper.dataset.desktopDiagram) wrapper.dataset.desktopDiagram = source.textContent;
 
     const mobile = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches;
-    source.textContent = mobile
-      ? wrapMobileLabels(wrapper.dataset.desktopDiagram.replace(/^flowchart\s+LR\b/m, "flowchart TB"))
-      : wrapper.dataset.desktopDiagram;
-    wrapper.dataset.diagramMode = mobile ? "mobile" : "desktop";
+    const verticalDiagram = verticalizeDiagram(wrapper.dataset.desktopDiagram);
+    source.textContent = mobile ? wrapMobileLabels(verticalDiagram) : verticalDiagram;
+    wrapper.dataset.diagramMode = mobile ? "vertical-mobile" : "vertical-desktop";
+    ensureDiagramToggle(wrapper);
   };
 
   const prepareAllResponsiveSources = () => {
@@ -161,6 +159,183 @@
         node.setAttribute("aria-pressed", String(Boolean(selected)));
       }
     });
+  };
+
+  const setCompactNodeState = (wrapper, selectedId) => {
+    wrapper.querySelectorAll("[data-compact-node]").forEach((node) => {
+      const selected = Boolean(selectedId && node.dataset.compactNode === selectedId);
+      node.classList.toggle("project-tool-workflow__squeezed-node--selected", selected);
+      if (node.matches("button")) node.setAttribute("aria-pressed", String(selected));
+    });
+  };
+
+  const nodePosition = (node) => {
+    const transform = node.getAttribute("transform") || "";
+    const match = transform.match(/translate\(\s*(-?[\d.]+)[,\s]+(-?[\d.]+)\s*\)/);
+    return match ? { x: Number(match[1]), y: Number(match[2]) } : { x: 0, y: 0 };
+  };
+
+  const nodesByRank = (svg) => {
+    const ranked = [...svg.querySelectorAll("g.node")].map((node) => ({ node, ...nodePosition(node) })).sort((a, b) => a.y - b.y || a.x - b.x);
+    const rows = [];
+    ranked.forEach((item) => {
+      const row = rows.find((candidate) => Math.abs(candidate.y - item.y) <= 16);
+      if (row) {
+        row.items.push(item);
+        row.y = (row.y * (row.items.length - 1) + item.y) / row.items.length;
+      } else {
+        rows.push({ y: item.y, items: [item] });
+      }
+    });
+    return rows.map((row) => row.items.sort((a, b) => a.x - b.x));
+  };
+
+  const normalizeHybridRowWidths = (wrapper, svg) => {
+    if (wrapper.dataset.workflowId !== "hybrid_profile") return;
+
+    nodesByRank(svg).forEach((row) => {
+      if (row.length < 2) return;
+      const widths = row.map(({ node }) => {
+        const rect = node.querySelector("rect");
+        return Number(rect?.getAttribute("width")) || node.getBBox().width;
+      });
+      const targetWidth = Math.max(...widths);
+
+      row.forEach(({ node }, index) => {
+        const delta = (targetWidth - widths[index]) / 2;
+        node.querySelectorAll("rect, foreignObject").forEach((shape) => {
+          const width = Number(shape.getAttribute("width"));
+          const x = Number(shape.getAttribute("x"));
+          if (!Number.isFinite(width) || !Number.isFinite(x)) return;
+          shape.setAttribute("x", String(x - delta));
+          shape.setAttribute("width", String(targetWidth));
+        });
+      });
+    });
+  };
+
+  const sizeSqueezedNodes = (wrapper) => {
+    const compact = wrapper.querySelector(".project-tool-workflow__squeezed");
+    const frame = wrapper.querySelector(".project-tool-workflow__diagram");
+    if (!compact || !frame) return;
+    const columns = Math.max(1, Number(compact.dataset.maxColumns) || 1);
+    const mobile = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches;
+    const horizontalPadding = mobile ? 18 : 32;
+    const gap = mobile ? 7 : 10;
+    const available = Math.max(0, frame.clientWidth - horizontalPadding - gap * (columns - 1));
+    const nodeWidth = Math.min(240, Math.floor(available / columns));
+    compact.style.setProperty("--compact-node-width", `${nodeWidth}px`);
+  };
+
+  const buildSqueezedLayout = (wrapper, svg, labels) => {
+    const frame = wrapper.querySelector(".project-tool-workflow__diagram");
+    if (!frame) return;
+    const mobile = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches;
+    const nodesPerRow = mobile ? 2 : Number.POSITIVE_INFINITY;
+    const rows = nodesByRank(svg).flatMap((row) => {
+      if (row.length <= nodesPerRow) return [row];
+      const chunks = [];
+      for (let index = 0; index < row.length; index += nodesPerRow) chunks.push(row.slice(index, index + nodesPerRow));
+      return chunks;
+    });
+    const signature = `${mobile ? "mobile" : "desktop"}:${rows.map((row) => row.map(({ node }) => mermaidNodeId(node)).join(",")).join("|")}`;
+    let compact = frame.querySelector(".project-tool-workflow__squeezed");
+
+    if (compact?.dataset.signature === signature) {
+      sizeSqueezedNodes(wrapper);
+      return;
+    }
+
+    compact?.remove();
+    compact = document.createElement("div");
+    compact.className = "project-tool-workflow__squeezed";
+    compact.dataset.signature = signature;
+    compact.dataset.maxColumns = Math.max(1, ...rows.map((row) => row.length));
+    compact.setAttribute("aria-label", "Squeezed pipeline overview");
+
+    rows.forEach((row) => {
+      const rowElement = document.createElement("div");
+      rowElement.className = "project-tool-workflow__squeezed-row";
+      rowElement.style.gridTemplateColumns = `repeat(${row.length}, var(--compact-node-width))`;
+
+      row.forEach(({ node }) => {
+        const nodeId = mermaidNodeId(node);
+        const label = labels.get(nodeId) || node.querySelector(".nodeLabel")?.textContent.trim() || "Workflow step";
+        const interactive = labels.has(nodeId);
+        const card = document.createElement(interactive ? "button" : "div");
+        card.className = "project-tool-workflow__squeezed-node";
+        card.dataset.compactNode = nodeId;
+        if (interactive) {
+          card.type = "button";
+          card.setAttribute("aria-label", `Show tools for ${label}`);
+          card.setAttribute("aria-pressed", "false");
+          card.addEventListener("click", () => selectNode(wrapper, nodeId));
+        } else {
+          card.setAttribute("role", "group");
+        }
+
+        const iconSlot = document.createElement("span");
+        iconSlot.className = "project-tool-workflow__squeezed-icon-slot";
+        iconSlot.setAttribute("aria-hidden", "true");
+        const icons = node.querySelector(".project-tool-node__icons")?.cloneNode(true);
+        if (icons) iconSlot.append(icons);
+        card.append(iconSlot);
+        const labelElement = document.createElement("span");
+        labelElement.className = "project-tool-workflow__squeezed-label";
+        labelElement.textContent = label;
+        card.append(labelElement);
+        rowElement.append(card);
+      });
+
+      compact.append(rowElement);
+    });
+
+    frame.insertBefore(compact, frame.querySelector("pre.mermaid"));
+    wrapper.dataset.compactReady = "true";
+    sizeSqueezedNodes(wrapper);
+  };
+
+  const setDiagramExpanded = (wrapper, expanded) => {
+    const button = wrapper.querySelector("[data-workflow-toggle]");
+    if (!button) return;
+    wrapper.dataset.diagramExpanded = String(expanded);
+    button.setAttribute("aria-expanded", String(expanded));
+    button.setAttribute("aria-label", expanded ? "Collapse pipeline" : "Expand full pipeline");
+    button.title = expanded ? "Collapse pipeline" : "Expand full pipeline";
+    button.textContent = expanded ? "−" : "+";
+  };
+
+  const ensureDiagramToggle = (wrapper) => {
+    const diagram = wrapper.querySelector("pre.mermaid");
+    if (!diagram) return;
+
+    let frame = diagram.parentElement;
+    if (!frame.classList.contains("project-tool-workflow__diagram")) {
+      frame = document.createElement("div");
+      frame.className = "project-tool-workflow__diagram";
+      diagram.before(frame);
+      frame.append(diagram);
+    }
+
+    if (!diagram.id) {
+      const workflowId = wrapper.dataset.workflowId || `workflow-${Math.random().toString(36).slice(2, 9)}`;
+      diagram.id = `${workflowId}-diagram`;
+    }
+
+    let button = frame.querySelector("[data-workflow-toggle]");
+    if (!button) {
+      button = document.createElement("button");
+      button.type = "button";
+      button.className = "project-tool-workflow__toggle";
+      button.dataset.workflowToggle = "true";
+      button.setAttribute("aria-controls", diagram.id);
+      button.addEventListener("click", () => {
+        setDiagramExpanded(wrapper, wrapper.dataset.diagramExpanded !== "true");
+      });
+      frame.append(button);
+    }
+
+    if (!wrapper.dataset.diagramExpanded) setDiagramExpanded(wrapper, false);
   };
 
   const selectNode = (wrapper, nodeId) => {
@@ -178,6 +353,7 @@
       row.hidden = row.dataset.toolNode !== nodeId;
     });
     setNodeState(svg, nodeId);
+    setCompactNodeState(wrapper, nodeId);
     const label = matchingRows[0].dataset.toolNodeLabel || nodeId;
     explorer.querySelector("[data-tool-selection]").textContent = label;
     explorer.querySelector("[data-tool-status]").textContent = `Showing ${matchingRows.length} tool entries for ${label}.`;
@@ -194,6 +370,7 @@
     const explorer = wrapper.querySelector(".project-tool-explorer");
     const svg = wrapper.querySelector("pre.mermaid svg");
     if (!explorer || !svg) return false;
+    ensureDiagramToggle(wrapper);
     disableWheelZoom(svg);
     sizeResponsiveSvg(wrapper, svg);
 
@@ -222,6 +399,7 @@
         row.hidden = false;
       });
       setNodeState(svg, null);
+      setCompactNodeState(wrapper, null);
       selection.textContent = "All workflow steps";
       status.textContent = `Showing all ${rows.length} tool entries.`;
       reset.hidden = true;
@@ -251,13 +429,26 @@
       });
     });
 
+    normalizeHybridRowWidths(wrapper, svg);
+
     if (wiredNodeCount === 0) return false;
+    buildSqueezedLayout(wrapper, svg, labels);
     explorer.dataset.toolReady = "true";
     return true;
   };
 
+  let observer;
+  const observeWorkflowMutations = () => {
+    observer?.observe(document.documentElement, { childList: true, subtree: true });
+  };
+
   const wireAll = () => {
-    document.querySelectorAll(".project-tool-workflow").forEach(wireExplorer);
+    observer?.disconnect();
+    try {
+      document.querySelectorAll(".project-tool-workflow").forEach(wireExplorer);
+    } finally {
+      observeWorkflowMutations();
+    }
   };
 
   const ensureIconRegistry = () => {
@@ -274,7 +465,7 @@
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-      const expectedMode = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches ? "mobile" : "desktop";
+      const expectedMode = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches ? "vertical-mobile" : "vertical-desktop";
       const currentMode = document.querySelector(".project-tool-workflow")?.dataset.diagramMode;
       if (currentMode && currentMode !== expectedMode) {
         window.location.reload();
@@ -284,8 +475,7 @@
     }, 160);
   });
 
-  const observer = new MutationObserver(wireAll);
-  observer.observe(document.documentElement, { childList: true, subtree: true });
+  observer = new MutationObserver(wireAll);
   document.addEventListener("click", (event) => {
     const node = event.target.closest?.("g.node");
     const wrapper = node?.closest(".project-tool-workflow");
