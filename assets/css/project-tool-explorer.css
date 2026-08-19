@@ -6,17 +6,159 @@
   background: var(--global-card-bg-color, #fff);
 }
 
-.project-tool-workflow > pre.mermaid {
-  max-width: 100%;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  touch-action: pan-y;
+.project-tool-workflow {
+  min-width: 0;
 }
 
-.project-tool-workflow > pre.mermaid svg {
+.project-tool-workflow__diagram {
+  position: relative;
+  max-width: 100%;
+  margin: 1.35rem 0 1.75rem;
+  overflow: hidden;
+  border: 1px solid var(--global-divider-color, #d8dee4);
+  border-radius: 0.9rem;
+  background: color-mix(in srgb, var(--global-card-bg-color, #fff) 97%, var(--global-theme-color, #6f42c1));
+}
+
+.project-tool-workflow__diagram::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  height: 4.5rem;
+  background: linear-gradient(to bottom, transparent, var(--global-card-bg-color, #fff) 88%);
+  content: "";
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.project-tool-workflow__diagram > pre.mermaid {
+  max-width: 100%;
+  max-height: clamp(22rem, 52vh, 30rem);
+  margin: 0;
+  padding: 1.2rem clamp(0.65rem, 2vw, 1.2rem) 3.5rem;
+  overflow: hidden;
+  touch-action: pan-y;
+  transition: max-height 280ms ease;
+}
+
+.project-tool-workflow__squeezed {
+  --compact-node-width: 15rem;
+  --compact-row-gap: 0.55rem;
+
+  display: grid;
+  gap: var(--compact-row-gap);
+  padding: 3.65rem 1rem 1.1rem;
+}
+
+.project-tool-workflow__squeezed-row {
+  display: grid;
+  gap: 0.65rem;
+  justify-content: center;
+}
+
+.project-tool-workflow__squeezed-node {
+  display: flex;
+  width: var(--compact-node-width);
+  min-width: 0;
+  min-height: 3.2rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--global-theme-color, #6f42c1) 56%, var(--global-divider-color, #d8dee4));
+  border-radius: 0.55rem;
+  background: color-mix(in srgb, var(--global-card-bg-color, #fff) 94%, var(--global-theme-color, #6f42c1));
+  color: var(--global-text-color, #24292f);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+button.project-tool-workflow__squeezed-node {
+  cursor: pointer;
+}
+
+button.project-tool-workflow__squeezed-node:hover,
+button.project-tool-workflow__squeezed-node:focus-visible,
+.project-tool-workflow__squeezed-node--selected {
+  border-color: var(--global-theme-color, #6f42c1);
+  background: color-mix(in srgb, var(--global-theme-color, #6f42c1) 14%, var(--global-card-bg-color, #fff));
+}
+
+button.project-tool-workflow__squeezed-node:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--global-theme-color, #6f42c1) 38%, transparent);
+  outline-offset: 2px;
+}
+
+.project-tool-workflow__squeezed-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.project-tool-workflow__squeezed-icon-slot {
+  display: grid;
+  flex: 0 0 3.25rem;
+  width: 3.25rem;
+  height: 2rem;
+  margin-right: 0.45rem;
+  place-items: center;
+}
+
+.project-tool-workflow__squeezed-icon-slot .project-tool-node__icons {
+  flex: 0 0 auto;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.project-tool-workflow__toggle {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  z-index: 20;
+  display: grid;
+  width: 2.45rem;
+  height: 2.45rem;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--global-theme-color, #6f42c1) 62%, var(--global-divider-color, #d8dee4));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--global-card-bg-color, #fff) 92%, transparent);
+  box-shadow: 0 0.25rem 0.8rem rgb(15 23 42 / 18%);
+  color: var(--global-theme-color, #6f42c1);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1;
+  place-items: center;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.project-tool-workflow__toggle:hover,
+.project-tool-workflow__toggle:focus-visible {
+  border-color: var(--global-theme-color, #6f42c1);
+  background: var(--global-theme-color, #6f42c1);
+  color: var(--global-bg-color, #fff);
+  transform: scale(1.05);
+}
+
+.project-tool-workflow__toggle:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--global-theme-color, #6f42c1) 40%, transparent);
+  outline-offset: 3px;
+}
+
+.project-tool-workflow__diagram > pre.mermaid svg {
   display: block;
-  width: max(100%, var(--workflow-svg-width, 100%)) !important;
-  max-width: none !important;
+  width: min(100%, var(--workflow-svg-render-width, 100%)) !important;
+  max-width: 100% !important;
   height: auto !important;
   margin: 0 auto;
 }
@@ -42,15 +184,9 @@
   text-transform: uppercase;
 }
 
-.project-tool-explorer__selection,
-.project-tool-explorer__hint {
+.project-tool-explorer__selection {
   margin: 0.35rem 0 0;
   color: var(--global-text-color-light, #57606a);
-}
-
-.project-tool-explorer__hint {
-  margin-top: 0.85rem;
-  font-size: 0.9rem;
 }
 
 .project-tool-explorer__reset {
@@ -210,25 +346,58 @@
 }
 
 @media (max-width: 640px) {
-  .project-tool-workflow > pre.mermaid {
-    padding: 0.75rem 0.25rem;
-    overflow-x: auto;
-    touch-action: pan-x pan-y;
+  .project-tool-workflow__diagram {
+    margin: 1rem 0 1.35rem;
+    border-radius: 0.7rem;
   }
 
-  .project-tool-workflow > pre.mermaid svg {
-    width: var(--workflow-svg-width, 100%) !important;
-    min-width: 0;
+  .project-tool-workflow__diagram > pre.mermaid {
+    max-height: min(24rem, 58vh);
+    padding: 0.8rem 0.25rem 3.25rem;
   }
 
-  .project-tool-workflow > pre.mermaid .nodeLabel {
+  .project-tool-workflow__toggle {
+    top: 0.55rem;
+    right: 0.55rem;
+    width: 2.35rem;
+    height: 2.35rem;
+    font-size: 1.55rem;
+  }
+
+  .project-tool-workflow__squeezed {
+    gap: 0.45rem;
+    padding: 3.3rem 0.55rem 0.75rem;
+  }
+
+  .project-tool-workflow__squeezed-row {
+    gap: 0.45rem;
+  }
+
+  .project-tool-workflow__squeezed-node {
+    min-height: 3rem;
+    padding: 0.45rem 0.38rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .project-tool-workflow__squeezed-node .project-tool-node__icons {
+    margin: 0;
+  }
+
+  .project-tool-workflow__squeezed-icon-slot {
+    flex-basis: 2.8rem;
+    width: 2.8rem;
+    margin-right: 0.28rem;
+  }
+
+  .project-tool-workflow__diagram > pre.mermaid .nodeLabel {
     font-size: 1rem !important;
     line-height: 1.25 !important;
   }
 
-  .project-tool-workflow > pre.mermaid .node rect,
-  .project-tool-workflow > pre.mermaid .node polygon,
-  .project-tool-workflow > pre.mermaid .node path {
+  .project-tool-workflow__diagram > pre.mermaid .node rect,
+  .project-tool-workflow__diagram > pre.mermaid .node polygon,
+  .project-tool-workflow__diagram > pre.mermaid .node path {
     stroke-width: 2px;
   }
 
@@ -315,5 +484,25 @@
 
   .project-result-figure__mobile {
     display: block !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-tool-workflow__diagram > pre.mermaid,
+  .project-tool-workflow__toggle {
+    transition: none;
+  }
+}
+
+@media print {
+  .project-tool-workflow__diagram > pre.mermaid {
+    max-height: none !important;
+    padding-bottom: 1rem;
+  }
+
+  .project-tool-workflow__diagram::after,
+  .project-tool-workflow__toggle,
+  .project-tool-workflow__squeezed {
+    display: none;
   }
 }
