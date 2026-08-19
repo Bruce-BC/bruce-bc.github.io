@@ -169,6 +169,30 @@
     });
   };
 
+  const updateToolDetail = (explorer, rows, label = "All workflow steps") => {
+    const title = explorer.querySelector("[data-tool-detail-title]");
+    const description = explorer.querySelector("[data-tool-detail-description]");
+    const tools = explorer.querySelector("[data-tool-detail-tools]");
+    const io = explorer.querySelector("[data-tool-detail-io]");
+    const status = explorer.querySelector("[data-tool-detail-status]");
+    if (!title || !description || !tools || !io || !status) return;
+
+    title.textContent = label;
+    if (!rows.length) {
+      description.textContent = "Select a workflow box to see its role and evidence.";
+      tools.textContent = "—";
+      io.textContent = "—";
+      status.textContent = "—";
+      return;
+    }
+
+    const cellText = (row, index) => row.cells[index]?.textContent.trim().replace(/\s+/g, " ") || "—";
+    description.textContent = cellText(rows[0], 3);
+    tools.textContent = [...new Set(rows.map((row) => toolNameForRow(row)).filter(Boolean))].join(", ") || "—";
+    io.textContent = cellText(rows[0], 4);
+    status.textContent = cellText(rows[0], 5);
+  };
+
   const nodePosition = (node) => {
     const transform = node.getAttribute("transform") || "";
     const match = transform.match(/translate\(\s*(-?[\d.]+)[,\s]+(-?[\d.]+)\s*\)/);
@@ -297,8 +321,15 @@
 
   const setDiagramExpanded = (wrapper, expanded) => {
     const button = wrapper.querySelector("[data-workflow-toggle]");
+    const diagram = wrapper.querySelector("pre.mermaid");
     if (!button) return;
     wrapper.dataset.diagramExpanded = String(expanded);
+    if (diagram) {
+      diagram.style.position = expanded ? "relative" : "absolute";
+      diagram.style.visibility = expanded ? "visible" : "hidden";
+      diagram.style.opacity = expanded ? "1" : "0";
+      diagram.style.pointerEvents = expanded ? "auto" : "none";
+    }
     button.setAttribute("aria-expanded", String(expanded));
     button.setAttribute("aria-label", expanded ? "Collapse pipeline" : "Expand full pipeline");
     button.title = expanded ? "Collapse pipeline" : "Expand full pipeline";
@@ -355,6 +386,7 @@
     setNodeState(svg, nodeId);
     setCompactNodeState(wrapper, nodeId);
     const label = matchingRows[0].dataset.toolNodeLabel || nodeId;
+    updateToolDetail(explorer, matchingRows, label);
     explorer.querySelector("[data-tool-selection]").textContent = label;
     explorer.querySelector("[data-tool-status]").textContent = `Showing ${matchingRows.length} tool entries for ${label}.`;
     explorer.querySelector("[data-tool-reset]").hidden = false;
@@ -380,6 +412,10 @@
     const reset = explorer.querySelector("[data-tool-reset]");
     const tableId = explorer.querySelector("table")?.id;
     const labels = new Map(rows.map((row) => [row.dataset.toolNode, row.dataset.toolNodeLabel]));
+    if (!explorer.dataset.detailReady) {
+      updateToolDetail(explorer, [], "All workflow steps");
+      explorer.dataset.detailReady = "true";
+    }
     const toolsByNode = new Map();
     rows.forEach((row) => {
       const current = toolsByNode.get(row.dataset.toolNode) || [];
@@ -400,6 +436,7 @@
       });
       setNodeState(svg, null);
       setCompactNodeState(wrapper, null);
+      updateToolDetail(explorer, [], "All workflow steps");
       selection.textContent = "All workflow steps";
       status.textContent = `Showing all ${rows.length} tool entries.`;
       reset.hidden = true;

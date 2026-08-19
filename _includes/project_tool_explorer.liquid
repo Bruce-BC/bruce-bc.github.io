@@ -24,6 +24,20 @@
       <button class="project-tool-explorer__reset" type="button" data-tool-reset hidden>Show all tools</button>
     </div>
 
+    <div class="project-tool-explorer__detail" data-tool-detail>
+      <p class="project-tool-explorer__detail-kicker">Selected workflow stage</p>
+      <h4 data-tool-detail-title>All workflow steps</h4>
+      <p data-tool-detail-description>Select a workflow box to see its role and evidence.</p>
+      <dl>
+        <dt>Tools</dt>
+        <dd data-tool-detail-tools>—</dd>
+        <dt>Input → output</dt>
+        <dd data-tool-detail-io>—</dd>
+        <dt>Status</dt>
+        <dd data-tool-detail-status>—</dd>
+      </dl>
+    </div>
+
     <div class="project-tool-explorer__table-wrap" tabindex="0" role="region" aria-label="{{ workflow_tooling.title }} tool table">
       <table id="{{ explorer_id }}-table" class="project-tool-explorer__table">
         <thead>
