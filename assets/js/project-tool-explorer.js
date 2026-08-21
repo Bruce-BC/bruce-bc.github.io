@@ -169,6 +169,15 @@
     });
   };
 
+  const syncDesktopPanelHeight = (wrapper) => {
+    if (!window.matchMedia("(min-width: 960px)").matches) {
+      wrapper.style.removeProperty("--workflow-panel-height");
+      return;
+    }
+    const diagram = wrapper.querySelector(".project-tool-workflow__diagram");
+    if (diagram) wrapper.style.setProperty("--workflow-panel-height", `${Math.ceil(diagram.getBoundingClientRect().height)}px`);
+  };
+
   const updateToolDetail = (explorer, rows, label = "All workflow steps") => {
     const title = explorer.querySelector("[data-tool-detail-title]");
     const description = explorer.querySelector("[data-tool-detail-description]");
@@ -317,14 +326,18 @@
     frame.insertBefore(compact, frame.querySelector("pre.mermaid"));
     wrapper.dataset.compactReady = "true";
     sizeSqueezedNodes(wrapper);
+    syncDesktopPanelHeight(wrapper);
   };
 
   const setDiagramExpanded = (wrapper, expanded) => {
     const button = wrapper.querySelector("[data-workflow-toggle]");
     const diagram = wrapper.querySelector("pre.mermaid");
+    const compact = wrapper.querySelector(".project-tool-workflow__squeezed");
     if (!button) return;
     wrapper.dataset.diagramExpanded = String(expanded);
+    if (compact) compact.style.display = expanded ? "none" : "grid";
     if (diagram) {
+      diagram.style.display = "block";
       diagram.style.position = expanded ? "relative" : "absolute";
       diagram.style.visibility = expanded ? "visible" : "hidden";
       diagram.style.opacity = expanded ? "1" : "0";
@@ -334,6 +347,7 @@
     button.setAttribute("aria-label", expanded ? "Collapse pipeline" : "Expand full pipeline");
     button.title = expanded ? "Collapse pipeline" : "Expand full pipeline";
     button.textContent = expanded ? "−" : "+";
+    requestAnimationFrame(() => syncDesktopPanelHeight(wrapper));
   };
 
   const ensureDiagramToggle = (wrapper) => {
@@ -470,6 +484,7 @@
 
     if (wiredNodeCount === 0) return false;
     buildSqueezedLayout(wrapper, svg, labels);
+    syncDesktopPanelHeight(wrapper);
     explorer.dataset.toolReady = "true";
     return true;
   };
