@@ -85,12 +85,13 @@ My long-horizon mission is to understand these mechanisms well enough to help re
 
 ### Wittgenbio
 
-- Bulk-to-single-cell inference that connects bulk expression profiles with curated single-cell references
-- Virtual-cell modeling and evaluation for computational representations of cell state and response
+- Multi-study single-cell RNA-seq reference integration with standardized metadata, quality control, provenance, clustering, and cell-type annotation
+- Tumor/normal evidence workflows for patient-level reproducibility and normal-tissue off-target assessment
+- Bulk-to-single-cell inference and virtual-cell evaluation with explicit uncertainty and validation boundaries
 
 The current-role [Klebsiella phage genomics and tail-design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}) presents an anonymized example. It integrates seven core phage-analysis tools, a 7,759-sequence capsule-target reference resource, and sequence-plus-structure evidence without exposing sample identifiers or internal reference IDs.
 
-The [Wittgenbio bulk-to-single-cell and virtual-cell case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}) describes this research track at method level. Private datasets, model implementations, and performance metrics are intentionally excluded until they can be disclosed.
+The [Wittgenbio bulk-to-single-cell and virtual-cell case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}) describes this research track at method level. Private datasets, model implementations, and performance metrics are intentionally excluded until they can be disclosed. A separate [company-by-company experience summary]({% link _pages/experience.md %}) brings the responsibilities and evidence-backed outcomes together.
 
 Explore the [project workflows]({% link _pages/projects.md %}), the [publication record]({% link _pages/publications.md %}), or download the [resume]({{ '/assets/pdf/Byungcheol_Kang_Bioinformatics_Resume.pdf' | relative_url }}) and [project portfolio]({{ '/assets/pdf/Byungcheol_Kang_Bioinformatics_Portfolio.pdf' | relative_url }}).
 

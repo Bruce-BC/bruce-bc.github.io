@@ -24,10 +24,11 @@ cv:
         position: Computational Biology Research
         start_date: "2026-07-01"
         end_date: present
-        summary: Develop bulk-to-single-cell inference approaches and contribute to virtual-cell research.
+        summary: Build reproducible single-cell reference and tumor/normal evidence workflows while developing bulk-to-single-cell inference and virtual-cell evaluation methods.
         highlights:
-          - Develop and evaluate bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references while retaining validation and uncertainty evidence.
-          - Contribute to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation of predicted states or responses.
+          - Build and harmonize multi-study single-cell RNA-seq references through H5AD standardization, metadata alignment, quality control, integration, clustering, and cell-type annotation.
+          - Structure therapeutic-target evaluation around tumor expression, patient-level reproducibility, normal-tissue off-target risk, source provenance, and uncertainty.
+          - Develop and evaluate bulk-to-single-cell and virtual-cell approaches with explicit train/evaluation boundaries and biologically grounded interpretation of predicted states or responses.
 
       - company: Microiotix
         position: Bioinformatician

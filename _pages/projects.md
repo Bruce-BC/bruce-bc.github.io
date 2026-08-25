@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 description: Applied bioinformatics systems, research workflows, and evidence-backed outcomes.
 nav: true
-nav_order: 3
+nav_order: 4
 display_categories: [platforms, research, operations]
 horizontal: true
 ---
