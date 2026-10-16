@@ -13,7 +13,7 @@ mermaid:
 
 ## Current-role scope
 
-At Microiotix, my work connects **bacterial genome analysis**, **phage genome analysis**, _Klebsiella pneumoniae_ **tail/RBP and KL-type database construction**, **protein structure analysis**, and **in silico phage design**. The case study below is translated and condensed from an internal analysis report; sample identifiers and internal reference IDs have been removed.
+At MicrobiotiX, my work connects **bacterial genome analysis**, **phage genome analysis**, _Klebsiella pneumoniae_ **tail/RBP and KL-type database construction**, **protein structure analysis**, and **in silico phage design**. The case study below is translated and condensed from an internal analysis report; sample identifiers and internal reference IDs have been removed.
 
 ## Design bench
 

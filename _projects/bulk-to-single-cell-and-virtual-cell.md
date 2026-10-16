@@ -13,7 +13,7 @@ mermaid:
 
 ## Wittgenbio research scope
 
-At **Wittgenbio**, I develop **bulk-to-single-cell inference** approaches and contribute to **virtual-cell research**. This work is separate from my bacteriophage research at Microiotix. The case study below reports only versioned, reproducible evidence available in the current research checkout; it does not use illustrative performance charts.
+At **Wittgenbio** (July 1 – October 1, 2026), I developed **bulk-to-single-cell inference** approaches and contributed to **virtual-cell research**. This work is separate from my bacteriophage research at MicrobiotiX. The case study below reports only reproducible evidence retained in versioned research artifacts; it does not use illustrative performance charts.
 
 ## Current evidence snapshot
 

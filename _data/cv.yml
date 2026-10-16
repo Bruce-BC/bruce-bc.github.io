@@ -1,16 +1,12 @@
 cv:
   name: Byung-cheol Kang
-  label: Bioinformatician
+  label: Bioinformatics Researcher and Developer
   email: sentim2@gmail.com
   phone: (+82) 10-5366-3411
   location: Suwon, South Korea
   image: ""
   summary: >
-    Bioinformatician using computation to observe biological systems, represent them in measurable
-    form, and draw evidence-proportional conclusions. More than six years of interdisciplinary
-    experience spanning experimental biomedicine, bacterial and bacteriophage genomics,
-    protein-structure-informed design, bulk-to-single-cell inference, virtual-cell research,
-    research database development, and reproducible workflow engineering.
+    I am a bioinformatics researcher and developer who analyzes genomic and bacteriophage data and builds research pipelines and databases. I use AI coding tools to implement analysis pipelines, develop phage analysis and database tools, and automate repetitive research tasks.
 
   social_networks:
     - network: GitHub
@@ -20,17 +16,7 @@ cv:
 
   sections:
     Experience:
-      - company: Wittgenbio
-        position: Computational Biology Research
-        start_date: "2026-07-01"
-        end_date: present
-        summary: Build reproducible single-cell reference and tumor/normal evidence workflows while developing bulk-to-single-cell inference and virtual-cell evaluation methods.
-        highlights:
-          - Build and harmonize multi-study single-cell RNA-seq references through H5AD standardization, metadata alignment, quality control, integration, clustering, and cell-type annotation.
-          - Structure therapeutic-target evaluation around tumor expression, patient-level reproducibility, normal-tissue off-target risk, source provenance, and uncertainty.
-          - Develop and evaluate bulk-to-single-cell and virtual-cell approaches with explicit train/evaluation boundaries and biologically grounded interpretation of predicted states or responses.
-
-      - company: Microiotix
+      - company: MicrobiotiX
         position: Bioinformatician
         start_date: 2026-07
         end_date: present
@@ -41,6 +27,16 @@ cv:
           - Applied sequence- and structure-based protein analysis with Phold, ProstT5, Foldseek, and experimental PDB references to identify divergent tail proteins and assess engineered RBP designs.
           - Integrated CheckV, Pharokka, Phold, BACPHLIP, PhaTYP, PhaGCN, and PhageTerm evidence in an anonymized four-genome case study; the tools independently converged on lytic Przondovirus genomes with short DTR packaging.
           - Developed an in silico tail-RBP design workflow that evaluates anchor compatibility, KL-target evidence, taxonomic context, cluster-label conflicts, and structural retention before producing genome and protein design files.
+
+      - company: Wittgenbio
+        position: Computational Biology Research
+        start_date: "2026-07-01"
+        end_date: "2026-10-01"
+        summary: Built reproducible single-cell reference and tumor/normal evidence workflows while developing bulk-to-single-cell inference and virtual-cell evaluation methods. Contract ended October 1, 2026.
+        highlights:
+          - Built and harmonized multi-study single-cell RNA-seq references through H5AD standardization, metadata alignment, quality control, integration, clustering, and cell-type annotation.
+          - Structured therapeutic-target evaluation around tumor expression, patient-level reproducibility, normal-tissue off-target risk, source provenance, and uncertainty.
+          - Developed and evaluated bulk-to-single-cell and virtual-cell approaches with explicit train/evaluation boundaries and biologically grounded interpretation of predicted states or responses.
 
       - company: Sanigen
         position: Bioinformatics Team Lead · Senior Researcher
@@ -102,8 +98,8 @@ cv:
       - name: Bulk-to-Single-Cell and Virtual-Cell Research
         summary: Wittgenbio research connecting bulk expression profiles to single-cell references and evaluating computational representations of cellular state and response.
         highlights:
-          - Structure bulk-to-single-cell analyses around reference curation, feature alignment, cell-composition and state inference, and uncertainty-aware validation.
-          - Develop and evaluate virtual-cell workflows with explicit train/evaluation boundaries and biological plausibility review.
+          - Structured bulk-to-single-cell analyses around reference curation, feature alignment, cell-composition and state inference, and uncertainty-aware validation.
+          - Developed and evaluated virtual-cell workflows with explicit train/evaluation boundaries and biological plausibility review.
           - Keep private datasets, model implementations, and performance metrics outside the public portfolio until disclosure is appropriate.
 
       - name: Phage Lifestyle Evidence Prototype

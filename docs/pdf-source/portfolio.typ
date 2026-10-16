@@ -7,27 +7,27 @@
   #v(4mm)
   #text(size: 30pt, weight: "bold", fill: navy)[Byung-cheol Kang]
   #v(2mm)
-  #text(size: 13pt, fill: teal)[Bacteriophage Genomics · Bulk-to-Single-Cell · Virtual Cell]
+  #text(size: 13pt, fill: teal)[Genomics · Bacteriophages · Research Pipelines]
   #v(9mm)
   #block(width: 150mm, inset: 14pt, radius: 8pt, fill: pale, stroke: 0.7pt + rule)[
     #text(size: 13pt, weight: "medium", fill: navy)[
-      I turn complex microbial and phage sequencing data into reproducible analysis systems, inspectable evidence, and research decisions.
+      I am a bioinformatics researcher and developer who analyzes genomic and bacteriophage data and builds research pipelines and databases. I use AI coding tools to implement analysis pipelines, develop phage analysis and database tools, and automate repetitive research tasks.
     ]
   ]
 ]
 
 #v(10mm)
-#section("CURRENT ROLES")
-#role("Microiotix", "Bioinformatician", "2026.07 - PRESENT", [
+#section("CURRENT AND RECENT ROLES")
+#role("MicrobiotiX", "Bioinformatician", "2026.07 - PRESENT", [
   - Bacterial genome analysis for host context and phage genome analysis across QC, annotation, taxonomy, lifestyle, packaging, and tail biology.
   - *K. pneumoniae* tail/RBP and KL-type database construction and evaluation.
   - Protein structure prediction, structure-based annotation, and reference-structure comparison.
   - In silico tail-RBP design using explicit attachment, target, taxonomy, and structural criteria.
 ])
 
-#role("Wittgenbio", "Computational Biology Research", "2026.07.01 - PRESENT", [
-  - Develop bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references.
-  - Contribute to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation.
+#role("Wittgenbio", "Computational Biology Research", "2026.07.01 - 2026.10.01", [
+  - Developed bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references.
+  - Contributed to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation.
 ])
 
 #section("CAREER SNAPSHOT")
@@ -40,7 +40,7 @@
 
 #v(4mm)
 #note[
-  *Past platform evidence.* The integrated workflow and operational results in this portfolio describe work performed at Sanigen (2020.03 - 2025.10). They are not presented as Microiotix or Wittgenbio assets or current-company outcomes.
+  *Past platform evidence.* The integrated workflow and operational results in this portfolio describe work performed at Sanigen (2020.03 - 2025.10). They are not presented as MicrobiotiX or Wittgenbio assets or current-company outcomes.
 ]
 
 #pagebreak()
@@ -176,10 +176,10 @@ The design bench supports domain swaps, full-module replacements, and tandem add
 )
 
 #section("ANALYTICAL RESPONSIBILITIES")
-- Curate reference atlases for tissue, condition, cell annotation, and population coverage.
-- Align bulk and single-cell feature spaces while tracking missing, duplicated, and weakly represented signals.
-- Infer cell-type composition and reference-supported cell-state signals from bulk expression profiles.
-- Review sensitivity to reference choice, feature coverage, batch effects, and biological mismatch before interpretation.
+- Curated reference atlases for tissue, condition, cell annotation, and population coverage.
+- Aligned bulk and single-cell feature spaces while tracking missing, duplicated, and weakly represented signals.
+- Inferred cell-type composition and reference-supported cell-state signals from bulk expression profiles.
+- Reviewed sensitivity to reference choice, feature coverage, batch effects, and biological mismatch before interpretation.
 
 #section("VIRTUAL-CELL WORKFLOW")
 #grid(columns: (1fr, auto, 1fr, auto, 1fr), align: center,

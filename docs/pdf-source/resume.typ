@@ -7,7 +7,7 @@
   [
     #text(size: 24pt, weight: "bold", fill: navy)[Byung-cheol Kang]
     #linebreak()
-    #text(size: 10.5pt, fill: teal)[Bioinformatician · Bacteriophage Research · In Silico Design]
+    #text(size: 10.5pt, fill: teal)[Bioinformatics Research & Development · Genomics · Bacteriophages]
   ],
   [
     #align(right)[
@@ -21,7 +21,7 @@
 )
 
 #section("PROFILE")
-Bioinformatician with more than six years of experience connecting bacterial and bacteriophage genomics, bulk-to-single-cell inference, virtual-cell research, protein-structure analysis, reproducible workflow engineering, and research operations. At *Microiotix*, I work on phage genomics and in silico design; at *Wittgenbio*, I work on bulk-to-single-cell inference and virtual-cell research. Previously led a five-person bioinformatics team and built shared Snakemake workflows for 16S, ITS, WGS, and hybrid assembly.
+I am a bioinformatics researcher and developer who analyzes genomic and bacteriophage data and builds research pipelines and databases. I use AI coding tools to implement analysis pipelines, develop phage analysis and database tools, and automate repetitive research tasks.
 
 #grid(
   columns: (1fr, 1fr, 1fr, 1fr),
@@ -34,17 +34,17 @@ Bioinformatician with more than six years of experience connecting bacterial and
 
 #section("EXPERIENCE")
 
-#role("Wittgenbio", "Computational Biology Research", "2026.07.01 - PRESENT", [
-  - Develop and evaluate bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references while retaining validation and uncertainty evidence.
-  - Contribute to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation of predicted states or responses.
-])
-
-#role("Microiotix", "Bioinformatician", "2026.07 - PRESENT", [
+#role("MicrobiotiX", "Bioinformatician", "2026.07 - PRESENT", [
   - Analyze bacterial genomes for host context and phage genomes for quality, annotation, taxonomy, lifestyle, packaging, and tail-gene interpretation.
   - Built and evaluated a *Klebsiella pneumoniae* tail/RBP and KL-type resource with 7,759 curated sequences, traceable sources, confidence labels, and verified targets explicitly flagged.
   - Apply Phold, ProstT5, Foldseek, and experimental PDB references to structure-informed annotation and engineered-RBP assessment.
   - Integrated CheckV, Pharokka, Phold, BACPHLIP, PhaTYP, PhaGCN, and PhageTerm in an anonymized four-genome study that converged on lytic Przondovirus genomes with short DTR packaging.
   - Develop tail-RBP design candidates using anchor compatibility, capsule-target evidence, taxonomic context, cluster conflicts, and structural retention.
+])
+
+#role("Wittgenbio", "Computational Biology Research", "2026.07.01 - 2026.10.01", [
+  - Developed and evaluated bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references while retaining validation and uncertainty evidence.
+  - Contributed to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation of predicted states or responses.
 ])
 
 #role("Sanigen", "Bioinformatics Team Lead · Senior Researcher", "2020.03 - 2025.10", [
@@ -82,7 +82,7 @@ Bioinformatician with more than six years of experience connecting bacterial and
     #kicker("Wittgenbio")
     #h(4pt)
     *Bulk-to-single-cell and virtual-cell research* \
-    Connect bulk expression profiles to curated single-cell references for cell-composition and state inference, and evaluate computational cell models against held-out and biologically interpretable evidence.
+    Connected bulk expression profiles to curated single-cell references for cell-composition and state inference, and evaluated computational cell models against held-out and biologically interpretable evidence.
   ],
 )
 

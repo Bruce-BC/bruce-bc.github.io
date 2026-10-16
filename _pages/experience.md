@@ -9,27 +9,7 @@ nav_order: 3
 
 This page summarizes my work by company. It is intentionally limited to public, non-confidential information: internal identifiers, private datasets, undisclosed targets, and proprietary implementation details are excluded.
 
-## Wittgenbio
-
-**Computational Biology Research · July 2026–present**
-
-### Main work
-
-- Build and harmonize multi-study single-cell RNA-seq references, including data ingestion, H5AD standardization, metadata alignment, quality control, integration, clustering, and cell-type annotation.
-- Develop tumor/normal analysis workflows that preserve study, sample, and cell provenance while examining epithelial and disease-associated cell states.
-- Evaluate therapeutic-target evidence through tumor expression, patient-level reproducibility, and normal-tissue off-target risk rather than relying on a single aggregate score.
-- Develop bulk-to-single-cell inference methods and evaluate computational representations of cell state for virtual-cell research.
-
-### Contributions and outcomes
-
-- Established a reproducible path from heterogeneous public studies to analysis-ready single-cell references with explicit dataset and sample provenance.
-- Added source-aware validation gates, contamination checks, and alternative integration paths so conclusions are not determined by one embedding or batch-correction method.
-- Structured target assessment around tumor coverage, between-patient consistency, normal-cell specificity, and uncertainty, producing reviewable evidence for research prioritization.
-- Defined evaluation boundaries for bulk-to-single-cell and virtual-cell outputs, separating model fitting, held-out assessment, biological plausibility review, and claims requiring experimental validation.
-
-[View the single-cell and virtual-cell research case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}).
-
-## Microiotix
+## MicrobiotiX
 
 **Bioinformatician · July 2026–present**
 
@@ -48,6 +28,26 @@ This page summarizes my work by company. It is intentionally limited to public, 
 - Prioritized a structure-supported module-replacement hypothesis using anchor coverage, same-genus context, experimental reference structures, label consistency, and predicted fold retention; host-range expansion remains a wet-lab question.
 
 [View the phage genomics and tail-design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}).
+
+## Wittgenbio
+
+**Computational Biology Research · July 1 – October 1, 2026**
+
+### Main work
+
+- Built and harmonized multi-study single-cell RNA-seq references, including data ingestion, H5AD standardization, metadata alignment, quality control, integration, clustering, and cell-type annotation.
+- Developed tumor/normal analysis workflows that preserve study, sample, and cell provenance while examining epithelial and disease-associated cell states.
+- Evaluated therapeutic-target evidence through tumor expression, patient-level reproducibility, and normal-tissue off-target risk rather than relying on a single aggregate score.
+- Developed bulk-to-single-cell inference methods and evaluated computational representations of cell state for virtual-cell research.
+
+### Contributions and outcomes
+
+- Established a reproducible path from heterogeneous public studies to analysis-ready single-cell references with explicit dataset and sample provenance.
+- Added source-aware validation gates, contamination checks, and alternative integration paths so conclusions are not determined by one embedding or batch-correction method.
+- Structured target assessment around tumor coverage, between-patient consistency, normal-cell specificity, and uncertainty, producing reviewable evidence for research prioritization.
+- Defined evaluation boundaries for bulk-to-single-cell and virtual-cell outputs, separating model fitting, held-out assessment, biological plausibility review, and claims requiring experimental validation.
+
+[View the single-cell and virtual-cell research case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}).
 
 ## Sanigen
 
