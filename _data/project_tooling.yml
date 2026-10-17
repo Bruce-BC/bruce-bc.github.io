@@ -1204,71 +1204,69 @@ klebsiella-phage-genomics-and-tail-design:
 
 bulk-to-single-cell-and-virtual-cell:
   workflows:
-    bulk_to_single_cell_workflow:
-      title: Bulk-to-single-cell inference workflow
+    single_cell_rnaseq_workflow:
+      title: CRC single-cell atlas and annotation workflow
       display_only_nodes:
-        - bulk_expression
-        - single_cell_reference
-        - interpretable_outputs
+        - single_cell_datasets
       nodes:
-        preprocessing_harmonization:
-          label: Preprocessing and harmonization
+        metadata_standardization:
+          label: H5AD and metadata standardization
           entries:
-            - name: Bulk expression preprocessing
+            - name: H5AD and metadata standardization
               kind: method
-              role: Prepare and quality-review bulk expression profiles before reference-based inference
-              input: Bulk expression profiles and sample metadata
-              output: Analysis-ready bulk expression matrix
+              role: Standardize single-cell dataset structure and study metadata while retaining provenance
+              input: Single-cell RNA-seq datasets and source metadata
+              output: Consistent H5AD inputs and provenance metadata
               usage_status: used
               pipeline_state: documented-only
-        reference_curation:
-          label: Reference curation
+        cell_quality_control:
+          label: Single-cell quality control
           entries:
-            - name: Single-cell reference curation
+            - name: Single-cell quality control
               kind: method
-              role: Select and review single-cell references for tissue, condition, annotation, and population coverage
-              input: Candidate single-cell reference atlases
-              output: Curated reference with documented coverage and limitations
+              role: Review cell-level quality and study-specific limitations
+              input: Standardized single-cell datasets
+              output: Reviewed cells and documented quality decisions
               usage_status: used
               pipeline_state: documented-only
-        feature_alignment:
-          label: Feature-space alignment
+        study_integration:
+          label: Multi-study integration
           entries:
-            - name: Bulk and reference feature alignment
+            - name: Multi-study integration
               kind: method
-              role: Establish a compatible feature space while tracking missing, duplicated, and weakly represented signals
-              input: Analysis-ready bulk data and curated single-cell reference
-              output: Aligned bulk and reference feature matrices
+              role: Normalize and integrate studies while reviewing batch effects and biological compatibility
+              input: Quality-reviewed single-cell datasets
+              output: Integrated atlas with study provenance
               usage_status: used
               pipeline_state: documented-only
-        composition_inference:
-          label: Cell-composition inference
+        clustering_annotation:
+          label: Clustering and cell-type annotation
           entries:
-            - name: Cell-type composition inference
+            - name: Clustering and cell-type annotation
               kind: method
-              role: Estimate the cellular composition represented in bulk expression profiles
-              input: Aligned bulk and single-cell reference matrices
-              output: Cell-type proportion estimates
+              role: Review clusters and assign cell-type labels using biological evidence
+              input: Integrated CRC single-cell atlas
+              output: Annotated cell populations and supporting evidence
               usage_status: used
               pipeline_state: documented-only
-        state_inference:
-          label: Cell-state inference
+        tumor_normal_evidence:
+          label: Tumor and normal-tissue evidence
           entries:
-            - name: Cell-state signal inference
+            - name: Tumor and normal-tissue evidence review
               kind: method
-              role: Recover reference-supported cell-state signals from bulk expression profiles
-              input: Aligned bulk and single-cell reference matrices
-              output: Cell-state estimates and supporting evidence
+              role: Review tumor and normal-tissue labels and expression evidence in context
+              input: Annotated cells with study and sample metadata
+              output: Contextualized tumor and normal-tissue expression evidence
               usage_status: used
               pipeline_state: documented-only
-        validation_uncertainty:
-          label: Validation and uncertainty review
+        provenance_review:
+          label: Provenance and uncertainty review
           entries:
-            - name: Reference and inference validation
+            - name: Annotation and provenance review
               kind: review
-              role: Evaluate sensitivity to reference choice, feature coverage, batch effects, and biological mismatch
-              input: Composition estimates, state estimates, and reference metadata
-              output: Reviewed results with confidence and limitations
+              role: Review annotation consistency, coverage, and interpretation limits while retaining source traceability
+              input: Atlas annotations and analysis evidence
+              output: Reviewed results with documented limitations
               usage_status: used
               pipeline_state: documented-only
     virtual_cell_workflow:

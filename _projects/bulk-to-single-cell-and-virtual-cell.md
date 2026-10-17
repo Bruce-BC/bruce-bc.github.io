@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Bulk-to-Single-Cell and Virtual-Cell Research
-description: Wittgenbio research connecting bulk transcriptomes to single-cell references and evaluating computational cell models.
+title: CRC Single-Cell Atlas and Cell-Type Annotation
+description: Wittgenbio CRC atlas construction, cell-type annotation, normal-tissue expression analysis, and the separate virtual-cell research track.
 img:
 importance: 1
 category: research
@@ -13,40 +13,32 @@ mermaid:
 
 ## Wittgenbio research scope
 
-At **Wittgenbio** (July 1 – October 1, 2026), I developed **bulk-to-single-cell inference** approaches and contributed to **virtual-cell research**. This work is separate from my bacteriophage research at MicrobiotiX. The case study below reports only reproducible evidence retained in versioned research artifacts; it does not use illustrative performance charts.
+At **Wittgenbio** (July 1 – October 1, 2026), I built a **colorectal cancer (CRC) single-cell atlas** and performed **cell-type annotation**. I also annotated externally supplied normal-tissue atlas data and compared tissue-specific expression. The separate virtual-cell research track is described below.
 
-## Current evidence snapshot
+## CRC single-cell atlas workflow
 
-| Public reference cohort |   Cells |  Genes | Cell types | Samples | EDA gate                                                                 |
-| ----------------------- | ------: | -----: | ---------: | ------: | ------------------------------------------------------------------------ |
-| GSE176078               |  52,774 | 17,882 |         15 |      26 | Integer-likeness PASS; UMAP evaluated on an 8,000-cell bounded subsample |
-| SCPCP000003             | 275,875 | 60,319 |         13 |      37 | Integer-likeness PASS; UMAP evaluated on an 8,000-cell bounded subsample |
-
-These values document reference scale and preprocessing readiness, not predictive performance. The public page will gain UMAP, cell-composition, or model-comparison figures only when the corresponding reproducible artifacts are available for disclosure.
-
-## Bulk-to-single-cell workflow
-
-<div class="project-tool-workflow" data-workflow-id="bulk_to_single_cell_workflow" markdown="1">
+<div class="project-tool-workflow" data-workflow-id="single_cell_rnaseq_workflow" markdown="1">
 
 ```mermaid
 flowchart LR
-    bulk_expression[Bulk expression profiles] --> preprocessing_harmonization[Preprocessing and harmonization]
-    single_cell_reference[Single-cell reference atlas] --> reference_curation[Reference curation]
-    preprocessing_harmonization --> feature_alignment[Feature-space alignment]
-    reference_curation --> feature_alignment
-    feature_alignment --> composition_inference[Cell-composition inference]
-    feature_alignment --> state_inference[Cell-state inference]
-    composition_inference --> validation_uncertainty[Validation and uncertainty review]
-    state_inference --> validation_uncertainty
-    validation_uncertainty --> interpretable_outputs[Interpretable bulk-to-cell outputs]
-    class preprocessing_harmonization,reference_curation,feature_alignment,composition_inference,state_inference,validation_uncertainty project-tool-node
+    single_cell_datasets[Single-cell RNA-seq datasets] --> metadata_standardization[H5AD and metadata standardization]
+    metadata_standardization --> cell_quality_control[Cell-level quality control]
+    cell_quality_control --> study_integration[Normalization and multi-study integration]
+    study_integration --> clustering_annotation[Clustering and cell-type annotation]
+    clustering_annotation --> tumor_normal_evidence[Tumor and normal-tissue evidence]
+    tumor_normal_evidence --> provenance_review[Provenance and uncertainty review]
+    class metadata_standardization,cell_quality_control,study_integration,clustering_annotation,tumor_normal_evidence,provenance_review project-tool-node
 ```
 
-{% include project_tool_explorer.liquid project=page.slug workflow="bulk_to_single_cell_workflow" %}
+{% include project_tool_explorer.liquid project=page.slug workflow="single_cell_rnaseq_workflow" %}
 
 </div>
 
-The analysis is organized around compatibility between the bulk dataset and the single-cell reference. Reference composition, feature overlap, batch effects, tissue or condition mismatch, and uncertainty are reviewed before cell-type or cell-state estimates are interpreted.
+The atlas workflow integrates measured single-cell datasets and reviews their metadata, cell quality, study differences, and cell-type labels. Annotation consistency and tumor/normal label discrepancies remain traceable to the source data.
+
+## Normal-tissue atlas annotation and expression analysis
+
+I performed cell-type annotation on externally supplied normal-tissue atlas data and compared tissue-specific expression. Candidate therapeutic targets were evaluated against normal-tissue expression while accounting for sequencing-depth differences and annotation coverage.
 
 ## Virtual-cell workflow
 
@@ -78,10 +70,6 @@ The virtual-cell track focuses on whether a computational representation preserv
 - Report where cell types, states, tissues, perturbations, or experimental conditions are underrepresented.
 - Treat generated cell states and perturbation responses as hypotheses until they are externally or experimentally validated.
 
-## What is measured next
-
-The evaluation plan separates three questions that are often conflated: whether inferred proportions agree with matched references, whether reconstructed expression preserves held-out signal, and whether uncertainty increases under tissue, condition, or cell-type mismatch. Results remain non-headline until the exact split, reference coverage, baseline, and uncertainty evidence are all versioned together.
-
 ## Boundary
 
-Bulk-to-single-cell outputs are model-based estimates, not direct single-cell measurements. Virtual-cell predictions do not establish biological mechanism or treatment response without independent data and experimental validation.
+Cell-type annotations and normal-tissue expression comparisons depend on data quality, annotation coverage, and biological context. Virtual-cell predictions do not establish biological mechanism or treatment response without independent data and experimental validation.
