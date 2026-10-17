@@ -2,7 +2,8 @@
   "scripts": {
     "lint:prettier": "prettier . --check",
     "test:icons": "node test/project_tool_icons_test.js",
-    "test:tooling": "ruby bin/validate_project_tooling.rb"
+    "test:tooling": "ruby bin/validate_project_tooling.rb",
+    "test:pdf": "node test/pdf_typography_test.js"
   },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "^1.10.0",
