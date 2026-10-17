@@ -5,7 +5,7 @@
 #let muted = rgb("5f6b73")
 #let rule = rgb("d7e0e3")
 
-#let setup(title: "") = {
+#let setup(body, title: "", body-size: 10.5pt) = {
   set page(
     paper: "a4",
     margin: (x: 15mm, top: 13mm, bottom: 13mm),
@@ -16,9 +16,10 @@
       #title #h(1fr) bruce-bc.github.io #h(8mm) #counter(page).display()
     ],
   )
-  set text(font: ("Helvetica Neue", "Apple SD Gothic Neo"), size: 9pt, fill: ink)
+  set text(font: ("Helvetica Neue", "Apple SD Gothic Neo"), size: body-size, fill: ink)
   set par(justify: false, leading: 0.56em)
-  set list(indent: 10pt, body-indent: 4pt, spacing: 3pt)
+  set list(tight: false, indent: 10pt, body-indent: 4pt, spacing: 3pt)
+  body
 }
 
 #let section(title) = block(above: 8pt, below: 5pt)[

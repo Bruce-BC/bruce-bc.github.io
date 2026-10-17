@@ -1,5 +1,5 @@
 #import "theme.typ": *
-#setup(title: "Byung-cheol Kang · Bioinformatics Resume")
+#show: setup.with(title: "Byung-cheol Kang · Bioinformatics Resume")
 
 #grid(
   columns: (1fr, auto),
@@ -21,68 +21,60 @@
 )
 
 #section("PROFILE")
-I am a bioinformatics researcher and developer who analyzes genomic and bacteriophage data and builds research pipelines and databases. I use AI coding tools to implement analysis pipelines, develop phage analysis and database tools, and automate repetitive research tasks.
+A bioinformatics researcher and developer connecting biological questions with analysis design and interpretation. My work extends from microbes to humans, integrating diverse analytical approaches and building research pipelines and databases. AI-powered coding accelerates my research and amplifies my ability to automate workflows and develop analytical tools.
 
-#grid(
-  columns: (1fr, 1fr, 1fr, 1fr),
-  gutter: 5pt,
-  metric("6+ years", "Applied bioinformatics"),
-  metric("4 profiles", "16S · ITS · WGS · Hybrid"),
-  metric("98+", "Archived project-order lower bound"),
-  metric("7 papers", "SCI(E) publication record"),
-)
-
+#v(4mm)
 #section("EXPERIENCE")
 
 #role("MicrobiotiX", "Bioinformatician", "2026.07 - PRESENT", [
-  - Analyze bacterial genomes for host context and phage genomes for quality, annotation, taxonomy, lifestyle, packaging, and tail-gene interpretation.
-  - Built and evaluated a *Klebsiella pneumoniae* tail/RBP and KL-type resource with 7,759 curated sequences, traceable sources, confidence labels, and verified targets explicitly flagged.
-  - Apply Phold, ProstT5, Foldseek, and experimental PDB references to structure-informed annotation and engineered-RBP assessment.
-  - Integrated CheckV, Pharokka, Phold, BACPHLIP, PhaTYP, PhaGCN, and PhageTerm in an anonymized four-genome study that converged on lytic Przondovirus genomes with short DTR packaging.
-  - Develop tail-RBP design candidates using anchor compatibility, capsule-target evidence, taxonomic context, cluster conflicts, and structural retention.
+  - Develop bacterial genome analysis workflows covering quality control, annotation, typing, antimicrobial resistance, and prophage detection to support production-strain assessment.
+  - Integrate phage genome quality, termini and packaging, taxonomy, lifestyle predictions, and tail-protein evidence into reports with traceable conclusions.
+  - Develop and extend analysis libraries and command-line tools combining experimental host-range matrices with sequence and protein features for clustering comparisons and cocktail candidate selection.
+  - Build and maintain a Klebsiella pneumoniae tail/RBP reference database linking sequences to K-type and KL-type evidence, with source citations and separate experimental and predicted labels.
+  - Develop in silico design tools that evaluate tail-protein candidates for specified capsule targets and generate candidate design sequences and review reports.
+  - Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.
 ])
 
 #role("Wittgenbio", "Computational Biology Research", "2026.07.01 - 2026.10.01", [
-  - Developed and evaluated bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references while retaining validation and uncertainty evidence.
+  - Built a colorectal cancer (CRC) single-cell atlas and performed cell-type annotation.
+  - Annotated externally supplied normal-tissue atlas data and compared tissue-specific expression to evaluate candidate therapeutic targets.
   - Contributed to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation of predicted states or responses.
 ])
 
 #role("Sanigen", "Bioinformatics Team Lead · Senior Researcher", "2020.03 - 2025.10", [
-  - Led a five-person bioinformatics team delivering microbial WGS, metagenomics, assembly, annotation, comparative-genomics, and research support.
-  - Designed and maintained a shared Snakemake platform covering 16S, ITS, WGS, and Illumina-ONT hybrid assembly with validation, logging, quality gates, and report packaging.
-  - Standardized execution with Conda, Docker, and Apptainer across Linux compute environments; wrote Python, R, and Bash utilities for QC, analysis, visualization, and reporting.
-  - Supported comparative-genomics marker discovery and foodborne-pathogen NGS panel development that contributed to two 2023 papers and one joint patent.
-  - Coordinated analysis review and delivery across a conservative lower bound of 98 archived project orders.
+  - Designed and maintained a shared analysis platform for 16S, ITS, WGS, and hybrid assembly, standardizing execution, quality control, and reporting.
+  - Performed microbial genomics and metagenomics analyses, led technical review, and coordinated team assignments, project schedules, and client communication.
+  - Contributed comparative-genomics and NGS analyses to foodborne-pathogen panel development, supporting two peer-reviewed publications and a joint patent.
 ])
 
 #pagebreak()
 
 #section("SELECTED PROJECTS")
 
-#grid(columns: (1fr, 1fr), gutter: 10pt,
+#grid(columns: (1fr, 1fr), column-gutter: 14pt, row-gutter: 12pt,
   [
-    #kicker("Platform")
-    #h(4pt)
-    *Integrated microbial genomics platform* \
-    Unified 16S, ITS, WGS, and hybrid profiles under a shared Snakemake execution contract. Active tooling included FastQC, MultiQC, QIIME 2/DADA2, SPAdes, Flye/Unicycler, QUAST, BUSCO, Prokka, Abricate, eggNOG-mapper, and custom reports.
-
-    #v(7pt)
-    #kicker("Research")
-    #h(4pt)
-    *Comparative-genomics marker discovery* \
-    Narrowed complete-genome differences to an approximately 17 kb candidate region while separating computational prioritization from downstream assay validation.
+    #kicker("Phage database and design")
+    #linebreak()
+    *Klebsiella Phage Reference Database & In Silico Design* \
+    Built a tail/RBP and KL-type reference database to connect protein sequences with capsule-target evidence. Integrated anchor compatibility, reference-label consistency, and protein-structure evidence to prioritize in silico tail-RBP design candidates for experimental follow-up.
   ],
   [
-    #kicker("Phage")
-    #h(4pt)
-    *Klebsiella phage genomics and tail-RBP design* \
-    Connected host and phage genomics to KL-type evidence, protein structure comparison, and reproducible design exports. Prioritized one candidate with a 129-aa anchor alignment spanning 99.2% of the region and experimental structure support.
-
-    #v(7pt)
-    #kicker("Wittgenbio")
-    #h(4pt)
-    *Bulk-to-single-cell and virtual-cell research* \
-    Connected bulk expression profiles to curated single-cell references for cell-composition and state inference, and evaluated computational cell models against held-out and biologically interpretable evidence.
+    #kicker("Single-cell and tissue expression")
+    #linebreak()
+    *CRC Atlas Annotation & Normal-Tissue Expression Analysis* \
+    Integrated CRC datasets across studies, annotated cell types, and reviewed annotation consistency and tumor/normal labels. Separately annotated externally supplied normal-tissue atlas data and compared tissue-specific expression to evaluate candidate therapeutic targets, accounting for sequencing-depth differences and annotation coverage.
+  ],
+  [
+    #kicker("Reproducible analysis platform")
+    #linebreak()
+    *Sanigen Integrated Microbial Genomics Platform* \
+    Designed and maintained a shared Snakemake platform for 16S, ITS, WGS, and Illumina-ONT hybrid assembly. Standardized inputs, execution environments, QC checkpoints, logs, and report packaging to support reproducible analysis and review.
+  ],
+  [
+    #kicker("Marker discovery")
+    #linebreak()
+    *Comparative Genomics-Based Marker Discovery* \
+    Compared complete microbial genomes to identify candidate marker regions and assess their specificity, conservation, and suitability for downstream assays. Prioritized an approximately 17 kb region for experimental follow-up.
   ],
 )
 
@@ -90,11 +82,11 @@ I am a bioinformatics researcher and developer who analyzes genomic and bacterio
 #section("TECHNICAL SKILLS")
 #grid(columns: (38mm, 1fr), row-gutter: 4pt,
   [*Genomics*], [Bacterial WGS, phage genomics, assembly, annotation, comparative genomics, KL typing],
-  [*Phage and protein*], [Tail/RBP analysis, depolymerase curation, Phold, ProstT5, Foldseek, PDB comparison],
-  [*Cell-state modeling*], [Bulk-to-single-cell inference, single-cell reference integration, virtual-cell modeling and evaluation],
-  [*Workflow engineering*], [Snakemake, Nextflow, Conda, Docker, Apptainer, Linux],
+  [*Phage and protein*], [Tail/RBP analysis, depolymerase curation, structure comparison (Foldseek)],
+  [*Single-cell analysis*], [CRC atlas construction, cell-type annotation, normal-tissue expression analysis, virtual-cell evaluation],
+  [*Workflow engineering*], [Reproducible analysis workflows and execution environments (Snakemake)],
   [*Programming*], [Python, R, Bash, Git],
-  [*Selected tools*], [CheckV, Pharokka, BACPHLIP, PhaTYP, PhaGCN, PhageTerm, Kaptive, BLAST],
+  [*Phage annotation*], [Pharokka],
 )
 
 #v(5pt)

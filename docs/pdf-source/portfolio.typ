@@ -1,42 +1,37 @@
 #import "theme.typ": *
-#setup(title: "Byung-cheol Kang · Bioinformatics Portfolio")
+#show: setup.with(title: "Byung-cheol Kang · Bioinformatics Portfolio", body-size: 11pt)
 
 #align(center)[
-  #v(17mm)
+  #v(5mm)
   #kicker("Bioinformatics portfolio · 2026")
   #v(4mm)
   #text(size: 30pt, weight: "bold", fill: navy)[Byung-cheol Kang]
   #v(2mm)
   #text(size: 13pt, fill: teal)[Genomics · Bacteriophages · Research Pipelines]
-  #v(9mm)
+  #v(5mm)
   #block(width: 150mm, inset: 14pt, radius: 8pt, fill: pale, stroke: 0.7pt + rule)[
     #text(size: 13pt, weight: "medium", fill: navy)[
-      I am a bioinformatics researcher and developer who analyzes genomic and bacteriophage data and builds research pipelines and databases. I use AI coding tools to implement analysis pipelines, develop phage analysis and database tools, and automate repetitive research tasks.
+      A bioinformatics researcher and developer connecting biological questions with analysis design and interpretation. My work extends from microbes to humans, integrating diverse analytical approaches and building research pipelines and databases. AI-powered coding accelerates my research and amplifies my ability to automate workflows and develop analytical tools.
     ]
   ]
 ]
 
-#v(10mm)
+#v(3mm)
 #section("CURRENT AND RECENT ROLES")
 #role("MicrobiotiX", "Bioinformatician", "2026.07 - PRESENT", [
-  - Bacterial genome analysis for host context and phage genome analysis across QC, annotation, taxonomy, lifestyle, packaging, and tail biology.
-  - *K. pneumoniae* tail/RBP and KL-type database construction and evaluation.
-  - Protein structure prediction, structure-based annotation, and reference-structure comparison.
-  - In silico tail-RBP design using explicit attachment, target, taxonomy, and structural criteria.
+  - Develop bacterial genome analysis workflows covering quality control, annotation, typing, antimicrobial resistance, and prophage detection to support production-strain assessment.
+  - Integrate phage genome quality, termini and packaging, taxonomy, lifestyle predictions, and tail-protein evidence into reports with traceable conclusions.
+  - Develop and extend analysis libraries and command-line tools combining experimental host-range matrices with sequence and protein features for clustering comparisons and cocktail candidate selection.
+  - Build and maintain a Klebsiella pneumoniae tail/RBP reference database linking sequences to K-type and KL-type evidence, with source citations and separate experimental and predicted labels.
+  - Develop in silico design tools that evaluate tail-protein candidates for specified capsule targets and generate candidate design sequences and review reports.
+  - Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.
 ])
 
 #role("Wittgenbio", "Computational Biology Research", "2026.07.01 - 2026.10.01", [
-  - Developed bulk-to-single-cell inference approaches that connect bulk expression profiles with curated single-cell references.
+  - Built a colorectal cancer (CRC) single-cell atlas and performed cell-type annotation.
+  - Annotated externally supplied normal-tissue atlas data and compared tissue-specific expression to evaluate candidate therapeutic targets.
   - Contributed to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation.
 ])
-
-#section("CAREER SNAPSHOT")
-#grid(columns: (1fr, 1fr, 1fr, 1fr), gutter: 5pt,
-  metric("6+ years", "Applied bioinformatics"),
-  metric("5-person", "Team led at Sanigen"),
-  metric("4 profiles", "16S · ITS · WGS · Hybrid"),
-  metric("7 papers", "SCI(E) publications"),
-)
 
 #v(4mm)
 #note[
@@ -87,10 +82,9 @@ Only tools connected to active Snakemake includes and rules are listed as active
 )
 
 #section("RESPONSIBILITIES AT SANIGEN")
-- Translated research and client questions into analysis scope, metadata requirements, and appropriate workflow profiles.
-- Reviewed Q20/Q30, read depth, contiguity, assembly plausibility, taxonomy, annotation, and analysis-specific quality evidence before interpretation.
-- Coordinated reruns, technical communication, report packaging, manuals, and training across a five-person team.
-- Maintained reproducible environments and operational failure handling across Linux compute and storage infrastructure.
+- Designed and maintained a shared analysis platform for 16S, ITS, WGS, and hybrid assembly, standardizing execution, quality control, and reporting.
+- Performed microbial genomics and metagenomics analyses, led technical review, and coordinated team assignments, project schedules, and client communication.
+- Contributed comparative-genomics and NGS analyses to foodborne-pathogen panel development, supporting two peer-reviewed publications and a joint patent.
 
 #section("VERIFIED LOWER BOUND OF ARCHIVED WORK")
 #grid(columns: (1fr, 1fr, 1fr, 1fr), gutter: 5pt,
@@ -151,7 +145,7 @@ Only tools connected to active Snakemake includes and rules are listed as active
 
 #section("CONTRIBUTION AND EVIDENCE")
 - Integrated CheckV, Pharokka, Phold, BACPHLIP, PhaTYP, PhaGCN, and PhageTerm outputs while preserving the evidence behind each conclusion.
-- Built a 7,759-sequence tail/RBP and KL-type reference resource with source traceability, confidence labels, and experimentally verified targets explicitly flagged.
+- Built a tail/RBP and KL-type reference resource with source traceability, confidence labels, and experimentally supported targets explicitly flagged.
 - Cross-validated candidate depolymerases with DposFinder, SpikeHunter, DepoScope, sequence search, domain boundaries, and protein-structure evidence.
 - Used ProstT5 and Foldseek with experimental PDB references to identify structurally conserved proteins at sequence identities below ordinary search sensitivity.
 
@@ -166,20 +160,22 @@ The design bench supports domain swaps, full-module replacements, and tandem add
 #pagebreak()
 #kicker("Project 06 · Wittgenbio research")
 #linebreak()
-#text(size: 21pt, weight: "bold", fill: navy)[Bulk-to-Single-Cell and Virtual-Cell Research]
+#text(size: 21pt, weight: "bold", fill: navy)[CRC Atlas and Cell-Type Annotation]
 
-#section("BULK-TO-SINGLE-CELL WORKFLOW")
+#section("CRC SINGLE-CELL ATLAS WORKFLOW")
 #grid(columns: (1fr, auto, 1fr, auto, 1fr), align: center,
-  note[*Bulk profiles* #linebreak() QC + harmonization], [→],
-  note[*Single-cell reference* #linebreak() curation + alignment], [→],
-  note[*Inference* #linebreak() composition + state],
+  note[*Single-cell datasets* #linebreak() QC + metadata], [→],
+  note[*Integrated CRC atlas* #linebreak() harmonization + clustering], [→],
+  note[*Cell-type annotation* #linebreak() labels + validation],
 )
 
 #section("ANALYTICAL RESPONSIBILITIES")
-- Curated reference atlases for tissue, condition, cell annotation, and population coverage.
-- Aligned bulk and single-cell feature spaces while tracking missing, duplicated, and weakly represented signals.
-- Inferred cell-type composition and reference-supported cell-state signals from bulk expression profiles.
-- Reviewed sensitivity to reference choice, feature coverage, batch effects, and biological mismatch before interpretation.
+- Built a colorectal cancer single-cell atlas by integrating datasets across studies and performing cell-type annotation.
+- Maintained traceable metadata and reviewed annotation consistency and tumor/normal label discrepancies.
+
+#section("NORMAL-TISSUE ATLAS ANNOTATION AND EXPRESSION")
+- Annotated externally supplied normal-tissue atlas data and compared tissue-specific expression.
+- Evaluated candidate therapeutic targets against normal-tissue expression while accounting for sequencing-depth differences and annotation coverage.
 
 #section("VIRTUAL-CELL WORKFLOW")
 #grid(columns: (1fr, auto, 1fr, auto, 1fr), align: center,
@@ -195,7 +191,7 @@ The design bench supports domain swaps, full-module replacements, and tandem add
 
 #section("PUBLIC EVIDENCE BOUNDARY")
 #note[
-  Bulk-to-single-cell outputs are model-based estimates, not direct single-cell measurements. Virtual-cell predictions remain research hypotheses until externally or experimentally validated. Private data, implementation details, and performance metrics are not disclosed here.
+  Cell-type annotations and normal-tissue expression comparisons depend on data quality, annotation coverage, and biological context. Virtual-cell predictions remain research hypotheses until externally or experimentally validated. Private data, implementation details, and performance metrics are not disclosed here.
 ]
 
 #pagebreak()
