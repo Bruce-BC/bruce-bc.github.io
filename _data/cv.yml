@@ -6,7 +6,7 @@ cv:
   location: Suwon, South Korea
   image: ""
   summary: >
-    I am a bioinformatics researcher and developer who analyzes genomic and bacteriophage data and builds research pipelines and databases. I use AI coding tools to implement analysis pipelines, develop phage analysis and database tools, and automate repetitive research tasks.
+    A bioinformatics researcher and developer connecting biological questions with analysis design and interpretation. My work extends from microbes to humans, integrating diverse analytical approaches and building research pipelines and databases. AI-powered coding accelerates my research and amplifies my ability to automate workflows and develop analytical tools.
 
   social_networks:
     - network: GitHub
@@ -20,36 +20,36 @@ cv:
         position: Bioinformatician
         start_date: 2026-07
         end_date: present
-        summary: Analyze bacterial and bacteriophage genomes and develop evidence-driven resources for phage target selection and in silico design.
+        summary: Develop bacterial and phage genome analysis workflows, research software, reference databases, and computational design tools.
         highlights:
-          - Analyze bacterial genomes for host context and phage genomes for quality, annotation, taxonomy, lifestyle, packaging, and tail-gene interpretation.
-          - Built and evaluated a Klebsiella pneumoniae tail/RBP and KL-type reference database with 7,759 curated sequences, source traceability, confidence labels, and experimentally verified targets explicitly flagged.
-          - Applied sequence- and structure-based protein analysis with Phold, ProstT5, Foldseek, and experimental PDB references to identify divergent tail proteins and assess engineered RBP designs.
-          - Integrated CheckV, Pharokka, Phold, BACPHLIP, PhaTYP, PhaGCN, and PhageTerm evidence in an anonymized four-genome case study; the tools independently converged on lytic Przondovirus genomes with short DTR packaging.
-          - Developed an in silico tail-RBP design workflow that evaluates anchor compatibility, KL-target evidence, taxonomic context, cluster-label conflicts, and structural retention before producing genome and protein design files.
+          - Develop bacterial genome analysis workflows covering quality control, annotation, typing, antimicrobial resistance, and prophage detection to support production-strain assessment.
+          - Integrate phage genome quality, termini and packaging, taxonomy, lifestyle predictions, and tail-protein evidence into reports with traceable conclusions.
+          - Develop and extend analysis libraries and command-line tools combining experimental host-range matrices with sequence and protein features for clustering comparisons and cocktail candidate selection.
+          - Build and maintain a Klebsiella pneumoniae tail/RBP reference database linking sequences to K-type and KL-type evidence, with source citations and separate experimental and predicted labels.
+          - Develop in silico design tools that evaluate tail-protein candidates for specified capsule targets and generate candidate design sequences and review reports.
+          - Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.
 
       - company: Wittgenbio
         position: Computational Biology Research
         start_date: "2026-07-01"
         end_date: "2026-10-01"
-        summary: Built reproducible single-cell reference and tumor/normal evidence workflows while developing bulk-to-single-cell inference and virtual-cell evaluation methods. Contract ended October 1, 2026.
+        summary: Built a colorectal cancer (CRC) single-cell atlas and performed cell-type annotation. Contract ended October 1, 2026.
         highlights:
-          - Built and harmonized multi-study single-cell RNA-seq references through H5AD standardization, metadata alignment, quality control, integration, clustering, and cell-type annotation.
+          - Built a colorectal cancer (CRC) single-cell atlas and performed cell-type annotation.
+          - Annotated externally supplied normal-tissue atlas data and compared tissue-specific expression to evaluate candidate therapeutic targets.
           - Structured therapeutic-target evaluation around tumor expression, patient-level reproducibility, normal-tissue off-target risk, source provenance, and uncertainty.
-          - Developed and evaluated bulk-to-single-cell and virtual-cell approaches with explicit train/evaluation boundaries and biologically grounded interpretation of predicted states or responses.
+          - Contributed to virtual-cell research with explicit evaluation boundaries and biologically grounded interpretation of predicted states or responses.
 
       - company: Sanigen
         position: Bioinformatics Team Lead · Senior Researcher
         location: Suwon, South Korea
         start_date: 2020-03
         end_date: 2025-10
-        summary: Led a five-person bioinformatics team delivering microbial genomics and metagenomics analyses.
+        summary: Combined hands-on bioinformatics research and development with technical leadership and team operations.
         highlights:
-          - Designed and maintained a shared Snakemake platform covering 16S, ITS, WGS, and hybrid-assembly workflows.
-          - Delivered microbial WGS, assembly, annotation, comparative genomics, and microbiome analyses with explicit quality-control checkpoints.
-          - Maintained reproducible environments with Conda, Docker, Apptainer, and Linux-based compute infrastructure.
-          - Developed in-house analysis utilities for NGS panel markers, microbial assemblies, and comparative-genomics investigations.
-          - Coordinated analysis operations, review, interpretation, and delivery across a conservative lower bound of 98 archived project orders.
+          - Designed and maintained a shared analysis platform for 16S, ITS, WGS, and hybrid assembly, standardizing execution, quality control, and reporting.
+          - Performed microbial genomics and metagenomics analyses, led technical review, and coordinated team assignments, project schedules, and client communication.
+          - Contributed comparative-genomics and NGS analyses to foodborne-pathogen panel development, supporting two peer-reviewed publications and a joint patent.
 
     Education:
       - institution: Kyungpook National University School of Medicine
@@ -71,42 +71,25 @@ cv:
         end_date: 2016-02
 
     Projects:
-      - name: Integrated Microbial Genomics Platform
-        summary: A shared Snakemake execution and reporting framework for 16S, ITS, WGS, and hybrid-assembly analyses.
+      - name: Klebsiella Phage Reference Database & In Silico Design
+        summary: Built a tail/RBP and KL-type reference database to connect protein sequences with capsule-target evidence.
         highlights:
-          - Standardized validation, environment capture, checkpoints, and deliverables across assay profiles.
-          - Implemented with Python, R, Bash, Conda, Docker, and Apptainer.
+          - Integrated anchor compatibility, reference-label consistency, and protein-structure evidence to prioritize in silico tail-RBP design candidates for experimental follow-up.
 
-      - name: Comparative-genomics Marker Discovery
-        summary: Prioritized a candidate region of approximately 17 kb by comparing complete microbial genomes.
+      - name: CRC Atlas Annotation & Normal-Tissue Expression Analysis
+        summary: Integrated CRC datasets across studies, annotated cell types, and reviewed annotation consistency and tumor/normal labels.
         highlights:
-          - Combined pan-genome context, region-level comparison, and downstream assay constraints.
+          - Separately annotated externally supplied normal-tissue atlas data and compared tissue-specific expression to evaluate candidate therapeutic targets, accounting for sequencing-depth differences and annotation coverage.
 
-      - name: Bacteriophage Assembly and Annotation
-        summary: Evaluated assembly and annotation strategies for bacteriophage sequencing data.
+      - name: Sanigen Integrated Microbial Genomics Platform
+        summary: Designed and maintained a shared Snakemake platform for 16S, ITS, WGS, and Illumina-ONT hybrid assembly.
         highlights:
-          - Produced single-contig final assemblies in the assessed sample set.
-          - Supplemented Prokka annotations with RAST-tk and evaluated ONT/Nextflow-based processing.
+          - Standardized inputs, execution environments, QC checkpoints, logs, and report packaging to support reproducible analysis and review.
 
-      - name: Klebsiella Phage Genomics and Tail-RBP Design
-        summary: Current-role case study connecting bacterial and phage genomics to capsule-target evidence, protein structure analysis, and in silico tail design.
+      - name: Comparative Genomics-Based Marker Discovery
+        summary: Compared complete microbial genomes to identify candidate marker regions and assess their specificity, conservation, and suitability for downstream assays.
         highlights:
-          - Integrated seven core tools to cross-check genome quality, annotation, taxonomy, lifestyle, and packaging mechanism.
-          - Curated a 7,759-sequence K. pneumoniae tail/RBP and KL-type reference resource with traceable evidence and confidence labels.
-          - Prioritized an engineering candidate using same-genus context, a 129-aa anchor alignment spanning 99.2% of the region, experimental PDB support, and predicted structural retention.
-
-      - name: Bulk-to-Single-Cell and Virtual-Cell Research
-        summary: Wittgenbio research connecting bulk expression profiles to single-cell references and evaluating computational representations of cellular state and response.
-        highlights:
-          - Structured bulk-to-single-cell analyses around reference curation, feature alignment, cell-composition and state inference, and uncertainty-aware validation.
-          - Developed and evaluated virtual-cell workflows with explicit train/evaluation boundaries and biological plausibility review.
-          - Keep private datasets, model implementations, and performance metrics outside the public portfolio until disclosure is appropriate.
-
-      - name: Phage Lifestyle Evidence Prototype
-        summary: Independent prototype integrating CheckV, Pharokka/Phold, BACPHLIP, and PhaTYP evidence.
-        highlights:
-          - Designed to keep tool disagreement visible rather than collapse every signal into an unexplained label.
-          - External benchmarking and publication-grade validation remain pending.
+          - Prioritized an approximately 17 kb region for experimental follow-up.
 
     Publications:
       - title: Novel next generation sequencing panel method for the multiple detection and identification of foodborne pathogens in agricultural wastewater
@@ -159,7 +142,7 @@ cv:
       - name: Single-Cell and Virtual Cell
         level: Applied research
         icon: fa-solid fa-microscope
-        keywords: "Bulk-to-single-cell inference, Single-cell reference integration, Cell-state modeling, Virtual-cell evaluation"
+        keywords: "CRC atlas construction, Cell-type annotation, Normal-tissue expression analysis, Virtual-cell evaluation"
 
       - name: Workflow Engineering
         level: Advanced
