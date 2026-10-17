@@ -15,14 +15,16 @@ This page summarizes my work by company. It is intentionally limited to public, 
 
 ### Main work
 
-- Analyze bacterial genomes for host and capsule-locus context and phage genomes for quality, annotation, taxonomy, lifestyle, packaging, and tail-gene interpretation.
-- Build and evaluate a _Klebsiella pneumoniae_ tail/RBP and KL-type evidence resource with literature provenance, confidence labels, and experimentally supported targets.
-- Combine sequence, protein-language-model, domain, and structure evidence to identify divergent tail proteins and review engineering candidates.
-- Develop in silico phage-design workflows that assess target evidence, anchor compatibility, taxonomic context, label conflicts, and predicted structural retention before wet-lab testing.
+- Develop bacterial genome analysis workflows covering quality control, annotation, typing, antimicrobial resistance, and prophage detection to support production-strain assessment.
+- Integrate phage genome quality, termini and packaging, taxonomy, lifestyle predictions, and tail-protein evidence into reports with traceable conclusions.
+- Develop and extend analysis libraries and command-line tools combining experimental host-range matrices with sequence and protein features for clustering comparisons and cocktail candidate selection.
+- Build and maintain a Klebsiella pneumoniae tail/RBP reference database linking sequences to K-type and KL-type evidence, with source citations and separate experimental and predicted labels.
+- Develop in silico design tools that evaluate tail-protein candidates for specified capsule targets and generate candidate design sequences and review reports.
+- Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.
 
 ### Contributions and outcomes
 
-- Built a **7,759-sequence capsule-target reference resource** covering depolymerase, tailspike, and receptor-binding proteins with traceable evidence and explicit confidence labels.
+- Built a capsule-target reference resource covering depolymerase, tailspike, and receptor-binding proteins with traceable evidence and explicit confidence labels.
 - Integrated seven core analysis tools in an anonymized four-genome case study; independent evidence converged on lytic phages with short direct-terminal-repeat packaging.
 - Resolved supported capsule-target assignments while retaining unsupported targets as data gaps instead of forcing labels.
 - Prioritized a structure-supported module-replacement hypothesis using anchor coverage, same-genus context, experimental reference structures, label consistency, and predicted fold retention; host-range expansion remains a wet-lab question.
@@ -35,17 +37,18 @@ This page summarizes my work by company. It is intentionally limited to public, 
 
 ### Main work
 
-- Built and harmonized multi-study single-cell RNA-seq references, including data ingestion, H5AD standardization, metadata alignment, quality control, integration, clustering, and cell-type annotation.
+- Built a colorectal cancer (CRC) single-cell atlas and performed cell-type annotation.
+- Annotated externally supplied normal-tissue atlas data and compared tissue-specific expression.
 - Developed tumor/normal analysis workflows that preserve study, sample, and cell provenance while examining epithelial and disease-associated cell states.
 - Evaluated therapeutic-target evidence through tumor expression, patient-level reproducibility, and normal-tissue off-target risk rather than relying on a single aggregate score.
-- Developed bulk-to-single-cell inference methods and evaluated computational representations of cell state for virtual-cell research.
+- Contributed to virtual-cell research through computational cell-state representation and evaluation.
 
 ### Contributions and outcomes
 
-- Established a reproducible path from heterogeneous public studies to analysis-ready single-cell references with explicit dataset and sample provenance.
+- Integrated single-cell datasets across studies into a CRC atlas with traceable metadata and cell-type labels.
 - Added source-aware validation gates, contamination checks, and alternative integration paths so conclusions are not determined by one embedding or batch-correction method.
 - Structured target assessment around tumor coverage, between-patient consistency, normal-cell specificity, and uncertainty, producing reviewable evidence for research prioritization.
-- Defined evaluation boundaries for bulk-to-single-cell and virtual-cell outputs, separating model fitting, held-out assessment, biological plausibility review, and claims requiring experimental validation.
+- Reviewed annotation consistency, tumor/normal label discrepancies, and interpretation limits; kept virtual-cell evaluation separate from cell-type annotation.
 
 [View the single-cell and virtual-cell research case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}).
 
@@ -55,10 +58,9 @@ This page summarizes my work by company. It is intentionally limited to public, 
 
 ### Main work
 
-- Led a five-person bioinformatics team delivering microbial genomics, metagenomics, and sequencing-based pathogen-analysis projects.
-- Designed and maintained a shared Snakemake platform for 16S, ITS, whole-genome sequencing, and hybrid-assembly workflows.
-- Performed and reviewed genome assembly, annotation, comparative genomics, microbiome analysis, quality control, interpretation, and client-facing delivery.
-- Maintained reproducible Linux environments with Conda, Docker, and Apptainer and developed in-house analysis utilities.
+- Designed and maintained a shared analysis platform for 16S, ITS, WGS, and hybrid assembly, standardizing execution, quality control, and reporting.
+- Performed microbial genomics and metagenomics analyses, led technical review, and coordinated team assignments, project schedules, and client communication.
+- Contributed comparative-genomics and NGS analyses to foodborne-pathogen panel development, supporting two peer-reviewed publications and a joint patent.
 
 ### Contributions and outcomes
 

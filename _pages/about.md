@@ -50,7 +50,7 @@ latest_posts:
   }
 </style>
 
-I am a bioinformatics researcher and developer who analyzes genomic and bacteriophage data and builds research pipelines and databases. I use AI coding tools to implement analysis pipelines, develop phage analysis and database tools, and automate repetitive research tasks.
+A bioinformatics researcher and developer connecting biological questions with analysis design and interpretation. My work extends from microbes to humans, integrating diverse analytical approaches and building research pipelines and databases. AI-powered coding accelerates my research and amplifies my ability to automate workflows and develop analytical tools.
 
 ## At a glance
 
@@ -63,21 +63,23 @@ I am a bioinformatics researcher and developer who analyzes genomic and bacterio
 
 ### MicrobiotiX
 
-- Bacterial genome analysis, including host-genome and capsule-locus context for phage research
-- Phage genome analysis spanning quality control, annotation, taxonomy, lifestyle, packaging, and tail-gene interpretation
-- _K. pneumoniae_ tail/RBP and KL-type database construction, curation, and evaluation
-- Protein structure prediction, structure-based annotation, and reference-structure comparison
-- In silico tail-RBP design with explicit compatibility criteria and wet-lab validation boundaries
+- Develop bacterial genome analysis workflows covering quality control, annotation, typing, antimicrobial resistance, and prophage detection to support production-strain assessment.
+- Integrate phage genome quality, termini and packaging, taxonomy, lifestyle predictions, and tail-protein evidence into reports with traceable conclusions.
+- Develop and extend analysis libraries and command-line tools combining experimental host-range matrices with sequence and protein features for clustering comparisons and cocktail candidate selection.
+- Build and maintain a Klebsiella pneumoniae tail/RBP reference database linking sequences to K-type and KL-type evidence, with source citations and separate experimental and predicted labels.
+- Develop in silico design tools that evaluate tail-protein candidates for specified capsule targets and generate candidate design sequences and review reports.
+- Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.
 
 ### Wittgenbio · July 1 – October 1, 2026
 
-- Multi-study single-cell RNA-seq reference integration with standardized metadata, quality control, provenance, clustering, and cell-type annotation
+- Colorectal cancer (CRC) single-cell atlas construction and cell-type annotation
 - Tumor/normal evidence workflows for patient-level reproducibility and normal-tissue off-target assessment
-- Bulk-to-single-cell inference and virtual-cell evaluation with explicit uncertainty and validation boundaries
+- Annotation of externally supplied normal-tissue atlas data and tissue-specific expression analysis
+- Virtual-cell evaluation with explicit uncertainty and validation boundaries
 
-The current-role [Klebsiella phage genomics and tail-design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}) presents an anonymized example. It integrates seven core phage-analysis tools, a 7,759-sequence capsule-target reference resource, and sequence-plus-structure evidence without exposing sample identifiers or internal reference IDs.
+The current-role [Klebsiella phage genomics and tail-design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}) presents an anonymized example. It combines phage-genome evidence, capsule-target references, and sequence-plus-structure comparisons without exposing sample identifiers or internal reference IDs.
 
-The [Wittgenbio bulk-to-single-cell and virtual-cell case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}) describes this previous research track at method level. Private datasets, model implementations, and performance metrics are intentionally excluded until they can be disclosed. A separate [company-by-company experience summary]({% link _pages/experience.md %}) brings the responsibilities and evidence-backed outcomes together.
+The [Wittgenbio CRC atlas, annotation, and virtual-cell case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}) describes this previous research track at method level. Private datasets, model implementations, and performance metrics are intentionally excluded until they can be disclosed. A separate [company-by-company experience summary]({% link _pages/experience.md %}) brings the responsibilities and evidence-backed outcomes together.
 
 Explore the [project workflows]({% link _pages/projects.md %}), the [publication record]({% link _pages/publications.md %}), or download the [resume]({{ '/assets/pdf/Byungcheol_Kang_Bioinformatics_Resume.pdf' | relative_url }}) and [project portfolio]({{ '/assets/pdf/Byungcheol_Kang_Bioinformatics_Portfolio.pdf' | relative_url }}).
 
