@@ -6,11 +6,10 @@ const path = require("node:path");
 
 const repository = path.resolve(__dirname, "..");
 const approvedMicrobiotixCopy = [
-  "Analyze bacterial and phage genomes for quality, annotation, taxonomy and host-associated features, with traceable reporting.",
-  "Develop analysis libraries and command-line tools linking host-range matrices with sequence and gene data for cocktail selection, cluster comparison and pan-genome analysis.",
-  "Build RBP/depolymerase reference databases with separate K/KL fields, source citations and experimental/inferred evidence labels.",
-  "Evaluate RBP candidates using sequence, domain and protein-structure evidence and generate candidate sequences and design reports.",
-  "Develop research tools for sequence analysis, primers and cloning; design genome-database workflows and interactive prototypes.",
+  "Analyze bacterial and phage genomes to prepare candidate-assessment reports and evidence for follow-up research.",
+  "Develop tools to select and compare phage cocktail candidates from measured host-range data.",
+  "Build a capsule-target reference database from 7,759 collected and clustered tail/RBP sequences; develop and evaluate prediction libraries and ML models.",
+  "Compare RBP candidates for target capsule types and generate candidate sequences supported by sequence and protein-structure evidence.",
 ];
 for (const [file, start, end] of [
   ["docs/pdf-source/resume.typ", '#role("MicrobiotiX"', '#role("Wittgenbio"'],
@@ -25,7 +24,10 @@ for (const [file, start, end] of [
   for (const sentence of approvedMicrobiotixCopy) {
     assert.ok(company.includes(sentence), `${file}: approved MicrobiotiX responsibility missing`);
   }
-  assert.ok(!/Phagogram|phagefinder|phagekit|ktyper|7,?759/i.test(company), `${file}: excluded internal names or sequence-count emphasis`);
+  assert.ok(
+    !/Phagogram|phagefinder|phagekit|ktyper|curated 7,?759|7,?759 curated|442 K-types/i.test(company),
+    `${file}: excluded internal names or imprecise artifact-count claims`
+  );
 }
 const approvedSanigenCopy = [
   "Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.",

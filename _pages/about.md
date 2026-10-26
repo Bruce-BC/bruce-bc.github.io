@@ -63,7 +63,7 @@ A bioinformatics researcher and developer connecting biological questions with a
 
 ### MicrobiotiX · July 2026–present
 
-Bacterial/phage evidence, host-range research software, RBP references and candidate design, sequence tools and genome-database prototypes.
+Phage candidate assessment, cocktail selection from measured host-range data, capsule-target references, prediction-method evaluation and follow-up experiment design.
 
 ### Wittgenbio · July–October 2026
 

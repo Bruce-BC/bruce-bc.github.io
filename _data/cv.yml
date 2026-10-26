@@ -20,13 +20,12 @@ cv:
         position: Senior Researcher · Bioinformatics
         start_date: 2026-07
         end_date: present
-        summary: Bacterial/phage genome evidence, research software, curated references, candidate design and genome-database prototypes.
+        summary: Genome-based candidate assessment, measured host-range cocktail selection, capsule-target references and prediction-method evaluation.
         highlights:
-          - Analyze bacterial and phage genomes for quality, annotation, taxonomy and host-associated features, with traceable reporting.
-          - Develop analysis libraries and command-line tools linking host-range matrices with sequence and gene data for cocktail selection, cluster comparison and pan-genome analysis.
-          - Build RBP/depolymerase reference databases with separate K/KL fields, source citations and experimental/inferred evidence labels.
-          - Evaluate RBP candidates using sequence, domain and protein-structure evidence and generate candidate sequences and design reports.
-          - Develop research tools for sequence analysis, primers and cloning; design genome-database workflows and interactive prototypes.
+          - Analyze bacterial and phage genomes to prepare candidate-assessment reports and evidence for follow-up research.
+          - Develop tools to select and compare phage cocktail candidates from measured host-range data.
+          - Build a capsule-target reference database from 7,759 collected and clustered tail/RBP sequences; develop and evaluate prediction libraries and ML models.
+          - Compare RBP candidates for target capsule types and generate candidate sequences supported by sequence and protein-structure evidence.
 
       - company: Wittgenbio
         position: Computational Biology Research

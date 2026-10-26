@@ -1008,20 +1008,20 @@ klebsiella-phage-genomics-and-tail-design:
               usage_status: used
               pipeline_state: documented-only
     tail_kl_design_workflow:
-      title: KPN tail, KL-type, and structure-design workflow
+      title: KPN tail, capsule-type, and structure-design workflow
       display_only_nodes:
         - literature_and_public_sequences
         - phage_tail_proteins
         - wet_lab_validation
       nodes:
         kpn_tail_kl_database:
-          label: KPN tail / RBP and KL-type database
+          label: KPN tail / RBP and K/KL database
           entries:
-            - name: Curated capsule-target reference database
+            - name: Capsule-target sequence reference resource
               kind: library
-              role: Connect depolymerase, tailspike, and RBP sequences to traceable KL-target evidence and confidence labels
+              role: Link tail and RBP sequences to separate K-serotype and KL-locus fields with experimental or inferred evidence labels
               input: Literature-backed and public protein records
-              output: 7,759 curated reference sequences with verified targets explicitly flagged
+              output: 7,759 collected sequences in 5,467 clusters; 442 K-label-bearing rows, including 107 experimentally supported K-label rows
               usage_status: used
               pipeline_state: documented-only
         depolymerase_consensus:
@@ -1049,20 +1049,20 @@ klebsiella-phage-genomics-and-tail-design:
               usage_status: used
               pipeline_state: documented-only
         capsule_target_evidence:
-          label: KL-type target evidence
+          label: K/KL target evidence
           entries:
             - name: BLAST
               kind: tool
               role: Compare candidate RBPs with traceable capsule-target references and retain alignment quality
-              input: Candidate RBP sequences and curated reference database
-              output: Ranked KL-type matches with identity and coverage evidence
+              input: Candidate RBP sequences and reference annotations
+              output: Ranked capsule-target matches with identity, coverage and typing-scheme evidence
               usage_status: used
               pipeline_state: documented-only
             - name: Confidence and conflict review
               kind: review
-              role: Prevent forced KL labels when references are unverified or cluster labels conflict
+              role: Preserve K/KL typing schemes and unresolved assignments when references or cluster labels conflict
               input: Ranked matches and reference metadata
-              output: Supported, tentative, or unresolved KL-target status
+              output: Supported, tentative, or unresolved capsule-target status
               usage_status: used
               pipeline_state: documented-only
         protein_structure_analysis:

@@ -11,32 +11,35 @@ This page summarizes my work by company. It is intentionally limited to public, 
 
 ## MicrobiotiX
 
+**[Phage]**<br>
 **Senior Researcher · Bioinformatics · July 2026–present**
 
-### Genome analysis and reference curation
+### Phage candidate assessment and target references
 
-- Reconciled phage lifestyle, taxonomy, packaging and tail/RBP evidence across tools; reported conflicting calls and unresolved findings.
-- Removed circular-genome reference duplicates caused by start-coordinate or reverse-complement differences; mapped closely related phage SNPs to CDS and synonymous/non-synonymous substitutions.
-- Integrated literature and public-sequence RBP references, merged duplicate sequences and retained cumulative citations, separate K-serotype/KL-locus fields and experimental/inferred labels.
+- Prepared candidate-assessment reports integrating phage taxonomy, gene content, lifestyle and host-recognition protein evidence.
+- Cleaned reference genomes duplicated by start-position or orientation differences; corrected duplicate evidence and prior calls through literature and sequence cross-checks.
+- Built a reference for finding phage proteins by target capsule type; organized 7,759 collected sequences into 5,467 clusters.
+- Recorded 442 rows carrying K-type labels across 62 distinct labels; separated 107 rows with literature-backed experimental K-label evidence from inferred labels.
 
-### Analysis libraries and research tools
+### Cocktail selection from measured data and prediction-method evaluation
 
-- Corrected host-range matrix matching, cutoffs and mechanism constraints; separated maximum-coverage and minimum-combination logic, repaired solver time-limit and feasible-solution handling, and cross-checked results with independent MILP calculations.
-- Implemented full/common-input cluster comparisons and call contracts for strain-level defense, pan-genome and functional-cluster outputs, including unresolved states.
-- Implemented analysis adapters, JSON responses, exception handling and version links; verified matching call contracts across source, installed wheels and reproducibility bundles.
-- Implemented GenBank/FASTA and annotation I/O, reverse-strand coordinates, primer extensions and PCR/cloning connections; fixed string-input crashes and missing error responses.
-- Fixed self-referencing capsid-capacity calculations, missing safety margins, multi-record GenBank parsing and terminal-repeat false calls; added regression checks.
+- Developed a cocktail-candidate selection program using measured host-range data for 221 bacterial strains and 74 phages; checked the observed coverage and selection results of candidate combinations.
+- Re-evaluated a saved 110-query reference benchmark using the same correct-label-inclusion definition: 85/110 (77.3%) excluding the query alone and 48/110 (43.6%) excluding its sequence cluster; documented false calls and applicability limits.
+- Developed and cross-validated capsule-type prediction libraries and ML models; documented label imbalance and leakage risks in the decision to defer an additional predictor.
 
-### Candidate design, developer integration and database planning
+### Follow-up experiment design and research software
 
-- Wrote target-specific donor/module ranking and tandem candidate-sequence generation; emitted domain boundaries, structural evidence and validation gaps.
-- Compared integration inputs, expected values and actual results; prepared call specifications, terminology mappings and reproducible cases for external developers.
-- Designed genome-database intake, QC, assembly, annotation and review workflows with versioning, provenance and role-based handoffs; delivered QC-gate specifications and synthetic interactive screen prototypes.
+- Compared host-recognition proteins for target capsule types and generated domain-combination candidate sequences and design records.
+- Organized 446 part records, 627 ranked candidate entries and 800 evidence rows for KL-specific design-candidate searches.
+- Developed research software connecting genome sequences and gene annotations with primer, PCR and cloning design.
+- Audited the formula behind a 100% design-tool display and identified it as the upper limit of a capped evaluation score, not an experimental success probability.
+- Designed procedures for genome-data registration, analysis and review history; produced handover documents and screen prototypes for researchers and reviewers.
 
-[View the phage genomics and tail-design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}).
+[View the phage candidate assessment and design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}).
 
 ## Wittgenbio
 
+**[Single cell]**<br>
 **Computational Biology Research · July–October 2026**
 
 - Reconciled study-specific gene axes, metadata and author annotations; prepared H5AD inputs and annotation records for integrated analysis.
@@ -47,6 +50,7 @@ This page summarizes my work by company. It is intentionally limited to public, 
 
 ## Sanigen
 
+**[Bacteria / Metagenome / Phage / Transcriptomics]**<br>
 **Bioinformatics Team Lead · Senior Researcher · March 2020–November 2025**
 
 ### Genome analysis and reanalysis
@@ -97,6 +101,6 @@ Related [platform]({% link _projects/integrated-microbial-genomics-platform.md %
 
 ## Evidence boundary
 
-RNA count/alignment delivery does not imply completed differential-expression or enrichment analysis. RNA-level target prioritization and computational phage designs require separate experimental validation.
+The reference benchmark is an internal, saved-data evaluation. Correct-label inclusion means at least one true target label is present in the prediction; it does not require the complete label set to match. RNA count/alignment delivery is separate from completed differential-expression or enrichment analysis. RNA-level target prioritization and computational phage designs require separate experimental validation.
 
 [View the concise responsibility summaries in the CV]({% link _pages/cv.md %}).

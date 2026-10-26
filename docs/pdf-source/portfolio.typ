@@ -19,13 +19,11 @@
 #v(3mm)
 #section("CURRENT AND RECENT ROLES")
 #role("MicrobiotiX", "Senior Researcher · Bioinformatics", "2026.07 - PRESENT", [
-  - Analyze bacterial and phage genomes for quality, annotation, taxonomy and host-associated features, with traceable reporting.
-  - Develop analysis libraries and command-line tools linking host-range matrices with sequence and gene data for cocktail selection, cluster comparison and pan-genome analysis.
-  - Build RBP/depolymerase reference databases with separate K/KL fields, source citations and experimental/inferred evidence labels.
-  - Evaluate RBP candidates using sequence, domain and protein-structure evidence and generate candidate sequences and design reports.
-  - Develop research tools for sequence analysis, primers and cloning; design genome-database workflows and interactive prototypes.
-])
-#role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
+  - Analyze bacterial and phage genomes to prepare candidate-assessment reports and evidence for follow-up research.
+  - Develop tools to select and compare phage cocktail candidates from measured host-range data.
+  - Build a capsule-target reference database from 7,759 collected and clustered tail/RBP sequences; develop and evaluate prediction libraries and ML models.
+  - Compare RBP candidates for target capsule types and generate candidate sequences supported by sequence and protein-structure evidence.
+])#role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
   - Built a multi-study CRC scRNA-seq atlas and performed cell-type annotation.
   - Cross-checked tumor/normal metadata, author annotations and marker evidence, with versioned label and source tracking.
   - Annotated externally supplied normal-tissue atlas data and compared normal-tissue, tumor and patient/specimen expression to assess therapeutic-target candidates.
@@ -150,25 +148,26 @@ Only tools connected to active Snakemake includes and rules are listed as active
   note[*Tail interpretation* #linebreak() KL target + structure],
 )
 
-#section("CONTRIBUTION AND EVIDENCE")
-- Integrated CheckV, Pharokka, Phold, BACPHLIP, PhaTYP, PhaGCN, and PhageTerm outputs while preserving the evidence behind each conclusion.
-- Built a tail/RBP and KL-type reference resource with source traceability, confidence labels, and experimentally supported targets explicitly flagged.
-- Cross-validated candidate depolymerases with DposFinder, SpikeHunter, DepoScope, sequence search, domain boundaries, and protein-structure evidence.
-- Used ProstT5 and Foldseek with experimental PDB references to identify structurally conserved proteins at sequence identities below ordinary search sensitivity.
+#section("CANDIDATE ASSESSMENT AND TARGET REFERENCES")
+- Integrated taxonomy, gene content, lifestyle and host-recognition evidence into candidate-assessment reports; corrected duplicate references and conflicting prior calls.
+- Collected and clustered 7,759 tail/RBP sequences into 5,467 clusters for target-capsule searches. K-type labels cover 442 rows and 62 distinct labels, with 107 literature-backed experimental K-label rows separated from inferred labels.
 
-#section("ANONYMIZED CASE-STUDY RESULTS")
-- Four genomes converged on lytic *Przondovirus* classifications and short DTR packaging with 180-183 bp terminal repeats.
-- Three capsule targets matched experimentally supported references at 95.4-98.8% sequence identity; unsupported cases remained unresolved rather than receiving forced labels.
-- One design candidate passed genus, attachment, target-label, experimental-structure, and predicted-structure criteria; its 129-aa anchor alignment spanned 99.2% of the region.
+#section("MEASURED HOST RANGE AND PREDICTION EVALUATION")
+- Developed cocktail-candidate selection from measured host-range data for 221 strains and 74 phages; checked candidate combinations against observed coverage.
+- Replayed a saved 110-query reference benchmark: correct-label inclusion was 85/110 (77.3%) with only the query excluded and 48/110 (43.6%) with its sequence cluster excluded.
+- Developed capsule-type prediction libraries and ML models; documented label imbalance/leakage risks and deferred an additional predictor.
 
-#section("RESEARCH SOFTWARE AND DEVELOPER INTEGRATION")
-- Separated maximum-coverage/minimum-combination host-range logic; corrected matching, cutoffs, solver time limits and feasible solutions, with independent MILP cross-checks.
-- Implemented cluster/defense/pan-genome contracts, JSON adapters and version/error handling; checked source, installed wheels and reproducibility bundles.
-- Implemented strand-aware annotation/primer/cloning workflows; repaired input crashes, capsid-capacity reference/margin errors and GenBank/repeat parsing with regression checks.
-- Delivered target-specific donor/module ranking and tandem candidates, developer call specifications and reproducible cases, and genome-database QC/review workflow specifications with interactive screen prototypes.
+#section("FOLLOW-UP DESIGN AND RESEARCH TOOLS")
+- Generated protein/module candidate sequences and design records for target capsule types; organized KL-specific tables of 446 part rows, 627 ranked entries and 800 evidence rows.
+- Connected genome sequence/annotation with primer, PCR and cloning design in research software. Prepared genome-data review/handover documents and screen prototypes.
+- Audited the 100% design display as a capped evaluation-score maximum, not an experimental success probability.
 
-#section("DESIGN OUTPUT AND BOUNDARY")
-The design bench supports domain swaps, full-module replacements, and tandem additions, with genome FASTA, module multi-FASTA, GenBank, and protein FASTA export. Host K-locus assignments, predicted RBP folding, adsorption, host range, and lytic activity still require bacterial-genome and wet-lab validation.
+#section("ANONYMIZED REPORT CASE")
+- Four genomes were consistent with lytic *Przondovirus* calls and short DTR packaging with 180-183 bp repeats; three capsule targets matched supported references at 95.4-98.8% identity.
+- A candidate's 129-aa anchor alignment covered 99.2% of the region; domain/structure evidence supported a module-replacement hypothesis for experimental follow-up.
+
+#section("INTERPRETATION BOUNDARY")
+The saved benchmark has 110 queries per mode and measures inclusion of at least one true target label, not complete label-set agreement or external validity. Its record correspondence to the current 107 literature-backed K-label rows is not established. Candidate sequences and structures do not establish adsorption, host range or lytic efficacy without experimental validation.
 
 #pagebreak()
 #kicker("Project 06 · Wittgenbio research")

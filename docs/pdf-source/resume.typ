@@ -27,13 +27,11 @@ A bioinformatics researcher and developer connecting biological questions with a
 #section("EXPERIENCE")
 
 #role("MicrobiotiX", "Senior Researcher · Bioinformatics", "2026.07 - PRESENT", [
-  - Analyze bacterial and phage genomes for quality, annotation, taxonomy and host-associated features, with traceable reporting.
-  - Develop analysis libraries and command-line tools linking host-range matrices with sequence and gene data for cocktail selection, cluster comparison and pan-genome analysis.
-  - Build RBP/depolymerase reference databases with separate K/KL fields, source citations and experimental/inferred evidence labels.
-  - Evaluate RBP candidates using sequence, domain and protein-structure evidence and generate candidate sequences and design reports.
-  - Develop research tools for sequence analysis, primers and cloning; design genome-database workflows and interactive prototypes.
-])
-#role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
+  - Analyze bacterial and phage genomes to prepare candidate-assessment reports and evidence for follow-up research.
+  - Develop tools to select and compare phage cocktail candidates from measured host-range data.
+  - Build a capsule-target reference database from 7,759 collected and clustered tail/RBP sequences; develop and evaluate prediction libraries and ML models.
+  - Compare RBP candidates for target capsule types and generate candidate sequences supported by sequence and protein-structure evidence.
+])#role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
   - Built a multi-study CRC scRNA-seq atlas and performed cell-type annotation.
   - Cross-checked tumor/normal metadata, author annotations and marker evidence, with versioned label and source tracking.
   - Annotated externally supplied normal-tissue atlas data and compared normal-tissue, tumor and patient/specimen expression to assess therapeutic-target candidates.
