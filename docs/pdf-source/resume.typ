@@ -35,18 +35,18 @@ A bioinformatics researcher and developer connecting biological questions with a
   - Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.
 ])
 
-#role("Wittgenbio", "Computational Biology Research", "2026.07.01 - 2026.10.01", [
-  - Built a colorectal cancer (CRC) single-cell atlas and performed cell-type annotation.
-  - Annotated externally supplied normal-tissue atlas data and compared tissue-specific expression to evaluate candidate therapeutic targets.
-  - Contributed to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation of predicted states or responses.
+#role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
+  - Built a multi-study CRC scRNA-seq atlas through metadata standardization, quality control, integration, clustering, and cell-type annotation.
+  - Cross-checked original author annotations, marker evidence, and tumor/normal metadata while tracking label decisions and source provenance across versions.
+  - Annotated externally supplied normal-tissue atlas data and combined tissue-specific expression with tumor and patient/specimen evidence to evaluate therapeutic-target candidates at the RNA level.
 ])
-
-#role("Sanigen", "Bioinformatics Team Lead · Senior Researcher", "2020.03 - 2025.10", [
-  - Designed and maintained a shared analysis platform for 16S, ITS, WGS, and hybrid assembly, standardizing execution, quality control, and reporting.
-  - Performed microbial genomics and metagenomics analyses, led technical review, and coordinated team assignments, project schedules, and client communication.
-  - Contributed comparative-genomics and NGS analyses to foodborne-pathogen panel development, supporting two peer-reviewed publications and a joint patent.
+#role("Sanigen", "Bioinformatics Team Lead · Senior Researcher", "2020.03 - 2025.11", [
+  - Led NGS analysis services and team operations, combining analysis design, hands-on work and result review with SOPs, turnaround management, quality control and client technical support.
+  - Performed microbial-genomics, microbiome and transcriptome analyses and developed shared workflows for standardized execution, quality control, annotation and reporting.
+  - Developed comparative-genomics and k-mer marker-discovery tools and contributed NGS analyses to pathogen-panel research, two collaborative papers and a joint patent.
+  - Supported external collaborations through RNA alignment and coverage QC and evaluation of Nanopore and Ion Torrent analysis methods.
+  - Maintained Linux/HPC analysis environments and data-transfer infrastructure and prepared analysis manuals and staff training.
 ])
-
 #pagebreak()
 
 #section("SELECTED PROJECTS")
@@ -83,7 +83,7 @@ A bioinformatics researcher and developer connecting biological questions with a
 #grid(columns: (38mm, 1fr), row-gutter: 4pt,
   [*Genomics*], [Bacterial WGS, phage genomics, assembly, annotation, comparative genomics, KL typing],
   [*Phage and protein*], [Tail/RBP analysis, depolymerase curation, structure comparison (Foldseek)],
-  [*Single-cell analysis*], [CRC atlas construction, cell-type annotation, normal-tissue expression analysis, virtual-cell evaluation],
+  [*Single-cell analysis*], [CRC atlas construction, cell-type annotation, normal-tissue expression analysis],
   [*Workflow engineering*], [Reproducible analysis workflows and execution environments (Snakemake)],
   [*Programming*], [Python, R, Bash, Git],
   [*Phage annotation*], [Pharokka],

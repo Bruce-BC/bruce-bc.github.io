@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CRC Single-Cell Atlas and Cell-Type Annotation
-description: Wittgenbio CRC atlas construction, cell-type annotation, normal-tissue expression analysis, and the separate virtual-cell research track.
+description: Wittgenbio CRC atlas construction, cell-type annotation, and RNA-level therapeutic-target evidence from tumor and external normal-tissue expression.
 img:
 importance: 1
 category: research
@@ -13,7 +13,7 @@ mermaid:
 
 ## Wittgenbio research scope
 
-At **Wittgenbio** (July 1 – October 1, 2026), I built a **colorectal cancer (CRC) single-cell atlas** and performed **cell-type annotation**. I also annotated externally supplied normal-tissue atlas data and compared tissue-specific expression. The separate virtual-cell research track is described below.
+At **Wittgenbio** (July–October 2026), I built a multi-study **colorectal cancer (CRC) single-cell atlas** and performed **cell-type annotation**. I separately annotated externally supplied normal-tissue atlas data and combined its tissue-specific expression with CRC tumor and patient/specimen evidence to evaluate therapeutic-target candidates at the RNA level.
 
 ## CRC single-cell atlas workflow
 
@@ -40,36 +40,13 @@ The atlas workflow integrates measured single-cell datasets and reviews their me
 
 I performed cell-type annotation on externally supplied normal-tissue atlas data and compared tissue-specific expression. Candidate therapeutic targets were evaluated against normal-tissue expression while accounting for sequencing-depth differences and annotation coverage.
 
-## Virtual-cell workflow
+## Annotation outputs and provenance
 
-<div class="project-tool-workflow" data-workflow-id="virtual_cell_workflow" markdown="1">
-
-```mermaid
-flowchart LR
-    cellular_data[Cellular and molecular data] --> data_model_scope[Data and modeling scope]
-    biological_question[Biological question] --> data_model_scope
-    data_model_scope --> cell_representation[Computational cell representation]
-    cell_representation --> train_evaluation_design[Train and evaluation design]
-    train_evaluation_design --> virtual_cell_model[Virtual-cell model]
-    virtual_cell_model --> state_response_evaluation[State and response evaluation]
-    state_response_evaluation --> biological_review[Biological plausibility review]
-    biological_review --> research_hypotheses[Research hypotheses]
-    class data_model_scope,cell_representation,train_evaluation_design,virtual_cell_model,state_response_evaluation,biological_review project-tool-node
-```
-
-{% include project_tool_explorer.liquid project=page.slug workflow="virtual_cell_workflow" %}
-
-</div>
-
-The virtual-cell track focuses on whether a computational representation preserves biologically useful cell-state information and whether predicted states or responses remain reliable outside the data used to build the model.
-
-## Evaluation principles
-
-- Separate model fitting from evaluation data and document reference or condition coverage.
-- Compare predictions with measurable biological signals rather than relying on latent-space appearance alone.
-- Report where cell types, states, tissues, perturbations, or experimental conditions are underrepresented.
-- Treat generated cell states and perturbation responses as hypotheses until they are externally or experimentally validated.
+- Cross-checked original author annotations, marker evidence, and tumor/normal metadata.
+- Produced integrated/annotated data, marker and annotation summaries, version-comparison tables and source-traceability records.
+- Summarized candidate-level expression, patient/specimen consistency, coverage and interpretation limits in comparison tables with follow-up validation items.
+- Reviewed raw-count availability and sequencing-depth differences when interpreting target-expression evidence.
 
 ## Boundary
 
-Cell-type annotations and normal-tissue expression comparisons depend on data quality, annotation coverage, and biological context. Virtual-cell predictions do not establish biological mechanism or treatment response without independent data and experimental validation.
+The CRC atlas was constructed by integrating public single-cell studies; the normal-tissue atlas was externally supplied and then annotated and analyzed. These analyses support RNA-level candidate prioritization. Transcript expression does not establish cell-surface protein abundance, clinical safety, or treatment response.

@@ -27,15 +27,14 @@
   - Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.
 ])
 
-#role("Wittgenbio", "Computational Biology Research", "2026.07.01 - 2026.10.01", [
-  - Built a colorectal cancer (CRC) single-cell atlas and performed cell-type annotation.
-  - Annotated externally supplied normal-tissue atlas data and compared tissue-specific expression to evaluate candidate therapeutic targets.
-  - Contributed to virtual-cell research through computational cell-state representation, model evaluation, and biologically grounded interpretation.
+#role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
+  - Built a multi-study CRC scRNA-seq atlas through metadata standardization, quality control, integration, clustering, and cell-type annotation.
+  - Cross-checked original author annotations, marker evidence, and tumor/normal metadata while tracking label decisions and source provenance across versions.
+  - Annotated externally supplied normal-tissue atlas data and combined tissue-specific expression with tumor and patient/specimen evidence to evaluate therapeutic-target candidates at the RNA level.
 ])
-
 #v(4mm)
 #note[
-  *Past platform evidence.* The integrated workflow and operational results in this portfolio describe work performed at Sanigen (2020.03 - 2025.10). They are not presented as MicrobiotiX or Wittgenbio assets or current-company outcomes.
+  *Past platform evidence.* The integrated workflow and operational results in this portfolio describe work performed at Sanigen (2020.03 - 2025.11). They are not presented as MicrobiotiX or Wittgenbio assets or current-company outcomes.
 ]
 
 #pagebreak()
@@ -66,6 +65,10 @@ Separate assay scripts, environments, quality checks, server paths, and reportin
   [Hybrid], [NanoFilt, NanoPlot, Flye or Unicycler, BWA, Pilon, minimap2], [QUAST, BUSCO, Prokka, CGView, BLASTn, Abricate, eggNOG-mapper],
 )
 
+#section("IMPLEMENTATION AND TECHNICAL REVIEW")
+- Connected shared analysis, container and server settings with QC, logs and HTML report outputs across the four execution profiles.
+- Curated complex WGS/hybrid contigs using Bandage graphs, BLAST and short/long-read depth; explained assembly-graph and BUSCO evidence in technical responses.
+
 #section("EVIDENCE BOUNDARY")
 Only tools connected to active Snakemake includes and rules are listed as active. Configured or documented but inactive components are not represented as production use.
 
@@ -82,26 +85,21 @@ Only tools connected to active Snakemake includes and rules are listed as active
 )
 
 #section("RESPONSIBILITIES AT SANIGEN")
-- Designed and maintained a shared analysis platform for 16S, ITS, WGS, and hybrid assembly, standardizing execution, quality control, and reporting.
-- Performed microbial genomics and metagenomics analyses, led technical review, and coordinated team assignments, project schedules, and client communication.
-- Contributed comparative-genomics and NGS analyses to foodborne-pathogen panel development, supporting two peer-reviewed publications and a joint patent.
+- Led NGS analysis services and team operations, combining analysis design, hands-on work and result review with SOPs, turnaround management, quality control and client technical support.
+- Performed microbial-genomics, microbiome and transcriptome analyses and developed shared workflows for standardized execution, quality control, annotation and reporting.
+- Developed comparative-genomics and k-mer marker-discovery tools and contributed NGS analyses to pathogen-panel research, two collaborative papers and a joint patent.
+- Supported external collaborations through RNA alignment and coverage QC and evaluation of Nanopore and Ion Torrent analysis methods.
+- Maintained Linux/HPC analysis environments and data-transfer infrastructure and prepared analysis manuals and staff training.
 
-#section("VERIFIED LOWER BOUND OF ARCHIVED WORK")
-#grid(columns: (1fr, 1fr, 1fr, 1fr), gutter: 5pt,
-  metric("28", "WGS order codes"),
-  metric("21", "Hybrid order codes"),
-  metric("19", "16S order codes"),
-  metric("18", "Shotgun order codes"),
-)
-#v(4pt)
-#grid(columns: (1fr, 1fr, 1fr), gutter: 5pt,
-  metric("7", "RNA order codes"),
-  metric("3", "ITS order codes"),
-  metric("2", "Other order codes"),
-)
+#section("SELECTED ANALYSIS AND DELIVERY OUTPUTS")
+- Delivered ANI, AMR, virulence-factor and MLST comparisons, panX core-gene comparisons and SVG/Newick trees, plus featureCounts gene-count and alignment summaries.
+- Corrected missing eggNOG functional-category, orthology and pathway report sections by updating the output script.
+- Delivered RNA reference-alignment, target/non-target and coverage summaries for external collaboration; evaluated Nanopore Dorado modes and duplex QC.
+- Prepared analysis and panX manuals and training materials while maintaining Linux/HPC environments and data-transfer infrastructure.
 
+#section("TRACEABILITY AND INTERPRETATION")
 #note[
-  These 98 distinct order codes are a conservative lower bound derived from archived communications. They are not sample counts, revenue, or an independently audited total workload.
+  Retained communications and analysis outputs support these examples, without a complete workload total. Gene-count delivery is separate from completed differential-expression or enrichment analysis. Platform evaluation and RNA QC do not establish regulatory qualification or therapeutic efficacy.
 ]
 
 #pagebreak()
@@ -117,7 +115,8 @@ Only tools connected to active Snakemake includes and rules are listed as active
 *Outcome.* Prioritized an approximately *17 kb candidate region* for follow-up, with traceable reasoning from genome selection to practical assay constraints.
 
 #section("FOODBORNE-PATHOGEN NGS PANEL")
-- Contributed bioinformatics and comparative-genomics analysis to marker-oriented panel development and evaluation.
+- Developed comparative-genomics and k-mer candidate-marker tools and reviewed panel-analysis code and QA/QC.
+- Contributed NGS data analysis and interpretation to collaborative panel development and evaluation.
 - Supported interpretation of NGS outputs across food and environmental sample contexts.
 - Collaborative outcomes included two peer-reviewed papers in 2023 and one joint patent contribution in 2022.
 
@@ -169,29 +168,24 @@ The design bench supports domain swaps, full-module replacements, and tandem add
   note[*Cell-type annotation* #linebreak() labels + validation],
 )
 
-#section("ANALYTICAL RESPONSIBILITIES")
-- Built a colorectal cancer single-cell atlas by integrating datasets across studies and performing cell-type annotation.
-- Maintained traceable metadata and reviewed annotation consistency and tumor/normal label discrepancies.
+#section("MULTI-STUDY DATA CURATION AND ANNOTATION")
+- Standardized public-study metadata, performed cell-level QC, integrated studies, and clustered cells for CRC atlas annotation.
+- Cross-checked original author labels and marker evidence against tumor/normal metadata; retained source provenance and version-specific label decisions.
+- Produced integrated/annotated data, marker/annotation summaries and version-comparison tables.
 
-#section("NORMAL-TISSUE ATLAS ANNOTATION AND EXPRESSION")
-- Annotated externally supplied normal-tissue atlas data and compared tissue-specific expression.
-- Evaluated candidate therapeutic targets against normal-tissue expression while accounting for sequencing-depth differences and annotation coverage.
-
-#section("VIRTUAL-CELL WORKFLOW")
+#section("TUMOR AND NORMAL-TISSUE EXPRESSION EVIDENCE")
 #grid(columns: (1fr, auto, 1fr, auto, 1fr), align: center,
-  note[*Cellular data* #linebreak() question + scope], [→],
-  note[*Cell model* #linebreak() representation + fitting], [→],
-  note[*Evaluation* #linebreak() state + response + biology],
+  note[*CRC atlas* #linebreak() tumor expression], [→],
+  note[*Target candidate review* #linebreak() patient / specimen evidence], [←],
+  note[*External normal atlas* #linebreak() tissue expression],
 )
-
-#section("EVALUATION PRINCIPLES")
-- Separate model fitting from evaluation data across relevant cell states, conditions, and perturbations.
-- Evaluate predicted states or responses against measurable biological evidence, not latent-space appearance alone.
-- Report underrepresented tissues, cell populations, perturbations, and experimental conditions.
+- Annotated externally supplied normal-tissue atlas data and reviewed tissue-specific expression.
+- Combined tissue-specific expression with tumor and patient/specimen evidence to evaluate therapeutic-target candidates.
+- Summarized candidate expression, coverage and interpretation limits in comparison tables with follow-up validation items; reviewed raw-count availability and depth differences.
 
 #section("PUBLIC EVIDENCE BOUNDARY")
 #note[
-  Cell-type annotations and normal-tissue expression comparisons depend on data quality, annotation coverage, and biological context. Virtual-cell predictions remain research hypotheses until externally or experimentally validated. Private data, implementation details, and performance metrics are not disclosed here.
+  These analyses support RNA-level candidate prioritization. Transcript expression does not establish cell-surface protein abundance, clinical safety, or treatment response. Private datasets and internal identifiers are not disclosed.
 ]
 
 #pagebreak()

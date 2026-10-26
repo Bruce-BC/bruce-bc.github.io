@@ -55,7 +55,7 @@ A bioinformatics researcher and developer connecting biological questions with a
 ## At a glance
 
 - **6+ years** in applied bioinformatics and genomics operations
-- **98 archived project orders** reviewed as a conservative lower bound across WGS, hybrid, amplicon, shotgun, and RNA work
+- Hands-on analysis and service leadership across microbial genomics, microbiome and transcriptome work
 - **7 SCI(E) publications** spanning NGS pathogen panels and experimental biomedicine
 - **2 peer-reviewed NGS panel papers and 1 joint patent** connected to foodborne-pathogen detection
 
@@ -70,16 +70,15 @@ A bioinformatics researcher and developer connecting biological questions with a
 - Develop in silico design tools that evaluate tail-protein candidates for specified capsule targets and generate candidate design sequences and review reports.
 - Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.
 
-### Wittgenbio · July 1 – October 1, 2026
+### Wittgenbio · July–October 2026
 
-- Colorectal cancer (CRC) single-cell atlas construction and cell-type annotation
-- Tumor/normal evidence workflows for patient-level reproducibility and normal-tissue off-target assessment
-- Annotation of externally supplied normal-tissue atlas data and tissue-specific expression analysis
-- Virtual-cell evaluation with explicit uncertainty and validation boundaries
+- Built a multi-study CRC scRNA-seq atlas through metadata standardization, quality control, integration, clustering, and cell-type annotation.
+- Cross-checked original author annotations, marker evidence, and tumor/normal metadata while tracking label decisions and source provenance across versions.
+- Annotated externally supplied normal-tissue atlas data and combined tissue-specific expression with tumor and patient/specimen evidence to evaluate therapeutic-target candidates at the RNA level.
 
 The current-role [Klebsiella phage genomics and tail-design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}) presents an anonymized example. It combines phage-genome evidence, capsule-target references, and sequence-plus-structure comparisons without exposing sample identifiers or internal reference IDs.
 
-The [Wittgenbio CRC atlas, annotation, and virtual-cell case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}) describes this previous research track at method level. Private datasets, model implementations, and performance metrics are intentionally excluded until they can be disclosed. A separate [company-by-company experience summary]({% link _pages/experience.md %}) brings the responsibilities and evidence-backed outcomes together.
+The [Wittgenbio CRC atlas, annotation, and tissue-expression case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}) describes this previous research track at method level. The case describes RNA-level target evidence and its interpretation limits without exposing private datasets or internal identifiers. A separate [company-by-company experience summary]({% link _pages/experience.md %}) brings the responsibilities and evidence-backed outcomes together.
 
 Explore the [project workflows]({% link _pages/projects.md %}), the [publication record]({% link _pages/publications.md %}), or download the [resume]({{ '/assets/pdf/Byungcheol_Kang_Bioinformatics_Resume.pdf' | relative_url }}) and [project portfolio]({{ '/assets/pdf/Byungcheol_Kang_Bioinformatics_Portfolio.pdf' | relative_url }}).
 

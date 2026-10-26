@@ -33,44 +33,56 @@ This page summarizes my work by company. It is intentionally limited to public, 
 
 ## Wittgenbio
 
-**Computational Biology Research · July 1 – October 1, 2026**
+**Computational Biology Research · July–October 2026**
 
-### Main work
+### CRC data integration and annotation evidence
 
-- Built a colorectal cancer (CRC) single-cell atlas and performed cell-type annotation.
-- Annotated externally supplied normal-tissue atlas data and compared tissue-specific expression.
-- Developed tumor/normal analysis workflows that preserve study, sample, and cell provenance while examining epithelial and disease-associated cell states.
-- Evaluated therapeutic-target evidence through tumor expression, patient-level reproducibility, and normal-tissue off-target risk rather than relying on a single aggregate score.
-- Contributed to virtual-cell research through computational cell-state representation and evaluation.
+- Standardized H5AD data and metadata, performed QC/integration/clustering, cross-checked marker-based annotations with author labels, and audited tumor/normal specimen metadata and label lineage.
+- Produced integrated/annotated data, marker/annotation summaries, version-comparison tables and source-traceability records. Cell-type annotation and malignancy assessment remained separate review questions.
 
-### Contributions and outcomes
+### Tumor and normal-tissue target-expression evidence
 
-- Integrated single-cell datasets across studies into a CRC atlas with traceable metadata and cell-type labels.
-- Added source-aware validation gates, contamination checks, and alternative integration paths so conclusions are not determined by one embedding or batch-correction method.
-- Structured target assessment around tumor coverage, between-patient consistency, normal-cell specificity, and uncertainty, producing reviewable evidence for research prioritization.
-- Reviewed annotation consistency, tumor/normal label discrepancies, and interpretation limits; kept virtual-cell evaluation separate from cell-type annotation.
+- Reviewed tumor and patient/specimen expression and cross-study consistency; annotated externally supplied normal-tissue atlas data and set comparison criteria around raw-count availability and depth differences.
+- Summarized candidate-level expression evidence, coverage, interpretation limits and follow-up validation items in comparison tables. Conclusions support RNA-level prioritization; cell-surface protein abundance, internalization, therapeutic efficacy and clinical safety require separate experimental validation.
 
-[View the single-cell and virtual-cell research case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}).
+[View the CRC atlas and tissue-expression case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}).
 
 ## Sanigen
 
-**Bioinformatics Team Lead · Senior Researcher · March 2020–October 2025**
+**Bioinformatics Team Lead · Senior Researcher · March 2020–November 2025**
 
-### Main work
+### Shared execution and report generation
 
-- Designed and maintained a shared analysis platform for 16S, ITS, WGS, and hybrid assembly, standardizing execution, quality control, and reporting.
-- Performed microbial genomics and metagenomics analyses, led technical review, and coordinated team assignments, project schedules, and client communication.
-- Contributed comparative-genomics and NGS analyses to foodborne-pathogen panel development, supporting two peer-reviewed publications and a joint patent.
+- Connected 16S, ITS, WGS and hybrid profiles through a common workflow, linking analysis, container and server settings with QC and HTML reporting.
+- Prepared reusable execution configurations, retained QC/log outputs, reports and analysis manuals. These four platform profiles are distinct from the full range of analyses performed.
 
-### Contributions and outcomes
+### Complex assembly review
 
-- Standardized validation, environment capture, checkpoints, reporting, and deliverables across multiple assay profiles.
-- Coordinated analysis and review for a conservative lower bound of **98 archived project orders** across WGS, hybrid assembly, amplicon, shotgun, and RNA work.
-- Contributed to two peer-reviewed NGS pathogen-panel publications and a joint patent for an NGS-based foodborne-pathogen detection method.
-- Built reusable comparative-genomics and assembly workflows that reduced one-off analysis and made reruns and technical review more traceable.
+- Reviewed Bandage graphs, BLAST and short/long-read depth together to curate WGS/hybrid contigs and explain assembly-graph and BUSCO evidence.
+- Delivered revised analysis reports and graph-based technical responses for the cases reviewed.
 
-Supporting publications, projects, and technical skills are listed in the [CV]({% link _pages/cv.md %}).
+### Comparative analysis and report maintenance
+
+- Delivered ANI, AMR, virulence-factor and MLST figures/tables, panX core-gene comparisons and SVG/Newick trees, and featureCounts gene-count and alignment summaries.
+- Updated the eggNOG output script and corrected annotation reports to include missing functional categories, orthology and pathways. Gene-count delivery is distinct from completed differential-expression or enrichment analysis.
+
+### Candidate-marker and pathogen-panel research
+
+- Developed comparative-genomics and k-mer marker-search tools and automated candidate-marker analysis.
+- Reviewed panel-analysis code and QA/QC and contributed NGS analysis and interpretation to two collaborative papers and a joint patent contribution.
+
+### External RNA QC and technology evaluation
+
+- Delivered RNA reference-alignment, depth and target/non-target summaries, identifying the scope of completed analysis and items requiring follow-up.
+- Tested Nanopore Dorado modes and duplex QC and provided test findings and execution-environment guidance.
+
+### Service operations, training and infrastructure
+
+- Managed SOPs, turnaround, task allocation, result review and client technical support while maintaining Linux/HPC environments and NAS/data-transfer infrastructure.
+- Prepared analysis and panX manuals, staff training and handover materials.
+
+Related [platform]({% link _projects/integrated-microbial-genomics-platform.md %}), [operations]({% link _projects/analysis-operations-and-qa.md %}), [marker-discovery]({% link _projects/comparative-genomics-marker-discovery.md %}) and [panel]({% link _projects/foodborne-pathogen-ngs-panel.md %}) cases provide method and output context; the [CV]({% link _pages/cv.md %}) provides the concise responsibility summary.
 
 ## Evidence boundary
 
-The outcomes above describe analysis systems, curated evidence resources, reproducible workflows, and decision support. Computational target calls, inferred cell states, and in silico phage designs remain hypotheses until independently or experimentally validated.
+The outcomes above describe analysis systems, curated evidence resources, reproducible workflows, and decision support. Computational target calls and in silico phage designs remain hypotheses until independently or experimentally validated.

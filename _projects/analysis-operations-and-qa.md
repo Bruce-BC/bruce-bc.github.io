@@ -34,37 +34,15 @@ flowchart LR
 
 </div>
 
-## Archived project mix
+## Representative analysis and delivery evidence
 
-The counts below are a **conservative lower bound** derived from 98 distinct order codes found in archived project communications. They show breadth of operations, not the total number of samples or every project completed.
+- Curated complex WGS/hybrid contigs by reviewing Bandage graphs, BLAST and short/long-read depth together; delivered revised reports and assembly-graph/BUSCO technical responses.
+- Delivered ANI, AMR, virulence-factor and MLST comparisons, plus panX core-gene comparisons and SVG/Newick trees.
+- Produced featureCounts gene-count and alignment summaries and RNA reference depth/coverage results.
+- Updated the eggNOG report script to include missing functional categories, orthology and pathway outputs.
+- Tested Nanopore Dorado modes and duplex QC and prepared analysis/panX manuals, execution-environment guidance and staff training.
 
-<div class="project-tool-workflow" data-workflow-id="archived_project_mix" markdown="1">
-
-```mermaid
-flowchart LR
-    archived_mix[Archived project communications<br/>n = 98] --> wgs_projects[WGS · 28]
-    archived_mix --> hybrid_projects[Hybrid · 21]
-    archived_mix --> amplicon_16s_projects[16S · 19]
-    archived_mix --> shotgun_projects[Shotgun · 18]
-    archived_mix --> rna_projects[RNA · 7]
-    archived_mix --> its_projects[ITS · 3]
-    archived_mix --> other_projects[Other · 2]
-    class wgs_projects,hybrid_projects,amplicon_16s_projects,shotgun_projects,rna_projects,its_projects,other_projects project-tool-node
-```
-
-{% include project_tool_explorer.liquid project=page.slug workflow="archived_project_mix" %}
-
-</div>
-
-| Analysis type | Distinct order codes |
-| ------------- | -------------------: |
-| WGS           |                   28 |
-| Hybrid        |                   21 |
-| 16S           |                   19 |
-| Shotgun       |                   18 |
-| RNA           |                    7 |
-| ITS           |                    3 |
-| Other         |                    2 |
+These examples link retained communications with concrete analytical outputs. No complete lifetime workload total is inferred from email or order-code mentions.
 
 ## What is standardized
 
@@ -76,4 +54,4 @@ flowchart LR
 
 ## Boundary
 
-Email-derived order counts can undercount work that used different communication channels, and they should not be interpreted as sample counts, revenue, or independently audited business metrics.
+The shared platform has four execution profiles: 16S, ITS, WGS and hybrid assembly. RNA and other research analyses are broader service work, not additional profiles of that platform. Gene-count delivery does not establish completed differential-expression or enrichment analysis; external RNA QC and method evaluation do not establish regulatory qualification or therapeutic efficacy.

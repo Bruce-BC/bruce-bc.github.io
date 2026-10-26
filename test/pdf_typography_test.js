@@ -31,15 +31,16 @@ for (const [file, start, end] of [
   assert.ok(!/Phagogram|phagefinder|phagekit|ktyper|7,?759/i.test(company), `${file}: excluded internal names or sequence-count emphasis`);
 }
 const approvedSanigenCopy = [
-  "Designed and maintained a shared analysis platform for 16S, ITS, WGS, and hybrid assembly, standardizing execution, quality control, and reporting.",
-  "Performed microbial genomics and metagenomics analyses, led technical review, and coordinated team assignments, project schedules, and client communication.",
-  "Contributed comparative-genomics and NGS analyses to foodborne-pathogen panel development, supporting two peer-reviewed publications and a joint patent.",
+  "Led NGS analysis services and team operations, combining analysis design, hands-on work and result review with SOPs, turnaround management, quality control and client technical support.",
+  "Performed microbial-genomics, microbiome and transcriptome analyses and developed shared workflows for standardized execution, quality control, annotation and reporting.",
+  "Developed comparative-genomics and k-mer marker-discovery tools and contributed NGS analyses to pathogen-panel research, two collaborative papers and a joint patent.",
+  "Supported external collaborations through RNA alignment and coverage QC and evaluation of Nanopore and Ion Torrent analysis methods.",
+  "Maintained Linux/HPC analysis environments and data-transfer infrastructure and prepared analysis manuals and staff training.",
 ];
 for (const [file, start, end] of [
   ["docs/pdf-source/resume.typ", '#role("Sanigen"', "\n])"],
-  ["docs/pdf-source/portfolio.typ", '#section("RESPONSIBILITIES AT SANIGEN")', '#section("VERIFIED LOWER BOUND OF ARCHIVED WORK")'],
+  ["docs/pdf-source/portfolio.typ", '#section("RESPONSIBILITIES AT SANIGEN")', '#section("SELECTED ANALYSIS AND DELIVERY OUTPUTS")'],
   ["_data/cv.yml", "- company: Sanigen", "    Education:"],
-  ["_pages/experience.md", "## Sanigen", "### Contributions and outcomes"],
 ]) {
   const source = fs.readFileSync(path.join(repository, file), "utf8");
   const first = source.indexOf(start);
@@ -49,8 +50,8 @@ for (const [file, start, end] of [
   for (const sentence of approvedSanigenCopy) {
     assert.ok(company.includes(sentence), `${file}: approved Sanigen responsibility missing`);
   }
-  assert.equal(company.match(/^\s*- (?!company:)/gm)?.length, 3, `${file}: keep the approved three-bullet summary`);
-  assert.ok(!/Snakemake|five-person|three-person|direct reports/i.test(company), `${file}: excluded tool emphasis or staffing qualifier`);
+  assert.equal(company.match(/^\s*- (?!company:)/gm)?.length, 5, `${file}: preserve all five responsibility themes`);
+  assert.ok(!/Nextflow|five-person|three-person|direct reports/i.test(company), `${file}: unsupported tooling or staffing qualifier`);
 }
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), "portfolio-pdf-test-"));
 

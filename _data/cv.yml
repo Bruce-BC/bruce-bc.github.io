@@ -31,25 +31,26 @@ cv:
 
       - company: Wittgenbio
         position: Computational Biology Research
-        start_date: "2026-07-01"
-        end_date: "2026-10-01"
-        summary: Built a colorectal cancer (CRC) single-cell atlas and performed cell-type annotation. Contract ended October 1, 2026.
+        start_date: "2026-07"
+        end_date: "2026-10"
+        summary: CRC single-cell atlas construction, annotation review, and RNA-level therapeutic-target evidence assessment.
         highlights:
-          - Built a colorectal cancer (CRC) single-cell atlas and performed cell-type annotation.
-          - Annotated externally supplied normal-tissue atlas data and compared tissue-specific expression to evaluate candidate therapeutic targets.
-          - Structured therapeutic-target evaluation around tumor expression, patient-level reproducibility, normal-tissue off-target risk, source provenance, and uncertainty.
-          - Contributed to virtual-cell research with explicit evaluation boundaries and biologically grounded interpretation of predicted states or responses.
+          - Built a multi-study CRC scRNA-seq atlas through metadata standardization, quality control, integration, clustering, and cell-type annotation.
+          - Cross-checked original author annotations, marker evidence, and tumor/normal metadata while tracking label decisions and source provenance across versions.
+          - Annotated externally supplied normal-tissue atlas data and combined tissue-specific expression with tumor and patient/specimen evidence to evaluate therapeutic-target candidates at the RNA level.
 
       - company: Sanigen
         position: Bioinformatics Team Lead · Senior Researcher
         location: Suwon, South Korea
         start_date: 2020-03
-        end_date: 2025-10
-        summary: Combined hands-on bioinformatics research and development with technical leadership and team operations.
+        end_date: 2025-11
+        summary: NGS analysis services, research software and team operations across microbial genomics, microbiome and transcriptome work.
         highlights:
-          - Designed and maintained a shared analysis platform for 16S, ITS, WGS, and hybrid assembly, standardizing execution, quality control, and reporting.
-          - Performed microbial genomics and metagenomics analyses, led technical review, and coordinated team assignments, project schedules, and client communication.
-          - Contributed comparative-genomics and NGS analyses to foodborne-pathogen panel development, supporting two peer-reviewed publications and a joint patent.
+          - Led NGS analysis services and team operations, combining analysis design, hands-on work and result review with SOPs, turnaround management, quality control and client technical support.
+          - Performed microbial-genomics, microbiome and transcriptome analyses and developed shared workflows for standardized execution, quality control, annotation and reporting.
+          - Developed comparative-genomics and k-mer marker-discovery tools and contributed NGS analyses to pathogen-panel research, two collaborative papers and a joint patent.
+          - Supported external collaborations through RNA alignment and coverage QC and evaluation of Nanopore and Ion Torrent analysis methods.
+          - Maintained Linux/HPC analysis environments and data-transfer infrastructure and prepared analysis manuals and staff training.
 
     Education:
       - institution: Kyungpook National University School of Medicine
@@ -139,15 +140,15 @@ cv:
         icon: fa-solid fa-atom
         keywords: "Tail/RBP analysis, Depolymerase curation, Protein structure comparison, Foldseek, In silico design"
 
-      - name: Single-Cell and Virtual Cell
+      - name: Single-Cell Analysis
         level: Applied research
         icon: fa-solid fa-microscope
-        keywords: "CRC atlas construction, Cell-type annotation, Normal-tissue expression analysis, Virtual-cell evaluation"
+        keywords: "CRC atlas construction, Cell-type annotation, Normal-tissue expression analysis"
 
       - name: Workflow Engineering
         level: Advanced
         icon: fa-solid fa-diagram-project
-        keywords: "Snakemake, Nextflow, Conda, Docker, Apptainer, Linux"
+        keywords: "Snakemake, Conda, Docker, Apptainer, Linux"
 
       - name: Programming
         level: Advanced

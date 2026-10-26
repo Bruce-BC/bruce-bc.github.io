@@ -29,7 +29,7 @@ flowchart LR
     one_contig_final_assembly --> rast_tk_annotation[RAST-tk annotation]
     prokka_annotation --> reconciled_functional_review[Reconciled functional review]
     rast_tk_annotation --> reconciled_functional_review
-    reconciled_functional_review --> portable_workflow_evaluation[ONT and Nextflow evaluation]
+    reconciled_functional_review --> portable_workflow_evaluation[ONT portability evaluation]
     portable_workflow_evaluation --> genome_package_caveats[Genome package + caveats]
     class read_qc,assembly_candidates,one_contig_final_assembly,prokka_annotation,rast_tk_annotation,reconciled_functional_review,portable_workflow_evaluation project-tool-node
 ```
@@ -43,7 +43,7 @@ flowchart LR
 - Compared assembly candidates using contiguity, read support, and genome-scale plausibility.
 - Reached single-contig final assemblies across the assessed sample set.
 - Supplemented Prokka output with RAST-tk evidence instead of treating one annotation source as definitive.
-- Evaluated ONT and Nextflow-based processing as part of a more portable workflow direction.
+- Evaluated ONT processing as part of a more portable workflow direction.
 
 ## Outcome
 
