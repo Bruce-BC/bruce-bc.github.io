@@ -11,23 +11,27 @@ This page summarizes my work by company. It is intentionally limited to public, 
 
 ## MicrobiotiX
 
-**Bioinformatician · July 2026–present**
+**Senior Researcher · Bioinformatics · July 2026–present**
 
-### Main work
+### Genome analysis and reference curation
 
-- Develop bacterial genome analysis workflows covering quality control, annotation, typing, antimicrobial resistance, and prophage detection to support production-strain assessment.
-- Integrate phage genome quality, termini and packaging, taxonomy, lifestyle predictions, and tail-protein evidence into reports with traceable conclusions.
-- Develop and extend analysis libraries and command-line tools combining experimental host-range matrices with sequence and protein features for clustering comparisons and cocktail candidate selection.
-- Build and maintain a Klebsiella pneumoniae tail/RBP reference database linking sequences to K-type and KL-type evidence, with source citations and separate experimental and predicted labels.
-- Develop in silico design tools that evaluate tail-protein candidates for specified capsule targets and generate candidate design sequences and review reports.
-- Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.
+- Reconciled phage lifestyle, taxonomy, packaging and tail/RBP evidence across tools; reported conflicting calls and unresolved findings.
+- Removed circular-genome reference duplicates caused by start-coordinate or reverse-complement differences; mapped closely related phage SNPs to CDS and synonymous/non-synonymous substitutions.
+- Integrated literature and public-sequence RBP references, merged duplicate sequences and retained cumulative citations, separate K-serotype/KL-locus fields and experimental/inferred labels.
 
-### Contributions and outcomes
+### Analysis libraries and research tools
 
-- Built a capsule-target reference resource covering depolymerase, tailspike, and receptor-binding proteins with traceable evidence and explicit confidence labels.
-- Integrated seven core analysis tools in an anonymized four-genome case study; independent evidence converged on lytic phages with short direct-terminal-repeat packaging.
-- Resolved supported capsule-target assignments while retaining unsupported targets as data gaps instead of forcing labels.
-- Prioritized a structure-supported module-replacement hypothesis using anchor coverage, same-genus context, experimental reference structures, label consistency, and predicted fold retention; host-range expansion remains a wet-lab question.
+- Corrected host-range matrix matching, cutoffs and mechanism constraints; separated maximum-coverage and minimum-combination logic, repaired solver time-limit and feasible-solution handling, and cross-checked results with independent MILP calculations.
+- Implemented full/common-input cluster comparisons and call contracts for strain-level defense, pan-genome and functional-cluster outputs, including unresolved states.
+- Implemented analysis adapters, JSON responses, exception handling and version links; verified matching call contracts across source, installed wheels and reproducibility bundles.
+- Implemented GenBank/FASTA and annotation I/O, reverse-strand coordinates, primer extensions and PCR/cloning connections; fixed string-input crashes and missing error responses.
+- Fixed self-referencing capsid-capacity calculations, missing safety margins, multi-record GenBank parsing and terminal-repeat false calls; added regression checks.
+
+### Candidate design, developer integration and database planning
+
+- Wrote target-specific donor/module ranking and tandem candidate-sequence generation; emitted domain boundaries, structural evidence and validation gaps.
+- Compared integration inputs, expected values and actual results; prepared call specifications, terminology mappings and reproducible cases for external developers.
+- Designed genome-database intake, QC, assembly, annotation and review workflows with versioning, provenance and role-based handoffs; delivered QC-gate specifications and synthetic interactive screen prototypes.
 
 [View the phage genomics and tail-design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}).
 
@@ -35,15 +39,9 @@ This page summarizes my work by company. It is intentionally limited to public, 
 
 **Computational Biology Research · July–October 2026**
 
-### CRC data integration and annotation evidence
-
-- Standardized H5AD data and metadata, performed QC/integration/clustering, cross-checked marker-based annotations with author labels, and audited tumor/normal specimen metadata and label lineage.
-- Produced integrated/annotated data, marker/annotation summaries, version-comparison tables and source-traceability records. Cell-type annotation and malignancy assessment remained separate review questions.
-
-### Tumor and normal-tissue target-expression evidence
-
-- Reviewed tumor and patient/specimen expression and cross-study consistency; annotated externally supplied normal-tissue atlas data and set comparison criteria around raw-count availability and depth differences.
-- Summarized candidate-level expression evidence, coverage, interpretation limits and follow-up validation items in comparison tables. Conclusions support RNA-level prioritization; cell-surface protein abundance, internalization, therapeutic efficacy and clinical safety require separate experimental validation.
+- Reconciled study-specific gene axes, metadata and author annotations; prepared H5AD inputs and annotation records for integrated analysis.
+- Compared cluster and label changes across versions, audited inherited calls and tumor/normal specimen metadata, and produced cross-validation tables.
+- Prepared cell-type/expression comparisons from externally supplied normal-tissue atlas data; documented donor, specimen and sequencing-depth differences and interpretation limits.
 
 [View the CRC atlas and tissue-expression case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}).
 
@@ -51,38 +49,54 @@ This page summarizes my work by company. It is intentionally limited to public, 
 
 **Bioinformatics Team Lead · Senior Researcher · March 2020–November 2025**
 
-### Shared execution and report generation
+### Genome analysis and reanalysis
 
-- Connected 16S, ITS, WGS and hybrid profiles through a common workflow, linking analysis, container and server settings with QC and HTML reporting.
-- Prepared reusable execution configurations, retained QC/log outputs, reports and analysis manuals. These four platform profiles are distinct from the full range of analyses performed.
+- Selected and manually corrected contigs using Bandage graphs and read depth; revised and redelivered WGS/hybrid assembly reports.
+- Repeated assemblies under Kraken2 read-selection and trimming conditions; checked circular contigs and BUSCO results.
+- Corrected reference, FASTA-header and unmerged chromosome-contig errors; reran assembly and Prokka annotation.
+- Delivered additional SNP, INDEL and plasmid analyses, hybrid-contig VCF/IGV comparisons, locus crosswalks and GFF/GBK files.
+- Delivered ANI heatmaps/trees, AMR, virulence-factor and MLST visualizations, and panX core-gene trees in SVG/Newick formats.
+- Aligned vector references, filtered reads and delivered requested-region edits; selected viral reads from mixed inputs, assembled them with metaSPAdes and identified assemblies with BLAST.
+- Summarized and delivered predicted prophage candidates, intervals and mobility potential.
 
-### Complex assembly review
+### Custom microbiome and transcriptome analysis
 
-- Reviewed Bandage graphs, BLAST and short/long-read depth together to curate WGS/hybrid contigs and explain assembly-graph and BUSCO evidence.
-- Delivered revised analysis reports and graph-based technical responses for the cases reviewed.
+- Compared QIIME 2 classifications with BLAST sequence filters, removed chloroplast/mitochondrial reads and adjusted sampling depth.
+- Reran shotgun and LEfSe analyses for revised groups/subsets; reissued KEGG-function and genus-comparison statistics, LDA figures and reports.
+- Reanalyzed single reads and OTUs after abnormal read-pair merging; delivered specified-position variant, representative-sequence alignment and sequence-match percentage tables.
+- Produced featureCounts gene counts and alignment summaries, TSS-position depth and TEX-group comparison records.
+- Compared RNA-clustering and error-correction settings; generated target/non-target classifications, reference alignments and position-level coverage.
+- Compared Nanopore Dorado sup/hac/fast modes and duplex-read QC; prepared hit-marker and sample-by-marker comparisons for pathogen-panel input methods.
 
-### Comparative analysis and report maintenance
+### Workflow and report fixes
 
-- Delivered ANI, AMR, virulence-factor and MLST figures/tables, panX core-gene comparisons and SVG/Newick trees, and featureCounts gene-count and alignment summaries.
-- Updated the eggNOG output script and corrected annotation reports to include missing functional categories, orthology and pathways. Gene-count delivery is distinct from completed differential-expression or enrichment analysis.
+- Built common 16S, ITS, WGS and hybrid execution profiles, separated analysis/container/server settings and connected QC with HTML reporting.
+- Fixed panel-TSV generation bugs and anomalous calculations; delivered conversion and SVG/HTML output scripts with test files.
+- Corrected missing eggNOG functional-category, orthology and pathway outputs and implemented their automatic report generation.
+- Corrected tree-JSON/metadata mismatches, restored missing nodes and table fields, and redelivered the results.
+- Resolved NanoPlot dependency/version errors and missing visualization packages; corrected QIIME 2 version-specific commands and execution instructions.
 
-### Candidate-marker and pathogen-panel research
+### Marker and panel research; technical-listing materials
 
-- Developed comparative-genomics and k-mer marker-search tools and automated candidate-marker analysis.
-- Reviewed panel-analysis code and QA/QC and contributed NGS analysis and interpretation to two collaborative papers and a joint patent contribution.
+- Automated primer-candidate analysis and FASTA generation with k-mer-length/GC filters; compared core genes and candidate markers with BLAST.
+- Aligned related-species genomes and extracted variants; delivered candidate-region FASTA files and figures and documented discrimination limits in identical sequence regions.
+- Verified allergen reference/accession mappings, built custom BLAST databases and delivered target/toxin-gene searches with identity/coverage criteria.
+- Resolved discrepancies among NCBI reclassification, SILVA entries and submitted species labels using sequence/ANI comparisons; documented marker-discrimination and non-detection limits.
+- Contributed analysis code, QA/QC and interpretation to NGS pathogen-panel research, two collaborative papers and a joint patent.
+- Reviewed diagnostic marker-search and panel-result functions and panX applicability; prepared algorithm-differentiation and patent-review materials.
+- Authored, revised and submitted technical-evaluation explanations, figures and tables; wrote the assigned section of the preliminary-listing application.
 
-### External RNA QC and technology evaluation
+### Service, training and infrastructure operations
 
-- Delivered RNA reference-alignment, depth and target/non-target summaries, identifying the scope of completed analysis and items requiring follow-up.
-- Tested Nanopore Dorado modes and duplex QC and provided test findings and execution-environment guidance.
+- Coordinated additional analyses, exceptions and redelivery schedules; addressed client questions about results, delays and follow-up actions.
+- Reviewed chromosome/contig mappings and additional unplaced-sequence submissions before NCBI registration; provided technical responses.
+- Prepared analysis/panX theory and practical manuals, training and handover materials; trained new team members.
+- Maintained HPC/Linux environments, NAS and data-transfer infrastructure; reviewed capacity, backup and server-configuration requirements.
 
-### Service operations, training and infrastructure
-
-- Managed SOPs, turnaround, task allocation, result review and client technical support while maintaining Linux/HPC environments and NAS/data-transfer infrastructure.
-- Prepared analysis and panX manuals, staff training and handover materials.
-
-Related [platform]({% link _projects/integrated-microbial-genomics-platform.md %}), [operations]({% link _projects/analysis-operations-and-qa.md %}), [marker-discovery]({% link _projects/comparative-genomics-marker-discovery.md %}) and [panel]({% link _projects/foodborne-pathogen-ngs-panel.md %}) cases provide method and output context; the [CV]({% link _pages/cv.md %}) provides the concise responsibility summary.
+Related [platform]({% link _projects/integrated-microbial-genomics-platform.md %}), [operations]({% link _projects/analysis-operations-and-qa.md %}), [marker-discovery]({% link _projects/comparative-genomics-marker-discovery.md %}) and [panel]({% link _projects/foodborne-pathogen-ngs-panel.md %}) cases provide method and output context.
 
 ## Evidence boundary
 
-The outcomes above describe analysis systems, curated evidence resources, reproducible workflows, and decision support. Computational target calls and in silico phage designs remain hypotheses until independently or experimentally validated.
+RNA count/alignment delivery does not imply completed differential-expression or enrichment analysis. RNA-level target prioritization and computational phage designs require separate experimental validation.
+
+[View the concise responsibility summaries in the CV]({% link _pages/cv.md %}).

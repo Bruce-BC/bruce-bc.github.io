@@ -46,3 +46,9 @@ The analysis prioritized an approximately **17 kb candidate region** for follow-
 ## Boundary
 
 Computational prioritization does not establish diagnostic performance. Wet-lab verification, inclusivity/exclusivity testing, and evaluation on broader strain diversity are required before deployment as a marker.
+
+## Panel and technical-evaluation documentation
+
+- Automated primer-candidate FASTA generation with k-mer-length and GC filters; compared core genes and candidate markers by BLAST.
+- Delivered related-species alignment/variant and candidate-region records, including limits where identical sequences do not support discrimination.
+- Prepared technical and patent-review materials on diagnostic marker-search/panel functions and algorithm differentiation; authored technical-evaluation explanations, figures/tables and an assigned preliminary-listing application section.

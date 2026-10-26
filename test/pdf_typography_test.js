@@ -6,19 +6,16 @@ const path = require("node:path");
 
 const repository = path.resolve(__dirname, "..");
 const approvedMicrobiotixCopy = [
-  "Develop bacterial genome analysis workflows covering quality control, annotation, typing, antimicrobial resistance, and prophage detection to support production-strain assessment.",
-  "Integrate phage genome quality, termini and packaging, taxonomy, lifestyle predictions, and tail-protein evidence into reports with traceable conclusions.",
-  "Develop and extend analysis libraries and command-line tools combining experimental host-range matrices with sequence and protein features for clustering comparisons and cocktail candidate selection.",
-  "Build and maintain a Klebsiella pneumoniae tail/RBP reference database linking sequences to K-type and KL-type evidence, with source citations and separate experimental and predicted labels.",
-  "Develop in silico design tools that evaluate tail-protein candidates for specified capsule targets and generate candidate design sequences and review reports.",
-  "Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.",
+  "Analyze bacterial and phage genomes for quality, annotation, taxonomy and host-associated features, with traceable reporting.",
+  "Develop analysis libraries and command-line tools linking host-range matrices with sequence and gene data for cocktail selection, cluster comparison and pan-genome analysis.",
+  "Build RBP/depolymerase reference databases with separate K/KL fields, source citations and experimental/inferred evidence labels.",
+  "Evaluate RBP candidates using sequence, domain and protein-structure evidence and generate candidate sequences and design reports.",
+  "Develop research tools for sequence analysis, primers and cloning; design genome-database workflows and interactive prototypes.",
 ];
 for (const [file, start, end] of [
   ["docs/pdf-source/resume.typ", '#role("MicrobiotiX"', '#role("Wittgenbio"'],
   ["docs/pdf-source/portfolio.typ", '#role("MicrobiotiX"', '#role("Wittgenbio"'],
   ["_data/cv.yml", "- company: MicrobiotiX", "- company: Wittgenbio"],
-  ["_pages/experience.md", "## MicrobiotiX", "## Wittgenbio"],
-  ["_pages/about.md", "### MicrobiotiX", "### Wittgenbio"],
 ]) {
   const source = fs.readFileSync(path.join(repository, file), "utf8");
   const first = source.indexOf(start);
@@ -31,11 +28,12 @@ for (const [file, start, end] of [
   assert.ok(!/Phagogram|phagefinder|phagekit|ktyper|7,?759/i.test(company), `${file}: excluded internal names or sequence-count emphasis`);
 }
 const approvedSanigenCopy = [
-  "Led NGS analysis services and team operations, combining analysis design, hands-on work and result review with SOPs, turnaround management, quality control and client technical support.",
-  "Performed microbial-genomics, microbiome and transcriptome analyses and developed shared workflows for standardized execution, quality control, annotation and reporting.",
-  "Developed comparative-genomics and k-mer marker-discovery tools and contributed NGS analyses to pathogen-panel research, two collaborative papers and a joint patent.",
-  "Supported external collaborations through RNA alignment and coverage QC and evaluation of Nanopore and Ion Torrent analysis methods.",
-  "Maintained Linux/HPC analysis environments and data-transfer infrastructure and prepared analysis manuals and staff training.",
+  "Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.",
+  "Performed genomics, microbiome and transcriptome analyses; automated workflows and reports and resolved analysis errors.",
+  "Developed comparative-genomics and k-mer marker-discovery methods and contributed to collaborative NGS pathogen-panel research.",
+  "Contributed to the technology-special listing task force, preparing and revising technical-evaluation and preliminary-listing application materials.",
+  "Delivered custom analyses and method evaluations for external collaborators, client technical support and training materials.",
+  "Maintained HPC/Linux analysis environments, NAS storage and data-transfer infrastructure.",
 ];
 for (const [file, start, end] of [
   ["docs/pdf-source/resume.typ", '#role("Sanigen"', "\n])"],
@@ -50,7 +48,7 @@ for (const [file, start, end] of [
   for (const sentence of approvedSanigenCopy) {
     assert.ok(company.includes(sentence), `${file}: approved Sanigen responsibility missing`);
   }
-  assert.equal(company.match(/^\s*- (?!company:)/gm)?.length, 5, `${file}: preserve all five responsibility themes`);
+  assert.equal(company.match(/^\s*- (?!company:)/gm)?.length, 6, `${file}: preserve all six responsibility themes`);
   assert.ok(!/Nextflow|five-person|three-person|direct reports/i.test(company), `${file}: unsupported tooling or staffing qualifier`);
 }
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), "portfolio-pdf-test-"));

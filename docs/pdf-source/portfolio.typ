@@ -18,21 +18,18 @@
 
 #v(3mm)
 #section("CURRENT AND RECENT ROLES")
-#role("MicrobiotiX", "Bioinformatician", "2026.07 - PRESENT", [
-  - Develop bacterial genome analysis workflows covering quality control, annotation, typing, antimicrobial resistance, and prophage detection to support production-strain assessment.
-  - Integrate phage genome quality, termini and packaging, taxonomy, lifestyle predictions, and tail-protein evidence into reports with traceable conclusions.
-  - Develop and extend analysis libraries and command-line tools combining experimental host-range matrices with sequence and protein features for clustering comparisons and cocktail candidate selection.
-  - Build and maintain a Klebsiella pneumoniae tail/RBP reference database linking sequences to K-type and KL-type evidence, with source citations and separate experimental and predicted labels.
-  - Develop in silico design tools that evaluate tail-protein candidates for specified capsule targets and generate candidate design sequences and review reports.
-  - Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.
+#role("MicrobiotiX", "Senior Researcher · Bioinformatics", "2026.07 - PRESENT", [
+  - Analyze bacterial and phage genomes for quality, annotation, taxonomy and host-associated features, with traceable reporting.
+  - Develop analysis libraries and command-line tools linking host-range matrices with sequence and gene data for cocktail selection, cluster comparison and pan-genome analysis.
+  - Build RBP/depolymerase reference databases with separate K/KL fields, source citations and experimental/inferred evidence labels.
+  - Evaluate RBP candidates using sequence, domain and protein-structure evidence and generate candidate sequences and design reports.
+  - Develop research tools for sequence analysis, primers and cloning; design genome-database workflows and interactive prototypes.
 ])
-
 #role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
-  - Built a multi-study CRC scRNA-seq atlas through metadata standardization, quality control, integration, clustering, and cell-type annotation.
-  - Cross-checked original author annotations, marker evidence, and tumor/normal metadata while tracking label decisions and source provenance across versions.
-  - Annotated externally supplied normal-tissue atlas data and combined tissue-specific expression with tumor and patient/specimen evidence to evaluate therapeutic-target candidates at the RNA level.
-])
-#v(4mm)
+  - Built a multi-study CRC scRNA-seq atlas and performed cell-type annotation.
+  - Cross-checked tumor/normal metadata, author annotations and marker evidence, with versioned label and source tracking.
+  - Annotated externally supplied normal-tissue atlas data and compared normal-tissue, tumor and patient/specimen expression to assess therapeutic-target candidates.
+])#v(4mm)
 #note[
   *Past platform evidence.* The integrated workflow and operational results in this portfolio describe work performed at Sanigen (2020.03 - 2025.11). They are not presented as MicrobiotiX or Wittgenbio assets or current-company outcomes.
 ]
@@ -67,7 +64,8 @@ Separate assay scripts, environments, quality checks, server paths, and reportin
 
 #section("IMPLEMENTATION AND TECHNICAL REVIEW")
 - Connected shared analysis, container and server settings with QC, logs and HTML report outputs across the four execution profiles.
-- Curated complex WGS/hybrid contigs using Bandage graphs, BLAST and short/long-read depth; explained assembly-graph and BUSCO evidence in technical responses.
+- Reran WGS/hybrid assemblies under read-selection and trimming conditions, curated contigs and redelivered corrected reports.
+- Corrected reference, FASTA-header and chromosome-contig errors; reran assembly/Prokka annotation and checked circular contigs, graphs and BUSCO results.
 
 #section("EVIDENCE BOUNDARY")
 Only tools connected to active Snakemake includes and rules are listed as active. Configured or documented but inactive components are not represented as production use.
@@ -85,17 +83,23 @@ Only tools connected to active Snakemake includes and rules are listed as active
 )
 
 #section("RESPONSIBILITIES AT SANIGEN")
-- Led NGS analysis services and team operations, combining analysis design, hands-on work and result review with SOPs, turnaround management, quality control and client technical support.
-- Performed microbial-genomics, microbiome and transcriptome analyses and developed shared workflows for standardized execution, quality control, annotation and reporting.
-- Developed comparative-genomics and k-mer marker-discovery tools and contributed NGS analyses to pathogen-panel research, two collaborative papers and a joint patent.
-- Supported external collaborations through RNA alignment and coverage QC and evaluation of Nanopore and Ion Torrent analysis methods.
-- Maintained Linux/HPC analysis environments and data-transfer infrastructure and prepared analysis manuals and staff training.
+- Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.
+- Performed genomics, microbiome and transcriptome analyses; automated workflows and reports and resolved analysis errors.
+- Developed comparative-genomics and k-mer marker-discovery methods and contributed to collaborative NGS pathogen-panel research.
+- Contributed to the technology-special listing task force, preparing and revising technical-evaluation and preliminary-listing application materials.
+- Delivered custom analyses and method evaluations for external collaborators, client technical support and training materials.
+- Maintained HPC/Linux analysis environments, NAS storage and data-transfer infrastructure.
 
 #section("SELECTED ANALYSIS AND DELIVERY OUTPUTS")
-- Delivered ANI, AMR, virulence-factor and MLST comparisons, panX core-gene comparisons and SVG/Newick trees, plus featureCounts gene-count and alignment summaries.
-- Corrected missing eggNOG functional-category, orthology and pathway report sections by updating the output script.
-- Delivered RNA reference-alignment, target/non-target and coverage summaries for external collaboration; evaluated Nanopore Dorado modes and duplex QC.
-- Prepared analysis and panX manuals and training materials while maintaining Linux/HPC environments and data-transfer infrastructure.
+- Reissued ANI/AMR/virulence/MLST figures, panX SVG/Newick trees, and shotgun/LEfSe subgroup comparisons with KEGG/genus statistics and LDA plots.
+- Delivered featureCounts counts, alignment summaries, TSS-depth/TEX comparisons, and RNA target/non-target coverage; compared Nanopore Dorado modes and duplex QC.
+- Fixed panel TSV/calculation bugs, tree-JSON/metadata mismatches and missing report nodes; restored eggNOG functional-category, orthology and pathway outputs.
+- Resolved NanoPlot dependency/version and missing-visualization errors; corrected QIIME 2 commands and prepared analysis/panX manuals and training.
+
+#section("ADDITIONAL CUSTOM ANALYSES")
+- Filtered vector/mixed-virus reads, assembled viral reads with metaSPAdes and identified assemblies by BLAST; delivered predicted prophage intervals and mobility evidence.
+- Reanalyzed abnormal read-pair/OTU cases and sequence-match tables; provided hybrid-contig VCF/IGV comparisons and pre-NCBI chromosome/contig-submission reviews.
+- Verified allergen/accession mappings and custom BLAST target/toxin searches; reconciled NCBI/SILVA/species-label discrepancies with sequence/ANI evidence and documented marker limits.
 
 #section("TRACEABILITY AND INTERPRETATION")
 #note[
@@ -119,6 +123,10 @@ Only tools connected to active Snakemake includes and rules are listed as active
 - Contributed NGS data analysis and interpretation to collaborative panel development and evaluation.
 - Supported interpretation of NGS outputs across food and environmental sample contexts.
 - Collaborative outcomes included two peer-reviewed papers in 2023 and one joint patent contribution in 2022.
+
+#section("TECHNICAL-LISTING DOCUMENT CONTRIBUTIONS")
+- Reviewed diagnostic marker-search/panel functions, panX applicability and algorithm differentiation for technical and patent-review materials.
+- Authored, revised and submitted technical-evaluation explanations, figures and tables; wrote the assigned preliminary-listing application section.
 
 #section("BOUNDARIES")
 #note[
@@ -152,6 +160,12 @@ Only tools connected to active Snakemake includes and rules are listed as active
 - Four genomes converged on lytic *Przondovirus* classifications and short DTR packaging with 180-183 bp terminal repeats.
 - Three capsule targets matched experimentally supported references at 95.4-98.8% sequence identity; unsupported cases remained unresolved rather than receiving forced labels.
 - One design candidate passed genus, attachment, target-label, experimental-structure, and predicted-structure criteria; its 129-aa anchor alignment spanned 99.2% of the region.
+
+#section("RESEARCH SOFTWARE AND DEVELOPER INTEGRATION")
+- Separated maximum-coverage/minimum-combination host-range logic; corrected matching, cutoffs, solver time limits and feasible solutions, with independent MILP cross-checks.
+- Implemented cluster/defense/pan-genome contracts, JSON adapters and version/error handling; checked source, installed wheels and reproducibility bundles.
+- Implemented strand-aware annotation/primer/cloning workflows; repaired input crashes, capsid-capacity reference/margin errors and GenBank/repeat parsing with regression checks.
+- Delivered target-specific donor/module ranking and tandem candidates, developer call specifications and reproducible cases, and genome-database QC/review workflow specifications with interactive screen prototypes.
 
 #section("DESIGN OUTPUT AND BOUNDARY")
 The design bench supports domain swaps, full-module replacements, and tandem additions, with genome FASTA, module multi-FASTA, GenBank, and protein FASTA export. Host K-locus assignments, predicted RBP folding, adsorption, host range, and lytic activity still require bacterial-genome and wet-lab validation.

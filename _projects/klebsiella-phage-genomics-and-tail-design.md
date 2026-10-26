@@ -32,6 +32,14 @@ At MicrobiotiX, my work connects **bacterial genome analysis**, **phage genome a
 | Protein structure | Domain-boundary review, Foldseek/PDB support and fold retention  | Reject candidates likely to disrupt attachment or folding   |
 | Design gate       | Anchor identity/coverage, genus context and label consistency    | Rank domain swap, module replacement or tandem addition     |
 
+## Research software and integration work
+
+- Corrected circular/reverse-complement reference deduplication and connected closely related phage SNPs to CDS and synonymous/non-synonymous substitutions.
+- Separated maximum-coverage and minimum-combination host-range calculations, repaired solver/matching edge cases and checked results against independent MILP solutions.
+- Implemented library adapters and cluster/defense/pan-genome call contracts; verified source, installed-wheel and reproducibility-bundle behavior.
+- Fixed strand-coordinate and malformed-input paths in sequence/primer/cloning tools and capsid-capacity/GenBank/repeat parsing, with regression checks.
+- Delivered developer specifications and genome-database QC/review workflows with synthetic interactive prototypes.
+
 ## Genome evidence workflow
 
 <div class="project-tool-workflow" data-workflow-id="genome_evidence_workflow" markdown="1">

@@ -34,15 +34,14 @@ flowchart LR
 
 </div>
 
-## Representative analysis and delivery evidence
+## Reanalysis and report maintenance
 
-- Curated complex WGS/hybrid contigs by reviewing Bandage graphs, BLAST and short/long-read depth together; delivered revised reports and assembly-graph/BUSCO technical responses.
-- Delivered ANI, AMR, virulence-factor and MLST comparisons, plus panX core-gene comparisons and SVG/Newick trees.
-- Produced featureCounts gene-count and alignment summaries and RNA reference depth/coverage results.
-- Updated the eggNOG report script to include missing functional categories, orthology and pathway outputs.
-- Tested Nanopore Dorado modes and duplex QC and prepared analysis/panX manuals, execution-environment guidance and staff training.
+- Reran read-selected/trimmed WGS and hybrid assemblies, curated contigs and reissued reports; corrected reference, FASTA-header and chromosome-contig errors before repeating assembly and annotation.
+- Recomputed shotgun/LEfSe comparisons for revised groups/subsets and reissued KEGG/genus statistics, LDA figures and reports.
+- Repaired panel TSV/calculation bugs and tree-JSON/metadata mismatches, restored missing result nodes/table fields and corrected eggNOG report omissions.
+- Supplied gene-count/alignment, TSS-depth/TEX and RNA target/non-target coverage records; resolved NanoPlot and visualization dependencies and version-specific QIIME 2 instructions.
 
-These examples link retained communications with concrete analytical outputs. No complete lifetime workload total is inferred from email or order-code mentions.
+Retained communications and delivered outputs support these examples. No complete lifetime workload total is inferred from email or order-code mentions. The [detailed experience record]({% link _pages/experience.md %}) also covers technical-listing materials, client support, training and infrastructure.
 
 ## What is standardized
 

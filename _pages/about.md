@@ -61,20 +61,17 @@ A bioinformatics researcher and developer connecting biological questions with a
 
 ## Research experience
 
-### MicrobiotiX
+### MicrobiotiX · July 2026–present
 
-- Develop bacterial genome analysis workflows covering quality control, annotation, typing, antimicrobial resistance, and prophage detection to support production-strain assessment.
-- Integrate phage genome quality, termini and packaging, taxonomy, lifestyle predictions, and tail-protein evidence into reports with traceable conclusions.
-- Develop and extend analysis libraries and command-line tools combining experimental host-range matrices with sequence and protein features for clustering comparisons and cocktail candidate selection.
-- Build and maintain a Klebsiella pneumoniae tail/RBP reference database linking sequences to K-type and KL-type evidence, with source citations and separate experimental and predicted labels.
-- Develop in silico design tools that evaluate tail-protein candidates for specified capsule targets and generate candidate design sequences and review reports.
-- Compare protein sequences, domains, predicted structures, and reference structures to support RBP annotation and assess the structural plausibility of replacement and fusion candidates.
+Bacterial/phage evidence, host-range research software, RBP references and candidate design, sequence tools and genome-database prototypes.
 
 ### Wittgenbio · July–October 2026
 
-- Built a multi-study CRC scRNA-seq atlas through metadata standardization, quality control, integration, clustering, and cell-type annotation.
-- Cross-checked original author annotations, marker evidence, and tumor/normal metadata while tracking label decisions and source provenance across versions.
-- Annotated externally supplied normal-tissue atlas data and combined tissue-specific expression with tumor and patient/specimen evidence to evaluate therapeutic-target candidates at the RNA level.
+Multi-study CRC atlas curation and RNA-level comparison of tumor, patient/specimen and externally supplied normal-tissue expression.
+
+### Sanigen · March 2020–November 2025
+
+NGS services and reanalysis, workflow/report maintenance, marker/panel research, technical-listing materials and analysis infrastructure.
 
 The current-role [Klebsiella phage genomics and tail-design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}) presents an anonymized example. It combines phage-genome evidence, capsule-target references, and sequence-plus-structure comparisons without exposing sample identifiers or internal reference IDs.
 
