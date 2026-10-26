@@ -35,10 +35,9 @@ At MicrobiotiX, I turn bacterial/phage genome evidence and measured host-range d
 ## Candidate selection and follow-up research
 
 - Produced candidate-assessment reports from genome classification, lifestyle and host-recognition evidence, correcting duplicate references and conflicting prior calls.
-- Built a cocktail-selection program for a measured 221-strain × 74-phage host-range matrix and checked candidate-combination results against the observed data.
+- Built cocktail-selection software comparing the observed target strains and required phages of candidate combinations, with independent calculation checks.
 - Developed capsule-type prediction libraries and ML models; recorded sparse-label and leakage concerns and the decision to defer an additional predictor.
-- Generated target-specific protein/module candidate sequences and design records; connected genome annotations with primer/PCR/cloning planning and prepared genome-data review workflows and screen prototypes.
-- Checked the 100% design display against its formula: a capped evaluation-score maximum, not an experimental success probability.
+- Selected target-specific host-recognition protein candidates and generated domain-combination sequences and sequence/structure comparisons.
 
 ## Genome evidence workflow
 
@@ -94,6 +93,7 @@ flowchart LR
 | Collected tail/RBP sequences                       | 7,759 rows in 5,467 clusters                         | Collection and clustering; experimental labels cover a subset |
 | K-type labels                                      | 442 label-bearing rows; 62 distinct labels           | Rows and label types are different units                      |
 | Literature-backed experimental K labels            | 107 rows                                             | Kept separate from inferred labels                            |
+| Measured host-range input                          | 221 bacterial strains × 74 phages                    | Dataset dimensions for candidate-combination comparisons      |
 | KL-specific design tables                          | 446 part rows; 627 ranked entries; 800 evidence rows | Searchable candidate and evidence records                     |
 | 110-query benchmark, exclude query alone           | Correct-label inclusion 85/110 (77.3%)               | At least one true target label included                       |
 | Same 110-query benchmark, exclude sequence cluster | Correct-label inclusion 48/110 (43.6%)               | Same inclusion metric with related-sequence evidence withheld |
@@ -112,4 +112,4 @@ The benchmark is a saved reference snapshot with 110 queries per mode, evaluated
 
 ## Boundary
 
-The database and design bench prioritize testable hypotheses. KL-type prediction should be checked against host-genome evidence such as Kaptive results, and predicted RBP folding, adsorption, host range, and lytic activity still require wet-lab validation.
+The database and design bench prioritize testable hypotheses. The 100% design display is the upper limit of a capped evaluation score, not an experimental success probability. KL-type prediction should be checked against host-genome evidence such as Kaptive results, and predicted RBP folding, adsorption, host range, and lytic activity still require wet-lab validation.

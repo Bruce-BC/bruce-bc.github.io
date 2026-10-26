@@ -20,12 +20,10 @@ cv:
         position: Senior Researcher · Bioinformatics
         start_date: 2026-07
         end_date: present
-        summary: Genome-based candidate assessment, measured host-range cocktail selection, capsule-target references and prediction-method evaluation.
+        summary: Phage genome assessment, cocktail-selection and capsule-type prediction software, and host-recognition protein design.
         highlights:
-          - Analyze bacterial and phage genomes to prepare candidate-assessment reports and evidence for follow-up research.
-          - Develop tools to select and compare phage cocktail candidates from measured host-range data.
-          - Build a capsule-target reference database from 7,759 collected and clustered tail/RBP sequences; develop and evaluate prediction libraries and ML models.
-          - Compare RBP candidates for target capsule types and generate candidate sequences supported by sequence and protein-structure evidence.
+          - Analyze bacterial and phage genomes and prepare phage candidate-assessment reports.
+          - Develop phage cocktail selection and capsule-type prediction software; design receptor-binding protein candidates.
 
       - company: Wittgenbio
         position: Computational Biology Research
@@ -79,7 +77,7 @@ cv:
       - name: CRC Atlas Annotation & Normal-Tissue Expression Analysis
         summary: Integrated CRC datasets across studies, annotated cell types, and reviewed annotation consistency and tumor/normal labels.
         highlights:
-          - Separately annotated externally supplied normal-tissue atlas data and compared tissue-specific expression to evaluate candidate therapeutic targets, accounting for sequencing-depth differences and annotation coverage.
+          - Compared externally supplied normal-tissue atlas expression and analyzed CRC markers after expression-based off-target filtering.
 
       - name: Sanigen Integrated Microbial Genomics Platform
         summary: Designed and maintained a shared Snakemake platform for 16S, ITS, WGS, and Illumina-ONT hybrid assembly.

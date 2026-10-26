@@ -27,22 +27,26 @@ A bioinformatics researcher and developer connecting biological questions with a
 #section("EXPERIENCE")
 
 #role("MicrobiotiX", "Senior Researcher · Bioinformatics", "2026.07 - PRESENT", [
-  - Analyze bacterial and phage genomes to prepare candidate-assessment reports and evidence for follow-up research.
-  - Develop tools to select and compare phage cocktail candidates from measured host-range data.
-  - Build a capsule-target reference database from 7,759 collected and clustered tail/RBP sequences; develop and evaluate prediction libraries and ML models.
-  - Compare RBP candidates for target capsule types and generate candidate sequences supported by sequence and protein-structure evidence.
-])#role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
+  - Analyze bacterial and phage genomes and prepare phage candidate-assessment reports.
+  - Develop phage cocktail selection and capsule-type prediction software; design receptor-binding protein candidates.
+])
+
+#role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
   - Built a multi-study CRC scRNA-seq atlas and performed cell-type annotation.
   - Cross-checked tumor/normal metadata, author annotations and marker evidence, with versioned label and source tracking.
   - Annotated externally supplied normal-tissue atlas data and compared normal-tissue, tumor and patient/specimen expression to assess therapeutic-target candidates.
-])#role("Sanigen", "Bioinformatics Team Lead · Senior Researcher", "2020.03 - 2025.11", [
+])
+
+#role("Sanigen", "Bioinformatics Team Lead · Senior Researcher", "2020.03 - 2025.11", [
   - Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.
   - Performed genomics, microbiome and transcriptome analyses; automated workflows and reports and resolved analysis errors.
   - Developed comparative-genomics and k-mer marker-discovery methods and contributed to collaborative NGS pathogen-panel research.
   - Contributed to the technology-special listing task force, preparing and revising technical-evaluation and preliminary-listing application materials.
   - Delivered custom analyses and method evaluations for external collaborators, client technical support and training materials.
   - Maintained HPC/Linux analysis environments, NAS storage and data-transfer infrastructure.
-])#pagebreak()
+])
+
+#pagebreak()
 
 #section("SELECTED PROJECTS")
 
@@ -57,7 +61,7 @@ A bioinformatics researcher and developer connecting biological questions with a
     #kicker("Single-cell and tissue expression")
     #linebreak()
     *CRC Atlas Annotation & Normal-Tissue Expression Analysis* \
-    Integrated CRC datasets across studies, annotated cell types, and reviewed annotation consistency and tumor/normal labels. Separately annotated externally supplied normal-tissue atlas data and compared tissue-specific expression to evaluate candidate therapeutic targets, accounting for sequencing-depth differences and annotation coverage.
+    Integrated CRC datasets across studies, annotated cell types, and reviewed annotation consistency and tumor/normal labels. Compared externally supplied normal-tissue atlas expression and analyzed CRC markers after expression-based off-target filtering.
   ],
   [
     #kicker("Reproducible analysis platform")

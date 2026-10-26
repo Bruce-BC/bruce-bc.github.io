@@ -63,7 +63,7 @@ A bioinformatics researcher and developer connecting biological questions with a
 
 ### MicrobiotiX · July 2026–present
 
-Phage candidate assessment, cocktail selection from measured host-range data, capsule-target references, prediction-method evaluation and follow-up experiment design.
+Phage candidate assessment, cocktail-selection and capsule-type prediction software, and host-recognition protein design.
 
 ### Wittgenbio · July–October 2026
 

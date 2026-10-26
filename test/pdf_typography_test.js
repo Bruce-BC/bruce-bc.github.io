@@ -6,10 +6,8 @@ const path = require("node:path");
 
 const repository = path.resolve(__dirname, "..");
 const approvedMicrobiotixCopy = [
-  "Analyze bacterial and phage genomes to prepare candidate-assessment reports and evidence for follow-up research.",
-  "Develop tools to select and compare phage cocktail candidates from measured host-range data.",
-  "Build a capsule-target reference database from 7,759 collected and clustered tail/RBP sequences; develop and evaluate prediction libraries and ML models.",
-  "Compare RBP candidates for target capsule types and generate candidate sequences supported by sequence and protein-structure evidence.",
+  "Analyze bacterial and phage genomes and prepare phage candidate-assessment reports.",
+  "Develop phage cocktail selection and capsule-type prediction software; design receptor-binding protein candidates.",
 ];
 for (const [file, start, end] of [
   ["docs/pdf-source/resume.typ", '#role("MicrobiotiX"', '#role("Wittgenbio"'],

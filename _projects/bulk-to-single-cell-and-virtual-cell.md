@@ -45,8 +45,9 @@ I performed cell-type annotation on externally supplied normal-tissue atlas data
 - Cross-checked original author annotations, marker evidence, and tumor/normal metadata.
 - Produced integrated/annotated data, marker and annotation summaries, version-comparison tables and source-traceability records.
 - Summarized candidate-level expression, patient/specimen consistency, coverage and interpretation limits in comparison tables with follow-up validation items.
+- Analyzed CRC markers after expression-based off-target filtering using externally supplied normal-tissue atlas comparisons.
 - Reviewed raw-count availability and sequencing-depth differences when interpreting target-expression evidence.
 
 ## Boundary
 
-The CRC atlas was constructed by integrating public single-cell studies; the normal-tissue atlas was externally supplied and then annotated and analyzed. These analyses support RNA-level candidate prioritization. Transcript expression does not establish cell-surface protein abundance, clinical safety, or treatment response.
+The CRC atlas was constructed by integrating public single-cell studies; the normal-tissue atlas was externally supplied and then annotated and analyzed. Off-target filtering describes expression-based screening. These analyses support RNA-level candidate prioritization. Transcript expression does not establish cell-surface protein abundance, clinical safety, or treatment response.

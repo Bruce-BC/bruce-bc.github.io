@@ -14,28 +14,22 @@ This page summarizes my work by company. It is intentionally limited to public, 
 **[Phage]**<br>
 **Senior Researcher · Bioinformatics · July 2026–present**
 
-### Phage candidate assessment and target references
+### Phage genome analysis and candidate assessment
 
-- Prepared candidate-assessment reports integrating phage taxonomy, gene content, lifestyle and host-recognition protein evidence.
-- Cleaned reference genomes duplicated by start-position or orientation differences; corrected duplicate evidence and prior calls through literature and sequence cross-checks.
-- Built a reference for finding phage proteins by target capsule type; organized 7,759 collected sequences into 5,467 clusters.
-- Recorded 442 rows carrying K-type labels across 62 distinct labels; separated 107 rows with literature-backed experimental K-label evidence from inferred labels.
+- Analyzed phage taxonomy, gene content and lifestyle; prepared candidate-assessment reports distinguishing tool disagreements from insufficient evidence.
+- Consolidated reference genomes differing only in start position or orientation; corrected duplicate evidence and prior calls through literature and sequence comparisons.
 
-### Cocktail selection from measured data and prediction-method evaluation
+### Phage cocktail selection software
 
-- Developed a cocktail-candidate selection program using measured host-range data for 221 bacterial strains and 74 phages; checked the observed coverage and selection results of candidate combinations.
-- Re-evaluated a saved 110-query reference benchmark using the same correct-label-inclusion definition: 85/110 (77.3%) excluding the query alone and 48/110 (43.6%) excluding its sequence cluster; documented false calls and applicability limits.
-- Developed and cross-validated capsule-type prediction libraries and ML models; documented label imbalance and leakage risks in the decision to defer an additional predictor.
+- Developed cocktail-selection software comparing target strains and required phages for combinations in measured host-range tables; checked the results with independent calculations.
 
-### Follow-up experiment design and research software
+### Host-recognition protein analysis and design
 
-- Compared host-recognition proteins for target capsule types and generated domain-combination candidate sequences and design records.
-- Organized 446 part records, 627 ranked candidate entries and 800 evidence rows for KL-specific design-candidate searches.
-- Developed research software connecting genome sequences and gene annotations with primer, PCR and cloning design.
-- Audited the formula behind a 100% design-tool display and identified it as the upper limit of a capped evaluation score, not an experimental success probability.
-- Designed procedures for genome-data registration, analysis and review history; produced handover documents and screen prototypes for researchers and reviewers.
+- Built a reference database to retrieve host-recognition proteins by target capsule type; distinguished experimentally supported targets from targets inferred by sequence similarity.
+- Developed and cross-validated capsule-type prediction libraries and ML models; deferred an additional predictor based on label imbalance and overlap risks between training and evaluation data.
+- Selected host-recognition protein candidates for target capsule types, generated domain-combination sequences and prepared sequence/structure comparisons.
 
-[View the phage candidate assessment and design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}).
+[View the technical phage assessment and design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}).
 
 ## Wittgenbio
 
@@ -44,7 +38,7 @@ This page summarizes my work by company. It is intentionally limited to public, 
 
 - Reconciled study-specific gene axes, metadata and author annotations; prepared H5AD inputs and annotation records for integrated analysis.
 - Compared cluster and label changes across versions, audited inherited calls and tumor/normal specimen metadata, and produced cross-validation tables.
-- Prepared cell-type/expression comparisons from externally supplied normal-tissue atlas data; documented donor, specimen and sequencing-depth differences and interpretation limits.
+- Prepared cell-type and expression comparisons from externally supplied normal-tissue atlas data; analyzed CRC markers after expression-based off-target filtering.
 
 [View the CRC atlas and tissue-expression case study]({% link _projects/bulk-to-single-cell-and-virtual-cell.md %}).
 
@@ -101,6 +95,6 @@ Related [platform]({% link _projects/integrated-microbial-genomics-platform.md %
 
 ## Evidence boundary
 
-The reference benchmark is an internal, saved-data evaluation. Correct-label inclusion means at least one true target label is present in the prediction; it does not require the complete label set to match. RNA count/alignment delivery is separate from completed differential-expression or enrichment analysis. RNA-level target prioritization and computational phage designs require separate experimental validation.
+Off-target filtering here uses RNA expression to prioritize candidates; clinical safety and efficacy require separate validation. RNA count/alignment delivery is separate from completed differential-expression or enrichment analysis. Computational phage designs require experimental validation.
 
 [View the concise responsibility summaries in the CV]({% link _pages/cv.md %}).
