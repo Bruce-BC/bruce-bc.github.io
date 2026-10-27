@@ -11,9 +11,9 @@ mermaid:
   zoomable: true
 ---
 
-## Wittgenbio research scope
+## Wittgenbio analysis delivery
 
-At **Wittgenbio** (July–October 2026), I built a multi-study **colorectal cancer (CRC) single-cell atlas** and performed **cell-type annotation**. I separately annotated externally supplied normal-tissue atlas data and combined its tissue-specific expression with CRC tumor and patient/specimen evidence to evaluate therapeutic-target candidates at the RNA level.
+At **Wittgenbio** (July–October 2026), I built a public-study **colorectal cancer (CRC) single-cell atlas**, annotated cell types and analyzed CRC marker and therapeutic-target candidates using tumor and normal-tissue expression comparisons.
 
 ## CRC single-cell atlas workflow
 
@@ -26,7 +26,7 @@ flowchart LR
     cell_quality_control --> study_integration[Normalization and multi-study integration]
     study_integration --> clustering_annotation[Clustering and cell-type annotation]
     clustering_annotation --> tumor_normal_evidence[Tumor and normal-tissue evidence]
-    tumor_normal_evidence --> provenance_review[Provenance and uncertainty review]
+    tumor_normal_evidence --> provenance_review[CRC candidate analysis tables]
     class metadata_standardization,cell_quality_control,study_integration,clustering_annotation,tumor_normal_evidence,provenance_review project-tool-node
 ```
 
@@ -34,20 +34,18 @@ flowchart LR
 
 </div>
 
-The atlas workflow integrates measured single-cell datasets and reviews their metadata, cell quality, study differences, and cell-type labels. Annotation consistency and tumor/normal label discrepancies remain traceable to the source data.
+The workflow standardizes public-study expression matrices and metadata, applies QC, integrates studies and clusters cells to prepare H5AD data. Marker expression and author annotations guide cell-type labels.
 
-## Normal-tissue atlas annotation and expression analysis
+## Public-study integration and cell-type annotation
 
-I performed cell-type annotation on externally supplied normal-tissue atlas data and compared tissue-specific expression. Candidate therapeutic targets were evaluated against normal-tissue expression while accounting for sequencing-depth differences and annotation coverage.
+- Standardized expression matrices and metadata from public studies; performed QC, cross-study integration and clustering and prepared H5AD data.
+- Assigned cell-type labels using cluster-marker expression and author annotations; produced cell-level annotations and marker summaries.
 
-## Annotation outputs and provenance
+## Tumor and normal-tissue expression analysis
 
-- Cross-checked original author annotations, marker evidence, and tumor/normal metadata.
-- Produced integrated/annotated data, marker and annotation summaries, version-comparison tables and source-traceability records.
-- Summarized candidate-level expression, patient/specimen consistency, coverage and interpretation limits in comparison tables with follow-up validation items.
-- Analyzed CRC markers after expression-based off-target filtering using externally supplied normal-tissue atlas comparisons.
-- Reviewed raw-count availability and sequencing-depth differences when interpreting target-expression evidence.
+- Annotated cell types and analyzed expression in an externally supplied normal-tissue atlas; compared tumor and patient/specimen expression and prepared CRC candidate tables using normal-tissue expression filters.
+- Produced expression comparisons by cell type, tissue and patient/specimen, with CRC candidate analysis tables.
 
-## Boundary
+## Interpretation boundary
 
-The CRC atlas was constructed by integrating public single-cell studies; the normal-tissue atlas was externally supplied and then annotated and analyzed. Off-target filtering describes expression-based screening. These analyses support RNA-level candidate prioritization. Transcript expression does not establish cell-surface protein abundance, clinical safety, or treatment response.
+Raw-count availability, sequencing-depth differences, annotation coverage and source provenance constrain interpretation. The CRC atlas was constructed by integrating public single-cell studies; the normal-tissue atlas was externally supplied and then annotated and analyzed. Off-target filtering describes expression-based screening. These analyses support RNA-level candidate prioritization. Transcript expression does not establish cell-surface protein abundance, clinical safety, or treatment response.

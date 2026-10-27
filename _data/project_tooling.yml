@@ -1170,20 +1170,20 @@ bulk-to-single-cell-and-virtual-cell:
         tumor_normal_evidence:
           label: Tumor and normal-tissue evidence
           entries:
-            - name: Tumor and normal-tissue evidence review
+            - name: Tumor and normal-tissue expression analysis
               kind: method
-              role: Review tumor and normal-tissue labels and expression evidence in context
+              role: Compare tumor, patient/specimen and external normal-tissue expression
               input: Annotated cells with study and sample metadata
               output: Contextualized tumor and normal-tissue expression evidence
               usage_status: used
               pipeline_state: documented-only
         provenance_review:
-          label: Provenance and uncertainty review
+          label: CRC candidate analysis tables
           entries:
-            - name: Annotation and provenance review
-              kind: review
-              role: Review annotation consistency, coverage, and interpretation limits while retaining source traceability
-              input: Atlas annotations and analysis evidence
-              output: Reviewed results with documented limitations
+            - name: Expression comparison and candidate tables
+              kind: method
+              role: Prepare cell-type, tissue and patient/specimen expression comparisons and CRC candidate tables using normal-tissue expression filters
+              input: Atlas annotations and tumor/normal expression data
+              output: Expression comparison and CRC candidate analysis tables
               usage_status: used
               pipeline_state: documented-only

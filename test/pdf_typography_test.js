@@ -27,6 +27,14 @@ for (const [file, start, end] of [
     `${file}: excluded internal names or imprecise artifact-count claims`
   );
 }
+const approvedWittgenCopy = [
+  "Built a CRC single-cell atlas and annotated cell types.",
+  "Analyzed CRC marker and therapeutic-target candidates through tumor and normal-tissue expression comparisons.",
+];
+for (const file of ["docs/pdf-source/resume.typ", "docs/pdf-source/portfolio.typ", "_data/cv.yml"]) {
+  const source = fs.readFileSync(path.join(repository, file), "utf8");
+  for (const sentence of approvedWittgenCopy) assert.ok(source.includes(sentence), `${file}: approved Wittgenbio responsibility missing`);
+}
 const approvedSanigenCopy = [
   "Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.",
   "Performed genomics, microbiome and transcriptome analyses; automated analysis workflows and reports.",

@@ -67,7 +67,7 @@ Genome analysis and RBP design, reference/prediction software development, cockt
 
 ### Wittgenbio · July–October 2026
 
-Multi-study CRC atlas curation and RNA-level comparison of tumor, patient/specimen and externally supplied normal-tissue expression.
+CRC single-cell atlas construction, cell-type annotation and analysis of marker and therapeutic-target candidates through tumor and normal-tissue expression comparisons.
 
 ### Sanigen · March 2020–November 2025
 

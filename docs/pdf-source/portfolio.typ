@@ -24,9 +24,8 @@
 ])
 
 #role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
-  - Built a multi-study CRC scRNA-seq atlas and performed cell-type annotation.
-  - Cross-checked tumor/normal metadata, author annotations and marker evidence, with versioned label and source tracking.
-  - Annotated externally supplied normal-tissue atlas data and compared normal-tissue, tumor and patient/specimen expression to assess therapeutic-target candidates.
+  - Built a CRC single-cell atlas and annotated cell types.
+  - Analyzed CRC marker and therapeutic-target candidates through tumor and normal-tissue expression comparisons.
 ])
 
 #v(4mm)
@@ -188,23 +187,21 @@ The saved benchmark has 110 queries per mode and measures inclusion of at least 
 #grid(columns: (1fr, auto, 1fr, auto, 1fr), align: center,
   note[*Single-cell datasets* #linebreak() QC + metadata], [→],
   note[*Integrated CRC atlas* #linebreak() harmonization + clustering], [→],
-  note[*Cell-type annotation* #linebreak() labels + validation],
+  note[*Cell-type annotation* #linebreak() cell labels + marker summaries],
 )
 
-#section("MULTI-STUDY DATA CURATION AND ANNOTATION")
-- Standardized public-study metadata, performed cell-level QC, integrated studies, and clustered cells for CRC atlas annotation.
-- Cross-checked original author labels and marker evidence against tumor/normal metadata; retained source provenance and version-specific label decisions.
-- Produced integrated/annotated data, marker/annotation summaries and version-comparison tables.
+#section("PUBLIC-STUDY INTEGRATION AND CELL-TYPE ANNOTATION")
+- Standardized expression matrices and metadata from public studies; performed QC, cross-study integration and clustering and prepared H5AD data.
+- Assigned cell-type labels using cluster-marker expression and author annotations; produced cell-level annotations and marker summaries.
 
-#section("TUMOR AND NORMAL-TISSUE EXPRESSION EVIDENCE")
+#section("TUMOR AND NORMAL-TISSUE EXPRESSION ANALYSIS")
 #grid(columns: (1fr, auto, 1fr, auto, 1fr), align: center,
   note[*CRC atlas* #linebreak() tumor expression], [→],
-  note[*Target candidate review* #linebreak() patient / specimen evidence], [←],
-  note[*External normal atlas* #linebreak() tissue expression],
+  note[*CRC candidate analysis* #linebreak() patient / specimen comparison], [←],
+  note[*External normal atlas* #linebreak() tissue expression filters],
 )
-- Annotated externally supplied normal-tissue atlas data and reviewed tissue-specific expression.
-- Combined tissue-specific expression with tumor and patient/specimen evidence; analyzed CRC markers after expression-based off-target filtering.
-- Summarized candidate expression, coverage and interpretation limits in comparison tables with follow-up validation items; reviewed raw-count availability and depth differences.
+- Annotated cell types and analyzed expression in an externally supplied normal-tissue atlas; compared tumor and patient/specimen expression and prepared CRC candidate tables using normal-tissue expression filters.
+- Produced expression comparisons by cell type, tissue and patient/specimen, with CRC candidate analysis tables.
 
 #section("PUBLIC EVIDENCE BOUNDARY")
 #note[

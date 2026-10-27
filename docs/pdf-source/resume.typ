@@ -32,9 +32,8 @@ A bioinformatics researcher and developer connecting biological questions with a
 ])
 
 #role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
-  - Built a multi-study CRC scRNA-seq atlas and performed cell-type annotation.
-  - Cross-checked tumor/normal metadata, author annotations and marker evidence, with versioned label and source tracking.
-  - Annotated externally supplied normal-tissue atlas data and compared normal-tissue, tumor and patient/specimen expression to assess therapeutic-target candidates.
+  - Built a CRC single-cell atlas and annotated cell types.
+  - Analyzed CRC marker and therapeutic-target candidates through tumor and normal-tissue expression comparisons.
 ])
 
 #role("Sanigen", "Bioinformatics Team Lead · Senior Researcher", "2020.03 - 2025.11", [
@@ -61,7 +60,7 @@ A bioinformatics researcher and developer connecting biological questions with a
     #kicker("Single-cell and tissue expression")
     #linebreak()
     *CRC Atlas Annotation & Normal-Tissue Expression Analysis* \
-    Integrated CRC datasets across studies, annotated cell types, and reviewed annotation consistency and tumor/normal labels. Compared externally supplied normal-tissue atlas expression and analyzed CRC markers after expression-based off-target filtering.
+    Integrated public CRC studies into H5AD data and produced cell-type annotations and marker summaries. Compared tumor and external normal-tissue expression and produced CRC candidate tables using normal-tissue expression filters.
   ],
   [
     #kicker("Reproducible analysis platform")

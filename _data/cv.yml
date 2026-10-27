@@ -29,11 +29,10 @@ cv:
         position: Computational Biology Research
         start_date: "2026-07"
         end_date: "2026-10"
-        summary: CRC single-cell atlas construction, annotation provenance and RNA-level therapeutic-target evidence.
+        summary: CRC single-cell atlas construction, cell-type annotation and tumor/normal expression analysis.
         highlights:
-          - Built a multi-study CRC scRNA-seq atlas and performed cell-type annotation.
-          - Cross-checked tumor/normal metadata, author annotations and marker evidence, with versioned label and source tracking.
-          - Annotated externally supplied normal-tissue atlas data and compared normal-tissue, tumor and patient/specimen expression to assess therapeutic-target candidates.
+          - Built a CRC single-cell atlas and annotated cell types.
+          - Analyzed CRC marker and therapeutic-target candidates through tumor and normal-tissue expression comparisons.
 
       - company: Sanigen
         position: Bioinformatics Team Lead · Senior Researcher
@@ -75,9 +74,9 @@ cv:
           - Integrated anchor compatibility, reference-label consistency, and protein-structure evidence to prioritize in silico tail-RBP design candidates for experimental follow-up.
 
       - name: CRC Atlas Annotation & Normal-Tissue Expression Analysis
-        summary: Integrated CRC datasets across studies, annotated cell types, and reviewed annotation consistency and tumor/normal labels.
+        summary: Integrated public CRC studies into H5AD data and produced cell-type annotations and marker summaries.
         highlights:
-          - Compared externally supplied normal-tissue atlas expression and analyzed CRC markers after expression-based off-target filtering.
+          - Compared tumor, patient/specimen and externally supplied normal-tissue expression and produced CRC candidate tables using normal-tissue expression filters.
 
       - name: Sanigen Integrated Microbial Genomics Platform
         summary: Designed and maintained a shared Snakemake platform for 16S, ITS, WGS, and Illumina-ONT hybrid assembly.
