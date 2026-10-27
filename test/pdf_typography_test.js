@@ -54,6 +54,14 @@ for (const [file, start, end] of [
   assert.equal(company.match(/^\s*- (?!company:)/gm)?.length, 4, `${file}: preserve all four responsibility themes`);
   assert.ok(!/Nextflow|five-person|three-person|direct reports/i.test(company), `${file}: unsupported tooling or staffing qualifier`);
 }
+for (const file of ["docs/pdf-source/resume.typ", "docs/pdf-source/portfolio.typ", "_data/cv.yml"]) {
+  assert.ok(
+    fs
+      .readFileSync(path.join(repository, file), "utf8")
+      .includes("Concurrent role alongside employment at MicrobiotiX (approximately three months)."),
+    `${file}: concurrent role metadata missing`
+  );
+}
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), "portfolio-pdf-test-"));
 
 try {

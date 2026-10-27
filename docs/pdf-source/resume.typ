@@ -32,6 +32,8 @@ A bioinformatics researcher and developer connecting biological questions with a
 ])
 
 #role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
+  #text(size: 8pt, fill: muted)[Concurrent role alongside employment at MicrobiotiX (approximately three months).]
+
   - Built a CRC single-cell atlas, annotated cell types and analyzed expression of target candidates.
 ])
 

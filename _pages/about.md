@@ -67,6 +67,8 @@ Analyze bacterial and phage genomes and design host-recognition protein candidat
 
 ### Wittgenbio · July–October 2026
 
+Concurrent role alongside employment at MicrobiotiX (approximately three months).
+
 Built a CRC single-cell atlas, annotated cell types and analyzed expression of target candidates.
 
 ### Sanigen · March 2020–November 2025

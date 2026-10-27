@@ -38,6 +38,8 @@ This page summarizes my work by company. It is intentionally limited to public, 
 **[Single cell]**<br>
 **Computational Biology Research · July–October 2026**
 
+Concurrent role alongside employment at MicrobiotiX (approximately three months).
+
 - Standardized expression matrices and metadata from public studies; performed QC, cross-study integration and clustering and prepared H5AD data.
 - Assigned cell-type labels using cluster-marker expression and author annotations; produced cell-level annotations and marker summaries.
 - Annotated cell types and analyzed expression in an externally supplied normal-tissue atlas; compared tumor and patient/specimen expression and prepared CRC candidate tables using normal-tissue expression filters.

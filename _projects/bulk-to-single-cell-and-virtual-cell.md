@@ -13,6 +13,8 @@ mermaid:
 
 ## Wittgenbio analysis delivery
 
+Concurrent role alongside employment at MicrobiotiX (approximately three months).
+
 At **Wittgenbio** (July–October 2026), I built a public-study **colorectal cancer (CRC) single-cell atlas**, annotated cell types and analyzed CRC marker and therapeutic-target candidates using tumor and normal-tissue expression comparisons.
 
 ## CRC single-cell atlas workflow
