@@ -35,7 +35,7 @@ At MicrobiotiX, I turn bacterial/phage genome evidence and measured host-range d
 ## Candidate selection and follow-up research
 
 - Produced candidate-assessment reports from genome classification, lifestyle and host-recognition evidence, correcting duplicate references and conflicting prior calls.
-- Built cocktail-selection software comparing the observed target strains and required phages of candidate combinations, with independent calculation checks.
+- Contributed to cocktail-selection software comparing target strains and required phages for measured host-range combinations; independently checked the calculations.
 - Developed capsule-type prediction libraries and ML models; recorded sparse-label and leakage concerns and the decision to defer an additional predictor.
 - Selected target-specific host-recognition protein candidates and generated domain-combination sequences and sequence/structure comparisons.
 

@@ -20,7 +20,7 @@
 #section("CURRENT AND RECENT ROLES")
 #role("MicrobiotiX", "Senior Researcher · Bioinformatics", "2026.07 - PRESENT", [
   - Analyze bacterial and phage genomes and prepare phage candidate-assessment reports.
-  - Develop phage cocktail selection and capsule-type prediction software; design receptor-binding protein candidates.
+  - Contribute to phage cocktail selection software; develop capsule-type prediction software and design receptor-binding protein candidates.
 ])
 
 #role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
@@ -64,8 +64,8 @@ Separate assay scripts, environments, quality checks, server paths, and reportin
 
 #section("IMPLEMENTATION AND TECHNICAL REVIEW")
 - Connected shared analysis, container and server settings with QC, logs and HTML report outputs across the four execution profiles.
-- Reran WGS/hybrid assemblies under read-selection and trimming conditions, curated contigs and redelivered corrected reports.
-- Corrected reference, FASTA-header and chromosome-contig errors; reran assembly/Prokka annotation and checked circular contigs, graphs and BUSCO results.
+- Delivered WGS/hybrid assemblies under research-specific read-selection and trimming conditions, with reviewed contigs and reports.
+- Performed assembly/Prokka annotation and manual contig review, with circular-genome, assembly-graph and BUSCO checks.
 
 #section("EVIDENCE BOUNDARY")
 Only tools connected to active Snakemake includes and rules are listed as active. Configured or documented but inactive components are not represented as production use.
@@ -84,21 +84,24 @@ Only tools connected to active Snakemake includes and rules are listed as active
 
 #section("RESPONSIBILITIES AT SANIGEN")
 - Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.
-- Performed genomics, microbiome and transcriptome analyses; automated workflows and reports and resolved analysis errors.
+- Performed genomics, microbiome and transcriptome analyses; automated analysis workflows and reports.
 - Developed comparative-genomics and k-mer marker-discovery methods and contributed to collaborative NGS pathogen-panel research.
 - Contributed to the technology-special listing task force, preparing and revising technical-evaluation and preliminary-listing application materials.
-- Delivered custom analyses and method evaluations for external collaborators, client technical support and training materials.
+- Provided analysis technical support to clients and internal researchers, custom analyses and method evaluations.
 - Maintained HPC/Linux analysis environments, NAS storage and data-transfer infrastructure.
 
-#section("SELECTED ANALYSIS AND DELIVERY OUTPUTS")
-- Reissued ANI/AMR/virulence/MLST figures, panX SVG/Newick trees, and shotgun/LEfSe subgroup comparisons with KEGG/genus statistics and LDA plots.
-- Delivered featureCounts counts, alignment summaries, TSS-depth/TEX comparisons, and RNA target/non-target coverage; compared Nanopore Dorado modes and duplex QC.
-- Fixed panel TSV/calculation bugs, tree-JSON/metadata mismatches and missing report nodes; restored eggNOG functional-category, orthology and pathway outputs.
-- Resolved NanoPlot dependency/version and missing-visualization errors; corrected QIIME 2 commands and prepared analysis/panX manuals and training.
+#section("ANALYSIS DELIVERY AND AUTOMATION")
+- Delivered genome assemblies, annotations, strain comparisons, microbiome reports and transcriptome count/coverage outputs for research questions.
+- Developed shared analysis configurations, QC and HTML reporting; automated result conversion and functional-annotation outputs and maintained phylogenetic/visual reports.
+
+#section("INTERNAL SERVICE OPERATIONS AND MANAGEMENT")
+- Managed analysis assignments, schedules, result review, SOPs, turnaround and quality.
+- Handled client/internal-researcher questions, interpretation and additional-analysis requirements; coordinated technical responses and result redelivery.
+- Reviewed NCBI chromosome/contig submissions and prepared analysis/panX training and handover materials.
 
 #section("ADDITIONAL CUSTOM ANALYSES")
 - Filtered vector/mixed-virus reads, assembled viral reads with metaSPAdes and identified assemblies by BLAST; delivered predicted prophage intervals and mobility evidence.
-- Reanalyzed abnormal read-pair/OTU cases and sequence-match tables; provided hybrid-contig VCF/IGV comparisons and pre-NCBI chromosome/contig-submission reviews.
+- Delivered OTU/sequence-match tables and hybrid-contig VCF/IGV comparisons with NCBI submission-related technical support.
 - Verified allergen/accession mappings and custom BLAST target/toxin searches; reconciled NCBI/SILVA/species-label discrepancies with sequence/ANI evidence and documented marker limits.
 
 #section("TRACEABILITY AND INTERPRETATION")
@@ -157,7 +160,7 @@ Only tools connected to active Snakemake includes and rules are listed as active
 - Collected and clustered 7,759 tail/RBP sequences into 5,467 clusters for target-capsule searches. K-type labels cover 442 rows and 62 distinct labels, with 107 literature-backed experimental K-label rows separated from inferred labels.
 
 #section("MEASURED HOST RANGE AND PREDICTION EVALUATION")
-- Developed cocktail-candidate selection from measured host-range data for 221 strains and 74 phages; checked candidate combinations against observed coverage.
+- Contributed to cocktail-selection software for measured host-range data from 221 strains and 74 phages; independently checked candidate-combination calculations.
 - Replayed a saved 110-query reference benchmark: correct-label inclusion was 85/110 (77.3%) with only the query excluded and 48/110 (43.6%) with its sequence cluster excluded.
 - Developed capsule-type prediction libraries and ML models; documented label imbalance/leakage risks and deferred an additional predictor.
 

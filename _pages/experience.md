@@ -19,11 +19,11 @@ This page summarizes my work by company. It is intentionally limited to public, 
 - Analyzed phage taxonomy, gene content and lifestyle; prepared candidate-assessment reports distinguishing tool disagreements from insufficient evidence.
 - Consolidated reference genomes differing only in start position or orientation; corrected duplicate evidence and prior calls through literature and sequence comparisons.
 
-### Phage cocktail selection software
+### Contribution to phage cocktail selection software
 
-- Developed cocktail-selection software comparing target strains and required phages for combinations in measured host-range tables; checked the results with independent calculations.
+- Contributed to cocktail-selection software based on measured host-range tables; independently checked the calculated target strains and required phages for candidate combinations.
 
-### Host-recognition protein analysis and design
+### RBP analysis and design
 
 - Built a reference database to retrieve host-recognition proteins by target capsule type; distinguished experimentally supported targets from targets inferred by sequence similarity.
 - Developed and cross-validated capsule-type prediction libraries and ML models; deferred an additional predictor based on label imbalance and overlap risks between training and evaluation data.
@@ -47,49 +47,43 @@ This page summarizes my work by company. It is intentionally limited to public, 
 **[Bacteria / Metagenome / Phage / Transcriptomics]**<br>
 **Bioinformatics Team Lead · Senior Researcher · March 2020–November 2025**
 
-### Genome analysis and reanalysis
+### Genome analysis
 
-- Selected and manually corrected contigs using Bandage graphs and read depth; revised and redelivered WGS/hybrid assembly reports.
-- Repeated assemblies under Kraken2 read-selection and trimming conditions; checked circular contigs and BUSCO results.
-- Corrected reference, FASTA-header and unmerged chromosome-contig errors; reran assembly and Prokka annotation.
-- Delivered additional SNP, INDEL and plasmid analyses, hybrid-contig VCF/IGV comparisons, locus crosswalks and GFF/GBK files.
-- Delivered ANI heatmaps/trees, AMR, virulence-factor and MLST visualizations, and panX core-gene trees in SVG/Newick formats.
-- Aligned vector references, filtered reads and delivered requested-region edits; selected viral reads from mixed inputs, assembled them with metaSPAdes and identified assemblies with BLAST.
-- Summarized and delivered predicted prophage candidates, intervals and mobility potential.
+- Performed WGS and hybrid assembly, gene annotation and functional analysis; manually reviewed and curated contigs and checked circular genomes.
+- Compared strain characteristics using ANI, AMR, virulence factors, MLST, pan-genome and phylogenomic analyses.
+- Analyzed SNPs, INDELs, plasmids, prophages and specified gene regions; delivered result tables and VCF/GFF/GBK files.
+- Selected target reads from vector-reference and mixed-sample data; assembled and identified viral genomes.
 
-### Custom microbiome and transcriptome analysis
+### Microbiome and transcriptome analysis
 
-- Compared QIIME 2 classifications with BLAST sequence filters, removed chloroplast/mitochondrial reads and adjusted sampling depth.
-- Reran shotgun and LEfSe analyses for revised groups/subsets; reissued KEGG-function and genus-comparison statistics, LDA figures and reports.
-- Reanalyzed single reads and OTUs after abnormal read-pair merging; delivered specified-position variant, representative-sequence alignment and sequence-match percentage tables.
-- Produced featureCounts gene counts and alignment summaries, TSS-position depth and TEX-group comparison records.
-- Compared RNA-clustering and error-correction settings; generated target/non-target classifications, reference alignments and position-level coverage.
-- Compared Nanopore Dorado sup/hac/fast modes and duplex-read QC; prepared hit-marker and sample-by-marker comparisons for pathogen-panel input methods.
+- Performed 16S, ITS and shotgun microbiome analyses; compared communities, functions and LEfSe results under study-specific conditions and prepared reports.
+- Produced gene-level read counts, TSS-position depth and TEX-group comparisons; analyzed target-RNA alignments and coverage.
+- Compared Nanopore Dorado modes and duplex-read QC; evaluated pathogen-panel detection results under different input conditions.
 
-### Workflow and report fixes
+### Workflow development and automation
 
-- Built common 16S, ITS, WGS and hybrid execution profiles, separated analysis/container/server settings and connected QC with HTML reporting.
-- Fixed panel-TSV generation bugs and anomalous calculations; delivered conversion and SVG/HTML output scripts with test files.
-- Corrected missing eggNOG functional-category, orthology and pathway outputs and implemented their automatic report generation.
-- Corrected tree-JSON/metadata mismatches, restored missing nodes and table fields, and redelivered the results.
-- Resolved NanoPlot dependency/version errors and missing visualization packages; corrected QIIME 2 version-specific commands and execution instructions.
+- Developed common 16S, ITS, WGS and hybrid analysis workflows and automated QC/HTML reporting.
+- Automated analysis-result conversion and functional-annotation outputs; maintained phylogenetic and visualization reports.
+
+### Internal service operations and technical support
+
+- Managed analysis assignments, schedules, result review, SOPs, turnaround and quality control.
+- Handled analysis inquiries from clients and internal researchers; coordinated result interpretation and additional-analysis or reanalysis requirements.
+- Investigated and resolved analysis-environment, result and reporting issues; coordinated follow-up actions and result delivery.
+- Reviewed chromosome, contig and unplaced-sequence records for NCBI registration and provided submission-related technical support.
 
 ### Marker and panel research; technical-listing materials
 
-- Automated primer-candidate analysis and FASTA generation with k-mer-length/GC filters; compared core genes and candidate markers with BLAST.
-- Aligned related-species genomes and extracted variants; delivered candidate-region FASTA files and figures and documented discrimination limits in identical sequence regions.
-- Verified allergen reference/accession mappings, built custom BLAST databases and delivered target/toxin-gene searches with identity/coverage criteria.
-- Resolved discrepancies among NCBI reclassification, SILVA entries and submitted species labels using sequence/ANI comparisons; documented marker-discrimination and non-detection limits.
+- Automated k-mer and comparative-genomics searches for marker and primer candidates; prepared candidate sequences and validation records.
+- Built custom references and BLAST databases for related species, allergens and toxin genes; cross-checked target-discrimination criteria and taxonomy.
 - Contributed analysis code, QA/QC and interpretation to NGS pathogen-panel research, two collaborative papers and a joint patent.
-- Reviewed diagnostic marker-search and panel-result functions and panX applicability; prepared algorithm-differentiation and patent-review materials.
-- Authored, revised and submitted technical-evaluation explanations, figures and tables; wrote the assigned section of the preliminary-listing application.
+- Reviewed diagnostic marker-search and panel-result functions and panX applicability; prepared algorithm and patent-review materials.
+- Contributed to the technology-special listing task force; authored and submitted technical-evaluation materials, figures and tables and the assigned section of the preliminary-listing application.
 
-### Service, training and infrastructure operations
+### Training and analysis infrastructure
 
-- Coordinated additional analyses, exceptions and redelivery schedules; addressed client questions about results, delays and follow-up actions.
-- Reviewed chromosome/contig mappings and additional unplaced-sequence submissions before NCBI registration; provided technical responses.
-- Prepared analysis/panX theory and practical manuals, training and handover materials; trained new team members.
-- Maintained HPC/Linux environments, NAS and data-transfer infrastructure; reviewed capacity, backup and server-configuration requirements.
+- Prepared analysis and panX training/practical manuals and handover materials; trained new team members.
+- Operated HPC/Linux analysis environments, NAS and data-transfer infrastructure; reviewed capacity, backups and server configurations.
 
 Related [platform]({% link _projects/integrated-microbial-genomics-platform.md %}), [operations]({% link _projects/analysis-operations-and-qa.md %}), [marker-discovery]({% link _projects/comparative-genomics-marker-discovery.md %}) and [panel]({% link _projects/foodborne-pathogen-ngs-panel.md %}) cases provide method and output context.
 

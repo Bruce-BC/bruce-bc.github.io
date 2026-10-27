@@ -34,14 +34,19 @@ flowchart LR
 
 </div>
 
-## Reanalysis and report maintenance
+## Analysis delivery and technical support
 
-- Reran read-selected/trimmed WGS and hybrid assemblies, curated contigs and reissued reports; corrected reference, FASTA-header and chromosome-contig errors before repeating assembly and annotation.
-- Recomputed shotgun/LEfSe comparisons for revised groups/subsets and reissued KEGG/genus statistics, LDA figures and reports.
-- Repaired panel TSV/calculation bugs and tree-JSON/metadata mismatches, restored missing result nodes/table fields and corrected eggNOG report omissions.
-- Supplied gene-count/alignment, TSS-depth/TEX and RNA target/non-target coverage records; resolved NanoPlot and visualization dependencies and version-specific QIIME 2 instructions.
+- Delivered genome assemblies, annotations, strain comparisons, microbiome reports and transcriptome count/coverage results for research questions.
+- Prepared interpretable reports and data files, with client/internal-researcher discussion of results, additional analyses and reanalysis requirements.
+- Maintained automated result conversion, functional-annotation outputs and phylogenetic/visual reporting.
 
-Retained communications and delivered outputs support these examples. No complete lifetime workload total is inferred from email or order-code mentions. The [detailed experience record]({% link _pages/experience.md %}) also covers technical-listing materials, client support, training and infrastructure.
+## Internal service operations and management
+
+- Assigned analyses, managed schedules and result review, and maintained SOPs, turnaround and quality controls.
+- Investigated analysis-environment, result and report issues; coordinated technical responses, follow-up actions and result redelivery.
+- Reviewed chromosome, contig and unplaced-sequence records and provided NCBI submission-related technical support.
+
+Retained communications and delivered outputs support these examples. No complete lifetime workload total is inferred from email or order-code mentions. The [detailed experience record]({% link _pages/experience.md %}) also covers technical-listing materials, training and infrastructure.
 
 ## What is standardized
 

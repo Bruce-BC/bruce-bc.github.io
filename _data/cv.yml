@@ -23,7 +23,7 @@ cv:
         summary: Phage genome assessment, cocktail-selection and capsule-type prediction software, and host-recognition protein design.
         highlights:
           - Analyze bacterial and phage genomes and prepare phage candidate-assessment reports.
-          - Develop phage cocktail selection and capsule-type prediction software; design receptor-binding protein candidates.
+          - Contribute to phage cocktail selection software; develop capsule-type prediction software and design receptor-binding protein candidates.
 
       - company: Wittgenbio
         position: Computational Biology Research
@@ -43,10 +43,10 @@ cv:
         summary: NGS analysis services, custom analyses, workflow maintenance, marker/panel research, technical-listing materials and infrastructure.
         highlights:
           - Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.
-          - Performed genomics, microbiome and transcriptome analyses; automated workflows and reports and resolved analysis errors.
+          - Performed genomics, microbiome and transcriptome analyses; automated analysis workflows and reports.
           - Developed comparative-genomics and k-mer marker-discovery methods and contributed to collaborative NGS pathogen-panel research.
           - Contributed to the technology-special listing task force, preparing and revising technical-evaluation and preliminary-listing application materials.
-          - Delivered custom analyses and method evaluations for external collaborators, client technical support and training materials.
+          - Provided analysis technical support to clients and internal researchers, custom analyses and method evaluations.
           - Maintained HPC/Linux analysis environments, NAS storage and data-transfer infrastructure.
 
     Education:

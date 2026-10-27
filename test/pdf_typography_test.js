@@ -7,7 +7,7 @@ const path = require("node:path");
 const repository = path.resolve(__dirname, "..");
 const approvedMicrobiotixCopy = [
   "Analyze bacterial and phage genomes and prepare phage candidate-assessment reports.",
-  "Develop phage cocktail selection and capsule-type prediction software; design receptor-binding protein candidates.",
+  "Contribute to phage cocktail selection software; develop capsule-type prediction software and design receptor-binding protein candidates.",
 ];
 for (const [file, start, end] of [
   ["docs/pdf-source/resume.typ", '#role("MicrobiotiX"', '#role("Wittgenbio"'],
@@ -29,15 +29,15 @@ for (const [file, start, end] of [
 }
 const approvedSanigenCopy = [
   "Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.",
-  "Performed genomics, microbiome and transcriptome analyses; automated workflows and reports and resolved analysis errors.",
+  "Performed genomics, microbiome and transcriptome analyses; automated analysis workflows and reports.",
   "Developed comparative-genomics and k-mer marker-discovery methods and contributed to collaborative NGS pathogen-panel research.",
   "Contributed to the technology-special listing task force, preparing and revising technical-evaluation and preliminary-listing application materials.",
-  "Delivered custom analyses and method evaluations for external collaborators, client technical support and training materials.",
+  "Provided analysis technical support to clients and internal researchers, custom analyses and method evaluations.",
   "Maintained HPC/Linux analysis environments, NAS storage and data-transfer infrastructure.",
 ];
 for (const [file, start, end] of [
   ["docs/pdf-source/resume.typ", '#role("Sanigen"', "\n])"],
-  ["docs/pdf-source/portfolio.typ", '#section("RESPONSIBILITIES AT SANIGEN")', '#section("SELECTED ANALYSIS AND DELIVERY OUTPUTS")'],
+  ["docs/pdf-source/portfolio.typ", '#section("RESPONSIBILITIES AT SANIGEN")', '#section("ANALYSIS DELIVERY AND AUTOMATION")'],
   ["_data/cv.yml", "- company: Sanigen", "    Education:"],
 ]) {
   const source = fs.readFileSync(path.join(repository, file), "utf8");

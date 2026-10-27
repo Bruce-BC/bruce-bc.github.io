@@ -28,7 +28,7 @@ A bioinformatics researcher and developer connecting biological questions with a
 
 #role("MicrobiotiX", "Senior Researcher · Bioinformatics", "2026.07 - PRESENT", [
   - Analyze bacterial and phage genomes and prepare phage candidate-assessment reports.
-  - Develop phage cocktail selection and capsule-type prediction software; design receptor-binding protein candidates.
+  - Contribute to phage cocktail selection software; develop capsule-type prediction software and design receptor-binding protein candidates.
 ])
 
 #role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
@@ -39,10 +39,10 @@ A bioinformatics researcher and developer connecting biological questions with a
 
 #role("Sanigen", "Bioinformatics Team Lead · Senior Researcher", "2020.03 - 2025.11", [
   - Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.
-  - Performed genomics, microbiome and transcriptome analyses; automated workflows and reports and resolved analysis errors.
+  - Performed genomics, microbiome and transcriptome analyses; automated analysis workflows and reports.
   - Developed comparative-genomics and k-mer marker-discovery methods and contributed to collaborative NGS pathogen-panel research.
   - Contributed to the technology-special listing task force, preparing and revising technical-evaluation and preliminary-listing application materials.
-  - Delivered custom analyses and method evaluations for external collaborators, client technical support and training materials.
+  - Provided analysis technical support to clients and internal researchers, custom analyses and method evaluations.
   - Maintained HPC/Linux analysis environments, NAS storage and data-transfer infrastructure.
 ])
 

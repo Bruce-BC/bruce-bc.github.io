@@ -63,7 +63,7 @@ A bioinformatics researcher and developer connecting biological questions with a
 
 ### MicrobiotiX · July 2026–present
 
-Phage candidate assessment, cocktail-selection and capsule-type prediction software, and host-recognition protein design.
+Phage candidate assessment, contributions to cocktail-selection software, capsule-type prediction and RBP design.
 
 ### Wittgenbio · July–October 2026
 
@@ -71,7 +71,7 @@ Multi-study CRC atlas curation and RNA-level comparison of tumor, patient/specim
 
 ### Sanigen · March 2020–November 2025
 
-NGS services and reanalysis, workflow/report maintenance, marker/panel research, technical-listing materials and analysis infrastructure.
+NGS analysis and technical support, internal service operations, workflow automation, marker/panel research and analysis infrastructure.
 
 The current-role [Klebsiella phage genomics and tail-design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}) presents an anonymized example. It combines phage-genome evidence, capsule-target references, and sequence-plus-structure comparisons without exposing sample identifiers or internal reference IDs.
 

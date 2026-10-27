@@ -19,12 +19,12 @@ Analysis services tend to fragment as each assay accumulates separate scripts, e
 
 I designed and maintained a shared Snakemake platform that separates common execution concerns from assay-specific logic. The system supports 16S, ITS, WGS, and hybrid-assembly profiles while keeping inputs, environments, checkpoints, logs, and deliverables traceable.
 
-## Maintenance and technical review examples
+## Analysis delivery and technical support
 
-- Connected analysis, container and server settings with QC, logs and HTML report outputs through the shared execution configuration.
-- Updated eggNOG report output to include missing functional categories, orthology and pathway information.
-- Reviewed complex WGS/hybrid contigs using Bandage graphs, BLAST and short/long-read depth and explained assembly-graph and BUSCO evidence in technical responses.
-- Produced reusable execution settings and analysis manuals. RNA analysis and additional comparative work belong to the broader service scope, separate from the four platform profiles below.
+- Ran 16S, ITS, WGS and hybrid profiles with linked analysis, container/server settings, QC and HTML reporting.
+- Produced functional-annotation reports covering functional categories, orthology and pathways, with maintained conversion and visualization outputs.
+- Performed manual contig review and assembly interpretation using Bandage graphs, BLAST, read depth and BUSCO evidence.
+- Maintained reusable execution settings, reports and manuals for internal analysis-service delivery; coordinated technical responses and follow-up analyses.
 
 ## Shared execution
 
