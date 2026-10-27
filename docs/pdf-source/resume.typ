@@ -27,8 +27,8 @@ A bioinformatics researcher and developer connecting biological questions with a
 #section("EXPERIENCE")
 
 #role("MicrobiotiX", "Senior Researcher · Bioinformatics", "2026.07 - PRESENT", [
-  - Analyze bacterial and phage genomes and prepare phage candidate-assessment reports.
-  - Contribute to phage cocktail selection software; develop capsule-type prediction software and design receptor-binding protein candidates.
+  - Analyze bacterial and phage genomes, assess phage candidates and design receptor-binding protein candidates.
+  - Develop reference databases and capsule-type prediction software; contribute to phage cocktail selection software and provide analysis technical support.
 ])
 
 #role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [

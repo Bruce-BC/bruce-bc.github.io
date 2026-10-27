@@ -14,20 +14,22 @@ This page summarizes my work by company. It is intentionally limited to public, 
 **[Phage]**<br>
 **Senior Researcher · Bioinformatics · July 2026–present**
 
-### Phage genome analysis and candidate assessment
+### Analysis delivery
 
-- Analyzed phage taxonomy, gene content and lifestyle; prepared candidate-assessment reports distinguishing tool disagreements from insufficient evidence.
-- Consolidated reference genomes differing only in start position or orientation; corrected duplicate evidence and prior calls through literature and sequence comparisons.
+- Analyzed bacterial and phage genome quality, taxonomy, lifestyle and gene content; prepared phage candidate-assessment reports.
+- Compared related phage genomes and organized references accounting for genome start positions and sequence orientation.
+- Selected RBP candidates for target capsule types, generated domain-combination sequences and compared sequences and protein structures.
 
-### Contribution to phage cocktail selection software
+### Software and database development
 
-- Contributed to cocktail-selection software based on measured host-range tables; independently checked the calculated target strains and required phages for candidate combinations.
+- Built an RBP reference database from literature and public sequences and implemented candidate searches by target capsule type.
+- Developed and cross-validated capsule-type prediction libraries and ML models.
+- Contributed to phage cocktail selection software based on measured host-range tables; verified target-strain and required-phage calculations for candidate combinations.
 
-### RBP analysis and design
+### Technical support
 
-- Built a reference database to retrieve host-recognition proteins by target capsule type; distinguished experimentally supported targets from targets inferred by sequence similarity.
-- Developed and cross-validated capsule-type prediction libraries and ML models; deferred an additional predictor based on label imbalance and overlap risks between training and evaluation data.
-- Selected host-recognition protein candidates for target capsule types, generated domain-combination sequences and prepared sequence/structure comparisons.
+- Provided technical support for input, calculation and result-output issues in host-range, clustering and gene-analysis software.
+- Prepared analysis specifications, examples, result formats and reproduction records for external developer integration; verified source and installed-package execution.
 
 [View the technical phage assessment and design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}).
 

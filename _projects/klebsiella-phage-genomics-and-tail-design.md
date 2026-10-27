@@ -13,7 +13,7 @@ mermaid:
 
 ## Current-role scope
 
-At MicrobiotiX, I turn bacterial/phage genome evidence and measured host-range data into candidate-assessment reports, cocktail comparisons and follow-up design records. I also build capsule-target references and develop and evaluate prediction methods. The anonymized report excerpt below retains its original scientific case; the reference and benchmark figures are checked separately against the October 27, 2026 source snapshot.
+At MicrobiotiX, my work covers bacterial/phage genome analysis, RBP candidate design, reference and prediction software, and technical support for analysis and developer integration. I contribute to cocktail-selection software and verify combination calculations against measured host-range data. The anonymized report case and separately checked reference/benchmark evidence below retain their original evaluation scope.
 
 ## Design bench
 
@@ -32,12 +32,11 @@ At MicrobiotiX, I turn bacterial/phage genome evidence and measured host-range d
 | Protein structure | Domain-boundary review, Foldseek/PDB support and fold retention       | Reject candidates likely to disrupt attachment or folding   |
 | Design gate       | Anchor identity/coverage, genus context and label consistency         | Rank domain swap, module replacement or tandem addition     |
 
-## Candidate selection and follow-up research
+## Analysis, development and technical support
 
-- Produced candidate-assessment reports from genome classification, lifestyle and host-recognition evidence, correcting duplicate references and conflicting prior calls.
-- Contributed to cocktail-selection software comparing target strains and required phages for measured host-range combinations; independently checked the calculations.
-- Developed capsule-type prediction libraries and ML models; recorded sparse-label and leakage concerns and the decision to defer an additional predictor.
-- Selected target-specific host-recognition protein candidates and generated domain-combination sequences and sequence/structure comparisons.
+- Performed genome comparisons and RBP candidate analyses to prepare assessment reports, candidate sequences and sequence/structure comparison records.
+- Built capsule-target references and prediction libraries and contributed to cocktail-selection software and calculation verification.
+- Provided analysis-software technical support and prepared developer specifications, examples, result formats and reproduction records, with source and installed-package execution checks.
 
 ## Genome evidence workflow
 
@@ -100,7 +99,7 @@ flowchart LR
 | 80–90% identity subset, query-alone exclusion      | Base-label hit 0/4                                   | Original base-label metric; small mode-specific subset        |
 | 80–90% identity subset, cluster exclusion          | Base-label hit 3/17                                  | Original base-label metric; a different mode-specific subset  |
 
-The benchmark is a saved reference snapshot with 110 queries per mode, evaluated by inclusion of at least one correct target label; it is not external validation. Its record correspondence to the current 107 literature-backed experimental K-label rows has not been established. The two 80–90% rows use the original benchmark's single base-label metric, not the inclusion metric above; their different, small subsets do not establish a general failure interval.
+The benchmark is a saved reference snapshot with 110 queries per mode, evaluated by inclusion of at least one correct target label; it is not external validation. Its record correspondence to the current 107 literature-backed experimental K-label rows has not been established. The two 80–90% rows use the original benchmark's single base-label metric, not the inclusion metric above; their different, small subsets do not establish a general failure interval. Archived model-development and cross-validation records document label-imbalance and data-overlap concerns and the decision to defer an additional predictor.
 
 ## Results highlighted from the report
 

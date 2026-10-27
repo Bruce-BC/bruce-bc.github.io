@@ -63,7 +63,7 @@ A bioinformatics researcher and developer connecting biological questions with a
 
 ### MicrobiotiX · July 2026–present
 
-Phage candidate assessment, contributions to cocktail-selection software, capsule-type prediction and RBP design.
+Genome analysis and RBP design, reference/prediction software development, cocktail-software contributions and technical support.
 
 ### Wittgenbio · July–October 2026
 

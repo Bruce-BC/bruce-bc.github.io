@@ -19,8 +19,8 @@
 #v(3mm)
 #section("CURRENT AND RECENT ROLES")
 #role("MicrobiotiX", "Senior Researcher · Bioinformatics", "2026.07 - PRESENT", [
-  - Analyze bacterial and phage genomes and prepare phage candidate-assessment reports.
-  - Contribute to phage cocktail selection software; develop capsule-type prediction software and design receptor-binding protein candidates.
+  - Analyze bacterial and phage genomes, assess phage candidates and design receptor-binding protein candidates.
+  - Develop reference databases and capsule-type prediction software; contribute to phage cocktail selection software and provide analysis technical support.
 ])
 
 #role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
@@ -155,17 +155,22 @@ Only tools connected to active Snakemake includes and rules are listed as active
   note[*Tail interpretation* #linebreak() KL target + structure],
 )
 
-#section("CANDIDATE ASSESSMENT AND TARGET REFERENCES")
-- Integrated taxonomy, gene content, lifestyle and host-recognition evidence into candidate-assessment reports; corrected duplicate references and conflicting prior calls.
-- Collected and clustered 7,759 tail/RBP sequences into 5,467 clusters for target-capsule searches. K-type labels cover 442 rows and 62 distinct labels, with 107 literature-backed experimental K-label rows separated from inferred labels.
+#section("ANALYSIS DELIVERY")
+- Analyzed bacterial and phage genome quality, taxonomy, lifestyle and gene content; prepared phage candidate-assessment reports.
+- Compared related phage genomes and organized references accounting for genome start positions and sequence orientation.
+- Selected RBP candidates for target capsule types, generated domain-combination sequences and compared sequences and protein structures.
 
-#section("MEASURED HOST RANGE AND PREDICTION EVALUATION")
-- Contributed to cocktail-selection software for measured host-range data from 221 strains and 74 phages; independently checked candidate-combination calculations.
-- Replayed a saved 110-query reference benchmark: correct-label inclusion was 85/110 (77.3%) with only the query excluded and 48/110 (43.6%) with its sequence cluster excluded.
-- Developed capsule-type prediction libraries and ML models; documented label imbalance/leakage risks and deferred an additional predictor.
+#section("SOFTWARE AND DATABASE DEVELOPMENT")
+- Built an RBP reference database from literature and public sequences and implemented candidate searches by target capsule type.
+- Developed and cross-validated capsule-type prediction libraries and ML models.
+- Contributed to phage cocktail selection software based on measured host-range tables; verified target-strain and required-phage calculations for candidate combinations.
 
-#section("TARGET-CAPSULE CANDIDATE DESIGN")
-- Generated protein/module candidate sequences and design records for target capsule types; organized KL-specific tables of 446 part rows, 627 ranked entries and 800 evidence rows.
+#section("TECHNICAL SUPPORT")
+- Provided technical support for input, calculation and result-output issues in host-range, clustering and gene-analysis software.
+- Prepared analysis specifications, examples, result formats and reproduction records for external developer integration; verified source and installed-package execution.
+
+#section("TECHNICAL CASE EVIDENCE")
+The checked reference snapshot has 7,759 sequences in 5,467 clusters; K labels cover 442 rows and 62 labels, including 107 literature-backed rows. KL tables contain 446 part rows, 627 ranked entries and 800 evidence rows. Host-range input covers 221 strains and 74 phages. Saved 110-query-per-mode label inclusion was 85/110 (77.3%) excluding the query and 48/110 (43.6%) excluding its cluster.
 
 #section("ANONYMIZED REPORT CASE")
 - Four genomes were consistent with lytic *Przondovirus* calls and short DTR packaging with 180-183 bp repeats; three capsule targets matched supported references at 95.4-98.8% identity.

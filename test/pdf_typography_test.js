@@ -6,8 +6,8 @@ const path = require("node:path");
 
 const repository = path.resolve(__dirname, "..");
 const approvedMicrobiotixCopy = [
-  "Analyze bacterial and phage genomes and prepare phage candidate-assessment reports.",
-  "Contribute to phage cocktail selection software; develop capsule-type prediction software and design receptor-binding protein candidates.",
+  "Analyze bacterial and phage genomes, assess phage candidates and design receptor-binding protein candidates.",
+  "Develop reference databases and capsule-type prediction software; contribute to phage cocktail selection software and provide analysis technical support.",
 ];
 for (const [file, start, end] of [
   ["docs/pdf-source/resume.typ", '#role("MicrobiotiX"', '#role("Wittgenbio"'],

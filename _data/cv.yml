@@ -20,10 +20,10 @@ cv:
         position: Senior Researcher · Bioinformatics
         start_date: 2026-07
         end_date: present
-        summary: Phage genome assessment, cocktail-selection and capsule-type prediction software, and host-recognition protein design.
+        summary: Genome analysis, RBP candidate design, reference/prediction software, cocktail-software contributions and technical support.
         highlights:
-          - Analyze bacterial and phage genomes and prepare phage candidate-assessment reports.
-          - Contribute to phage cocktail selection software; develop capsule-type prediction software and design receptor-binding protein candidates.
+          - Analyze bacterial and phage genomes, assess phage candidates and design receptor-binding protein candidates.
+          - Develop reference databases and capsule-type prediction software; contribute to phage cocktail selection software and provide analysis technical support.
 
       - company: Wittgenbio
         position: Computational Biology Research
