@@ -37,13 +37,14 @@ flowchart LR
 ## Analysis delivery and technical support
 
 - Delivered genome assemblies, annotations, strain comparisons, microbiome reports and transcriptome count/coverage results for research questions.
-- Prepared interpretable reports and data files, with client/internal-researcher discussion of results, additional analyses and reanalysis requirements.
+- Prepared interpretable reports and data files.
 - Maintained automated result conversion, functional-annotation outputs and phylogenetic/visual reporting.
 
 ## Internal service operations and management
 
 - Assigned analyses, managed schedules and result review, and maintained SOPs, turnaround and quality controls.
-- Investigated analysis-environment, result and report issues; coordinated technical responses, follow-up actions and result redelivery.
+- Handled client and internal-researcher inquiries about interpretation, additional analyses and reanalysis; coordinated the work schedules.
+- Investigated and addressed analysis-environment, calculation and reporting issues; redelivered results.
 - Reviewed chromosome, contig and unplaced-sequence records and provided NCBI submission-related technical support.
 
 Retained communications and delivered outputs support these examples. No complete lifetime workload total is inferred from email or order-code mentions. The [detailed experience record]({% link _pages/experience.md %}) also covers technical-listing materials, training and infrastructure.

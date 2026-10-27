@@ -6,8 +6,8 @@ const path = require("node:path");
 
 const repository = path.resolve(__dirname, "..");
 const approvedMicrobiotixCopy = [
-  "Analyze bacterial and phage genomes, assess phage candidates and design receptor-binding protein candidates.",
-  "Develop reference databases and capsule-type prediction software; contribute to phage cocktail selection software and provide analysis technical support.",
+  "Analyze bacterial and phage genomes and design host-recognition protein candidates.",
+  "Develop phage research databases and prediction tools; contribute to cocktail selection software and provide analysis technical support.",
 ];
 for (const [file, start, end] of [
   ["docs/pdf-source/resume.typ", '#role("MicrobiotiX"', '#role("Wittgenbio"'],
@@ -27,21 +27,16 @@ for (const [file, start, end] of [
     `${file}: excluded internal names or imprecise artifact-count claims`
   );
 }
-const approvedWittgenCopy = [
-  "Built a CRC single-cell atlas and annotated cell types.",
-  "Analyzed CRC marker and therapeutic-target candidates through tumor and normal-tissue expression comparisons.",
-];
+const approvedWittgenCopy = ["Built a CRC single-cell atlas, annotated cell types and analyzed expression of target candidates."];
 for (const file of ["docs/pdf-source/resume.typ", "docs/pdf-source/portfolio.typ", "_data/cv.yml"]) {
   const source = fs.readFileSync(path.join(repository, file), "utf8");
   for (const sentence of approvedWittgenCopy) assert.ok(source.includes(sentence), `${file}: approved Wittgenbio responsibility missing`);
 }
 const approvedSanigenCopy = [
-  "Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.",
-  "Performed genomics, microbiome and transcriptome analyses; automated analysis workflows and reports.",
-  "Developed comparative-genomics and k-mer marker-discovery methods and contributed to collaborative NGS pathogen-panel research.",
-  "Contributed to the technology-special listing task force, preparing and revising technical-evaluation and preliminary-listing application materials.",
-  "Provided analysis technical support to clients and internal researchers, custom analyses and method evaluations.",
-  "Maintained HPC/Linux analysis environments, NAS storage and data-transfer infrastructure.",
+  "Managed NGS analysis services and the bioinformatics team; performed genomics, microbiome and transcriptome analyses.",
+  "Automated analysis workflows and reports and contributed to marker and panel research.",
+  "Provided technical support to clients and internal researchers and operated analysis infrastructure.",
+  "Contributed to the technology-special listing task force and prepared technical-evaluation and listing-review materials.",
 ];
 for (const [file, start, end] of [
   ["docs/pdf-source/resume.typ", '#role("Sanigen"', "\n])"],
@@ -56,7 +51,7 @@ for (const [file, start, end] of [
   for (const sentence of approvedSanigenCopy) {
     assert.ok(company.includes(sentence), `${file}: approved Sanigen responsibility missing`);
   }
-  assert.equal(company.match(/^\s*- (?!company:)/gm)?.length, 6, `${file}: preserve all six responsibility themes`);
+  assert.equal(company.match(/^\s*- (?!company:)/gm)?.length, 4, `${file}: preserve all four responsibility themes`);
   assert.ok(!/Nextflow|five-person|three-person|direct reports/i.test(company), `${file}: unsupported tooling or staffing qualifier`);
 }
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), "portfolio-pdf-test-"));

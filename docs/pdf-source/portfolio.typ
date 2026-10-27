@@ -19,13 +19,12 @@
 #v(3mm)
 #section("CURRENT AND RECENT ROLES")
 #role("MicrobiotiX", "Senior Researcher · Bioinformatics", "2026.07 - PRESENT", [
-  - Analyze bacterial and phage genomes, assess phage candidates and design receptor-binding protein candidates.
-  - Develop reference databases and capsule-type prediction software; contribute to phage cocktail selection software and provide analysis technical support.
+  - Analyze bacterial and phage genomes and design host-recognition protein candidates.
+  - Develop phage research databases and prediction tools; contribute to cocktail selection software and provide analysis technical support.
 ])
 
 #role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
-  - Built a CRC single-cell atlas and annotated cell types.
-  - Analyzed CRC marker and therapeutic-target candidates through tumor and normal-tissue expression comparisons.
+  - Built a CRC single-cell atlas, annotated cell types and analyzed expression of target candidates.
 ])
 
 #v(4mm)
@@ -82,12 +81,10 @@ Only tools connected to active Snakemake includes and rules are listed as active
 )
 
 #section("RESPONSIBILITIES AT SANIGEN")
-- Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.
-- Performed genomics, microbiome and transcriptome analyses; automated analysis workflows and reports.
-- Developed comparative-genomics and k-mer marker-discovery methods and contributed to collaborative NGS pathogen-panel research.
-- Contributed to the technology-special listing task force, preparing and revising technical-evaluation and preliminary-listing application materials.
-- Provided analysis technical support to clients and internal researchers, custom analyses and method evaluations.
-- Maintained HPC/Linux analysis environments, NAS storage and data-transfer infrastructure.
+- Managed NGS analysis services and the bioinformatics team; performed genomics, microbiome and transcriptome analyses.
+- Automated analysis workflows and reports and contributed to marker and panel research.
+- Provided technical support to clients and internal researchers and operated analysis infrastructure.
+- Contributed to the technology-special listing task force and prepared technical-evaluation and listing-review materials.
 
 #section("ANALYSIS DELIVERY AND AUTOMATION")
 - Delivered genome assemblies, annotations, strain comparisons, microbiome reports and transcriptome count/coverage outputs for research questions.
@@ -95,7 +92,8 @@ Only tools connected to active Snakemake includes and rules are listed as active
 
 #section("INTERNAL SERVICE OPERATIONS AND MANAGEMENT")
 - Managed analysis assignments, schedules, result review, SOPs, turnaround and quality.
-- Handled client/internal-researcher questions, interpretation and additional-analysis requirements; coordinated technical responses and result redelivery.
+- Handled client and internal-researcher inquiries about interpretation, additional analyses and reanalysis; coordinated the work schedules.
+- Investigated and addressed analysis-environment, calculation and reporting issues; redelivered results.
 - Reviewed NCBI chromosome/contig submissions and prepared analysis/panX training and handover materials.
 
 #section("ADDITIONAL CUSTOM ANALYSES")
@@ -121,7 +119,7 @@ Only tools connected to active Snakemake includes and rules are listed as active
 *Outcome.* Prioritized an approximately *17 kb candidate region* for follow-up, with traceable reasoning from genome selection to practical assay constraints.
 
 #section("FOODBORNE-PATHOGEN NGS PANEL")
-- Developed comparative-genomics and k-mer candidate-marker tools and reviewed panel-analysis code and QA/QC.
+- Automated k-mer and comparative-genomics searches for marker and primer candidates; prepared candidate sequences and comparison tables. Reviewed panel-analysis code and QA/QC.
 - Contributed NGS data analysis and interpretation to collaborative panel development and evaluation.
 - Supported interpretation of NGS outputs across food and environmental sample contexts.
 - Collaborative outcomes included two peer-reviewed papers in 2023 and one joint patent contribution in 2022.
@@ -161,12 +159,12 @@ Only tools connected to active Snakemake includes and rules are listed as active
 
 #section("SOFTWARE AND DATABASE DEVELOPMENT")
 - Built an RBP reference database from literature and public sequences and implemented candidate searches by target capsule type.
-- Developed and cross-validated capsule-type prediction libraries and ML models.
+- Developed a capsule-type prediction library and trained and cross-validated ML classifiers for enzyme–target pairs.
 - Contributed to phage cocktail selection software based on measured host-range tables; verified target-strain and required-phage calculations for candidate combinations.
 
 #section("TECHNICAL SUPPORT")
 - Provided technical support for input, calculation and result-output issues in host-range, clustering and gene-analysis software.
-- Prepared analysis specifications, examples, result formats and reproduction records for external developer integration; verified source and installed-package execution.
+- Prepared analysis specifications and reproduction records for external developer integration; compared execution results from source and installed packages.
 
 #section("TECHNICAL CASE EVIDENCE")
 The checked reference snapshot has 7,759 sequences in 5,467 clusters; K labels cover 442 rows and 62 labels, including 107 literature-backed rows. KL tables contain 446 part rows, 627 ranked entries and 800 evidence rows. Host-range input covers 221 strains and 74 phages. Saved 110-query-per-mode label inclusion was 85/110 (77.3%) excluding the query and 48/110 (43.6%) excluding its cluster.

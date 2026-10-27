@@ -49,6 +49,6 @@ Computational prioritization does not establish diagnostic performance. Wet-lab 
 
 ## Panel and technical-evaluation documentation
 
-- Automated primer-candidate FASTA generation with k-mer-length and GC filters; compared core genes and candidate markers by BLAST.
+- Automated k-mer and comparative-genomics searches for marker and primer candidates; prepared candidate sequences and comparison tables. Generated primer-candidate FASTA files with k-mer-length and GC filters and compared core genes and candidate markers by BLAST.
 - Delivered related-species alignment/variant and candidate-region records, including limits where identical sequences do not support discrimination.
 - Prepared technical and patent-review materials on diagnostic marker-search/panel functions and algorithm differentiation; authored technical-evaluation explanations, figures/tables and an assigned preliminary-listing application section.

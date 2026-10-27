@@ -35,8 +35,8 @@ At MicrobiotiX, my work covers bacterial/phage genome analysis, RBP candidate de
 ## Analysis, development and technical support
 
 - Performed genome comparisons and RBP candidate analyses to prepare assessment reports, candidate sequences and sequence/structure comparison records.
-- Built capsule-target references and prediction libraries and contributed to cocktail-selection software and calculation verification.
-- Provided analysis-software technical support and prepared developer specifications, examples, result formats and reproduction records, with source and installed-package execution checks.
+- Built capsule-target references and a capsule-type prediction library; trained and cross-validated enzyme–target-pair ML classifiers as a separate development track. Contributed to cocktail-selection software and calculation verification.
+- Provided analysis-software technical support; prepared analysis specifications and reproduction records for developer integration and compared source and installed-package execution results.
 
 ## Genome evidence workflow
 
@@ -99,7 +99,7 @@ flowchart LR
 | 80–90% identity subset, query-alone exclusion      | Base-label hit 0/4                                   | Original base-label metric; small mode-specific subset        |
 | 80–90% identity subset, cluster exclusion          | Base-label hit 3/17                                  | Original base-label metric; a different mode-specific subset  |
 
-The benchmark is a saved reference snapshot with 110 queries per mode, evaluated by inclusion of at least one correct target label; it is not external validation. Its record correspondence to the current 107 literature-backed experimental K-label rows has not been established. The two 80–90% rows use the original benchmark's single base-label metric, not the inclusion metric above; their different, small subsets do not establish a general failure interval. Archived model-development and cross-validation records document label-imbalance and data-overlap concerns and the decision to defer an additional predictor.
+The benchmark is a saved reference snapshot with 110 queries per mode, evaluated by inclusion of at least one correct target label; it is not external validation. Its record correspondence to the current 107 literature-backed experimental K-label rows has not been established. The two 80–90% rows use the original benchmark's single base-label metric, not the inclusion metric above; their different, small subsets do not establish a general failure interval. Archived enzyme–target-pair classifier development and cross-validation records document label-imbalance and data-overlap concerns and the decision to defer an additional predictor. This classifier work is separate from the capsule-type prediction library and the saved reference-search benchmark above.
 
 ## Results highlighted from the report
 

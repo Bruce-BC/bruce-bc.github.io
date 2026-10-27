@@ -23,13 +23,13 @@ This page summarizes my work by company. It is intentionally limited to public, 
 ### Software and database development
 
 - Built an RBP reference database from literature and public sequences and implemented candidate searches by target capsule type.
-- Developed and cross-validated capsule-type prediction libraries and ML models.
+- Developed a capsule-type prediction library and trained and cross-validated ML classifiers for enzyme–target pairs.
 - Contributed to phage cocktail selection software based on measured host-range tables; verified target-strain and required-phage calculations for candidate combinations.
 
 ### Technical support
 
 - Provided technical support for input, calculation and result-output issues in host-range, clustering and gene-analysis software.
-- Prepared analysis specifications, examples, result formats and reproduction records for external developer integration; verified source and installed-package execution.
+- Prepared analysis specifications and reproduction records for external developer integration; compared execution results from source and installed packages.
 
 [View the technical phage assessment and design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}).
 
@@ -70,13 +70,13 @@ This page summarizes my work by company. It is intentionally limited to public, 
 ### Internal service operations and technical support
 
 - Managed analysis assignments, schedules, result review, SOPs, turnaround and quality control.
-- Handled analysis inquiries from clients and internal researchers; coordinated result interpretation and additional-analysis or reanalysis requirements.
-- Investigated and resolved analysis-environment, result and reporting issues; coordinated follow-up actions and result delivery.
+- Handled client and internal-researcher inquiries about interpretation, additional analyses and reanalysis; coordinated the work schedules.
+- Investigated and addressed analysis-environment, calculation and reporting issues; redelivered results.
 - Reviewed chromosome, contig and unplaced-sequence records for NCBI registration and provided submission-related technical support.
 
 ### Marker and panel research; technical-listing materials
 
-- Automated k-mer and comparative-genomics searches for marker and primer candidates; prepared candidate sequences and validation records.
+- Automated k-mer and comparative-genomics searches for marker and primer candidates; prepared candidate sequences and comparison tables.
 - Built custom references and BLAST databases for related species, allergens and toxin genes; cross-checked target-discrimination criteria and taxonomy.
 - Contributed analysis code, QA/QC and interpretation to NGS pathogen-panel research, two collaborative papers and a joint patent.
 - Reviewed diagnostic marker-search and panel-result functions and panX applicability; prepared algorithm and patent-review materials.

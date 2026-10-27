@@ -63,15 +63,15 @@ A bioinformatics researcher and developer connecting biological questions with a
 
 ### MicrobiotiX · July 2026–present
 
-Genome analysis and RBP design, reference/prediction software development, cocktail-software contributions and technical support.
+Analyze bacterial and phage genomes and design host-recognition protein candidates. Develop phage research databases and prediction tools; contribute to cocktail selection software and provide analysis technical support.
 
 ### Wittgenbio · July–October 2026
 
-CRC single-cell atlas construction, cell-type annotation and analysis of marker and therapeutic-target candidates through tumor and normal-tissue expression comparisons.
+Built a CRC single-cell atlas, annotated cell types and analyzed expression of target candidates.
 
 ### Sanigen · March 2020–November 2025
 
-NGS analysis and technical support, internal service operations, workflow automation, marker/panel research and analysis infrastructure.
+Managed NGS analysis services and the bioinformatics team; performed genomics, microbiome and transcriptome analyses. Automated analysis workflows and reports and contributed to marker and panel research. Provided technical support to clients and internal researchers and operated analysis infrastructure. Contributed to the technology-special listing task force and prepared technical-evaluation and listing-review materials.
 
 The current-role [Klebsiella phage genomics and tail-design case study]({% link _projects/klebsiella-phage-genomics-and-tail-design.md %}) presents an anonymized example. It combines phage-genome evidence, capsule-target references, and sequence-plus-structure comparisons without exposing sample identifiers or internal reference IDs.
 

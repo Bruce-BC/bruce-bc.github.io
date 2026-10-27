@@ -27,22 +27,19 @@ A bioinformatics researcher and developer connecting biological questions with a
 #section("EXPERIENCE")
 
 #role("MicrobiotiX", "Senior Researcher · Bioinformatics", "2026.07 - PRESENT", [
-  - Analyze bacterial and phage genomes, assess phage candidates and design receptor-binding protein candidates.
-  - Develop reference databases and capsule-type prediction software; contribute to phage cocktail selection software and provide analysis technical support.
+  - Analyze bacterial and phage genomes and design host-recognition protein candidates.
+  - Develop phage research databases and prediction tools; contribute to cocktail selection software and provide analysis technical support.
 ])
 
 #role("Wittgenbio", "Computational Biology Research", "2026.07 - 2026.10", [
-  - Built a CRC single-cell atlas and annotated cell types.
-  - Analyzed CRC marker and therapeutic-target candidates through tumor and normal-tissue expression comparisons.
+  - Built a CRC single-cell atlas, annotated cell types and analyzed expression of target candidates.
 ])
 
 #role("Sanigen", "Bioinformatics Team Lead · Senior Researcher", "2020.03 - 2025.11", [
-  - Led NGS analysis services and team operations, including analysis design, hands-on work, result review, SOPs, turnaround management and quality control.
-  - Performed genomics, microbiome and transcriptome analyses; automated analysis workflows and reports.
-  - Developed comparative-genomics and k-mer marker-discovery methods and contributed to collaborative NGS pathogen-panel research.
-  - Contributed to the technology-special listing task force, preparing and revising technical-evaluation and preliminary-listing application materials.
-  - Provided analysis technical support to clients and internal researchers, custom analyses and method evaluations.
-  - Maintained HPC/Linux analysis environments, NAS storage and data-transfer infrastructure.
+  - Managed NGS analysis services and the bioinformatics team; performed genomics, microbiome and transcriptome analyses.
+  - Automated analysis workflows and reports and contributed to marker and panel research.
+  - Provided technical support to clients and internal researchers and operated analysis infrastructure.
+  - Contributed to the technology-special listing task force and prepared technical-evaluation and listing-review materials.
 ])
 
 #pagebreak()
